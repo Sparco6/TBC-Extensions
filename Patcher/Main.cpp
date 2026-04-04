@@ -73,8 +73,11 @@ int main(int argc, char** argv)
 
     // TODO_TBC: Applies Large Address Aware flag (4GB patch)
     // WotLK offset was: 0x126
-    // For TBC 2.4.3: this is likely the same PE header offset
-    write_pos<uint8_t>(0x126 /* TODO_TBC: verify for TBC */, 0x23);
+    // For TBC 2.4.3: verify using CFF Explorer - open WoW.exe, go to NT Headers ->
+    //   File Header -> Characteristics field. The file offset for this field is 0x126
+    //   in most Win32 PE executables. Confirm by looking for the 2-byte value at that
+    //   offset; setting bit 0x20 enables IMAGE_FILE_LARGE_ADDRESS_AWARE.
+    write_pos<uint8_t>(0x126 /* TODO_TBC: verify using CFF Explorer as noted above */, 0x23);
 
     // TODO_TBC: Custom Glue XML bypass
     // WotLK offsets were: 0x1F41BF, 0x415A25, 0x415A3F, etc.
