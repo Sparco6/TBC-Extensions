@@ -1,0 +1,37 @@
+#pragma once
+
+#include <cstdint>
+
+struct CDataStore;
+
+struct CNetClientCustomPacket
+{
+    void* m_handler;
+    void* m_param;
+
+    CNetClientCustomPacket(void* handler, void* param) : m_handler(handler), m_param(param) {}
+};
+
+class CNetClient
+{
+public:
+    static void Apply();
+
+    static void Packet_MSG_SET_ACTION_BUTTON(uint32_t slotID, bool p1, bool p2);
+    static void __cdecl PacketGroupSpellLaunch(void* handlerParam, uint32_t opcode, uint32_t a2, CDataStore* a3);
+
+private:
+    CNetClient() = delete;
+    ~CNetClient() = delete;
+
+    static int32_t ProcessMessage(void* thisMessage, uint32_t a2, CDataStore* dataStore, uint32_t a4);
+    static void    SetMessageHandler(void* thisMessage, uint32_t opcode, void* handler, void* param);
+
+    static void    SetCustomHandlers();
+
+    static void    InitializePlayerEx();
+    static void __fastcall ProcessMessageEx(void* _this, uint32_t unused, uint32_t a2, CDataStore* a3, uint32_t a4);
+    static void __fastcall SetMessageHandlerEx(void* _this, uint32_t unused, uint32_t opcode, void* function, void* param);
+
+    static void __cdecl Packet_SMSG_UPDATE_CUSTOM_COMBAT_RATING(void* handlerParam, uint32_t opcode, uint32_t a2, CDataStore* a3);
+};

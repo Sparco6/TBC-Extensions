@@ -1,0 +1,20 @@
+#pragma once
+
+#include <cstdint>
+
+struct DBClient
+{
+    void*   m_vtable    = nullptr;
+    bool    m_isLoaded  = false;
+    int32_t m_numRows   = 0;
+    int32_t m_maxIndex  = 0xFFFFFFFF;
+    int32_t m_minIndex  = 0xFFFFFFF;
+    char*   m_stringTable = nullptr;
+    void*   m_vtable2   = nullptr;
+    int32_t* m_firstRow = nullptr;
+    int32_t* m_Rows     = nullptr;
+
+    static double  GetGameTableValue(uint32_t tableID, uint32_t classID, uint32_t combatRating);
+    static int32_t GetLocalizedRow(void* thisDBC, uint32_t rowIndex, void* row);
+    static void*   GetRow(void* vtable2, uint32_t rowIndex);
+};
