@@ -111,8 +111,17 @@ These are confirmed in `func.sym` / `label.sym` and can be used when implementin
 - **Modern C_ namespace APIs** (C_QuestLog, C_Map, C_Container, C_ChatInfo)
 - **Custom DBC loader** (`CDBCMgr`) for adding new database tables
 - **Custom packet system** for server↔client communication
+- **CVar system** — read and write client CVars from Lua
+- **Spell description parser** (`SpellParser`) — custom variables in spell tooltips (`$hp`, `$power1`, etc.)
+- **Formula computation** (`CFormula`) — evaluate stat/damage formulas at runtime
+- **Action bar extensions** — extra Lua functions such as `ReplaceActionBarSpell`
+- **Developer helper functions** — `ReloadMap`, toggle rendering of liquids, terrain, and more
+- **NOAMMO patch** — optionally removes the ammo requirement for ranged weapons
+- **Combo-point fix** — makes combo points work for all classes, not just Rogues/Druids
+- **Character-creation race fix** — prevents crash when more than 21 playable races are defined
+- **Item-mod extension** — expands the `ITEM_MOD` table to display custom tooltip stats
 - **All WotLK-only features removed**: No LFD, no ZoneLight DBCs, no Glyphs, no Vehicles
-- **Full TBC 2.4.3 field layouts** for all game objects
+- **Full TBC 2.4.3 field layouts** for all game objects (build 8606)
 
 ---
 
@@ -211,3 +220,9 @@ The output DLL will be in `build/bin/TBCExtensions.dll`.
 - **Original WotLK-Extensions**: [Alyst3r](https://github.com/Alyst3r/WotLK-Extensions)
 - **TBC Port**: TBC-Extensions contributors
 - Techniques inspired by AwesomeWotLK and TSWoW projects
+
+---
+
+## Special Thanks
+
+A **big thank you** to **Alystor** for his invaluable help and support throughout the development of this project. 🙏
