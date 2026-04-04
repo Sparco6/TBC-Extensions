@@ -2,10 +2,105 @@
 
 A comprehensive extension DLL for World of Warcraft TBC 2.4.3 (build 8606), ported from [WotLK-Extensions](https://github.com/Alyst3r/WotLK-Extensions).
 
-> ⚠️ **STATUS: WORK IN PROGRESS - All memory addresses are TODO_TBC placeholders**
+> ⚠️ **STATUS: IN PROGRESS — Framework complete; several addresses confirmed from sym files, rest still TODO_TBC**
 >
-> This project provides the complete code framework, but every hardcoded address must be found and filled in for TBC 2.4.3 before the DLL will work.  
-> See [TBC_PORTING_GUIDE.md](TBC_PORTING_GUIDE.md) for address-finding instructions.
+> The full code framework is in place with 85+ source files. A growing set of TBC 2.4.3 addresses has been confirmed
+> from `Docs/symbols/func.sym` and `Docs/symbols/label.sym`. All remaining `0x000000 /* TODO_TBC */` placeholders
+> must still be located via IDA/Ghidra before those code paths will work.
+> See [TBC_PORTING_GUIDE.md](TBC_PORTING_GUIDE.md) for instructions.
+
+---
+
+## What Has Been Done
+
+### ✅ Framework & Porting (initial port)
+
+- Full project structure with CMake, Win32 DLL target, configurable feature flags
+- **85+ C++ source files** ported from WotLK-Extensions and adapted for TBC 2.4.3 field layouts
+- All WotLK-only features removed (LFD, ZoneLight DBC, Glyphs, Vehicles)
+- Custom DBC loader (`CDBCMgr`) — `Load()` / `PatchAddress()` / `RegisterDBCEx()` class interface
+- Custom Lua function registration system (`CustomLua`, `FrameScript` wrappers)
+- Custom packet system (`CNetClient`, `CDataStore`)
+- WoWTime patch, CMap safe-load, CGTooltip, Spell, Misc, CGPlayer patches
+- `DataContainer` singleton for runtime configuration
+- Logger, pattern scanner, utility helpers
+- Patcher binary (writes DLL-load stub into WoW.exe)
+- Symbol files: `Docs/symbols/func.sym` and `Docs/symbols/label.sym` for TBC 2.4.3
+
+### ✅ CDBCMgr — `RegisterDBCEx` class member
+
+- `static int RegisterDBCEx()` added to `CDBCMgr.hpp` public interface
+- Implementation promoted from anonymous free function to proper class member in `CDBCMgr.cpp`
+- `PatchAddress()` updated to reference `&CDBCMgr::RegisterDBCEx`
+
+### ✅ Addresses confirmed from func.sym / label.sym
+
+The following TBC 2.4.3 addresses have been filled in from the symbol files (no more `TODO_TBC` for these):
+
+| File | Function | Address |
+|------|----------|---------|
+| `Client/CNetClient.cpp` | `NetClient::ProcessMessage` | `0x0055F440` |
+| `Client/CNetClient.cpp` | `NetClient::SetMessageHandler` | `0x0055F400` |
+| `Client/CDataStore.cpp` | `CDataStore::IsRead` | `0x00425BB0` |
+| `Client/SFile.cpp` | `SFile::OpenFileEx` (`SFile__OpenFile`) | `0x006755A0` |
+| `Client/SFile.cpp` | `SFile::ReadFile` | `0x0067FF90` |
+| `Client/DBClient.cpp` | `WowClientDB::GetRow` | `0x004047C0` |
+
+### 🔍 Additional confirmed symbols (available for future use)
+
+These are confirmed in `func.sym` / `label.sym` and can be used when implementing their call sites:
+
+| Symbol | Address | Relevant for |
+|--------|---------|-------------|
+| `NetClient__Init` | `0x0055F220` | Network init hook |
+| `NetClient__Send` | `0x0055F9A0` | Packet send |
+| `NetClient__Disconnect` | `0x0055F7B0` | Disconnect hook |
+| `CDataStore__Init` | `0x0041F0E0` | Packet construction |
+| `CDataStore__Alloc` | `0x0041F140` | Packet construction |
+| `CDataStore__Reset` | `0x00425C30` | Packet reset |
+| `CDataStore__GrowBuffer` | `0x00422DA0` | Buffer growth |
+| `SFile__Free` | `0x0065D4E0` | File memory free |
+| `CMap__SafeOpen` | `0x006B8D10` | Map safe-open |
+| `CMap__SafeRead` | `0x006B8EF0` | Map safe-read |
+| `CMap__LoadWdt` | `0x006BB6A0` | WDT load |
+| `WowClientDB__BuildIndex` | `0x00405060` | DBC index build |
+| `StaticDBLoadAll` | `0x00573C90` | DBC load entry point |
+| `ObjectMgrClient__RegisterHandlers` | `0x0046E060` | Object manager |
+| `Script_GetItemInfo` | `0x0049B6F0` | GetItemInfo Lua impl |
+| `Script_GetTalentTabInfo` | `0x0050A0E0` | GetNumTalentTabs |
+| `Script_GetNumTalents` | `0x0050A250` | GetNumTalents |
+| `Script_LearnTalent` | `0x0050A410` | LearnTalent |
+| `Script_GetTalentInfo` | `0x0050A910` | GetTalentInfo |
+| `Script_GetSpellTabInfo` | `0x004C1AE0` | GetSpellTabInfo |
+| `Script_CastSpellByName` | `0x004C42E0` | CastSpellByName |
+| `Script_GetActionInfo` | `0x00526550` | GetActionInfo |
+| `Script_GetActionCount` | `0x00525890` | GetActionCount |
+| `Script_GetActionText` | `0x00525900` | GetActionText |
+| `Script_GetActionCooldown` | `0x00526690` | GetActionCooldown |
+| `Script_GetActionTexture` | `0x005271F0` | GetActionTexture |
+| `Script_UnitClass` | `0x005451F0` | UnitClass |
+| `Script_UnitGUID` | `0x00543CA0` | UnitGUID |
+| `Script_GetWorldLocMapPosition` | `0x004B2750` | GetPlayerMapPosition |
+| `g_netClientList` | `0x00B9F940` | Net client list |
+| `g_pendingMapID` | `0x00BDB05C` | Pending map ID |
+| `g_glueMgrState` | `0x00C07D2C` | Glue manager state |
+
+### ❌ Still TODO_TBC (addresses not yet in sym files)
+
+| Module | What is needed |
+|--------|----------------|
+| `FrameScript.cpp` | All Lua function addresses (`lua_pushstring`, `lua_tonumber`, `lua_toboolean`, `lua_settop`, `FrameScript__RegisterFunction`, `FrameScript__SignalEvent`, `FrameScript__LoadFunctions`, global `lua_State*`, etc.) |
+| `CDataStore.cpp` | `CDataStore::Put*` and `CDataStore::Get*` method addresses (packet read/write) |
+| `SFile.cpp` | `SFile::CloseFile` address |
+| `Client/CNetClient.cpp` | `SendActionButton` call site, `ProcessMessage` patch addresses, group spell launch handler |
+| `Client/CustomLua.cpp` | `Apply()` patch call site, `FrameScript::GetState()` global address, FPS global |
+| `Client/WoWTime.cpp` | All WoWTime patch call sites |
+| `Client/CGPlayer.cpp` | Character creation race table patch addresses |
+| `Client/CGTooltip.cpp` | Tooltip patch addresses |
+| `Data/MiscAddresses.hpp` | Render flags, `g_currentMapID`, game window HWND, action button arrays, UI coordinate multipliers |
+| `Data/DBCAddresses.hpp` | All DBC global instance pointers (50+ tables) |
+| `Main.cpp` | Invalid-function-pointer hack addresses (`FrameScript__LoadFunctions` bootstrap area) |
+| `CDBCMgr/CDBCMgr.cpp` | `RegisterDBCEx` call target + patch site in `StaticDBLoadAll` |
 
 ---
 
@@ -14,7 +109,7 @@ A comprehensive extension DLL for World of Warcraft TBC 2.4.3 (build 8606), port
 - **200+ Backported Lua API functions** from WotLK, Cataclysm, and MoP
 - **Compatibility stubs** for WotLK+ features that return safe defaults in TBC
 - **Modern C_ namespace APIs** (C_QuestLog, C_Map, C_Container, C_ChatInfo)
-- **Custom DBC loader** for adding new database tables
+- **Custom DBC loader** (`CDBCMgr`) for adding new database tables
 - **Custom packet system** for server↔client communication
 - **All WotLK-only features removed**: No LFD, no ZoneLight DBCs, no Glyphs, no Vehicles
 - **Full TBC 2.4.3 field layouts** for all game objects
@@ -72,7 +167,7 @@ The output DLL will be in `build/bin/TBCExtensions.dll`.
 
 ## Installation
 
-1. **Find all TODO_TBC addresses** — see [TBC_PORTING_GUIDE.md](TBC_PORTING_GUIDE.md)
+1. **Find remaining TODO_TBC addresses** — see [TBC_PORTING_GUIDE.md](TBC_PORTING_GUIDE.md)
 2. **Build the DLL** — see Build Instructions above
 3. **Run the Patcher** on your `WoW.exe`:
    ```
@@ -106,6 +201,8 @@ The output DLL will be in `build/bin/TBCExtensions.dll`.
 - [Docs/BACKPORTED_API.md](Docs/BACKPORTED_API.md) — Full API reference
 - [Docs/API_QUICK_REFERENCE.md](Docs/API_QUICK_REFERENCE.md) — Quick lookup table
 - [HOWTO.md](HOWTO.md) — Step-by-step usage guide
+- [Docs/symbols/func.sym](Docs/symbols/func.sym) — TBC 2.4.3 function symbol addresses
+- [Docs/symbols/label.sym](Docs/symbols/label.sym) — TBC 2.4.3 data label addresses
 
 ---
 
