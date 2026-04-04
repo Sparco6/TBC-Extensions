@@ -10,7 +10,7 @@ void CDBCMgr::Load()
     // Add custom TBC DBC loaders here if needed.
 }
 
-static void __declspec(naked) RegisterDBCEx()
+int __declspec(naked) CDBCMgr::RegisterDBCEx()
 {
     CDBCMgr::Load();
 
@@ -34,5 +34,5 @@ void CDBCMgr::PatchAddress()
     // StaticDBLoadAll (0x00573C90) contains the CALL instruction to patch.
     // Disassemble StaticDBLoadAll to find the exact call-site offset.
     // WotLK 3.3.5 was: 0x634E30 (patch site), offset = fn - 0x634E34
-    Util::OverwriteUInt32AtAddress(0x000000 /* TODO_TBC */, (uint32_t)&RegisterDBCEx - 0x000004 /* TODO_TBC */);
+    Util::OverwriteUInt32AtAddress(0x000000 /* TODO_TBC */, (uint32_t)&CDBCMgr::RegisterDBCEx - 0x000004 /* TODO_TBC */);
 }
