@@ -8,7 +8,7 @@
 | Metric | Value |
 |--------|-------|
 | Total functions targeted | 46 |
-| Addresses found (≥ 85 % confidence) | 3 |
+| Addresses found (≥ 85% confidence) | 3 |
 | Still missing / unconfirmed | 43 |
 | Overall progress | **6%** |
 
@@ -26,7 +26,7 @@
 
 ## Suggested Addresses for Manual Verification
 
-These candidates were found but have confidence < 85 %.  Verify each one in Ghidra or x32dbg before using.
+These candidates were found but have confidence < 85%.  Verify each one in Ghidra or x32dbg before using.
 
 ### 🔴 CRITICAL Priority
 

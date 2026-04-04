@@ -112,12 +112,13 @@ static void test_lua_gettop()
     if (!ADDR_lua_gettop || !ADDR_FrameScript__GetState) {
         LOG("[SKIP] lua_gettop — dependency address not set"); return;
     }
-    using fn_t = int32_t(__cdecl*)(void*, int32_t);
+    // lua_gettop: int __cdecl lua_gettop(lua_State *L)
+    using fn_t = int(__cdecl*)(void*);
     void* L = *reinterpret_cast<void**>(ADDR_FrameScript__GetState);
     if (!L) { LOG("[SKIP] lua_gettop — lua_State* is NULL"); return; }
 
     __try {
-        int top = reinterpret_cast<fn_t>(ADDR_lua_gettop)(L, 0);
+        int top = reinterpret_cast<fn_t>(ADDR_lua_gettop)(L);
         LOG("[PASS] lua_gettop → stack top = %d", top);
     }
     __except (EXCEPTION_EXECUTE_HANDLER) {
@@ -131,17 +132,20 @@ static void test_lua_pushnumber()
         !ADDR_FrameScript__GetState) {
         LOG("[SKIP] lua_pushnumber — dependency address not set"); return;
     }
-    using push_t   = int32_t(__cdecl*)(void*, double);
-    using gettop_t = int32_t(__cdecl*)(void*, int32_t);
-    using settop_t = int32_t(__cdecl*)(void*, int32_t);
+    // lua_pushnumber: void __cdecl lua_pushnumber(lua_State *L, lua_Number n)
+    // lua_gettop:    int  __cdecl lua_gettop(lua_State *L)
+    // lua_settop:    void __cdecl lua_settop(lua_State *L, int idx)
+    using push_t   = void(__cdecl*)(void*, double);
+    using gettop_t = int(__cdecl*)(void*);
+    using settop_t = void(__cdecl*)(void*, int);
 
     void* L = *reinterpret_cast<void**>(ADDR_FrameScript__GetState);
     if (!L) { LOG("[SKIP] lua_pushnumber — lua_State* is NULL"); return; }
 
     __try {
-        int before = reinterpret_cast<gettop_t>(ADDR_lua_gettop)(L, 0);
+        int before = reinterpret_cast<gettop_t>(ADDR_lua_gettop)(L);
         reinterpret_cast<push_t>(ADDR_lua_pushnumber)(L, 42.0);
-        int after  = reinterpret_cast<gettop_t>(ADDR_lua_gettop)(L, 0);
+        int after  = reinterpret_cast<gettop_t>(ADDR_lua_gettop)(L);
         if (after == before + 1) {
             LOG("[PASS] lua_pushnumber — stack grew by 1 (before=%d after=%d)", before, after);
         } else {

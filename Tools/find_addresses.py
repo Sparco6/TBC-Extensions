@@ -619,7 +619,7 @@ def generate_report(targets: List[FunctionTarget], output_path: Path) -> None:
         f"| Metric | Value |",
         f"|--------|-------|",
         f"| Total functions targeted | {len(targets)} |",
-        f"| Addresses found (≥ 85 % confidence) | {len(found)} |",
+        f"| Addresses found (≥ 85% confidence) | {len(found)} |",
         f"| Still missing / unconfirmed | {len(missing)} |",
         f"| Overall progress | **{pct}%** |",
         "",
@@ -642,7 +642,7 @@ def generate_report(targets: List[FunctionTarget], output_path: Path) -> None:
                 f"| `{t.name}` | `{t.tbc_address}` | {conf} | {meth} |"
             )
     else:
-        lines.append("*No functions found at ≥ 85 % confidence yet.*")
+        lines.append("*No functions found at ≥ 85% confidence yet.*")
 
     lines += [
         "",
@@ -650,7 +650,7 @@ def generate_report(targets: List[FunctionTarget], output_path: Path) -> None:
         "",
         "## Suggested Addresses for Manual Verification",
         "",
-        "These candidates were found but have confidence < 85 %.  "
+        "These candidates were found but have confidence < 85%.  "
         "Verify each one in Ghidra or x32dbg before using.",
         "",
     ]
