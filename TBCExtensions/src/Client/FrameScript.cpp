@@ -139,3 +139,58 @@ int32_t FrameScript::SignalEvent(uint32_t event, char* fmt, ...)
     // How to find: Trace event firing from Lua event handler code
     return reinterpret_cast<int32_t(__cdecl*)(uint32_t, char*, ...)>(0x000000 /* TODO_TBC */)(event, "%s", buffer);
 }
+
+// ---------------------------------------------------------------
+// Extended Lua API helpers – used for Frame metatable injection
+// ---------------------------------------------------------------
+
+lua_State* FrameScript::GetState()
+{
+    // TODO_TBC: Find the address of the global lua_State pointer in wow.exe
+    // WotLK 3.3.5 address was: *(lua_State**)0x00884BAC
+    // How to find: Search for the global variable used in FrameScript__LoadFunctions
+    //              to pass the Lua state to Lua C API calls.
+    return *reinterpret_cast<lua_State**>(0x000000 /* TODO_TBC */);
+}
+
+void FrameScript::GetField(lua_State* L, int32_t idx, const char* k)
+{
+    // TODO_TBC: Find lua_getfield address
+    // WotLK 3.3.5 address was: 0x84E620
+    // How to find: Search for lua_getfield calls near FrameScript init
+    reinterpret_cast<void(__cdecl*)(lua_State*, int32_t, const char*)>(0x000000 /* TODO_TBC */)(L, idx, k);
+}
+
+void FrameScript::SetField(lua_State* L, int32_t idx, const char* k)
+{
+    // TODO_TBC: Find lua_setfield address
+    // WotLK 3.3.5 address was: 0x84E680
+    // How to find: Search for lua_setfield calls near frame method registration
+    reinterpret_cast<void(__cdecl*)(lua_State*, int32_t, const char*)>(0x000000 /* TODO_TBC */)(L, idx, k);
+}
+
+void FrameScript::PushCFunction(lua_State* L, int32_t (*fn)(lua_State*))
+{
+    // TODO_TBC: Find lua_pushcclosure address (with nup=0 for plain C functions)
+    // WotLK 3.3.5 address was: 0x84E460
+    // How to find: Search for lua_pushcclosure calls in FrameScript registration
+    reinterpret_cast<void(__cdecl*)(lua_State*, int32_t(*)(lua_State*), int32_t)>(0x000000 /* TODO_TBC */)(L, fn, 0);
+}
+
+int32_t FrameScript::LuaType(lua_State* L, int32_t idx)
+{
+    // TODO_TBC: Find lua_type address
+    // WotLK 3.3.5 address was: 0x84DEC0
+    // How to find: Search for the function that returns an integer type code (0-8)
+    return reinterpret_cast<int32_t(__cdecl*)(lua_State*, int32_t)>(0x000000 /* TODO_TBC */)(L, idx);
+}
+
+void FrameScript::GetMetaTable(lua_State* L, const char* tname)
+{
+    // Equivalent to luaL_getmetatable(L, tname):
+    //   lua_getfield(L, LUA_REGISTRYINDEX, tname)
+    // LUA_REGISTRYINDEX is -10000 in the standard Lua 5.1 build embedded
+    // in TBC 2.4.3. Update this value if the WoW client uses a modified Lua.
+    // TODO_TBC: Once lua_getfield address is filled in, this will work automatically.
+    GetField(L, -10000 /* LUA_REGISTRYINDEX */, tname);
+}

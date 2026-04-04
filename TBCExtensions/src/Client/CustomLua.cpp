@@ -17,6 +17,7 @@
 #include <Client/CustomLua.hpp>
 #include <Client/CVar.hpp>
 #include <Client/DBClient.hpp>
+#include <Client/FrameAPI.hpp>
 #include <Client/FrameScript.hpp>
 #include <Client/SpellParser.hpp>
 #include <Client/SStr.hpp>
@@ -56,7 +57,15 @@ int32_t CustomLua::LoadScriptFunctionsCustom()
         FrameScript::RegisterFunction(name, ptr);
     }
 
-    return FrameScript::LoadFunctions();
+    int32_t result = FrameScript::LoadFunctions();
+
+    // Inject backported Frame/UI metatable methods after WoW has
+    // registered all native frame types via LoadFunctions().
+    // TODO_TBC: Ensure FrameScript::GetState() address is filled in
+    //           before this call will take effect.
+    FrameAPI::Initialize();
+
+    return result;
 }
 
 void CustomLua::AddToFunctionMap(const char* name, void* ptr)
