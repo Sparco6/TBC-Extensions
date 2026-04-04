@@ -14,9 +14,8 @@ bool SFile::OpenFileEx(HANDLE handle, const char* filename, uint32_t flags, HAND
 
 bool SFile::ReadFile(HANDLE handle, void* data, uint32_t bytesToRead, uint32_t* bytesRead, uint32_t* overlap, uint32_t unk)
 {
-    // TODO_TBC: Find SFile::ReadFile address
-    // WotLK 3.3.5 address was: 0x422530
-    return reinterpret_cast<bool (__stdcall*)(HANDLE, void*, uint32_t, uint32_t*, uint32_t*, uint32_t)>(0x000000 /* TODO_TBC */)(handle, data, bytesToRead, bytesRead, overlap, unk);
+    // Found in func.sym: SFile__ReadFile = 0x0067FF90
+    return reinterpret_cast<bool (__stdcall*)(HANDLE, void*, uint32_t, uint32_t*, uint32_t*, uint32_t)>(0x0067FF90)(handle, data, bytesToRead, bytesRead, overlap, unk);
 }
 
 void SFile::CloseFile(HANDLE handle)

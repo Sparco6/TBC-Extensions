@@ -18,8 +18,6 @@ int32_t DBClient::GetLocalizedRow(void* thisDBC, uint32_t rowIndex, void* row)
 
 void* DBClient::GetRow(void* vtable2, uint32_t rowIndex)
 {
-    // TODO_TBC: Find GetRow address
-    // WotLK 3.3.5 address was: 0x65C290
-    // How to find: Look for DBC row read function in item/creature lookup code
-    return reinterpret_cast<void* (__thiscall*)(void*, uint32_t)>(0x000000 /* TODO_TBC */)(vtable2, rowIndex);
+    // Found in func.sym: WowClientDB__GetRow = 0x004047C0
+    return reinterpret_cast<void* (__thiscall*)(void*, uint32_t)>(0x004047C0)(vtable2, rowIndex);
 }

@@ -86,7 +86,6 @@ void CDataStore::Release(CDataStore* thisPacket)
 
 bool CDataStore::IsRead(CDataStore* thisPacket)
 {
-    // TODO_TBC: Find CDataStore::IsRead address
-    // WotLK 3.3.5 address was: 0x4010D0
-    return reinterpret_cast<bool (__thiscall*)(CDataStore*)>(0x000000 /* TODO_TBC */)(thisPacket);
+    // Found in func.sym: CDataStore__IsRead = 0x00425BB0
+    return reinterpret_cast<bool (__thiscall*)(CDataStore*)>(0x00425BB0)(thisPacket);
 }

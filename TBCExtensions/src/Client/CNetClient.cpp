@@ -9,16 +9,14 @@
 
 int32_t CNetClient::ProcessMessage(void* thisMessage, uint32_t a2, CDataStore* dataStore, uint32_t a4)
 {
-    // TODO_TBC: Find NetClient::ProcessMessage address
-    // WotLK 3.3.5 address was: 0x631FE0
-    return reinterpret_cast<int32_t (__thiscall*)(void*, uint32_t, CDataStore*, uint32_t)>(0x000000 /* TODO_TBC */)(thisMessage, a2, dataStore, a4);
+    // Found in func.sym: NetClient__ProcessMessage = 0x0055F440
+    return reinterpret_cast<int32_t (__thiscall*)(void*, uint32_t, CDataStore*, uint32_t)>(0x0055F440)(thisMessage, a2, dataStore, a4);
 }
 
 void CNetClient::SetMessageHandler(void* thisMessage, uint32_t opcode, void* handler, void* param)
 {
-    // TODO_TBC: Find NetClient::SetMessageHandler address
-    // WotLK 3.3.5 address was: 0x631FA0
-    reinterpret_cast<void (__thiscall*)(void*, uint32_t, void*, void*)>(0x000000 /* TODO_TBC */)(thisMessage, opcode, handler, param);
+    // Found in func.sym: NetClient__SetMessageHandler = 0x0055F400
+    reinterpret_cast<void (__thiscall*)(void*, uint32_t, void*, void*)>(0x0055F400)(thisMessage, opcode, handler, param);
 }
 
 void CNetClient::Packet_MSG_SET_ACTION_BUTTON(uint32_t slotID, bool p1, bool p2)
