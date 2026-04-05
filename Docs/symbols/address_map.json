@@ -1,0 +1,1195 @@
+{
+  "CFormula__GetVariableValue": {
+    "candidates": [
+      {
+        "address": "0x00578290",
+        "confidence": 38,
+        "method": "proximity_to_wotlk(0x5782D0):wow_tbc.sym",
+        "name": "FUN_00578290",
+        "notes": "distance=0x40"
+      },
+      {
+        "address": "0x00578190",
+        "confidence": 30,
+        "method": "proximity_to_wotlk(0x5782D0):wow_tbc.sym",
+        "name": "FUN_00578190",
+        "notes": "distance=0x140"
+      },
+      {
+        "address": "0x00578090",
+        "confidence": 22,
+        "method": "proximity_to_wotlk(0x5782D0):wow_tbc.sym",
+        "name": "FUN_00578090",
+        "notes": "distance=0x240"
+      },
+      {
+        "address": "0x00577F90",
+        "confidence": 14,
+        "method": "proximity_to_wotlk(0x5782D0):wow_tbc.sym",
+        "name": "FUN_00577f90",
+        "notes": "distance=0x340"
+      },
+      {
+        "address": "0x00577E90",
+        "confidence": 6,
+        "method": "proximity_to_wotlk(0x5782D0):wow_tbc.sym",
+        "name": "FUN_00577e90",
+        "notes": "distance=0x440"
+      }
+    ],
+    "confidence": 38,
+    "description": "Returns a formula variable value (used in spell descriptions).",
+    "method": "proximity_to_wotlk(0x5782D0):wow_tbc.sym",
+    "priority": "MEDIUM",
+    "tbc_address": "TODO_TBC",
+    "verification_status": "pending",
+    "wotlk_address": "0x5782D0"
+  },
+  "CGChat__AddChatMessage": {
+    "candidates": [
+      {
+        "address": "0x00509AC0",
+        "confidence": 16,
+        "method": "proximity_to_wotlk(0x509DD0):wow_tbc.sym",
+        "name": "FUN_00509ac0",
+        "notes": "distance=0x310"
+      },
+      {
+        "address": "0x00509AA0",
+        "confidence": 15,
+        "method": "proximity_to_wotlk(0x509DD0):wow_tbc.sym",
+        "name": "FUN_00509aa0",
+        "notes": "distance=0x330"
+      },
+      {
+        "address": "0x00509A70",
+        "confidence": 13,
+        "method": "proximity_to_wotlk(0x509DD0):wow_tbc.sym",
+        "name": "FUN_00509a70",
+        "notes": "distance=0x360"
+      },
+      {
+        "address": "0x00509A50",
+        "confidence": 12,
+        "method": "proximity_to_wotlk(0x509DD0):wow_tbc.sym",
+        "name": "FUN_00509a50",
+        "notes": "distance=0x380"
+      },
+      {
+        "address": "0x00509920",
+        "confidence": 5,
+        "method": "proximity_to_wotlk(0x509DD0):wow_tbc.sym",
+        "name": "FUN_00509920",
+        "notes": "distance=0x4B0"
+      }
+    ],
+    "confidence": 16,
+    "description": "Adds a message to the in-game chat frame.",
+    "method": "proximity_to_wotlk(0x509DD0):wow_tbc.sym",
+    "priority": "MEDIUM",
+    "tbc_address": "TODO_TBC",
+    "verification_status": "pending",
+    "wotlk_address": "0x509DD0"
+  },
+  "CGPetInfo__GetPet": {
+    "candidates": [
+      {
+        "address": "0x004E3960",
+        "confidence": 75,
+        "method": "substring:func.sym",
+        "name": "Script_GetPetActionCooldown",
+        "notes": ""
+      },
+      {
+        "address": "0x004E4D90",
+        "confidence": 75,
+        "method": "substring:func.sym",
+        "name": "Script_GetPetActionInfo",
+        "notes": ""
+      },
+      {
+        "address": "0x0050FF30",
+        "confidence": 75,
+        "method": "substring:func.sym",
+        "name": "Script_GetPetitionNameInfo",
+        "notes": ""
+      }
+    ],
+    "confidence": 75,
+    "description": "Returns the GUID of the pet at a given index.",
+    "method": "substring:func.sym",
+    "priority": "MEDIUM",
+    "tbc_address": "TODO_TBC",
+    "verification_status": "pending",
+    "wotlk_address": "unknown"
+  },
+  "CGPlayer__IsDeadOrGhost": {
+    "candidates": [
+      {
+        "address": "0x005449F0",
+        "confidence": 75,
+        "method": "substring:func.sym",
+        "name": "Script_UnitIsDeadOrGhost",
+        "notes": ""
+      }
+    ],
+    "confidence": 75,
+    "description": "Returns true if the local player is dead or a ghost.",
+    "method": "substring:func.sym",
+    "priority": "MEDIUM",
+    "tbc_address": "TODO_TBC",
+    "verification_status": "pending",
+    "wotlk_address": "unknown"
+  },
+  "CGUnit__GetShapeshiftFormID": {
+    "candidates": [],
+    "confidence": 0,
+    "description": "Returns the active shapeshift form ID for a unit.",
+    "method": "none",
+    "priority": "MEDIUM",
+    "tbc_address": "TODO_TBC",
+    "verification_status": "pending",
+    "wotlk_address": "unknown"
+  },
+  "CVar__Set": {
+    "candidates": [
+      {
+        "address": "0x0076673E",
+        "confidence": 24,
+        "method": "proximity_to_wotlk(0x766940):wow_tbc.sym",
+        "name": "FUN_0076673e",
+        "notes": "distance=0x202"
+      },
+      {
+        "address": "0x00766720",
+        "confidence": 23,
+        "method": "proximity_to_wotlk(0x766940):wow_tbc.sym",
+        "name": "FUN_00766720",
+        "notes": "distance=0x220"
+      },
+      {
+        "address": "0x007665DB",
+        "confidence": 13,
+        "method": "proximity_to_wotlk(0x766940):wow_tbc.sym",
+        "name": "FUN_007665db",
+        "notes": "distance=0x365"
+      },
+      {
+        "address": "0x00766577",
+        "confidence": 10,
+        "method": "proximity_to_wotlk(0x766940):wow_tbc.sym",
+        "name": "__d_inttype",
+        "notes": "distance=0x3C9"
+      },
+      {
+        "address": "0x007664CE",
+        "confidence": 5,
+        "method": "proximity_to_wotlk(0x766940):wow_tbc.sym",
+        "name": "FUN_007664ce",
+        "notes": "distance=0x472"
+      }
+    ],
+    "confidence": 24,
+    "description": "Sets a CVar value. Used extensively by extension code.",
+    "method": "proximity_to_wotlk(0x766940):wow_tbc.sym",
+    "priority": "CRITICAL",
+    "tbc_address": "TODO_TBC",
+    "verification_status": "pending",
+    "wotlk_address": "0x766940"
+  },
+  "CWorld__LoadMap": {
+    "candidates": [],
+    "confidence": 0,
+    "description": "Loads a game map by directory/position/mapID.",
+    "method": "none",
+    "priority": "LOW",
+    "tbc_address": "TODO_TBC",
+    "verification_status": "pending",
+    "wotlk_address": "unknown"
+  },
+  "CWorld__Pos3Dto2D": {
+    "candidates": [],
+    "confidence": 0,
+    "description": "Projects a 3-D world position onto the 2-D minimap.",
+    "method": "none",
+    "priority": "LOW",
+    "tbc_address": "TODO_TBC",
+    "verification_status": "pending",
+    "wotlk_address": "unknown"
+  },
+  "CWorld__UnloadMap": {
+    "candidates": [],
+    "confidence": 0,
+    "description": "Unloads the current game map.",
+    "method": "none",
+    "priority": "LOW",
+    "tbc_address": "TODO_TBC",
+    "verification_status": "pending",
+    "wotlk_address": "unknown"
+  },
+  "DBClient__GetGameTableValue": {
+    "candidates": [
+      {
+        "address": "0x007F69E7",
+        "confidence": 38,
+        "method": "proximity_to_wotlk(0x7F6990):wow_tbc.sym",
+        "name": "FUN_007f69e7",
+        "notes": "distance=0x57"
+      },
+      {
+        "address": "0x007F6867",
+        "confidence": 31,
+        "method": "proximity_to_wotlk(0x7F6990):wow_tbc.sym",
+        "name": "FUN_007f6867",
+        "notes": "distance=0x129"
+      },
+      {
+        "address": "0x007F66E4",
+        "confidence": 19,
+        "method": "proximity_to_wotlk(0x7F6990):wow_tbc.sym",
+        "name": "FUN_007f66e4",
+        "notes": "distance=0x2AC"
+      },
+      {
+        "address": "0x007F6613",
+        "confidence": 13,
+        "method": "proximity_to_wotlk(0x7F6990):wow_tbc.sym",
+        "name": "FUN_007f6613",
+        "notes": "distance=0x37D"
+      },
+      {
+        "address": "0x007F6503",
+        "confidence": 5,
+        "method": "proximity_to_wotlk(0x7F6990):wow_tbc.sym",
+        "name": "FUN_007f6503",
+        "notes": "distance=0x48D"
+      }
+    ],
+    "confidence": 38,
+    "description": "Returns a value from a game table DBC.",
+    "method": "proximity_to_wotlk(0x7F6990):wow_tbc.sym",
+    "priority": "MEDIUM",
+    "tbc_address": "TODO_TBC",
+    "verification_status": "pending",
+    "wotlk_address": "0x7F6990"
+  },
+  "DBClient__GetLocalizedRow": {
+    "candidates": [
+      {
+        "address": "0x004CF950",
+        "confidence": 10,
+        "method": "proximity_to_wotlk(0x4CFD20):wow_tbc.sym",
+        "name": "FUN_004cf950",
+        "notes": "distance=0x3D0"
+      },
+      {
+        "address": "0x004CF930",
+        "confidence": 9,
+        "method": "proximity_to_wotlk(0x4CFD20):wow_tbc.sym",
+        "name": "FUN_004cf930",
+        "notes": "distance=0x3F0"
+      },
+      {
+        "address": "0x004CF830",
+        "confidence": 5,
+        "method": "proximity_to_wotlk(0x4CFD20):wow_tbc.sym",
+        "name": "FUN_004cf830",
+        "notes": "distance=0x4F0"
+      },
+      {
+        "address": "0x004CF890",
+        "confidence": 5,
+        "method": "proximity_to_wotlk(0x4CFD20):wow_tbc.sym",
+        "name": "FUN_004cf890",
+        "notes": "distance=0x490"
+      },
+      {
+        "address": "0x004CF8C0",
+        "confidence": 5,
+        "method": "proximity_to_wotlk(0x4CFD20):wow_tbc.sym",
+        "name": "FUN_004cf8c0",
+        "notes": "distance=0x460"
+      }
+    ],
+    "confidence": 10,
+    "description": "Returns a localised DBC row.",
+    "method": "proximity_to_wotlk(0x4CFD20):wow_tbc.sym",
+    "priority": "MEDIUM",
+    "tbc_address": "TODO_TBC",
+    "verification_status": "pending",
+    "wotlk_address": "0x4CFD20"
+  },
+  "DNInfo__AddZoneLight": {
+    "candidates": [],
+    "confidence": 0,
+    "description": "Adds a zone light entry to the day/night info struct.",
+    "method": "none",
+    "priority": "LOW",
+    "tbc_address": "TODO_TBC",
+    "verification_status": "pending",
+    "wotlk_address": "unknown"
+  },
+  "DNInfo__GetDNInfoPtr": {
+    "candidates": [],
+    "confidence": 0,
+    "description": "Returns a pointer to the global DNInfo structure.",
+    "method": "none",
+    "priority": "LOW",
+    "tbc_address": "TODO_TBC",
+    "verification_status": "pending",
+    "wotlk_address": "unknown"
+  },
+  "FrameScript__GetParam": {
+    "candidates": [
+      {
+        "address": "0x00815370",
+        "confidence": 28,
+        "method": "proximity_to_wotlk(0x815500):wow_tbc.sym",
+        "name": "FUN_00815370",
+        "notes": "distance=0x190"
+      },
+      {
+        "address": "0x00815227",
+        "confidence": 18,
+        "method": "proximity_to_wotlk(0x815500):wow_tbc.sym",
+        "name": "FUN_00815227",
+        "notes": "distance=0x2D9"
+      },
+      {
+        "address": "0x0081586C",
+        "confidence": 13,
+        "method": "proximity_to_wotlk(0x815500):wow_tbc.sym",
+        "name": "FUN_0081586c",
+        "notes": "distance=0x36C"
+      },
+      {
+        "address": "0x00815149",
+        "confidence": 11,
+        "method": "proximity_to_wotlk(0x815500):wow_tbc.sym",
+        "name": "FUN_00815149",
+        "notes": "distance=0x3B7"
+      },
+      {
+        "address": "0x0081507C",
+        "confidence": 5,
+        "method": "proximity_to_wotlk(0x815500):wow_tbc.sym",
+        "name": "FUN_0081507c",
+        "notes": "distance=0x484"
+      }
+    ],
+    "confidence": 28,
+    "description": "WoW wrapper: pops a parameter with optional boolean coercion.",
+    "method": "proximity_to_wotlk(0x815500):wow_tbc.sym",
+    "priority": "HIGH",
+    "tbc_address": "TODO_TBC",
+    "verification_status": "pending",
+    "wotlk_address": "0x815500"
+  },
+  "FrameScript__GetState": {
+    "candidates": [
+      {
+        "address": "0x008846C0",
+        "confidence": 5,
+        "method": "proximity_to_wotlk(0x00884BAC):wow_tbc.sym",
+        "name": "FUN_008846c0",
+        "notes": "distance=0x4EC"
+      },
+      {
+        "address": "0x008846E0",
+        "confidence": 5,
+        "method": "proximity_to_wotlk(0x00884BAC):wow_tbc.sym",
+        "name": "FUN_008846e0",
+        "notes": "distance=0x4CC"
+      },
+      {
+        "address": "0x00884700",
+        "confidence": 5,
+        "method": "proximity_to_wotlk(0x00884BAC):wow_tbc.sym",
+        "name": "FUN_00884700",
+        "notes": "distance=0x4AC"
+      },
+      {
+        "address": "0x00884720",
+        "confidence": 5,
+        "method": "proximity_to_wotlk(0x00884BAC):wow_tbc.sym",
+        "name": "FUN_00884720",
+        "notes": "distance=0x48C"
+      },
+      {
+        "address": "0x00884740",
+        "confidence": 5,
+        "method": "proximity_to_wotlk(0x00884BAC):wow_tbc.sym",
+        "name": "FUN_00884740",
+        "notes": "distance=0x46C"
+      }
+    ],
+    "confidence": 5,
+    "description": "Returns the global lua_State* pointer.",
+    "method": "proximity_to_wotlk(0x00884BAC):wow_tbc.sym",
+    "priority": "CRITICAL",
+    "tbc_address": "TODO_TBC",
+    "verification_status": "pending",
+    "wotlk_address": "0x00884BAC"
+  },
+  "FrameScript__GetText": {
+    "candidates": [
+      {
+        "address": "0x00446A60",
+        "confidence": 75,
+        "method": "substring:func.sym",
+        "name": "Script_FontString_GetTextColor",
+        "notes": ""
+      },
+      {
+        "address": "0x007A6580",
+        "confidence": 75,
+        "method": "substring:func.sym",
+        "name": "Script_ScrollingMessageFrame_GetTextColor",
+        "notes": ""
+      },
+      {
+        "address": "0x007A78D0",
+        "confidence": 75,
+        "method": "substring:func.sym",
+        "name": "Script_MessageFrame_GetTextColor",
+        "notes": ""
+      },
+      {
+        "address": "0x007A8720",
+        "confidence": 75,
+        "method": "substring:func.sym",
+        "name": "Script_ScrollingMessageFrame_GetTextColor2",
+        "notes": ""
+      },
+      {
+        "address": "0x007A9140",
+        "confidence": 75,
+        "method": "substring:func.sym",
+        "name": "Script_EditBox_GetTextColor",
+        "notes": ""
+      }
+    ],
+    "confidence": 75,
+    "description": "WoW localization lookup by string key.",
+    "method": "substring:func.sym",
+    "priority": "HIGH",
+    "tbc_address": "TODO_TBC",
+    "verification_status": "pending",
+    "wotlk_address": "0x819D40"
+  },
+  "FrameScript__LoadFunctions": {
+    "candidates": [
+      {
+        "address": "0x004A86E0",
+        "confidence": 75,
+        "method": "substring:func.sym",
+        "name": "Script_LoadAddOn",
+        "notes": ""
+      },
+      {
+        "address": "0x004D9360",
+        "confidence": 75,
+        "method": "substring:func.sym",
+        "name": "Script_LoadBindings",
+        "notes": ""
+      },
+      {
+        "address": "0x00511F10",
+        "confidence": 26,
+        "method": "proximity_to_wotlk(0x5120E0):wow_tbc.sym",
+        "name": "FUN_00511f10",
+        "notes": "distance=0x1D0"
+      },
+      {
+        "address": "0x00511E80",
+        "confidence": 21,
+        "method": "proximity_to_wotlk(0x5120E0):wow_tbc.sym",
+        "name": "FUN_00511e80",
+        "notes": "distance=0x260"
+      },
+      {
+        "address": "0x00511E30",
+        "confidence": 19,
+        "method": "proximity_to_wotlk(0x5120E0):wow_tbc.sym",
+        "name": "FUN_00511e30",
+        "notes": "distance=0x2B0"
+      }
+    ],
+    "confidence": 75,
+    "description": "Registers all default Lua API functions at startup. Build-breaking if missing.",
+    "method": "substring:func.sym",
+    "priority": "CRITICAL",
+    "tbc_address": "TODO_TBC",
+    "verification_status": "pending",
+    "wotlk_address": "0x5120E0"
+  },
+  "FrameScript__RegisterFunction": {
+    "candidates": [
+      {
+        "address": "0x00817F72",
+        "confidence": 40,
+        "method": "proximity_to_wotlk(0x817F90):wow_tbc.sym",
+        "name": "FUN_00817f72",
+        "notes": "distance=0x1E"
+      },
+      {
+        "address": "0x00818039",
+        "confidence": 35,
+        "method": "proximity_to_wotlk(0x817F90):wow_tbc.sym",
+        "name": "FUN_00818039",
+        "notes": "distance=0xA9"
+      },
+      {
+        "address": "0x00817CC3",
+        "confidence": 18,
+        "method": "proximity_to_wotlk(0x817F90):wow_tbc.sym",
+        "name": "FUN_00817cc3",
+        "notes": "distance=0x2CD"
+      },
+      {
+        "address": "0x00817C5B",
+        "confidence": 15,
+        "method": "proximity_to_wotlk(0x817F90):wow_tbc.sym",
+        "name": "FUN_00817c5b",
+        "notes": "distance=0x335"
+      },
+      {
+        "address": "0x00817AA3",
+        "confidence": 5,
+        "method": "proximity_to_wotlk(0x817F90):wow_tbc.sym",
+        "name": "FUN_00817aa3",
+        "notes": "distance=0x4ED"
+      }
+    ],
+    "confidence": 40,
+    "description": "Maps string\u2192function pointer for Lua API. Every custom Lua function needs this.",
+    "method": "proximity_to_wotlk(0x817F90):wow_tbc.sym",
+    "priority": "CRITICAL",
+    "tbc_address": "TODO_TBC",
+    "verification_status": "pending",
+    "wotlk_address": "0x817F90"
+  },
+  "FrameScript__SignalEvent": {
+    "candidates": [
+      {
+        "address": "0x0081B0FF",
+        "confidence": 7,
+        "method": "proximity_to_wotlk(0x81B530):wow_tbc.sym",
+        "name": "FUN_0081b0ff",
+        "notes": "distance=0x431"
+      }
+    ],
+    "confidence": 7,
+    "description": "Fires a WoW Lua event (e.g. UNIT_HEALTH).",
+    "method": "proximity_to_wotlk(0x81B530):wow_tbc.sym",
+    "priority": "HIGH",
+    "tbc_address": "TODO_TBC",
+    "verification_status": "pending",
+    "wotlk_address": "0x81B530"
+  },
+  "SErr__PrepareAppFatal": {
+    "candidates": [
+      {
+        "address": "0x00772870",
+        "confidence": 24,
+        "method": "proximity_to_wotlk(0x772A80):wow_tbc.sym",
+        "name": "FUN_00772870",
+        "notes": "distance=0x210"
+      },
+      {
+        "address": "0x00772880",
+        "confidence": 24,
+        "method": "proximity_to_wotlk(0x772A80):wow_tbc.sym",
+        "name": "FUN_00772880",
+        "notes": "distance=0x200"
+      },
+      {
+        "address": "0x00772710",
+        "confidence": 13,
+        "method": "proximity_to_wotlk(0x772A80):wow_tbc.sym",
+        "name": "FUN_00772710",
+        "notes": "distance=0x370"
+      },
+      {
+        "address": "0x00772700",
+        "confidence": 12,
+        "method": "proximity_to_wotlk(0x772A80):wow_tbc.sym",
+        "name": "FUN_00772700",
+        "notes": "distance=0x380"
+      },
+      {
+        "address": "0x00772580",
+        "confidence": 5,
+        "method": "proximity_to_wotlk(0x772A80):wow_tbc.sym",
+        "name": "FUN_00772580",
+        "notes": "distance=0x500"
+      }
+    ],
+    "confidence": 24,
+    "description": "Fatal error handler. Build-breaking if wrong address.",
+    "method": "proximity_to_wotlk(0x772A80):wow_tbc.sym",
+    "priority": "CRITICAL",
+    "tbc_address": "TODO_TBC",
+    "verification_status": "pending",
+    "wotlk_address": "0x772A80"
+  },
+  "SFile__CloseFile": {
+    "candidates": [
+      {
+        "address": "0x0065E1B0",
+        "confidence": 75,
+        "method": "substring:func.sym",
+        "name": "Filestack__CloseFile",
+        "notes": ""
+      },
+      {
+        "address": "0x00422940",
+        "confidence": 39,
+        "method": "proximity_to_wotlk(0x422910):wow_tbc.sym",
+        "name": "FUN_00422940",
+        "notes": "distance=0x30"
+      },
+      {
+        "address": "0x00422880",
+        "confidence": 36,
+        "method": "proximity_to_wotlk(0x422910):wow_tbc.sym",
+        "name": "FUN_00422880",
+        "notes": "distance=0x90"
+      },
+      {
+        "address": "0x00422A20",
+        "confidence": 32,
+        "method": "proximity_to_wotlk(0x422910):wow_tbc.sym",
+        "name": "FUN_00422a20",
+        "notes": "distance=0x110"
+      },
+      {
+        "address": "0x00422AD0",
+        "confidence": 26,
+        "method": "proximity_to_wotlk(0x422910):wow_tbc.sym",
+        "name": "FUN_00422ad0",
+        "notes": "distance=0x1C0"
+      }
+    ],
+    "confidence": 75,
+    "description": "Storm file close.",
+    "method": "substring:func.sym",
+    "priority": "MEDIUM",
+    "tbc_address": "TODO_TBC",
+    "verification_status": "pending",
+    "wotlk_address": "0x422910"
+  },
+  "SStr__Append": {
+    "candidates": [
+      {
+        "address": "0x0076EE30",
+        "confidence": 30,
+        "method": "proximity_to_wotlk(0x76EF70):wow_tbc.sym",
+        "name": "FUN_0076ee30",
+        "notes": "distance=0x140"
+      },
+      {
+        "address": "0x0076ED40",
+        "confidence": 23,
+        "method": "proximity_to_wotlk(0x76EF70):wow_tbc.sym",
+        "name": "FUN_0076ed40",
+        "notes": "distance=0x230"
+      },
+      {
+        "address": "0x0076ED30",
+        "confidence": 22,
+        "method": "proximity_to_wotlk(0x76EF70):wow_tbc.sym",
+        "name": "FUN_0076ed30",
+        "notes": "distance=0x240"
+      },
+      {
+        "address": "0x0076ECC0",
+        "confidence": 19,
+        "method": "proximity_to_wotlk(0x76EF70):wow_tbc.sym",
+        "name": "FUN_0076ecc0",
+        "notes": "distance=0x2B0"
+      },
+      {
+        "address": "0x0076ECB0",
+        "confidence": 18,
+        "method": "proximity_to_wotlk(0x76EF70):wow_tbc.sym",
+        "name": "FUN_0076ecb0",
+        "notes": "distance=0x2C0"
+      }
+    ],
+    "confidence": 30,
+    "description": "Storm string append.",
+    "method": "proximity_to_wotlk(0x76EF70):wow_tbc.sym",
+    "priority": "MEDIUM",
+    "tbc_address": "TODO_TBC",
+    "verification_status": "pending",
+    "wotlk_address": "0x76EF70"
+  },
+  "SStr__Copy": {
+    "candidates": [
+      {
+        "address": "0x0076ED30",
+        "confidence": 40,
+        "method": "proximity_to_wotlk(0x76ED20):wow_tbc.sym",
+        "name": "FUN_0076ed30",
+        "notes": "distance=0x10"
+      },
+      {
+        "address": "0x0076ED40",
+        "confidence": 39,
+        "method": "proximity_to_wotlk(0x76ED20):wow_tbc.sym",
+        "name": "FUN_0076ed40",
+        "notes": "distance=0x20"
+      },
+      {
+        "address": "0x0076ECB0",
+        "confidence": 37,
+        "method": "proximity_to_wotlk(0x76ED20):wow_tbc.sym",
+        "name": "FUN_0076ecb0",
+        "notes": "distance=0x70"
+      },
+      {
+        "address": "0x0076ECC0",
+        "confidence": 37,
+        "method": "proximity_to_wotlk(0x76ED20):wow_tbc.sym",
+        "name": "FUN_0076ecc0",
+        "notes": "distance=0x60"
+      },
+      {
+        "address": "0x0076EE30",
+        "confidence": 32,
+        "method": "proximity_to_wotlk(0x76ED20):wow_tbc.sym",
+        "name": "FUN_0076ee30",
+        "notes": "distance=0x110"
+      }
+    ],
+    "confidence": 40,
+    "description": "Storm string copy.",
+    "method": "proximity_to_wotlk(0x76ED20):wow_tbc.sym",
+    "priority": "MEDIUM",
+    "tbc_address": "TODO_TBC",
+    "verification_status": "pending",
+    "wotlk_address": "0x76ED20"
+  },
+  "SStr__Printf": {
+    "candidates": [
+      {
+        "address": "0x0076EE30",
+        "confidence": 22,
+        "method": "proximity_to_wotlk(0x76F070):wow_tbc.sym",
+        "name": "FUN_0076ee30",
+        "notes": "distance=0x240"
+      },
+      {
+        "address": "0x0076ED40",
+        "confidence": 15,
+        "method": "proximity_to_wotlk(0x76F070):wow_tbc.sym",
+        "name": "FUN_0076ed40",
+        "notes": "distance=0x330"
+      },
+      {
+        "address": "0x0076ED30",
+        "confidence": 14,
+        "method": "proximity_to_wotlk(0x76F070):wow_tbc.sym",
+        "name": "FUN_0076ed30",
+        "notes": "distance=0x340"
+      },
+      {
+        "address": "0x0076ECC0",
+        "confidence": 11,
+        "method": "proximity_to_wotlk(0x76F070):wow_tbc.sym",
+        "name": "FUN_0076ecc0",
+        "notes": "distance=0x3B0"
+      },
+      {
+        "address": "0x0076ECB0",
+        "confidence": 10,
+        "method": "proximity_to_wotlk(0x76F070):wow_tbc.sym",
+        "name": "FUN_0076ecb0",
+        "notes": "distance=0x3C0"
+      }
+    ],
+    "confidence": 22,
+    "description": "Storm string printf.",
+    "method": "proximity_to_wotlk(0x76F070):wow_tbc.sym",
+    "priority": "MEDIUM",
+    "tbc_address": "TODO_TBC",
+    "verification_status": "pending",
+    "wotlk_address": "0x76F070"
+  },
+  "Script_GetCameraPosition": {
+    "candidates": [],
+    "confidence": 0,
+    "description": "Lua API: GetCameraPosition() \u2192 x, y, z.",
+    "method": "none",
+    "priority": "HIGH",
+    "tbc_address": "TODO_TBC",
+    "verification_status": "pending",
+    "wotlk_address": "unknown"
+  },
+  "Script_GetItemInfo": {
+    "candidates": [
+      {
+        "address": "0x0049B6F0",
+        "confidence": 95,
+        "method": "exact_match:func.sym",
+        "name": "Script_GetItemInfo",
+        "notes": ""
+      },
+      {
+        "address": "0x004D11D0",
+        "confidence": 75,
+        "method": "substring:func.sym",
+        "name": "Script_GetTradeTargetItemInfo",
+        "notes": ""
+      }
+    ],
+    "confidence": 95,
+    "description": "Lua API: GetItemInfo(itemID|link) \u2192 name, link, \u2026",
+    "method": "exact_match:func.sym",
+    "priority": "HIGH",
+    "tbc_address": "0x0049B6F0",
+    "verification_status": "pending",
+    "wotlk_address": "unknown"
+  },
+  "Script_GetSpellInfo": {
+    "candidates": [],
+    "confidence": 0,
+    "description": "Lua API: GetSpellInfo(spellID) \u2192 name, rank, icon, \u2026",
+    "method": "none",
+    "priority": "HIGH",
+    "tbc_address": "TODO_TBC",
+    "verification_status": "pending",
+    "wotlk_address": "unknown"
+  },
+  "Script_UnitGUID": {
+    "candidates": [
+      {
+        "address": "0x00543CA0",
+        "confidence": 95,
+        "method": "exact_match:func.sym",
+        "name": "Script_UnitGUID",
+        "notes": ""
+      }
+    ],
+    "confidence": 95,
+    "description": "Lua API: UnitGUID(unit) \u2192 GUID string.",
+    "method": "exact_match:func.sym",
+    "priority": "HIGH",
+    "tbc_address": "0x00543CA0",
+    "verification_status": "pending",
+    "wotlk_address": "unknown"
+  },
+  "Script_UnitHealth": {
+    "candidates": [
+      {
+        "address": "0x00544190",
+        "confidence": 95,
+        "method": "exact_match:func.sym",
+        "name": "Script_UnitHealth",
+        "notes": ""
+      },
+      {
+        "address": "0x005442A0",
+        "confidence": 75,
+        "method": "substring:func.sym",
+        "name": "Script_UnitHealthMax",
+        "notes": ""
+      },
+      {
+        "address": "0x00548090",
+        "confidence": 75,
+        "method": "substring:func.sym",
+        "name": "Script_GetUnitHealthModifier",
+        "notes": ""
+      },
+      {
+        "address": "0x00548230",
+        "confidence": 75,
+        "method": "substring:func.sym",
+        "name": "Script_GetUnitHealthRegenRateFromSpirit",
+        "notes": ""
+      }
+    ],
+    "confidence": 95,
+    "description": "Lua API: UnitHealth(unit) \u2192 current HP.",
+    "method": "exact_match:func.sym",
+    "priority": "HIGH",
+    "tbc_address": "0x00544190",
+    "verification_status": "pending",
+    "wotlk_address": "unknown"
+  },
+  "SpellParser__ParseText": {
+    "candidates": [],
+    "confidence": 0,
+    "description": "Parses a spell description template string.",
+    "method": "none",
+    "priority": "MEDIUM",
+    "tbc_address": "TODO_TBC",
+    "verification_status": "pending",
+    "wotlk_address": "unknown"
+  },
+  "lua_error": {
+    "candidates": [
+      {
+        "address": "0x0084F00B",
+        "confidence": 21,
+        "method": "proximity_to_wotlk(0x84F280):wow_tbc.sym",
+        "name": "FUN_0084f00b",
+        "notes": "distance=0x275"
+      },
+      {
+        "address": "0x0084EFFF",
+        "confidence": 20,
+        "method": "proximity_to_wotlk(0x84F280):wow_tbc.sym",
+        "name": "FUN_0084efff",
+        "notes": "distance=0x281"
+      },
+      {
+        "address": "0x0084EFC6",
+        "confidence": 19,
+        "method": "proximity_to_wotlk(0x84F280):wow_tbc.sym",
+        "name": "FUN_0084efc6",
+        "notes": "distance=0x2BA"
+      },
+      {
+        "address": "0x0084EEA1",
+        "confidence": 10,
+        "method": "proximity_to_wotlk(0x84F280):wow_tbc.sym",
+        "name": "FUN_0084eea1",
+        "notes": "distance=0x3DF"
+      },
+      {
+        "address": "0x0084EEBA",
+        "confidence": 10,
+        "method": "proximity_to_wotlk(0x84F280):wow_tbc.sym",
+        "name": "FUN_0084eeba",
+        "notes": "distance=0x3C6"
+      }
+    ],
+    "confidence": 21,
+    "description": "Lua C-API: raises a Lua error (FrameScript::DisplayError).",
+    "method": "proximity_to_wotlk(0x84F280):wow_tbc.sym",
+    "priority": "HIGH",
+    "tbc_address": "TODO_TBC",
+    "verification_status": "pending",
+    "wotlk_address": "0x84F280"
+  },
+  "lua_getfield": {
+    "candidates": [
+      {
+        "address": "0x0084EACD",
+        "confidence": 5,
+        "method": "proximity_to_wotlk(0x84E620):wow_tbc.sym",
+        "name": "FUN_0084eacd",
+        "notes": "distance=0x4AD"
+      },
+      {
+        "address": "0x0084EB13",
+        "confidence": 5,
+        "method": "proximity_to_wotlk(0x84E620):wow_tbc.sym",
+        "name": "FUN_0084eb13",
+        "notes": "distance=0x4F3"
+      }
+    ],
+    "confidence": 5,
+    "description": "Lua C-API: gets a field from a table on the stack.",
+    "method": "proximity_to_wotlk(0x84E620):wow_tbc.sym",
+    "priority": "HIGH",
+    "tbc_address": "TODO_TBC",
+    "verification_status": "pending",
+    "wotlk_address": "0x84E620"
+  },
+  "lua_gettop": {
+    "candidates": [
+      {
+        "address": "0x0084D86D",
+        "confidence": 13,
+        "method": "proximity_to_wotlk(0x84DBD0):wow_tbc.sym",
+        "name": "FUN_0084d86d",
+        "notes": "distance=0x363"
+      }
+    ],
+    "confidence": 13,
+    "description": "Lua C-API: returns the number of items on the stack.",
+    "method": "proximity_to_wotlk(0x84DBD0):wow_tbc.sym",
+    "priority": "HIGH",
+    "tbc_address": "TODO_TBC",
+    "verification_status": "pending",
+    "wotlk_address": "0x84DBD0"
+  },
+  "lua_isnumber": {
+    "candidates": [],
+    "confidence": 0,
+    "description": "Lua C-API: tests whether a stack value is a number.",
+    "method": "none",
+    "priority": "HIGH",
+    "tbc_address": "TODO_TBC",
+    "verification_status": "pending",
+    "wotlk_address": "0x84DF20"
+  },
+  "lua_isstring": {
+    "candidates": [],
+    "confidence": 0,
+    "description": "Lua C-API: tests whether a stack value is a string.",
+    "method": "none",
+    "priority": "HIGH",
+    "tbc_address": "TODO_TBC",
+    "verification_status": "pending",
+    "wotlk_address": "0x84DF60"
+  },
+  "lua_pushboolean": {
+    "candidates": [],
+    "confidence": 0,
+    "description": "Lua C-API: pushes a boolean onto the stack.",
+    "method": "none",
+    "priority": "HIGH",
+    "tbc_address": "TODO_TBC",
+    "verification_status": "pending",
+    "wotlk_address": "0x84E4D0"
+  },
+  "lua_pushcclosure": {
+    "candidates": [],
+    "confidence": 0,
+    "description": "Lua C-API: pushes a C closure (function) onto the stack.",
+    "method": "none",
+    "priority": "HIGH",
+    "tbc_address": "TODO_TBC",
+    "verification_status": "pending",
+    "wotlk_address": "0x84E460"
+  },
+  "lua_pushnil": {
+    "candidates": [],
+    "confidence": 0,
+    "description": "Lua C-API: pushes nil onto the stack.",
+    "method": "none",
+    "priority": "HIGH",
+    "tbc_address": "TODO_TBC",
+    "verification_status": "pending",
+    "wotlk_address": "0x84E280"
+  },
+  "lua_pushnumber": {
+    "candidates": [],
+    "confidence": 0,
+    "description": "Lua C-API: pushes a double onto the stack.",
+    "method": "none",
+    "priority": "HIGH",
+    "tbc_address": "TODO_TBC",
+    "verification_status": "pending",
+    "wotlk_address": "0x84E2A0"
+  },
+  "lua_pushstring": {
+    "candidates": [],
+    "confidence": 0,
+    "description": "Lua C-API: pushes a C string onto the stack.",
+    "method": "none",
+    "priority": "HIGH",
+    "tbc_address": "TODO_TBC",
+    "verification_status": "pending",
+    "wotlk_address": "0x84E350"
+  },
+  "lua_setfield": {
+    "candidates": [
+      {
+        "address": "0x0084EACD",
+        "confidence": 6,
+        "method": "proximity_to_wotlk(0x84E680):wow_tbc.sym",
+        "name": "FUN_0084eacd",
+        "notes": "distance=0x44D"
+      },
+      {
+        "address": "0x0084EB13",
+        "confidence": 5,
+        "method": "proximity_to_wotlk(0x84E680):wow_tbc.sym",
+        "name": "FUN_0084eb13",
+        "notes": "distance=0x493"
+      },
+      {
+        "address": "0x0084EB55",
+        "confidence": 5,
+        "method": "proximity_to_wotlk(0x84E680):wow_tbc.sym",
+        "name": "FUN_0084eb55",
+        "notes": "distance=0x4D5"
+      },
+      {
+        "address": "0x0084EB5F",
+        "confidence": 5,
+        "method": "proximity_to_wotlk(0x84E680):wow_tbc.sym",
+        "name": "FUN_0084eb5f",
+        "notes": "distance=0x4DF"
+      },
+      {
+        "address": "0x0084EB70",
+        "confidence": 5,
+        "method": "proximity_to_wotlk(0x84E680):wow_tbc.sym",
+        "name": "FUN_0084eb70",
+        "notes": "distance=0x4F0"
+      }
+    ],
+    "confidence": 6,
+    "description": "Lua C-API: sets a field in a table on the stack.",
+    "method": "proximity_to_wotlk(0x84E680):wow_tbc.sym",
+    "priority": "HIGH",
+    "tbc_address": "TODO_TBC",
+    "verification_status": "pending",
+    "wotlk_address": "0x84E680"
+  },
+  "lua_settop": {
+    "candidates": [
+      {
+        "address": "0x0084D86D",
+        "confidence": 12,
+        "method": "proximity_to_wotlk(0x84DBF0):wow_tbc.sym",
+        "name": "FUN_0084d86d",
+        "notes": "distance=0x383"
+      }
+    ],
+    "confidence": 12,
+    "description": "Lua C-API: sets the stack top (removes excess values).",
+    "method": "proximity_to_wotlk(0x84DBF0):wow_tbc.sym",
+    "priority": "HIGH",
+    "tbc_address": "TODO_TBC",
+    "verification_status": "pending",
+    "wotlk_address": "0x84DBF0"
+  },
+  "lua_toboolean": {
+    "candidates": [],
+    "confidence": 0,
+    "description": "Lua C-API: converts stack value to boolean.",
+    "method": "none",
+    "priority": "HIGH",
+    "tbc_address": "TODO_TBC",
+    "verification_status": "pending",
+    "wotlk_address": "0x84E0B0"
+  },
+  "lua_tolstring": {
+    "candidates": [],
+    "confidence": 0,
+    "description": "Lua C-API: converts stack value to C string.",
+    "method": "none",
+    "priority": "HIGH",
+    "tbc_address": "TODO_TBC",
+    "verification_status": "pending",
+    "wotlk_address": "0x84E0E0"
+  },
+  "lua_tonumber": {
+    "candidates": [],
+    "confidence": 0,
+    "description": "Lua C-API: converts stack value to double.",
+    "method": "none",
+    "priority": "HIGH",
+    "tbc_address": "TODO_TBC",
+    "verification_status": "pending",
+    "wotlk_address": "0x84E030"
+  },
+  "lua_type": {
+    "candidates": [],
+    "confidence": 0,
+    "description": "Lua C-API: returns the type of a stack value.",
+    "method": "none",
+    "priority": "HIGH",
+    "tbc_address": "TODO_TBC",
+    "verification_status": "pending",
+    "wotlk_address": "0x84DEC0"
+  }
+}
