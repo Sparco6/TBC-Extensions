@@ -131,6 +131,20 @@
         "method": "substring:func.sym",
         "name": "Script_UnitIsDeadOrGhost",
         "notes": ""
+      },
+      {
+        "address": "0x00619280",
+        "confidence": 62,
+        "method": "token_overlap:func.sym",
+        "name": "CGPlayer_C__dtor",
+        "notes": ""
+      },
+      {
+        "address": "0x0061B090",
+        "confidence": 62,
+        "method": "token_overlap:func.sym",
+        "name": "CGPlayer_C__scalar_deleting_dtor",
+        "notes": ""
       }
     ],
     "confidence": 75,
@@ -154,44 +168,44 @@
   "CVar__Set": {
     "candidates": [
       {
-        "address": "0x0076673E",
-        "confidence": 24,
-        "method": "proximity_to_wotlk(0x766940):wow_tbc.sym",
-        "name": "FUN_0076673e",
-        "notes": "distance=0x202"
+        "address": "0x004472E0",
+        "confidence": 62,
+        "method": "token_overlap:func.sym",
+        "name": "__set_pgmptr",
+        "notes": ""
       },
       {
-        "address": "0x00766720",
-        "confidence": 23,
-        "method": "proximity_to_wotlk(0x766940):wow_tbc.sym",
-        "name": "FUN_00766720",
-        "notes": "distance=0x220"
+        "address": "0x00453690",
+        "confidence": 62,
+        "method": "token_overlap:func.sym",
+        "name": "___set_app_type",
+        "notes": ""
       },
       {
-        "address": "0x007665DB",
-        "confidence": 13,
-        "method": "proximity_to_wotlk(0x766940):wow_tbc.sym",
-        "name": "FUN_007665db",
-        "notes": "distance=0x365"
+        "address": "0x00453B20",
+        "confidence": 62,
+        "method": "token_overlap:func.sym",
+        "name": "__set_wpgmptr",
+        "notes": ""
       },
       {
-        "address": "0x00766577",
-        "confidence": 10,
-        "method": "proximity_to_wotlk(0x766940):wow_tbc.sym",
-        "name": "__d_inttype",
-        "notes": "distance=0x3C9"
+        "address": "0x0048FB20",
+        "confidence": 62,
+        "method": "token_overlap:func.sym",
+        "name": "PacketHandler_SMSG_MOVE_SET_CAN_FLY",
+        "notes": ""
       },
       {
-        "address": "0x007664CE",
-        "confidence": 5,
-        "method": "proximity_to_wotlk(0x766940):wow_tbc.sym",
-        "name": "FUN_007664ce",
-        "notes": "distance=0x472"
+        "address": "0x00498320",
+        "confidence": 62,
+        "method": "token_overlap:func.sym",
+        "name": "___set_stl_sync_api_mode",
+        "notes": ""
       }
     ],
-    "confidence": 24,
+    "confidence": 62,
     "description": "Sets a CVar value. Used extensively by extension code.",
-    "method": "proximity_to_wotlk(0x766940):wow_tbc.sym",
+    "method": "token_overlap:func.sym",
     "priority": "CRITICAL",
     "tbc_address": "TODO_TBC",
     "verification_status": "pending",
@@ -208,10 +222,46 @@
     "wotlk_address": "unknown"
   },
   "CWorld__Pos3Dto2D": {
-    "candidates": [],
-    "confidence": 0,
+    "candidates": [
+      {
+        "address": "0x004015D0",
+        "confidence": 72,
+        "method": "signature_hint:Functions.csv",
+        "name": "FUN_004015d0",
+        "notes": "undefined4 FUN_004015d0(undefined4 param_1\\, undefined4 param_2\\, char * param_3)"
+      },
+      {
+        "address": "0x004017D0",
+        "confidence": 72,
+        "method": "signature_hint:Functions.csv",
+        "name": "FUN_004017d0",
+        "notes": "undefined4 FUN_004017d0(undefined4 param_1\\, undefined4 param_2\\, char * param_3)"
+      },
+      {
+        "address": "0x00401D10",
+        "confidence": 72,
+        "method": "signature_hint:Functions.csv",
+        "name": "FUN_00401d10",
+        "notes": "undefined4 FUN_00401d10(undefined4 param_1\\, undefined4 param_2\\, char * param_3)"
+      },
+      {
+        "address": "0x00401D50",
+        "confidence": 72,
+        "method": "signature_hint:Functions.csv",
+        "name": "FUN_00401d50",
+        "notes": "undefined FUN_00401d50(undefined4 param_1\\, undefined4 param_2\\, char * param_3)"
+      },
+      {
+        "address": "0x00402D40",
+        "confidence": 72,
+        "method": "signature_hint:Functions.csv",
+        "name": "FUN_00402d40",
+        "notes": "undefined FUN_00402d40(undefined4 param_1\\, undefined4 param_2\\, int param_3\\, undefined * param_4)"
+      }
+    ],
+    "confidence": 72,
     "description": "Projects a 3-D world position onto the 2-D minimap.",
-    "method": "none",
+    "method": "signature_hint:Functions.csv",
     "priority": "LOW",
     "tbc_address": "TODO_TBC",
     "verification_status": "pending",
@@ -342,44 +392,44 @@
   "FrameScript__GetParam": {
     "candidates": [
       {
+        "address": "0x00707A20",
+        "confidence": 62,
+        "method": "token_overlap:func.sym",
+        "name": "TSExplicitList_FrameScript_EventObject_ctor",
+        "notes": ""
+      },
+      {
+        "address": "0x00707DA0",
+        "confidence": 62,
+        "method": "token_overlap:func.sym",
+        "name": "TSExplicitList_FrameScript_EventObject_scalar_deleting_dtor",
+        "notes": ""
+      },
+      {
+        "address": "0x00708060",
+        "confidence": 62,
+        "method": "token_overlap:func.sym",
+        "name": "FrameScript_EventObject__ctor",
+        "notes": ""
+      },
+      {
+        "address": "0x007080E0",
+        "confidence": 62,
+        "method": "token_overlap:func.sym",
+        "name": "FrameScript_EventObject__scalar_deleting_dtor",
+        "notes": ""
+      },
+      {
         "address": "0x00815370",
         "confidence": 28,
         "method": "proximity_to_wotlk(0x815500):wow_tbc.sym",
         "name": "FUN_00815370",
         "notes": "distance=0x190"
-      },
-      {
-        "address": "0x00815227",
-        "confidence": 18,
-        "method": "proximity_to_wotlk(0x815500):wow_tbc.sym",
-        "name": "FUN_00815227",
-        "notes": "distance=0x2D9"
-      },
-      {
-        "address": "0x0081586C",
-        "confidence": 13,
-        "method": "proximity_to_wotlk(0x815500):wow_tbc.sym",
-        "name": "FUN_0081586c",
-        "notes": "distance=0x36C"
-      },
-      {
-        "address": "0x00815149",
-        "confidence": 11,
-        "method": "proximity_to_wotlk(0x815500):wow_tbc.sym",
-        "name": "FUN_00815149",
-        "notes": "distance=0x3B7"
-      },
-      {
-        "address": "0x0081507C",
-        "confidence": 5,
-        "method": "proximity_to_wotlk(0x815500):wow_tbc.sym",
-        "name": "FUN_0081507c",
-        "notes": "distance=0x484"
       }
     ],
-    "confidence": 28,
+    "confidence": 62,
     "description": "WoW wrapper: pops a parameter with optional boolean coercion.",
-    "method": "proximity_to_wotlk(0x815500):wow_tbc.sym",
+    "method": "token_overlap:func.sym",
     "priority": "HIGH",
     "tbc_address": "TODO_TBC",
     "verification_status": "pending",
@@ -388,44 +438,44 @@
   "FrameScript__GetState": {
     "candidates": [
       {
-        "address": "0x008846C0",
-        "confidence": 5,
-        "method": "proximity_to_wotlk(0x00884BAC):wow_tbc.sym",
-        "name": "FUN_008846c0",
-        "notes": "distance=0x4EC"
+        "address": "0x00707A20",
+        "confidence": 62,
+        "method": "token_overlap:func.sym",
+        "name": "TSExplicitList_FrameScript_EventObject_ctor",
+        "notes": ""
       },
       {
-        "address": "0x008846E0",
-        "confidence": 5,
-        "method": "proximity_to_wotlk(0x00884BAC):wow_tbc.sym",
-        "name": "FUN_008846e0",
-        "notes": "distance=0x4CC"
+        "address": "0x00707DA0",
+        "confidence": 62,
+        "method": "token_overlap:func.sym",
+        "name": "TSExplicitList_FrameScript_EventObject_scalar_deleting_dtor",
+        "notes": ""
       },
       {
-        "address": "0x00884700",
-        "confidence": 5,
-        "method": "proximity_to_wotlk(0x00884BAC):wow_tbc.sym",
-        "name": "FUN_00884700",
-        "notes": "distance=0x4AC"
+        "address": "0x00708060",
+        "confidence": 62,
+        "method": "token_overlap:func.sym",
+        "name": "FrameScript_EventObject__ctor",
+        "notes": ""
       },
       {
-        "address": "0x00884720",
-        "confidence": 5,
-        "method": "proximity_to_wotlk(0x00884BAC):wow_tbc.sym",
-        "name": "FUN_00884720",
-        "notes": "distance=0x48C"
+        "address": "0x007080E0",
+        "confidence": 62,
+        "method": "token_overlap:func.sym",
+        "name": "FrameScript_EventObject__scalar_deleting_dtor",
+        "notes": ""
       },
       {
-        "address": "0x00884740",
-        "confidence": 5,
-        "method": "proximity_to_wotlk(0x00884BAC):wow_tbc.sym",
-        "name": "FUN_00884740",
-        "notes": "distance=0x46C"
+        "address": "0x004B7C70",
+        "confidence": 62,
+        "method": "token_overlap:func.sym",
+        "name": "PacketHandler_SMSG_WORLD_STATE_UI_TIMER_UPDATE",
+        "notes": ""
       }
     ],
-    "confidence": 5,
+    "confidence": 62,
     "description": "Returns the global lua_State* pointer.",
-    "method": "proximity_to_wotlk(0x00884BAC):wow_tbc.sym",
+    "method": "token_overlap:func.sym",
     "priority": "CRITICAL",
     "tbc_address": "TODO_TBC",
     "verification_status": "pending",
@@ -433,6 +483,20 @@
   },
   "FrameScript__GetText": {
     "candidates": [
+      {
+        "address": "0x007A9BA0",
+        "confidence": 88,
+        "method": "token_overlap:func.sym",
+        "name": "Script_EditBox_GetText",
+        "notes": ""
+      },
+      {
+        "address": "0x007AB4E0",
+        "confidence": 88,
+        "method": "token_overlap:func.sym",
+        "name": "Script_Button_GetText",
+        "notes": ""
+      },
       {
         "address": "0x00446A60",
         "confidence": 75,
@@ -453,27 +517,13 @@
         "method": "substring:func.sym",
         "name": "Script_MessageFrame_GetTextColor",
         "notes": ""
-      },
-      {
-        "address": "0x007A8720",
-        "confidence": 75,
-        "method": "substring:func.sym",
-        "name": "Script_ScrollingMessageFrame_GetTextColor2",
-        "notes": ""
-      },
-      {
-        "address": "0x007A9140",
-        "confidence": 75,
-        "method": "substring:func.sym",
-        "name": "Script_EditBox_GetTextColor",
-        "notes": ""
       }
     ],
-    "confidence": 75,
+    "confidence": 88,
     "description": "WoW localization lookup by string key.",
-    "method": "substring:func.sym",
+    "method": "token_overlap:func.sym",
     "priority": "HIGH",
-    "tbc_address": "TODO_TBC",
+    "tbc_address": "0x007A9BA0",
     "verification_status": "pending",
     "wotlk_address": "0x819D40"
   },
@@ -494,25 +544,25 @@
         "notes": ""
       },
       {
-        "address": "0x00511F10",
-        "confidence": 26,
-        "method": "proximity_to_wotlk(0x5120E0):wow_tbc.sym",
-        "name": "FUN_00511f10",
-        "notes": "distance=0x1D0"
+        "address": "0x00707A20",
+        "confidence": 62,
+        "method": "token_overlap:func.sym",
+        "name": "TSExplicitList_FrameScript_EventObject_ctor",
+        "notes": ""
       },
       {
-        "address": "0x00511E80",
-        "confidence": 21,
-        "method": "proximity_to_wotlk(0x5120E0):wow_tbc.sym",
-        "name": "FUN_00511e80",
-        "notes": "distance=0x260"
+        "address": "0x00707DA0",
+        "confidence": 62,
+        "method": "token_overlap:func.sym",
+        "name": "TSExplicitList_FrameScript_EventObject_scalar_deleting_dtor",
+        "notes": ""
       },
       {
-        "address": "0x00511E30",
-        "confidence": 19,
-        "method": "proximity_to_wotlk(0x5120E0):wow_tbc.sym",
-        "name": "FUN_00511e30",
-        "notes": "distance=0x2B0"
+        "address": "0x00708060",
+        "confidence": 62,
+        "method": "token_overlap:func.sym",
+        "name": "FrameScript_EventObject__ctor",
+        "notes": ""
       }
     ],
     "confidence": 75,
@@ -526,44 +576,44 @@
   "FrameScript__RegisterFunction": {
     "candidates": [
       {
-        "address": "0x00817F72",
-        "confidence": 40,
-        "method": "proximity_to_wotlk(0x817F90):wow_tbc.sym",
-        "name": "FUN_00817f72",
-        "notes": "distance=0x1E"
+        "address": "0x00707A20",
+        "confidence": 62,
+        "method": "token_overlap:func.sym",
+        "name": "TSExplicitList_FrameScript_EventObject_ctor",
+        "notes": ""
       },
       {
-        "address": "0x00818039",
-        "confidence": 35,
-        "method": "proximity_to_wotlk(0x817F90):wow_tbc.sym",
-        "name": "FUN_00818039",
-        "notes": "distance=0xA9"
+        "address": "0x00707DA0",
+        "confidence": 62,
+        "method": "token_overlap:func.sym",
+        "name": "TSExplicitList_FrameScript_EventObject_scalar_deleting_dtor",
+        "notes": ""
       },
       {
-        "address": "0x00817CC3",
-        "confidence": 18,
-        "method": "proximity_to_wotlk(0x817F90):wow_tbc.sym",
-        "name": "FUN_00817cc3",
-        "notes": "distance=0x2CD"
+        "address": "0x00708060",
+        "confidence": 62,
+        "method": "token_overlap:func.sym",
+        "name": "FrameScript_EventObject__ctor",
+        "notes": ""
       },
       {
-        "address": "0x00817C5B",
-        "confidence": 15,
-        "method": "proximity_to_wotlk(0x817F90):wow_tbc.sym",
-        "name": "FUN_00817c5b",
-        "notes": "distance=0x335"
+        "address": "0x007080E0",
+        "confidence": 62,
+        "method": "token_overlap:func.sym",
+        "name": "FrameScript_EventObject__scalar_deleting_dtor",
+        "notes": ""
       },
       {
-        "address": "0x00817AA3",
-        "confidence": 5,
-        "method": "proximity_to_wotlk(0x817F90):wow_tbc.sym",
-        "name": "FUN_00817aa3",
-        "notes": "distance=0x4ED"
+        "address": "0x00701900",
+        "confidence": 62,
+        "method": "token_overlap:func.sym",
+        "name": "FrameFactory__Register",
+        "notes": ""
       }
     ],
-    "confidence": 40,
+    "confidence": 62,
     "description": "Maps string\u2192function pointer for Lua API. Every custom Lua function needs this.",
-    "method": "proximity_to_wotlk(0x817F90):wow_tbc.sym",
+    "method": "token_overlap:func.sym",
     "priority": "CRITICAL",
     "tbc_address": "TODO_TBC",
     "verification_status": "pending",
@@ -572,6 +622,34 @@
   "FrameScript__SignalEvent": {
     "candidates": [
       {
+        "address": "0x00707A20",
+        "confidence": 62,
+        "method": "token_overlap:func.sym",
+        "name": "TSExplicitList_FrameScript_EventObject_ctor",
+        "notes": ""
+      },
+      {
+        "address": "0x00707DA0",
+        "confidence": 62,
+        "method": "token_overlap:func.sym",
+        "name": "TSExplicitList_FrameScript_EventObject_scalar_deleting_dtor",
+        "notes": ""
+      },
+      {
+        "address": "0x00708060",
+        "confidence": 62,
+        "method": "token_overlap:func.sym",
+        "name": "FrameScript_EventObject__ctor",
+        "notes": ""
+      },
+      {
+        "address": "0x007080E0",
+        "confidence": 62,
+        "method": "token_overlap:func.sym",
+        "name": "FrameScript_EventObject__scalar_deleting_dtor",
+        "notes": ""
+      },
+      {
         "address": "0x0081B0FF",
         "confidence": 7,
         "method": "proximity_to_wotlk(0x81B530):wow_tbc.sym",
@@ -579,9 +657,9 @@
         "notes": "distance=0x431"
       }
     ],
-    "confidence": 7,
+    "confidence": 62,
     "description": "Fires a WoW Lua event (e.g. UNIT_HEALTH).",
-    "method": "proximity_to_wotlk(0x81B530):wow_tbc.sym",
+    "method": "token_overlap:func.sym",
     "priority": "HIGH",
     "tbc_address": "TODO_TBC",
     "verification_status": "pending",
@@ -637,9 +715,30 @@
     "candidates": [
       {
         "address": "0x0065E1B0",
-        "confidence": 75,
-        "method": "substring:func.sym",
+        "confidence": 88,
+        "method": "token_overlap:func.sym",
         "name": "Filestack__CloseFile",
+        "notes": ""
+      },
+      {
+        "address": "0x0065D4E0",
+        "confidence": 62,
+        "method": "token_overlap:func.sym",
+        "name": "SFile__Free",
+        "notes": ""
+      },
+      {
+        "address": "0x006755A0",
+        "confidence": 62,
+        "method": "token_overlap:func.sym",
+        "name": "SFile__OpenFile",
+        "notes": ""
+      },
+      {
+        "address": "0x0067FF90",
+        "confidence": 62,
+        "method": "token_overlap:func.sym",
+        "name": "SFile__ReadFile",
         "notes": ""
       },
       {
@@ -648,34 +747,13 @@
         "method": "proximity_to_wotlk(0x422910):wow_tbc.sym",
         "name": "FUN_00422940",
         "notes": "distance=0x30"
-      },
-      {
-        "address": "0x00422880",
-        "confidence": 36,
-        "method": "proximity_to_wotlk(0x422910):wow_tbc.sym",
-        "name": "FUN_00422880",
-        "notes": "distance=0x90"
-      },
-      {
-        "address": "0x00422A20",
-        "confidence": 32,
-        "method": "proximity_to_wotlk(0x422910):wow_tbc.sym",
-        "name": "FUN_00422a20",
-        "notes": "distance=0x110"
-      },
-      {
-        "address": "0x00422AD0",
-        "confidence": 26,
-        "method": "proximity_to_wotlk(0x422910):wow_tbc.sym",
-        "name": "FUN_00422ad0",
-        "notes": "distance=0x1C0"
       }
     ],
-    "confidence": 75,
+    "confidence": 88,
     "description": "Storm file close.",
-    "method": "substring:func.sym",
+    "method": "token_overlap:func.sym",
     "priority": "MEDIUM",
-    "tbc_address": "TODO_TBC",
+    "tbc_address": "0x0065E1B0",
     "verification_status": "pending",
     "wotlk_address": "0x422910"
   },
@@ -728,6 +806,27 @@
   "SStr__Copy": {
     "candidates": [
       {
+        "address": "0x0041E530",
+        "confidence": 62,
+        "method": "token_overlap:func.sym",
+        "name": "REALM_INFO__copy_or_list_op",
+        "notes": ""
+      },
+      {
+        "address": "0x004F9540",
+        "confidence": 62,
+        "method": "token_overlap:func.sym",
+        "name": "AuctionItemInfo__copy_ctor",
+        "notes": ""
+      },
+      {
+        "address": "0x0041AEFE",
+        "confidence": 55,
+        "method": "token_overlap:wow_tbc.sym",
+        "name": "copy_environ",
+        "notes": ""
+      },
+      {
         "address": "0x0076ED30",
         "confidence": 40,
         "method": "proximity_to_wotlk(0x76ED20):wow_tbc.sym",
@@ -740,32 +839,11 @@
         "method": "proximity_to_wotlk(0x76ED20):wow_tbc.sym",
         "name": "FUN_0076ed40",
         "notes": "distance=0x20"
-      },
-      {
-        "address": "0x0076ECB0",
-        "confidence": 37,
-        "method": "proximity_to_wotlk(0x76ED20):wow_tbc.sym",
-        "name": "FUN_0076ecb0",
-        "notes": "distance=0x70"
-      },
-      {
-        "address": "0x0076ECC0",
-        "confidence": 37,
-        "method": "proximity_to_wotlk(0x76ED20):wow_tbc.sym",
-        "name": "FUN_0076ecc0",
-        "notes": "distance=0x60"
-      },
-      {
-        "address": "0x0076EE30",
-        "confidence": 32,
-        "method": "proximity_to_wotlk(0x76ED20):wow_tbc.sym",
-        "name": "FUN_0076ee30",
-        "notes": "distance=0x110"
       }
     ],
-    "confidence": 40,
+    "confidence": 62,
     "description": "Storm string copy.",
-    "method": "proximity_to_wotlk(0x76ED20):wow_tbc.sym",
+    "method": "token_overlap:func.sym",
     "priority": "MEDIUM",
     "tbc_address": "TODO_TBC",
     "verification_status": "pending",
@@ -818,10 +896,46 @@
     "wotlk_address": "0x76F070"
   },
   "Script_GetCameraPosition": {
-    "candidates": [],
-    "confidence": 0,
+    "candidates": [
+      {
+        "address": "0x00406CD0",
+        "confidence": 62,
+        "method": "token_overlap:func.sym",
+        "name": "Script_worldport",
+        "notes": ""
+      },
+      {
+        "address": "0x004343B0",
+        "confidence": 62,
+        "method": "token_overlap:func.sym",
+        "name": "Script_SetDrawLayer",
+        "notes": ""
+      },
+      {
+        "address": "0x004344C0",
+        "confidence": 62,
+        "method": "token_overlap:func.sym",
+        "name": "Script_SetBlendMode",
+        "notes": ""
+      },
+      {
+        "address": "0x004346E0",
+        "confidence": 62,
+        "method": "token_overlap:func.sym",
+        "name": "Script_SetGradient",
+        "notes": ""
+      },
+      {
+        "address": "0x004347C0",
+        "confidence": 62,
+        "method": "token_overlap:func.sym",
+        "name": "Script_SetGradientAlpha",
+        "notes": ""
+      }
+    ],
+    "confidence": 62,
     "description": "Lua API: GetCameraPosition() \u2192 x, y, z.",
-    "method": "none",
+    "method": "token_overlap:func.sym",
     "priority": "HIGH",
     "tbc_address": "TODO_TBC",
     "verification_status": "pending",
@@ -842,6 +956,27 @@
         "method": "substring:func.sym",
         "name": "Script_GetTradeTargetItemInfo",
         "notes": ""
+      },
+      {
+        "address": "0x00406CD0",
+        "confidence": 62,
+        "method": "token_overlap:func.sym",
+        "name": "Script_worldport",
+        "notes": ""
+      },
+      {
+        "address": "0x004343B0",
+        "confidence": 62,
+        "method": "token_overlap:func.sym",
+        "name": "Script_SetDrawLayer",
+        "notes": ""
+      },
+      {
+        "address": "0x004344C0",
+        "confidence": 62,
+        "method": "token_overlap:func.sym",
+        "name": "Script_SetBlendMode",
+        "notes": ""
       }
     ],
     "confidence": 95,
@@ -853,10 +988,46 @@
     "wotlk_address": "unknown"
   },
   "Script_GetSpellInfo": {
-    "candidates": [],
-    "confidence": 0,
+    "candidates": [
+      {
+        "address": "0x00406CD0",
+        "confidence": 62,
+        "method": "token_overlap:func.sym",
+        "name": "Script_worldport",
+        "notes": ""
+      },
+      {
+        "address": "0x004343B0",
+        "confidence": 62,
+        "method": "token_overlap:func.sym",
+        "name": "Script_SetDrawLayer",
+        "notes": ""
+      },
+      {
+        "address": "0x004344C0",
+        "confidence": 62,
+        "method": "token_overlap:func.sym",
+        "name": "Script_SetBlendMode",
+        "notes": ""
+      },
+      {
+        "address": "0x004346E0",
+        "confidence": 62,
+        "method": "token_overlap:func.sym",
+        "name": "Script_SetGradient",
+        "notes": ""
+      },
+      {
+        "address": "0x004347C0",
+        "confidence": 62,
+        "method": "token_overlap:func.sym",
+        "name": "Script_SetGradientAlpha",
+        "notes": ""
+      }
+    ],
+    "confidence": 62,
     "description": "Lua API: GetSpellInfo(spellID) \u2192 name, rank, icon, \u2026",
-    "method": "none",
+    "method": "token_overlap:func.sym",
     "priority": "HIGH",
     "tbc_address": "TODO_TBC",
     "verification_status": "pending",
@@ -869,6 +1040,34 @@
         "confidence": 95,
         "method": "exact_match:func.sym",
         "name": "Script_UnitGUID",
+        "notes": ""
+      },
+      {
+        "address": "0x00406CD0",
+        "confidence": 62,
+        "method": "token_overlap:func.sym",
+        "name": "Script_worldport",
+        "notes": ""
+      },
+      {
+        "address": "0x004343B0",
+        "confidence": 62,
+        "method": "token_overlap:func.sym",
+        "name": "Script_SetDrawLayer",
+        "notes": ""
+      },
+      {
+        "address": "0x004344C0",
+        "confidence": 62,
+        "method": "token_overlap:func.sym",
+        "name": "Script_SetBlendMode",
+        "notes": ""
+      },
+      {
+        "address": "0x004346E0",
+        "confidence": 62,
+        "method": "token_overlap:func.sym",
+        "name": "Script_SetGradient",
         "notes": ""
       }
     ],
@@ -909,6 +1108,13 @@
         "method": "substring:func.sym",
         "name": "Script_GetUnitHealthRegenRateFromSpirit",
         "notes": ""
+      },
+      {
+        "address": "0x00406CD0",
+        "confidence": 62,
+        "method": "token_overlap:func.sym",
+        "name": "Script_worldport",
+        "notes": ""
       }
     ],
     "confidence": 95,
@@ -932,44 +1138,44 @@
   "lua_error": {
     "candidates": [
       {
-        "address": "0x0084F00B",
-        "confidence": 21,
-        "method": "proximity_to_wotlk(0x84F280):wow_tbc.sym",
-        "name": "FUN_0084f00b",
-        "notes": "distance=0x275"
+        "address": "0x004809C0",
+        "confidence": 62,
+        "method": "token_overlap:func.sym",
+        "name": "?_Get_future_error_what@std@@YAPBDH@Z",
+        "notes": ""
       },
       {
-        "address": "0x0084EFFF",
-        "confidence": 20,
-        "method": "proximity_to_wotlk(0x84F280):wow_tbc.sym",
-        "name": "FUN_0084efff",
-        "notes": "distance=0x281"
+        "address": "0x005D7310",
+        "confidence": 62,
+        "method": "token_overlap:func.sym",
+        "name": "PacketHandler_SMSG_ARENA_ERROR",
+        "notes": ""
       },
       {
-        "address": "0x0084EFC6",
-        "confidence": 19,
-        "method": "proximity_to_wotlk(0x84F280):wow_tbc.sym",
-        "name": "FUN_0084efc6",
-        "notes": "distance=0x2BA"
+        "address": "0x0074FE80",
+        "confidence": 62,
+        "method": "token_overlap:func.sym",
+        "name": "?DumpThisThread@__vcasan@@YAKPAPAUEXCEPTION_SANITIZER_ERROR@1@PBG@Z",
+        "notes": ""
       },
       {
-        "address": "0x0084EEA1",
-        "confidence": 10,
-        "method": "proximity_to_wotlk(0x84F280):wow_tbc.sym",
-        "name": "FUN_0084eea1",
-        "notes": "distance=0x3DF"
+        "address": "0x0040A30D",
+        "confidence": 55,
+        "method": "token_overlap:wow_tbc.sym",
+        "name": "fast_error_exit",
+        "notes": ""
       },
       {
-        "address": "0x0084EEBA",
-        "confidence": 10,
-        "method": "proximity_to_wotlk(0x84F280):wow_tbc.sym",
-        "name": "FUN_0084eeba",
-        "notes": "distance=0x3C6"
+        "address": "0x00410920",
+        "confidence": 55,
+        "method": "token_overlap:wow_tbc.sym",
+        "name": "__set_error_mode",
+        "notes": ""
       }
     ],
-    "confidence": 21,
+    "confidence": 62,
     "description": "Lua C-API: raises a Lua error (FrameScript::DisplayError).",
-    "method": "proximity_to_wotlk(0x84F280):wow_tbc.sym",
+    "method": "token_overlap:func.sym",
     "priority": "HIGH",
     "tbc_address": "TODO_TBC",
     "verification_status": "pending",
@@ -1003,6 +1209,13 @@
   "lua_gettop": {
     "candidates": [
       {
+        "address": "0x0043FB80",
+        "confidence": 62,
+        "method": "token_overlap:func.sym",
+        "name": "Script_SimpleFont_GetTop",
+        "notes": ""
+      },
+      {
         "address": "0x0084D86D",
         "confidence": 13,
         "method": "proximity_to_wotlk(0x84DBD0):wow_tbc.sym",
@@ -1010,9 +1223,9 @@
         "notes": "distance=0x363"
       }
     ],
-    "confidence": 13,
+    "confidence": 62,
     "description": "Lua C-API: returns the number of items on the stack.",
-    "method": "proximity_to_wotlk(0x84DBD0):wow_tbc.sym",
+    "method": "token_overlap:func.sym",
     "priority": "HIGH",
     "tbc_address": "TODO_TBC",
     "verification_status": "pending",
@@ -1183,10 +1396,39 @@
     "wotlk_address": "0x84E030"
   },
   "lua_type": {
-    "candidates": [],
-    "confidence": 0,
+    "candidates": [
+      {
+        "address": "0x00453690",
+        "confidence": 62,
+        "method": "token_overlap:func.sym",
+        "name": "___set_app_type",
+        "notes": ""
+      },
+      {
+        "address": "0x0081015D",
+        "confidence": 62,
+        "method": "token_overlap:func.sym",
+        "name": "?UnregisterWinRTObject@?$Module@$00VInProcModule@Details@Platform@@@WRL@Microsoft@@UAGJPB_WPAU<unnamed-type-RO_REGISTRATION_COOKIE>@@@Z",
+        "notes": ""
+      },
+      {
+        "address": "0x0040A6DA",
+        "confidence": 55,
+        "method": "token_overlap:wow_tbc.sym",
+        "name": "~type_info",
+        "notes": ""
+      },
+      {
+        "address": "0x0040E029",
+        "confidence": 55,
+        "method": "token_overlap:wow_tbc.sym",
+        "name": "_Type_info_dtor",
+        "notes": ""
+      }
+    ],
+    "confidence": 62,
     "description": "Lua C-API: returns the type of a stack value.",
-    "method": "none",
+    "method": "token_overlap:func.sym",
     "priority": "HIGH",
     "tbc_address": "TODO_TBC",
     "verification_status": "pending",

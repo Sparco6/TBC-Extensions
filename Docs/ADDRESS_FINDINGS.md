@@ -8,9 +8,9 @@
 | Metric | Value |
 |--------|-------|
 | Total functions targeted | 46 |
-| Addresses found (≥ 85% confidence) | 3 |
-| Still missing / unconfirmed | 43 |
-| Overall progress | **6%** |
+| Addresses found (≥ 85% confidence) | 5 |
+| Still missing / unconfirmed | 41 |
+| Overall progress | **10%** |
 
 ---
 
@@ -21,6 +21,8 @@
 | `Script_UnitGUID` | `0x00543CA0` | 95% | exact_match:func.sym |
 | `Script_GetItemInfo` | `0x0049B6F0` | 95% | exact_match:func.sym |
 | `Script_UnitHealth` | `0x00544190` | 95% | exact_match:func.sym |
+| `FrameScript__GetText` | `0x007A9BA0` | 88% | token_overlap:func.sym |
+| `SFile__CloseFile` | `0x0065E1B0` | 88% | token_overlap:func.sym |
 
 ---
 
@@ -28,7 +30,7 @@
 
 These candidates were found but have confidence < 85%.  Verify each one in Ghidra or x32dbg before using.
 
-### 🔴 CRITICAL Priority
+### [CRIT] CRITICAL Priority
 
 #### `FrameScript__LoadFunctions`
 
@@ -39,11 +41,12 @@ These candidates were found but have confidence < 85%.  Verify each one in Ghidr
 |-------------------|------|------------|--------|-------|
 | `0x004A86E0` | `Script_LoadAddOn` | 75% | substring:func.sym |  |
 | `0x004D9360` | `Script_LoadBindings` | 75% | substring:func.sym |  |
-| `0x00511F10` | `FUN_00511f10` | 26% | proximity_to_wotlk(0x5120E0):wow_tbc.sym | distance=0x1D0 |
-| `0x00511E80` | `FUN_00511e80` | 21% | proximity_to_wotlk(0x5120E0):wow_tbc.sym | distance=0x260 |
-| `0x00511E30` | `FUN_00511e30` | 19% | proximity_to_wotlk(0x5120E0):wow_tbc.sym | distance=0x2B0 |
-| `0x00511D80` | `FUN_00511d80` | 13% | proximity_to_wotlk(0x5120E0):wow_tbc.sym | distance=0x360 |
-| `0x00511CB0` | `FUN_00511cb0` | 7% | proximity_to_wotlk(0x5120E0):wow_tbc.sym | distance=0x430 |
+| `0x00707A20` | `TSExplicitList_FrameScript_EventObject_ctor` | 62% | token_overlap:func.sym |  |
+| `0x00707DA0` | `TSExplicitList_FrameScript_EventObject_scalar_deleting_dtor` | 62% | token_overlap:func.sym |  |
+| `0x00708060` | `FrameScript_EventObject__ctor` | 62% | token_overlap:func.sym |  |
+| `0x007080E0` | `FrameScript_EventObject__scalar_deleting_dtor` | 62% | token_overlap:func.sym |  |
+| `0x00406CD0` | `Script_worldport` | 62% | token_overlap:func.sym |  |
+| `0x004343B0` | `Script_SetDrawLayer` | 62% | token_overlap:func.sym |  |
 
 #### `FrameScript__RegisterFunction`
 
@@ -52,11 +55,14 @@ These candidates were found but have confidence < 85%.  Verify each one in Ghidr
 
 | Candidate Address | Name | Confidence | Method | Notes |
 |-------------------|------|------------|--------|-------|
+| `0x00707A20` | `TSExplicitList_FrameScript_EventObject_ctor` | 62% | token_overlap:func.sym |  |
+| `0x00707DA0` | `TSExplicitList_FrameScript_EventObject_scalar_deleting_dtor` | 62% | token_overlap:func.sym |  |
+| `0x00708060` | `FrameScript_EventObject__ctor` | 62% | token_overlap:func.sym |  |
+| `0x007080E0` | `FrameScript_EventObject__scalar_deleting_dtor` | 62% | token_overlap:func.sym |  |
+| `0x00701900` | `FrameFactory__Register` | 62% | token_overlap:func.sym |  |
+| `0x007896C0` | `?register_target_block@?$source_link_manager@V?$multi_link_registry@V?$ISource@W4agent_status@Concurrency@@@Concurrency@@@Concurrency@@@Concurrency@@QAEXPAV?$ITarget@W4agent_status@Concurrency@@@2@@Z` | 62% | token_overlap:func.sym |  |
 | `0x00817F72` | `FUN_00817f72` | 40% | proximity_to_wotlk(0x817F90):wow_tbc.sym | distance=0x1E |
 | `0x00818039` | `FUN_00818039` | 35% | proximity_to_wotlk(0x817F90):wow_tbc.sym | distance=0xA9 |
-| `0x00817CC3` | `FUN_00817cc3` | 18% | proximity_to_wotlk(0x817F90):wow_tbc.sym | distance=0x2CD |
-| `0x00817C5B` | `FUN_00817c5b` | 15% | proximity_to_wotlk(0x817F90):wow_tbc.sym | distance=0x335 |
-| `0x00817AA3` | `FUN_00817aa3` | 5% | proximity_to_wotlk(0x817F90):wow_tbc.sym | distance=0x4ED |
 
 #### `FrameScript__GetState`
 
@@ -65,11 +71,14 @@ These candidates were found but have confidence < 85%.  Verify each one in Ghidr
 
 | Candidate Address | Name | Confidence | Method | Notes |
 |-------------------|------|------------|--------|-------|
+| `0x00707A20` | `TSExplicitList_FrameScript_EventObject_ctor` | 62% | token_overlap:func.sym |  |
+| `0x00707DA0` | `TSExplicitList_FrameScript_EventObject_scalar_deleting_dtor` | 62% | token_overlap:func.sym |  |
+| `0x00708060` | `FrameScript_EventObject__ctor` | 62% | token_overlap:func.sym |  |
+| `0x007080E0` | `FrameScript_EventObject__scalar_deleting_dtor` | 62% | token_overlap:func.sym |  |
+| `0x004B7C70` | `PacketHandler_SMSG_WORLD_STATE_UI_TIMER_UPDATE` | 62% | token_overlap:func.sym |  |
+| `0x004BAC10` | `PacketHandler_SMSG_UPDATE_WORLD_STATE` | 62% | token_overlap:func.sym |  |
 | `0x008846C0` | `FUN_008846c0` | 5% | proximity_to_wotlk(0x00884BAC):wow_tbc.sym | distance=0x4EC |
 | `0x008846E0` | `FUN_008846e0` | 5% | proximity_to_wotlk(0x00884BAC):wow_tbc.sym | distance=0x4CC |
-| `0x00884700` | `FUN_00884700` | 5% | proximity_to_wotlk(0x00884BAC):wow_tbc.sym | distance=0x4AC |
-| `0x00884720` | `FUN_00884720` | 5% | proximity_to_wotlk(0x00884BAC):wow_tbc.sym | distance=0x48C |
-| `0x00884740` | `FUN_00884740` | 5% | proximity_to_wotlk(0x00884BAC):wow_tbc.sym | distance=0x46C |
 
 #### `CVar__Set`
 
@@ -78,11 +87,14 @@ These candidates were found but have confidence < 85%.  Verify each one in Ghidr
 
 | Candidate Address | Name | Confidence | Method | Notes |
 |-------------------|------|------------|--------|-------|
-| `0x0076673E` | `FUN_0076673e` | 24% | proximity_to_wotlk(0x766940):wow_tbc.sym | distance=0x202 |
-| `0x00766720` | `FUN_00766720` | 23% | proximity_to_wotlk(0x766940):wow_tbc.sym | distance=0x220 |
-| `0x007665DB` | `FUN_007665db` | 13% | proximity_to_wotlk(0x766940):wow_tbc.sym | distance=0x365 |
-| `0x00766577` | `__d_inttype` | 10% | proximity_to_wotlk(0x766940):wow_tbc.sym | distance=0x3C9 |
-| `0x007664CE` | `FUN_007664ce` | 5% | proximity_to_wotlk(0x766940):wow_tbc.sym | distance=0x472 |
+| `0x004472E0` | `__set_pgmptr` | 62% | token_overlap:func.sym |  |
+| `0x00453690` | `___set_app_type` | 62% | token_overlap:func.sym |  |
+| `0x00453B20` | `__set_wpgmptr` | 62% | token_overlap:func.sym |  |
+| `0x0048FB20` | `PacketHandler_SMSG_MOVE_SET_CAN_FLY` | 62% | token_overlap:func.sym |  |
+| `0x00498320` | `___set_stl_sync_api_mode` | 62% | token_overlap:func.sym |  |
+| `0x005D6450` | `PacketHandler_SMSG_GROUP_SET_LEADER` | 62% | token_overlap:func.sym |  |
+| `0x005D7770` | `PacketHandler_SMSG_VOICE_SET_TALKER_MUTED` | 62% | token_overlap:func.sym |  |
+| `0x005D83B0` | `PacketHandler_SMSG_SET_PROFICIENCY` | 62% | token_overlap:func.sym |  |
 
 #### `SErr__PrepareAppFatal`
 
@@ -97,21 +109,39 @@ These candidates were found but have confidence < 85%.  Verify each one in Ghidr
 | `0x00772700` | `FUN_00772700` | 12% | proximity_to_wotlk(0x772A80):wow_tbc.sym | distance=0x380 |
 | `0x00772580` | `FUN_00772580` | 5% | proximity_to_wotlk(0x772A80):wow_tbc.sym | distance=0x500 |
 
-### 🟠 HIGH Priority
+### [HIGH] HIGH Priority
 
 #### `Script_GetSpellInfo`
 
 - **WotLK address:** `unknown`
 - **Description:** Lua API: GetSpellInfo(spellID) → name, rank, icon, …
 
-*No candidates found — manual Ghidra analysis required.*
+| Candidate Address | Name | Confidence | Method | Notes |
+|-------------------|------|------------|--------|-------|
+| `0x00406CD0` | `Script_worldport` | 62% | token_overlap:func.sym |  |
+| `0x004343B0` | `Script_SetDrawLayer` | 62% | token_overlap:func.sym |  |
+| `0x004344C0` | `Script_SetBlendMode` | 62% | token_overlap:func.sym |  |
+| `0x004346E0` | `Script_SetGradient` | 62% | token_overlap:func.sym |  |
+| `0x004347C0` | `Script_SetGradientAlpha` | 62% | token_overlap:func.sym |  |
+| `0x004348A0` | `Script_SetAlpha` | 62% | token_overlap:func.sym |  |
+| `0x00434F50` | `Script_Texture_SetDrawLayer` | 62% | token_overlap:func.sym |  |
+| `0x00435110` | `Script_Texture_SetAlpha` | 62% | token_overlap:func.sym |  |
 
 #### `Script_GetCameraPosition`
 
 - **WotLK address:** `unknown`
 - **Description:** Lua API: GetCameraPosition() → x, y, z.
 
-*No candidates found — manual Ghidra analysis required.*
+| Candidate Address | Name | Confidence | Method | Notes |
+|-------------------|------|------------|--------|-------|
+| `0x00406CD0` | `Script_worldport` | 62% | token_overlap:func.sym |  |
+| `0x004343B0` | `Script_SetDrawLayer` | 62% | token_overlap:func.sym |  |
+| `0x004344C0` | `Script_SetBlendMode` | 62% | token_overlap:func.sym |  |
+| `0x004346E0` | `Script_SetGradient` | 62% | token_overlap:func.sym |  |
+| `0x004347C0` | `Script_SetGradientAlpha` | 62% | token_overlap:func.sym |  |
+| `0x004348A0` | `Script_SetAlpha` | 62% | token_overlap:func.sym |  |
+| `0x00434F50` | `Script_Texture_SetDrawLayer` | 62% | token_overlap:func.sym |  |
+| `0x00435110` | `Script_Texture_SetAlpha` | 62% | token_overlap:func.sym |  |
 
 #### `lua_error`
 
@@ -120,11 +150,14 @@ These candidates were found but have confidence < 85%.  Verify each one in Ghidr
 
 | Candidate Address | Name | Confidence | Method | Notes |
 |-------------------|------|------------|--------|-------|
+| `0x004809C0` | `?_Get_future_error_what@std@@YAPBDH@Z` | 62% | token_overlap:func.sym |  |
+| `0x005D7310` | `PacketHandler_SMSG_ARENA_ERROR` | 62% | token_overlap:func.sym |  |
+| `0x0074FE80` | `?DumpThisThread@__vcasan@@YAKPAPAUEXCEPTION_SANITIZER_ERROR@1@PBG@Z` | 62% | token_overlap:func.sym |  |
+| `0x0040A30D` | `fast_error_exit` | 55% | token_overlap:wow_tbc.sym |  |
+| `0x00410920` | `__set_error_mode` | 55% | token_overlap:wow_tbc.sym |  |
+| `0x00765318` | `___libm_error_support` | 55% | token_overlap:wow_tbc.sym |  |
 | `0x0084F00B` | `FUN_0084f00b` | 21% | proximity_to_wotlk(0x84F280):wow_tbc.sym | distance=0x275 |
 | `0x0084EFFF` | `FUN_0084efff` | 20% | proximity_to_wotlk(0x84F280):wow_tbc.sym | distance=0x281 |
-| `0x0084EFC6` | `FUN_0084efc6` | 19% | proximity_to_wotlk(0x84F280):wow_tbc.sym | distance=0x2BA |
-| `0x0084EEA1` | `FUN_0084eea1` | 10% | proximity_to_wotlk(0x84F280):wow_tbc.sym | distance=0x3DF |
-| `0x0084EEBA` | `FUN_0084eeba` | 10% | proximity_to_wotlk(0x84F280):wow_tbc.sym | distance=0x3C6 |
 
 #### `lua_toboolean`
 
@@ -147,11 +180,14 @@ These candidates were found but have confidence < 85%.  Verify each one in Ghidr
 
 | Candidate Address | Name | Confidence | Method | Notes |
 |-------------------|------|------------|--------|-------|
+| `0x00707A20` | `TSExplicitList_FrameScript_EventObject_ctor` | 62% | token_overlap:func.sym |  |
+| `0x00707DA0` | `TSExplicitList_FrameScript_EventObject_scalar_deleting_dtor` | 62% | token_overlap:func.sym |  |
+| `0x00708060` | `FrameScript_EventObject__ctor` | 62% | token_overlap:func.sym |  |
+| `0x007080E0` | `FrameScript_EventObject__scalar_deleting_dtor` | 62% | token_overlap:func.sym |  |
 | `0x00815370` | `FUN_00815370` | 28% | proximity_to_wotlk(0x815500):wow_tbc.sym | distance=0x190 |
 | `0x00815227` | `FUN_00815227` | 18% | proximity_to_wotlk(0x815500):wow_tbc.sym | distance=0x2D9 |
 | `0x0081586C` | `FUN_0081586c` | 13% | proximity_to_wotlk(0x815500):wow_tbc.sym | distance=0x36C |
 | `0x00815149` | `FUN_00815149` | 11% | proximity_to_wotlk(0x815500):wow_tbc.sym | distance=0x3B7 |
-| `0x0081507C` | `FUN_0081507c` | 5% | proximity_to_wotlk(0x815500):wow_tbc.sym | distance=0x484 |
 
 #### `lua_tolstring`
 
@@ -160,22 +196,6 @@ These candidates were found but have confidence < 85%.  Verify each one in Ghidr
 
 *No candidates found — manual Ghidra analysis required.*
 
-#### `FrameScript__GetText`
-
-- **WotLK address:** `0x819D40`
-- **Description:** WoW localization lookup by string key.
-
-| Candidate Address | Name | Confidence | Method | Notes |
-|-------------------|------|------------|--------|-------|
-| `0x00446A60` | `Script_FontString_GetTextColor` | 75% | substring:func.sym |  |
-| `0x007A6580` | `Script_ScrollingMessageFrame_GetTextColor` | 75% | substring:func.sym |  |
-| `0x007A78D0` | `Script_MessageFrame_GetTextColor` | 75% | substring:func.sym |  |
-| `0x007A8720` | `Script_ScrollingMessageFrame_GetTextColor2` | 75% | substring:func.sym |  |
-| `0x007A9140` | `Script_EditBox_GetTextColor` | 75% | substring:func.sym |  |
-| `0x007A9BA0` | `Script_EditBox_GetText` | 75% | substring:func.sym |  |
-| `0x007A9F10` | `Script_EditBox_GetTextInsets` | 75% | substring:func.sym |  |
-| `0x007A9FE0` | `Script_EditBox_GetTextInsets2` | 75% | substring:func.sym |  |
-
 #### `lua_gettop`
 
 - **WotLK address:** `0x84DBD0`
@@ -183,6 +203,7 @@ These candidates were found but have confidence < 85%.  Verify each one in Ghidr
 
 | Candidate Address | Name | Confidence | Method | Notes |
 |-------------------|------|------------|--------|-------|
+| `0x0043FB80` | `Script_SimpleFont_GetTop` | 62% | token_overlap:func.sym |  |
 | `0x0084D86D` | `FUN_0084d86d` | 13% | proximity_to_wotlk(0x84DBD0):wow_tbc.sym | distance=0x363 |
 
 #### `lua_isnumber`
@@ -243,6 +264,10 @@ These candidates were found but have confidence < 85%.  Verify each one in Ghidr
 
 | Candidate Address | Name | Confidence | Method | Notes |
 |-------------------|------|------------|--------|-------|
+| `0x00707A20` | `TSExplicitList_FrameScript_EventObject_ctor` | 62% | token_overlap:func.sym |  |
+| `0x00707DA0` | `TSExplicitList_FrameScript_EventObject_scalar_deleting_dtor` | 62% | token_overlap:func.sym |  |
+| `0x00708060` | `FrameScript_EventObject__ctor` | 62% | token_overlap:func.sym |  |
+| `0x007080E0` | `FrameScript_EventObject__scalar_deleting_dtor` | 62% | token_overlap:func.sym |  |
 | `0x0081B0FF` | `FUN_0081b0ff` | 7% | proximity_to_wotlk(0x81B530):wow_tbc.sym | distance=0x431 |
 
 #### `lua_getfield`
@@ -280,9 +305,14 @@ These candidates were found but have confidence < 85%.  Verify each one in Ghidr
 - **WotLK address:** `0x84DEC0`
 - **Description:** Lua C-API: returns the type of a stack value.
 
-*No candidates found — manual Ghidra analysis required.*
+| Candidate Address | Name | Confidence | Method | Notes |
+|-------------------|------|------------|--------|-------|
+| `0x00453690` | `___set_app_type` | 62% | token_overlap:func.sym |  |
+| `0x0081015D` | `?UnregisterWinRTObject@?$Module@$00VInProcModule@Details@Platform@@@WRL@Microsoft@@UAGJPB_WPAU<unnamed-type-RO_REGISTRATION_COOKIE>@@@Z` | 62% | token_overlap:func.sym |  |
+| `0x0040A6DA` | `~type_info` | 55% | token_overlap:wow_tbc.sym |  |
+| `0x0040E029` | `_Type_info_dtor` | 55% | token_overlap:wow_tbc.sym |  |
 
-### 🟡 MEDIUM Priority
+### [MED] MEDIUM Priority
 
 #### `SStr__Printf`
 
@@ -317,25 +347,14 @@ These candidates were found but have confidence < 85%.  Verify each one in Ghidr
 
 | Candidate Address | Name | Confidence | Method | Notes |
 |-------------------|------|------------|--------|-------|
+| `0x0041E530` | `REALM_INFO__copy_or_list_op` | 62% | token_overlap:func.sym |  |
+| `0x004F9540` | `AuctionItemInfo__copy_ctor` | 62% | token_overlap:func.sym |  |
+| `0x0041AEFE` | `copy_environ` | 55% | token_overlap:wow_tbc.sym |  |
 | `0x0076ED30` | `FUN_0076ed30` | 40% | proximity_to_wotlk(0x76ED20):wow_tbc.sym | distance=0x10 |
 | `0x0076ED40` | `FUN_0076ed40` | 39% | proximity_to_wotlk(0x76ED20):wow_tbc.sym | distance=0x20 |
 | `0x0076ECB0` | `FUN_0076ecb0` | 37% | proximity_to_wotlk(0x76ED20):wow_tbc.sym | distance=0x70 |
 | `0x0076ECC0` | `FUN_0076ecc0` | 37% | proximity_to_wotlk(0x76ED20):wow_tbc.sym | distance=0x60 |
 | `0x0076EE30` | `FUN_0076ee30` | 32% | proximity_to_wotlk(0x76ED20):wow_tbc.sym | distance=0x110 |
-
-#### `SFile__CloseFile`
-
-- **WotLK address:** `0x422910`
-- **Description:** Storm file close.
-
-| Candidate Address | Name | Confidence | Method | Notes |
-|-------------------|------|------------|--------|-------|
-| `0x0065E1B0` | `Filestack__CloseFile` | 75% | substring:func.sym |  |
-| `0x00422940` | `FUN_00422940` | 39% | proximity_to_wotlk(0x422910):wow_tbc.sym | distance=0x30 |
-| `0x00422880` | `FUN_00422880` | 36% | proximity_to_wotlk(0x422910):wow_tbc.sym | distance=0x90 |
-| `0x00422A20` | `FUN_00422a20` | 32% | proximity_to_wotlk(0x422910):wow_tbc.sym | distance=0x110 |
-| `0x00422AD0` | `FUN_00422ad0` | 26% | proximity_to_wotlk(0x422910):wow_tbc.sym | distance=0x1C0 |
-| `0x004226B0` | `FUN_004226b0` | 21% | proximity_to_wotlk(0x422910):wow_tbc.sym | distance=0x260 |
 
 #### `CFormula__GetVariableValue`
 
@@ -411,6 +430,8 @@ These candidates were found but have confidence < 85%.  Verify each one in Ghidr
 | Candidate Address | Name | Confidence | Method | Notes |
 |-------------------|------|------------|--------|-------|
 | `0x005449F0` | `Script_UnitIsDeadOrGhost` | 75% | substring:func.sym |  |
+| `0x00619280` | `CGPlayer_C__dtor` | 62% | token_overlap:func.sym |  |
+| `0x0061B090` | `CGPlayer_C__scalar_deleting_dtor` | 62% | token_overlap:func.sym |  |
 
 #### `CGPetInfo__GetPet`
 
@@ -423,7 +444,7 @@ These candidates were found but have confidence < 85%.  Verify each one in Ghidr
 | `0x004E4D90` | `Script_GetPetActionInfo` | 75% | substring:func.sym |  |
 | `0x0050FF30` | `Script_GetPetitionNameInfo` | 75% | substring:func.sym |  |
 
-### 🟢 LOW Priority
+### [LOW] LOW Priority
 
 #### `DNInfo__AddZoneLight`
 
@@ -458,14 +479,21 @@ These candidates were found but have confidence < 85%.  Verify each one in Ghidr
 - **WotLK address:** `unknown`
 - **Description:** Projects a 3-D world position onto the 2-D minimap.
 
-*No candidates found — manual Ghidra analysis required.*
+| Candidate Address | Name | Confidence | Method | Notes |
+|-------------------|------|------------|--------|-------|
+| `0x004015D0` | `FUN_004015d0` | 72% | signature_hint:Functions.csv | undefined4 FUN_004015d0(undefined4 param_1\, undefined4 param_2\, char * param_3) |
+| `0x004017D0` | `FUN_004017d0` | 72% | signature_hint:Functions.csv | undefined4 FUN_004017d0(undefined4 param_1\, undefined4 param_2\, char * param_3) |
+| `0x00401D10` | `FUN_00401d10` | 72% | signature_hint:Functions.csv | undefined4 FUN_00401d10(undefined4 param_1\, undefined4 param_2\, char * param_3) |
+| `0x00401D50` | `FUN_00401d50` | 72% | signature_hint:Functions.csv | undefined FUN_00401d50(undefined4 param_1\, undefined4 param_2\, char * param_3) |
+| `0x00402D40` | `FUN_00402d40` | 72% | signature_hint:Functions.csv | undefined FUN_00402d40(undefined4 param_1\, undefined4 param_2\, int param_3\, undefined * param_4) |
+| `0x00402D70` | `FUN_00402d70` | 72% | signature_hint:Functions.csv | int FUN_00402d70(undefined4 param_1\, int param_2\, int param_3\, undefined * param_4) |
+| `0x00403D50` | `FUN_00403d50` | 72% | signature_hint:Functions.csv | undefined FUN_00403d50(int param_1\, undefined4 param_2\, undefined4 param_3) |
+| `0x00404D60` | `FUN_00404d60` | 72% | signature_hint:Functions.csv | undefined FUN_00404d60(int param_1\, float param_2\, undefined4 param_3\, undefined4 param_4) |
 
 ---
 
 ## Still Missing (no candidates found)
 
-- `Script_GetSpellInfo` (HIGH) — Lua API: GetSpellInfo(spellID) → name, rank, icon, …
-- `Script_GetCameraPosition` (HIGH) — Lua API: GetCameraPosition() → x, y, z.
 - `lua_toboolean` (HIGH) — Lua C-API: converts stack value to boolean.
 - `lua_tonumber` (HIGH) — Lua C-API: converts stack value to double.
 - `lua_tolstring` (HIGH) — Lua C-API: converts stack value to C string.
@@ -476,14 +504,12 @@ These candidates were found but have confidence < 85%.  Verify each one in Ghidr
 - `lua_pushnumber` (HIGH) — Lua C-API: pushes a double onto the stack.
 - `lua_pushstring` (HIGH) — Lua C-API: pushes a C string onto the stack.
 - `lua_pushcclosure` (HIGH) — Lua C-API: pushes a C closure (function) onto the stack.
-- `lua_type` (HIGH) — Lua C-API: returns the type of a stack value.
 - `SpellParser__ParseText` (MEDIUM) — Parses a spell description template string.
 - `CGUnit__GetShapeshiftFormID` (MEDIUM) — Returns the active shapeshift form ID for a unit.
 - `DNInfo__AddZoneLight` (LOW) — Adds a zone light entry to the day/night info struct.
 - `DNInfo__GetDNInfoPtr` (LOW) — Returns a pointer to the global DNInfo structure.
 - `CWorld__LoadMap` (LOW) — Loads a game map by directory/position/mapID.
 - `CWorld__UnloadMap` (LOW) — Unloads the current game map.
-- `CWorld__Pos3Dto2D` (LOW) — Projects a 3-D world position onto the 2-D minimap.
 
 ---
 

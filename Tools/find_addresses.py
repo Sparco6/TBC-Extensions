@@ -21,7 +21,7 @@ import re
 import sys
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Dict, List, Optional, Tuple
+from typing import Dict, Iterable, List, Optional, Set, Tuple
 
 # ---------------------------------------------------------------------------
 # Paths (relative to repo root)
@@ -33,6 +33,8 @@ WOW_TBC_SYM = REPO_ROOT / "Docs" / "symbols" / "wow_tbc.sym"
 FUNCTIONS_CSV = REPO_ROOT / "Docs" / "symbols" / "Functions.csv"
 ADDRESS_MAP_JSON = REPO_ROOT / "Docs" / "symbols" / "address_map.json"
 OUTPUT_MD  = REPO_ROOT / "Docs" / "ADDRESS_FINDINGS.md"
+ALL_OUTPUT_MD = REPO_ROOT / "Docs" / "ADDRESS_ALL_POSSIBILITIES.md"
+SOURCE_ROOT = REPO_ROOT / "TBCExtensions" / "src"
 
 # ---------------------------------------------------------------------------
 # Data structures
@@ -56,6 +58,17 @@ class FunctionTarget:
     search_terms: List[str] = field(default_factory=list)
     candidates: List[Candidate] = field(default_factory=list)
     tbc_address: str = "TODO_TBC"
+
+
+@dataclass
+class SourcePlaceholder:
+    target_name: str
+    file_path: Path
+    line_number: int
+    comment: str
+    context_function: str = ""
+    wotlk_address: Optional[str] = None
+    candidates: List[Candidate] = field(default_factory=list)
 
 
 # ---------------------------------------------------------------------------
@@ -455,6 +468,68 @@ def _normalise(name: str) -> str:
     return re.sub(r"[_\-]+", "_", name.lower())
 
 
+def _tokenise(name: str) -> List[str]:
+    cleaned = re.sub(r"[^A-Za-z0-9]+", "_", name)
+    parts = [p.lower() for p in cleaned.split("_") if p]
+    tokens: List[str] = []
+
+    for part in parts:
+        camel = re.findall(r"[A-Z]?[a-z]+|[A-Z]+(?=[A-Z]|$)|\d+", part)
+        if camel:
+            tokens.extend(piece.lower() for piece in camel if piece)
+        else:
+            tokens.append(part)
+
+    return [t for t in tokens if t]
+
+
+def _symbol_variants(name: str) -> Set[str]:
+    tokens = _tokenise(name)
+    variants = {
+        name,
+        name.replace("::", "__"),
+        name.replace("__", "_"),
+        name.replace("::", "_"),
+        _normalise(name),
+    }
+
+    if tokens:
+        variants.add("_".join(tokens))
+        variants.add("".join(tokens))
+
+    prefixes = [
+        "script", "framescript", "lua", "cvar", "sfile", "sstr", "cgplayer",
+        "cgunit", "cgchat", "cgpetinfo", "dbclient", "cformula", "dninfo",
+        "cworld",
+    ]
+
+    for prefix in prefixes:
+        if tokens[:1] == [prefix]:
+            remainder = tokens[1:]
+            if remainder:
+                variants.add("_".join(remainder))
+                variants.add("".join(remainder))
+
+    return {variant for variant in variants if variant}
+
+
+def _score_token_overlap(target_tokens: List[str], symbol_tokens: List[str]) -> int:
+    if not target_tokens or not symbol_tokens:
+        return 0
+
+    overlap = len(set(target_tokens) & set(symbol_tokens))
+    if overlap == 0:
+        return 0
+
+    coverage = overlap / len(set(target_tokens))
+    score = int(45 + coverage * 35)
+
+    if overlap == len(set(target_tokens)):
+        score += 10
+
+    return min(score, 88)
+
+
 def search_exact(term: str,
                  named: Dict[str, str],
                  all_syms: Dict[str, str]) -> Optional[Candidate]:
@@ -488,6 +563,26 @@ def search_case_insensitive(term: str,
     return results
 
 
+def search_normalised(term: str,
+                      named: Dict[str, str],
+                      all_syms: Dict[str, str]) -> List[Candidate]:
+    """Normalised exact-ish matches across common separators/prefix styles."""
+    results: List[Candidate] = []
+    variants = {_normalise(v) for v in _symbol_variants(term)}
+
+    for sym_dict, label in [(named, "func.sym"), (all_syms, "wow_tbc.sym")]:
+        for name, addr in sym_dict.items():
+            if _normalise(name) in variants:
+                results.append(Candidate(
+                    address=addr,
+                    name=name,
+                    confidence=88 if label == "func.sym" else 82,
+                    method=f"normalised_match:{label}",
+                ))
+
+    return results
+
+
 def search_substring(term: str,
                      named: Dict[str, str],
                      all_syms: Dict[str, str]) -> List[Candidate]:
@@ -504,6 +599,65 @@ def search_substring(term: str,
                     confidence=conf,
                     method=f"substring:{label}",
                 ))
+    return results
+
+
+def search_token_overlap(term: str,
+                         named: Dict[str, str],
+                         all_syms: Dict[str, str]) -> List[Candidate]:
+    """Token-based fuzzy match, useful for name-style differences."""
+    results: List[Candidate] = []
+    target_tokens = _tokenise(term)
+
+    for sym_dict, label in [(named, "func.sym"), (all_syms, "wow_tbc.sym")]:
+        for name, addr in sym_dict.items():
+            symbol_tokens = _tokenise(name)
+            score = _score_token_overlap(target_tokens, symbol_tokens)
+            if score >= 60:
+                if label == "wow_tbc.sym":
+                    score = max(55, score - 10)
+                results.append(Candidate(
+                    address=addr,
+                    name=name,
+                    confidence=score,
+                    method=f"token_overlap:{label}",
+                ))
+
+    return results
+
+
+def search_signature_hints(term: str,
+                           functions_csv: Dict[str, Tuple[str, str]]) -> List[Candidate]:
+    """Use Ghidra signatures to surface additional plausible matches."""
+    results: List[Candidate] = []
+    target_tokens = set(_tokenise(term))
+    variants = {_normalise(v) for v in _symbol_variants(term)}
+
+    for name, (addr, signature) in functions_csv.items():
+        norm_name = _normalise(name)
+        sig_tokens = set(_tokenise(signature))
+
+        if norm_name in variants:
+            results.append(Candidate(
+                address=addr,
+                name=name,
+                confidence=86,
+                method="normalised_match:Functions.csv",
+                notes=signature,
+            ))
+            continue
+
+        overlap = len(target_tokens & sig_tokens)
+        if overlap >= 2 or (target_tokens and target_tokens.issubset(sig_tokens)):
+            score = min(74, 48 + overlap * 8)
+            results.append(Candidate(
+                address=addr,
+                name=name,
+                confidence=score,
+                method="signature_hint:Functions.csv",
+                notes=signature,
+            ))
+
     return results
 
 
@@ -560,6 +714,7 @@ def deduplicate(candidates: List[Candidate]) -> List[Candidate]:
 def find_function(target: FunctionTarget,
                   named: Dict[str, str],
                   all_syms: Dict[str, str],
+                  functions_csv: Dict[str, Tuple[str, str]],
                   verbose: bool = False) -> None:
     """Populate target.candidates and target.tbc_address in-place."""
     candidates: List[Candidate] = []
@@ -576,11 +731,23 @@ def find_function(target: FunctionTarget,
         for c in search_case_insensitive(term, named, all_syms):
             candidates.append(c)
 
-        # 3. Substring
+        # 3. Normalised exact-ish match
+        for c in search_normalised(term, named, all_syms):
+            candidates.append(c)
+
+        # 4. Substring
         for c in search_substring(term, named, all_syms):
             candidates.append(c)
 
-    # 4. Proximity to WotLK address
+        # 5. Token overlap
+        for c in search_token_overlap(term, named, all_syms):
+            candidates.append(c)
+
+        # 6. Signature hints from Functions.csv
+        for c in search_signature_hints(term, functions_csv):
+            candidates.append(c)
+
+    # 7. Proximity to WotLK address
     if target.wotlk_address:
         for c in search_proximity(target.wotlk_address, all_syms):
             candidates.append(c)
@@ -592,6 +759,101 @@ def find_function(target: FunctionTarget,
         target.tbc_address = target.candidates[0].address
 
 
+def _extract_function_target(comment: str, context_function: str) -> Optional[str]:
+    patterns = [
+        r"Find\s+([A-Za-z_][A-Za-z0-9_:]*)\s+address",
+        r"Find\s+([A-Za-z_][A-Za-z0-9_:]*)\s+function\s+address",
+        r"Replace\s+0x[0-9A-Fa-f]+\s+with\s+TBC.*?\s+([A-Za-z_][A-Za-z0-9_:]*)\s+address",
+    ]
+
+    for pattern in patterns:
+        match = re.search(pattern, comment)
+        if match:
+            return match.group(1).replace("::", "__")
+
+    if context_function and "TODO_TBC" in comment:
+        return context_function.replace("::", "__")
+
+    return None
+
+
+def scan_source_placeholders(source_root: Path) -> List[SourcePlaceholder]:
+    placeholders: List[SourcePlaceholder] = []
+    function_re = re.compile(r"^\s*[\w:<>\*&\s]+?\s+([A-Za-z_]\w*)::([A-Za-z_]\w*)\s*\(")
+    wotlk_re = re.compile(r"WotLK.*?(0x[0-9A-Fa-f]+)")
+
+    for path in source_root.rglob("*.cpp"):
+        try:
+            lines = path.read_text(encoding="utf-8", errors="replace").splitlines()
+        except OSError:
+            continue
+
+        current_function = ""
+
+        for idx, line in enumerate(lines, start=1):
+            fn_match = function_re.match(line)
+            if fn_match:
+                current_function = f"{fn_match.group(1)}__{fn_match.group(2)}"
+
+            if "TODO_TBC" not in line:
+                continue
+
+            stripped = line.strip()
+            target = _extract_function_target(stripped, current_function)
+            if not target:
+                continue
+
+            wotlk_address = None
+            lookahead = lines[idx:min(idx + 3, len(lines))]
+            for extra in lookahead:
+                match = wotlk_re.search(extra)
+                if match:
+                    wotlk_address = match.group(1)
+                    break
+
+            placeholders.append(SourcePlaceholder(
+                target_name=target,
+                file_path=path,
+                line_number=idx,
+                comment=stripped,
+                context_function=current_function,
+                wotlk_address=wotlk_address,
+            ))
+
+    deduped: Dict[Tuple[str, str], SourcePlaceholder] = {}
+    for placeholder in placeholders:
+        key = (str(placeholder.file_path), placeholder.target_name)
+        deduped.setdefault(key, placeholder)
+
+    return sorted(deduped.values(), key=lambda p: (str(p.file_path), p.line_number, p.target_name))
+
+
+def find_placeholder_candidates(placeholder: SourcePlaceholder,
+                                named: Dict[str, str],
+                                all_syms: Dict[str, str],
+                                functions_csv: Dict[str, Tuple[str, str]]) -> None:
+    candidates: List[Candidate] = []
+
+    search_terms = [placeholder.target_name]
+    if placeholder.context_function and placeholder.context_function != placeholder.target_name:
+        search_terms.append(placeholder.context_function)
+
+    for term in search_terms:
+        exact = search_exact(term, named, all_syms)
+        if exact:
+            candidates.append(exact)
+        candidates.extend(search_case_insensitive(term, named, all_syms))
+        candidates.extend(search_normalised(term, named, all_syms))
+        candidates.extend(search_substring(term, named, all_syms))
+        candidates.extend(search_token_overlap(term, named, all_syms))
+        candidates.extend(search_signature_hints(term, functions_csv))
+
+    if placeholder.wotlk_address:
+        candidates.extend(search_proximity(placeholder.wotlk_address, all_syms))
+
+    placeholder.candidates = deduplicate(candidates)
+
+
 # ---------------------------------------------------------------------------
 # Report generation
 # ---------------------------------------------------------------------------
@@ -600,7 +862,7 @@ PRIORITY_ORDER = ["CRITICAL", "HIGH", "MEDIUM", "LOW"]
 
 
 def _priority_emoji(p: str) -> str:
-    return {"CRITICAL": "🔴", "HIGH": "🟠", "MEDIUM": "🟡", "LOW": "🟢"}.get(p, "")
+    return {"CRITICAL": "[CRIT]", "HIGH": "[HIGH]", "MEDIUM": "[MED]", "LOW": "[LOW]"}.get(p, "")
 
 
 def generate_report(targets: List[FunctionTarget], output_path: Path) -> None:
@@ -717,6 +979,70 @@ def generate_report(targets: List[FunctionTarget], output_path: Path) -> None:
     print(f"[INFO] Report written to {output_path}")
 
 
+def generate_all_possibilities_report(placeholders: List[SourcePlaceholder],
+                                      output_path: Path) -> None:
+    lines: List[str] = [
+        "# TBC Address All Possibilities",
+        "",
+        "> Auto-generated by `Tools/find_addresses.py`.",
+        "> This report scans actual `TODO_TBC` source placeholders and lists",
+        "> plausible exported-symbol candidates for each unresolved target.",
+        "",
+        "## Summary",
+        "",
+        "| Metric | Value |",
+        "|--------|-------|",
+        f"| Source placeholders scanned | {len(placeholders)} |",
+        f"| With at least one candidate | {sum(1 for p in placeholders if p.candidates)} |",
+        f"| Still with no candidate | {sum(1 for p in placeholders if not p.candidates)} |",
+        "",
+        "---",
+        "",
+    ]
+
+    current_file = None
+    for placeholder in placeholders:
+        if current_file != placeholder.file_path:
+            current_file = placeholder.file_path
+            lines += [
+                f"## `{placeholder.file_path.relative_to(REPO_ROOT).as_posix()}`",
+                "",
+            ]
+
+        source_ref = placeholder.file_path.relative_to(REPO_ROOT).as_posix()
+        lines += [
+            f"### `{placeholder.target_name}`",
+            "",
+            f"- Source: `{source_ref}:{placeholder.line_number}`",
+            f"- Comment: {placeholder.comment}",
+        ]
+
+        if placeholder.context_function:
+            lines.append(f"- Context function: `{placeholder.context_function}`")
+        if placeholder.wotlk_address:
+            lines.append(f"- WotLK reference: `{placeholder.wotlk_address}`")
+        lines.append("")
+
+        if placeholder.candidates:
+            lines += [
+                "| Candidate Address | Name | Confidence | Method | Notes |",
+                "|-------------------|------|------------|--------|-------|",
+            ]
+            for candidate in placeholder.candidates[:10]:
+                lines.append(
+                    f"| `{candidate.address}` | `{candidate.name}` | {candidate.confidence}% "
+                    f"| {candidate.method} | {candidate.notes} |"
+                )
+        else:
+            lines.append("*No candidates found from current exports.*")
+
+        lines += ["", "---", ""]
+
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    output_path.write_text("\n".join(lines), encoding="utf-8")
+    print(f"[INFO] All-possibilities report written to {output_path}")
+
+
 # ---------------------------------------------------------------------------
 # address_map.json update
 # ---------------------------------------------------------------------------
@@ -815,25 +1141,37 @@ def main() -> int:
                         help="Print per-term search details.")
     parser.add_argument("--output", "-o", default=str(OUTPUT_MD),
                         help=f"Path for the findings report (default: {OUTPUT_MD})")
+    parser.add_argument("--all-output", default=str(ALL_OUTPUT_MD),
+                        help=f"Path for the exhaustive source-placeholder report "
+                             f"(default: {ALL_OUTPUT_MD})")
     args = parser.parse_args()
 
     output_path = Path(args.output)
+    all_output_path = Path(args.all_output)
 
     print(f"[INFO] Loading symbol files …")
     named    = load_sym_file(FUNC_SYM)
     all_syms = load_sym_file(WOW_TBC_SYM)
+    functions_csv = load_functions_csv(FUNCTIONS_CSV)
     print(f"[INFO]   func.sym    : {len(named):,} symbols")
     print(f"[INFO]   wow_tbc.sym : {len(all_syms):,} symbols")
+    print(f"[INFO]   Functions.csv: {len(functions_csv):,} functions")
 
     print("[INFO] Searching for addresses …")
     for target in FUNCTION_TARGETS:
         if args.verbose:
             print(f"\n[SEARCH] {target.name}")
-        find_function(target, named, all_syms, verbose=args.verbose)
+        find_function(target, named, all_syms, functions_csv, verbose=args.verbose)
 
     print_summary(FUNCTION_TARGETS)
     generate_report(FUNCTION_TARGETS, output_path)
     update_address_map(FUNCTION_TARGETS, ADDRESS_MAP_JSON)
+
+    print("[INFO] Scanning source placeholders …")
+    placeholders = scan_source_placeholders(SOURCE_ROOT)
+    for placeholder in placeholders:
+        find_placeholder_candidates(placeholder, named, all_syms, functions_csv)
+    generate_all_possibilities_report(placeholders, all_output_path)
 
     return 0
 
