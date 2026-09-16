@@ -1,0 +1,366 @@
+{
+  "custom": {
+    "path": "E:\\Server\\Codex\\TBC-Extensions\\Wow.exe",
+    "size": 8267776,
+    "sha256": "C1ED7F0404DBC953EC40CF13D92DE33018AC8B197AD91ABAB9D2FA4D95136C44",
+    "pe": {
+      "machine": "0x014C",
+      "x86": true,
+      "timestamp": 1215715495,
+      "image_size": 11304960,
+      "sections": 6
+    }
+  },
+  "reference": {
+    "path": "E:\\Server\\Codex\\TBC-Extensions\\Wow (2) original.exe",
+    "size": 8272528,
+    "sha256": "9561DE227C3B1C05E56D542C7DD308EB5A00DCB6C6A0B64AC75C2725CAABF3AA",
+    "pe": {
+      "machine": "0x014C",
+      "x86": true,
+      "timestamp": 1215715495,
+      "image_size": 11304960,
+      "sections": 6
+    }
+  },
+  "different_bytes": 5065,
+  "different_ranges": 56,
+  "ranges": [
+    {
+      "file_offset": "0x00000160",
+      "length": 3,
+      "custom": "C6 5F 7E",
+      "reference": "15 32 7F"
+    },
+    {
+      "file_offset": "0x000001A1",
+      "length": 2,
+      "custom": "00 00",
+      "reference": "28 7E"
+    },
+    {
+      "file_offset": "0x000001A4",
+      "length": 2,
+      "custom": "00 00",
+      "reference": "90 12"
+    },
+    {
+      "file_offset": "0x0006F406",
+      "length": 1,
+      "custom": "25",
+      "reference": "0E"
+    },
+    {
+      "file_offset": "0x0006F415",
+      "length": 5,
+      "custom": "EB 15 90 90 90",
+      "reference": "E8 C6 68 FB FF"
+    },
+    {
+      "file_offset": "0x00077629",
+      "length": 1,
+      "custom": "00",
+      "reference": "05"
+    },
+    {
+      "file_offset": "0x00078020",
+      "length": 1,
+      "custom": "00",
+      "reference": "05"
+    },
+    {
+      "file_offset": "0x0009ADB3",
+      "length": 33,
+      "custom": "89 C2 E8 39 C6 15 00 89 C7 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90",
+      "reference": "8B 0D 6C 03 BA 00 3B C1 0F 8C 81 00 00 00 3B 05 68 03 BA 00 7F 79 2B C1 8B 0D 78 03 BA 00 8B 3C"
+    },
+    {
+      "file_offset": "0x0009ADF4",
+      "length": 3,
+      "custom": "89 FA 90",
+      "reference": "8B 57 04"
+    },
+    {
+      "file_offset": "0x000A51AC",
+      "length": 8,
+      "custom": "89 C2 E8 40 22 15 00 90",
+      "reference": "8B 0D 6C 03 BA 00 3B C1"
+    },
+    {
+      "file_offset": "0x000A51B5",
+      "length": 23,
+      "custom": "89 C1 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90",
+      "reference": "7C 30 3B 05 68 03 BA 00 7F 28 8B D0 2B D1 8B 0D 78 03 BA 00 8B 0C 91"
+    },
+    {
+      "file_offset": "0x000A51D0",
+      "length": 3,
+      "custom": "89 C9 90",
+      "reference": "8B 49 04"
+    },
+    {
+      "file_offset": "0x000A9DEA",
+      "length": 1,
+      "custom": "20",
+      "reference": "0E"
+    },
+    {
+      "file_offset": "0x000A9DF9",
+      "length": 5,
+      "custom": "EB 10 90 90 90",
+      "reference": "E8 E2 BE F7 FF"
+    },
+    {
+      "file_offset": "0x000E0891",
+      "length": 5,
+      "custom": "5A 90 90 90 90",
+      "reference": "B9 5C 03 BA 00"
+    },
+    {
+      "file_offset": "0x000E0897",
+      "length": 4,
+      "custom": "58 6B 11 00",
+      "reference": "05 31 F9 FF"
+    },
+    {
+      "file_offset": "0x000E08E0",
+      "length": 3,
+      "custom": "89 C1 90",
+      "reference": "8B 48 04"
+    },
+    {
+      "file_offset": "0x000FEF28",
+      "length": 5,
+      "custom": "5A 90 90 90 90",
+      "reference": "B9 5C 03 BA 00"
+    },
+    {
+      "file_offset": "0x000FEF2E",
+      "length": 4,
+      "custom": "C1 84 0F 00",
+      "reference": "6E 4A F7 FF"
+    },
+    {
+      "file_offset": "0x000FEF6F",
+      "length": 3,
+      "custom": "89 D0 90",
+      "reference": "8B 42 04"
+    },
+    {
+      "file_offset": "0x000FF199",
+      "length": 5,
+      "custom": "5A 90 90 90 90",
+      "reference": "B9 5C 03 BA 00"
+    },
+    {
+      "file_offset": "0x000FF19F",
+      "length": 4,
+      "custom": "50 82 0F 00",
+      "reference": "FD 47 F7 FF"
+    },
+    {
+      "file_offset": "0x000FF1C7",
+      "length": 3,
+      "custom": "89 C1 90",
+      "reference": "8B 48 04"
+    },
+    {
+      "file_offset": "0x001181E3",
+      "length": 33,
+      "custom": "89 C2 E8 09 F2 0D 00 89 C6 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90",
+      "reference": "8B 0D 6C 03 BA 00 3B C1 0F 8C 83 00 00 00 3B 05 68 03 BA 00 7F 7B 2B C1 8B 0D 78 03 BA 00 8B 34"
+    },
+    {
+      "file_offset": "0x0011822E",
+      "length": 3,
+      "custom": "89 F2 90",
+      "reference": "8B 56 04"
+    },
+    {
+      "file_offset": "0x001263CE",
+      "length": 5,
+      "custom": "5A 90 90 90 90",
+      "reference": "B9 5C 03 BA 00"
+    },
+    {
+      "file_offset": "0x001263D4",
+      "length": 4,
+      "custom": "1B 10 0D 00",
+      "reference": "C8 D5 F4 FF"
+    },
+    {
+      "file_offset": "0x001263DC",
+      "length": 3,
+      "custom": "89 C0 90",
+      "reference": "8B 40 04"
+    },
+    {
+      "file_offset": "0x001276C7",
+      "length": 5,
+      "custom": "5A 90 90 90 90",
+      "reference": "B9 5C 03 BA 00"
+    },
+    {
+      "file_offset": "0x001276CD",
+      "length": 4,
+      "custom": "22 FD 0C 00",
+      "reference": "CF C2 F4 FF"
+    },
+    {
+      "file_offset": "0x001276D5",
+      "length": 3,
+      "custom": "89 C0 90",
+      "reference": "8B 40 04"
+    },
+    {
+      "file_offset": "0x00127853",
+      "length": 5,
+      "custom": "5A 90 90 90 90",
+      "reference": "B9 5C 03 BA 00"
+    },
+    {
+      "file_offset": "0x00127859",
+      "length": 4,
+      "custom": "96 FB 0C 00",
+      "reference": "43 C1 F4 FF"
+    },
+    {
+      "file_offset": "0x00127861",
+      "length": 3,
+      "custom": "89 C0 90",
+      "reference": "8B 40 04"
+    },
+    {
+      "file_offset": "0x0012797D",
+      "length": 5,
+      "custom": "5A 90 90 90 90",
+      "reference": "B9 5C 03 BA 00"
+    },
+    {
+      "file_offset": "0x00127983",
+      "length": 4,
+      "custom": "6C FA 0C 00",
+      "reference": "19 C0 F4 FF"
+    },
+    {
+      "file_offset": "0x0012798B",
+      "length": 3,
+      "custom": "89 C0 90",
+      "reference": "8B 40 04"
+    },
+    {
+      "file_offset": "0x00127F06",
+      "length": 5,
+      "custom": "5A 90 90 90 90",
+      "reference": "B9 5C 03 BA 00"
+    },
+    {
+      "file_offset": "0x00127F0C",
+      "length": 4,
+      "custom": "E3 F4 0C 00",
+      "reference": "90 BA F4 FF"
+    },
+    {
+      "file_offset": "0x00127F14",
+      "length": 3,
+      "custom": "89 C0 90",
+      "reference": "8B 40 04"
+    },
+    {
+      "file_offset": "0x001F73F3",
+      "length": 4,
+      "custom": "89 D0 EB 0F",
+      "reference": "CC CC CC CC"
+    },
+    {
+      "file_offset": "0x0023043F",
+      "length": 1,
+      "custom": "43",
+      "reference": "90"
+    },
+    {
+      "file_offset": "0x00230483",
+      "length": 8,
+      "custom": "8D 4D F8 E9 C6 00 00 00",
+      "reference": "CC CC CC CC CC CC CC CC"
+    },
+    {
+      "file_offset": "0x00230551",
+      "length": 14,
+      "custom": "68 E0 C7 46 00 51 50 31 C0 E9 6A 01 00 00",
+      "reference": "CC CC CC CC CC CC CC CC CC CC CC CC CC CC"
+    },
+    {
+      "file_offset": "0x002306C9",
+      "length": 7,
+      "custom": "B9 98 9A D2 00 EB 05",
+      "reference": "CC CC CC CC CC CC CC"
+    },
+    {
+      "file_offset": "0x002306D5",
+      "length": 11,
+      "custom": "89 45 F8 89 45 FC E9 A3 00 00 00",
+      "reference": "CC CC CC CC CC CC CC CC CC CC CC"
+    },
+    {
+      "file_offset": "0x00230783",
+      "length": 11,
+      "custom": "E8 78 02 F6 FF 85 C0 74 5D EB 60",
+      "reference": "CC CC CC CC CC CC CC CC CC CC CC"
+    },
+    {
+      "file_offset": "0x002307E9",
+      "length": 7,
+      "custom": "5E 89 EC 5D C3 EB 26",
+      "reference": "CC CC CC CC CC CC CC"
+    },
+    {
+      "file_offset": "0x00230816",
+      "length": 5,
+      "custom": "8B 40 10 EB CE",
+      "reference": "CC CC CC CC CC"
+    },
+    {
+      "file_offset": "0x0025747B",
+      "length": 1,
+      "custom": "31",
+      "reference": "E8"
+    },
+    {
+      "file_offset": "0x0025747D",
+      "length": 3,
+      "custom": "90 90 90",
+      "reference": "FE FF FF"
+    },
+    {
+      "file_offset": "0x00257729",
+      "length": 6,
+      "custom": "58 C7 44 24 0C 00",
+      "reference": "C7 44 24 0C 14 01"
+    },
+    {
+      "file_offset": "0x00257731",
+      "length": 6,
+      "custom": "00 90 90 90 90 90",
+      "reference": "FF 15 C0 A3 BD 00"
+    },
+    {
+      "file_offset": "0x004B4004",
+      "length": 3,
+      "custom": "DB 0F C9",
+      "reference": "66 66 F6"
+    },
+    {
+      "file_offset": "0x007A2991",
+      "length": 3,
+      "custom": "00 C8 43",
+      "reference": "80 48 45"
+    },
+    {
+      "file_offset": "0x007E2800",
+      "length": 4752,
+      "custom": "",
+      "reference": "90 12 00 00 00 02 02 00 30 82 12 7E 06 09 2A 86 48 86 F7 0D 01 07 02 A0 82 12 6F 30 82 12 6B 02"
+    }
+  ]
+}

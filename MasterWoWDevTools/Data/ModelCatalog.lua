@@ -1,0 +1,2 @@
+MWDT_MODEL_CATALOG={
+}

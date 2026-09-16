@@ -1,6 +1,8 @@
 #include <Client/FrameScript.hpp>
+#include <Offsets/ClientOffsets_8606.hpp>
 
 #include <cstdarg>
+#include <cstddef>
 #include <cstdio>
 
 void FrameScript::DisplayError(lua_State* L, char* fmt, ...)
@@ -12,20 +14,17 @@ void FrameScript::DisplayError(lua_State* L, char* fmt, ...)
     vsnprintf_s(buffer, sizeof(buffer), _TRUNCATE, fmt, args);
     va_end(args);
 
-    // TBC 2.4.3: luaL_error — takes (L, fmt, ...), calls lua_pushfstring then lua_error
-    reinterpret_cast<void(_cdecl*)(lua_State*, char*, ...)>(0x0072F5C0)(L, "%s", buffer);
+    reinterpret_cast<void(_cdecl*)(lua_State*, const char*, ...)>(Offsets8606::LuaLError)(L, "%s", buffer);
 }
 
 bool FrameScript::GetBoolean(lua_State* L, int32_t index)
 {
-    // TBC 2.4.3: lua_toboolean
-    return reinterpret_cast<bool (__cdecl*)(lua_State*, int32_t)>(0x0072DFC0)(L, index);
+    return reinterpret_cast<bool (__cdecl*)(lua_State*, int32_t)>(Offsets8606::LuaToBoolean)(L, index);
 }
 
 double FrameScript::GetNumber(lua_State* L, int32_t index)
 {
-    // TBC 2.4.3: lua_tonumber
-    return reinterpret_cast<double(__cdecl*)(lua_State*, int32_t)>(0x0072DF40)(L, index);
+    return reinterpret_cast<double(__cdecl*)(lua_State*, int32_t)>(Offsets8606::LuaToNumber)(L, index);
 }
 
 bool FrameScript::GetParam(lua_State* L, int32_t index, bool p)
@@ -37,8 +36,7 @@ bool FrameScript::GetParam(lua_State* L, int32_t index, bool p)
 
 char* FrameScript::GetString(lua_State* L, int32_t index, bool p)
 {
-    // TBC 2.4.3: lua_tolstring
-    return reinterpret_cast<char* (__cdecl*)(lua_State*, int32_t, bool)>(0x0072DFF0)(L, index, p);
+    return reinterpret_cast<char* (__cdecl*)(lua_State*, int32_t, size_t*)>(Offsets8606::LuaToLString)(L, index, nullptr);
 }
 
 char* FrameScript::GetText(const char* str, int32_t a2, int32_t a3)
@@ -48,22 +46,23 @@ char* FrameScript::GetText(const char* str, int32_t a2, int32_t a3)
     return reinterpret_cast<char* (__cdecl*)(const char*, int32_t, int32_t)>(0x000000 /* TODO_TBC */)(str, a2, a3);
 }
 
-int32_t FrameScript::GetTop(lua_State* L, int32_t p)
+int32_t FrameScript::GetTop(lua_State* L, int32_t)
 {
-    // TBC 2.4.3: lua_gettop
-    return reinterpret_cast <int32_t(__cdecl*)(lua_State*, int32_t)>(0x0072DAE0)(L, p);
+    return reinterpret_cast<int32_t(__cdecl*)(lua_State*)>(Offsets8606::LuaGetTop)(L);
 }
 
 int32_t FrameScript::IsNumber(lua_State* L, int32_t index)
 {
-    // TBC 2.4.3: lua_isnumber
-    return reinterpret_cast<int32_t(__cdecl*)(lua_State*, int32_t)>(0x0072DE30)(L, index);
+    // TODO_TBC: Find lua_isnumber address
+    // WotLK 3.3.5 address was: 0x84DF20
+    return reinterpret_cast<int32_t(__cdecl*)(lua_State*, int32_t)>(Offsets8606::LuaIsNumber)(L, index);
 }
 
 char* FrameScript::IsString(lua_State* L, int32_t index)
 {
-    // TBC 2.4.3: lua_isstring
-    return reinterpret_cast<char* (__cdecl*)(lua_State*, int32_t)>(0x0072DE70)(L, index);
+    // TODO_TBC: Find lua_isstring address
+    // WotLK 3.3.5 address was: 0x84DF60
+    return reinterpret_cast<char* (__cdecl*)(lua_State*, int32_t)>(Offsets8606::LuaIsString)(L, index);
 }
 
 int32_t FrameScript::LoadFunctions()
@@ -76,38 +75,45 @@ int32_t FrameScript::LoadFunctions()
 
 int32_t FrameScript::PushBoolean(lua_State* L, bool state)
 {
-    // TBC 2.4.3: lua_pushboolean
-    return reinterpret_cast<int32_t(__cdecl*)(lua_State*, bool)>(0x0072E3B0)(L, state);
+    // TODO_TBC: Find lua_pushboolean address
+    // WotLK 3.3.5 address was: 0x84E4D0
+    return reinterpret_cast<int32_t(__cdecl*)(lua_State*, bool)>(Offsets8606::LuaPushBoolean)(L, state);
 }
 
 int32_t FrameScript::PushNil(lua_State* L)
 {
-    // TBC 2.4.3: lua_pushnil
-    return reinterpret_cast<int32_t(__cdecl*)(lua_State*)>(0x0072E180)(L);
+    // TODO_TBC: Find lua_pushnil address
+    // WotLK 3.3.5 address was: 0x84E280
+    return reinterpret_cast<int32_t(__cdecl*)(lua_State*)>(Offsets8606::LuaPushNil)(L);
 }
 
 int32_t FrameScript::PushNumber(lua_State* L, double value)
 {
-    // TBC 2.4.3: lua_pushnumber
-    return reinterpret_cast<int32_t(__cdecl*)(lua_State*, double)>(0x0072E1A0)(L, value);
+    // TODO_TBC: Find lua_pushnumber address
+    // WotLK 3.3.5 address was: 0x84E2A0
+    return reinterpret_cast<int32_t(__cdecl*)(lua_State*, double)>(Offsets8606::LuaPushNumber)(L, value);
 }
 
 int32_t FrameScript::PushString(lua_State* L, const char* str)
 {
-    // TBC 2.4.3: lua_pushstring
-    return reinterpret_cast<int32_t(__cdecl*)(lua_State*, const char*)>(0x0072E250)(L, str);
+    // TODO_TBC: Find lua_pushstring address
+    // WotLK 3.3.5 address was: 0x84E350
+    return reinterpret_cast<int32_t(__cdecl*)(lua_State*, const char*)>(Offsets8606::LuaPushString)(L, str);
 }
 
 int32_t FrameScript::RegisterFunction(const char* name, void* ptr)
 {
-    // TBC 2.4.3: FrameScript__RegisterFunction
-    return reinterpret_cast<int32_t(__cdecl*)(const char*, void*)>(0x007059B0)(name, ptr);
+    // TODO_TBC: Find FrameScript__RegisterFunction address
+    // WotLK 3.3.5 address was: 0x817F90
+    // How to find: Search for the function that maps string→function pointer for Lua API
+    return reinterpret_cast<int32_t(__cdecl*)(const char*, void*)>(Offsets8606::FrameScriptRegisterFunction)(name, ptr);
 }
 
 int32_t FrameScript::SetTop(lua_State* L, int32_t p)
 {
-    // TBC 2.4.3: lua_settop
-    return reinterpret_cast<int32_t(__cdecl*)(lua_State * L, int32_t)>(0x0072DB00)(L, p);
+    // TODO_TBC: Find lua_settop address
+    // WotLK 3.3.5 address was: 0x84DBF0
+    return reinterpret_cast<int32_t(__cdecl*)(lua_State*, int32_t)>(Offsets8606::LuaSetTop)(L, p);
 }
 
 int32_t FrameScript::SignalEvent(uint32_t event, char* fmt, ...)
@@ -131,32 +137,43 @@ int32_t FrameScript::SignalEvent(uint32_t event, char* fmt, ...)
 
 lua_State* FrameScript::GetState()
 {
-    // TBC 2.4.3: global lua_State* at 0xE1DB84 (confirmed via FrameScript__GetState at 0x7057C0)
-    return *reinterpret_cast<lua_State**>(0x00E1DB84);
+    // TODO_TBC: Find the address of the global lua_State pointer in wow.exe
+    // WotLK 3.3.5 address was: *(lua_State**)0x00884BAC
+    // How to find: Search for the global variable used in FrameScript__LoadFunctions
+    //              to pass the Lua state to Lua C API calls.
+    return *reinterpret_cast<lua_State**>(Offsets8606::GlobalLuaStatePointer);
 }
 
 void FrameScript::GetField(lua_State* L, int32_t idx, const char* k)
 {
-    // TBC 2.4.3: lua_getfield
-    reinterpret_cast<void(__cdecl*)(lua_State*, int32_t, const char*)>(0x0072E550)(L, idx, k);
+    // TODO_TBC: Find lua_getfield address
+    // WotLK 3.3.5 address was: 0x84E620
+    // How to find: Search for lua_getfield calls near FrameScript init
+    reinterpret_cast<void(__cdecl*)(lua_State*, int32_t, const char*)>(Offsets8606::LuaGetField)(L, idx, k);
 }
 
 void FrameScript::SetField(lua_State* L, int32_t idx, const char* k)
 {
-    // TBC 2.4.3: lua_setfield
-    reinterpret_cast<void(__cdecl*)(lua_State*, int32_t, const char*)>(0x0072E7E0)(L, idx, k);
+    // TODO_TBC: Find lua_setfield address
+    // WotLK 3.3.5 address was: 0x84E680
+    // How to find: Search for lua_setfield calls near frame method registration
+    reinterpret_cast<void(__cdecl*)(lua_State*, int32_t, const char*)>(Offsets8606::LuaSetField)(L, idx, k);
 }
 
 void FrameScript::PushCFunction(lua_State* L, int32_t (*fn)(lua_State*))
 {
-    // TBC 2.4.3: lua_pushcclosure (nup=0 for plain C function)
-    reinterpret_cast<void(__cdecl*)(lua_State*, int32_t(*)(lua_State*), int32_t)>(0x0072E2F0)(L, fn, 0);
+    // TODO_TBC: Find lua_pushcclosure address (with nup=0 for plain C functions)
+    // WotLK 3.3.5 address was: 0x84E460
+    // How to find: Search for lua_pushcclosure calls in FrameScript registration
+    reinterpret_cast<void(__cdecl*)(lua_State*, int32_t(*)(lua_State*), int32_t)>(Offsets8606::LuaPushCClosure)(L, fn, 0);
 }
 
 int32_t FrameScript::LuaType(lua_State* L, int32_t idx)
 {
-    // TBC 2.4.3: lua_type
-    return reinterpret_cast<int32_t(__cdecl*)(lua_State*, int32_t)>(0x0072DDC0)(L, idx);
+    // TODO_TBC: Find lua_type address
+    // WotLK 3.3.5 address was: 0x84DEC0
+    // How to find: Search for the function that returns an integer type code (0-8)
+    return reinterpret_cast<int32_t(__cdecl*)(lua_State*, int32_t)>(Offsets8606::LuaType)(L, idx);
 }
 
 void FrameScript::GetMetaTable(lua_State* L, const char* tname)

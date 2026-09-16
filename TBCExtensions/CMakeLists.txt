@@ -1,7 +1,9 @@
 # Dll
 cmake_minimum_required(VERSION 3.25)
 
-set(CMAKE_GENERATOR_PLATFORM Win32)
+if(CMAKE_GENERATOR MATCHES "Visual Studio")
+    set(CMAKE_GENERATOR_PLATFORM Win32)
+endif()
 
 set(CMAKE_CXX_STANDARD 17)
 
@@ -19,6 +21,7 @@ option(ITEMMODEXT_PATCH "Expands ITEM_MOD table, allowing to add and display mor
 option(SPELLDESCRIPTIONEXT_PATCH "Enables possibility to add more variable arguments used in spell descriptions, like $hp, $power1, etc." OFF)
 option(ACTIONBAR_LUA "Enables some additional action bar functions like 'ReplaceActionBarSpell'" OFF)
 option(DEVHELPER_LUA "Various Lua functions useful in dev, like 'ReloadMap' or toggle rendering of various elements: liquids, terrain, etc." OFF)
+option(UNSAFE_LEGACY_PORT "Enable incomplete WotLK-derived patches containing unverified TBC addresses" OFF)
 
 # Warn about TODO_TBC placeholders
 message(WARNING "TBC-Extensions: Many memory addresses are TODO_TBC placeholders. "
@@ -59,6 +62,7 @@ target_include_directories(TBCExtensions PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/include/
     ${CMAKE_CURRENT_SOURCE_DIR}/src/
 )
+target_link_libraries(TBCExtensions PRIVATE minhook)
 source_group(TREE "${CMAKE_CURRENT_SOURCE_DIR}/src" PREFIX "DLL" FILES
     ${TBCExt_sources}
     ${TBCExt_includes}

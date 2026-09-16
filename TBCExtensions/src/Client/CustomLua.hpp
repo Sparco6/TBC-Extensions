@@ -20,12 +20,40 @@ class Main;
 class CustomLua
 {
 public:
+    using SafeRegistrar = int32_t(__cdecl*)(const char*, void*);
     static int32_t LoadScriptFunctionsCustom();
+    static void ApplySafeResearchApi();
+    static void ApplySafeResearchApiWithRegistrar(SafeRegistrar registrar);
+    static bool IsSafeResearchCallback(std::uintptr_t address);
+    static bool CaptureClientFingerprint();
 
 private:
     static void AddToFunctionMap(const char* name, void* ptr);
     static void Apply();
     static void RegisterFunctions();
+    static int32_t TBCExtGetVersion(lua_State* L);
+    static int32_t TBCExtGetClientBuild(lua_State* L);
+    static int32_t TBCExtGetModuleBase(lua_State* L);
+    static int32_t TBCExtGetLuaState(lua_State* L);
+    static int32_t TBCExtGetNativeApiVersion(lua_State* L);
+    static int32_t TBCExtGetClientProfile(lua_State* L);
+    static int32_t TBCExtGetCoreLuaStatus(lua_State* L);
+    static int32_t TBCExtGetCallbackValidatorStatus(lua_State* L);
+    static int32_t TBCExtGetNativeTraceStatus(lua_State* L);
+    static int32_t TBCExtGetModelHooksStatus(lua_State* L);
+    static int32_t TBCExtGetAddressInfo(lua_State* L);
+    static int32_t TBCExtIsAddressExecutable(lua_State* L);
+    static int32_t TBCExtIsAddressReadable(lua_State* L);
+    static int32_t TBCExtCustomDBC(lua_State* L);
+    static int32_t TBCExtGetBLPSupport(lua_State* L);
+    static int32_t TBCExtInspectBLP(lua_State* L);
+    static int32_t TBCExtGetTextureLoaderStatus(lua_State* L);
+    static int32_t TBCExtArmBLPObservation(lua_State* L);
+    static int32_t TBCExtGetBLPObservationStatus(lua_State* L);
+    static int32_t TBCExtArmNativeBLPDXT5(lua_State* L);
+    static int32_t TBCExtArmNativeBLPBGRA8(lua_State* L);
+    static int32_t TBCExtArmNativeBLPBGRA8Prototype(lua_State* L);
+    static int32_t TBCExtGetNativeBLPTraceStatus(lua_State* L);
 
     friend class Main;
 

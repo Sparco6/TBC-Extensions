@@ -1,0 +1,12 @@
+{
+  "total_native_functions": 23217,
+  "named": 1002,
+  "fun_auto_named": 22215,
+  "verified": 17,
+  "candidates": 0,
+  "duplicate_address_rows": 0,
+  "categories": {
+    "Lua": 17,
+    "Unknown": 23200
+  }
+}

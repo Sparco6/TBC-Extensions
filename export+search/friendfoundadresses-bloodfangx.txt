@@ -1,0 +1,271 @@
+#include <idc.idc>
+
+static Rebase(addr)
+{
+    return addr + (get_imagebase() - 0x400000);
+}
+
+static InSeg(ea)
+{
+    return SegStart(ea) != BADADDR;
+}
+
+static NameAddr(addr, name)
+{
+    auto ea = Rebase(addr);
+    if (!InSeg(ea)) {
+        Message("[skip] 0x%08X not mapped\n", ea);
+        return;
+    }
+    auto other = get_name_ea(BADADDR, name);
+    if (other != BADADDR && other != ea) {
+        Message("[fix] name '%s' was at 0x%08X (stale from an earlier run); clearing so 0x%08X can take it\n", name, other, ea);
+        MakeNameEx(other, "", 0);
+    }
+    if (MakeNameEx(ea, name, 0x33) == 0) {
+        Message("[name] failed on 0x%08X -> %s (collision?)\n", ea, name);
+    }
+    Message("[ok] 0x%08X %-48s\n", ea, name);
+}
+
+static Data(addr, name, kind)
+{
+    auto ea = Rebase(addr);
+    if (!InSeg(ea)) {
+        Message("[skip] 0x%08X not mapped\n", ea);
+        return;
+    }
+    if (kind == "byte")   { create_byte(ea); }
+    if (kind == "dword")  { create_dword(ea); }
+    if (kind == "qword")  { create_qword(ea); }
+    if (kind == "float")  { create_float(ea); }
+    if (kind == "double") { create_double(ea); }
+    if (kind == "ptr")    { create_dword(ea); }
+    NameAddr(addr, name);
+}
+
+static main()
+{
+    // ---- mem (engine/Mem.hpp) ------------------------------------------------
+    NameAddr(0x006441F0, "wow_mem_kAlloc");
+    NameAddr(0x00644080, "wow_mem_kFree");
+    NameAddr(0x00643990, "wow_mem_free_core");
+    NameAddr(0x00644090, "wow_mem_alloc_core");
+    NameAddr(0x00D73700, "wow_heap_singleton");
+
+    // ---- ui (engine/Ui.hpp) ---------------------------------------------------
+    NameAddr(0x004A9ED0, "wow_ui_GameUI_Init");
+    NameAddr(0x00430F60, "wow_ui_find_frame_by_name");
+    Data(0x00C6E80C, "g_uiRoot", "ptr");
+    Data(0x00B97DB8, "g_uiEnabledFlag", "dword");
+    NameAddr(0x004A1150, "wow_ui_SetUIVisibility");
+    Data(0x00B986D8, "g_uiRegistrationTable", "dword");
+
+    // ---- gx (engine/Gx.hpp) ---------------------------------------------------
+    Data(0x00D2A15C, "g_gxDevicePtrAlt", "ptr");
+
+    // ---- world frame (game/World.hpp) -----------------------------------------
+    NameAddr(0x008A2F58, "aWorldframe");
+    NameAddr(0x008A7B68, "aWorldframeCpp");
+    NameAddr(0x00494620, "wow_world_frame_FactoryCreateWorldFrame");
+    NameAddr(0x004AFAE0, "wow_world_frame_ctor");
+    NameAddr(0x008A7BE8, "wow_world_frame_vtable");
+    NameAddr(0x008A7BA8, "wow_world_frame_vtable_secondary");
+    NameAddr(0x0049DCC0, "wow_world_frame_GameFrameFactory_RegisterTypes");
+    NameAddr(0x007001A0, "wow_world_frame_FrameFactoryCreateFrame");
+    NameAddr(0x004AFF00, "wow_world_frame_render");
+    NameAddr(0x004AE110, "wow_world_frame_render_world");
+    NameAddr(0x004AFFF0, "wow_world_frame_Update");
+    NameAddr(0x004AF4D0, "wow_world_frame_UpdateCursor");
+    NameAddr(0x004AE760, "wow_world_frame_pick_objects");
+    NameAddr(0x004AEB10, "wow_world_frame_pick_driver");
+    NameAddr(0x004AC140, "wow_world_frame_GetObjectByGuid");
+    NameAddr(0x004ABFB0, "wow_world_frame_method_4ABFB0");
+    NameAddr(0x0043CD2C, "wow_world_region_render_cb");
+    NameAddr(0x0043C827, "wow_world_region_render_dispatch");
+    NameAddr(0x0042F902, "wow_world_region_render_frame_entry");
+    NameAddr(0x004AC540, "wow_world_object_draw_cb");
+
+    // ---- lua / FrameScript (engine/Lua.hpp) ------------------------------------
+    Data(0x00E1F640, "g_frameScriptLuaGate", "ptr");
+    Data(0x00B9EF60, "g_luaRegistrationTable", "dword");
+    NameAddr(0x00540C30, "wow_lua_RegisterAll");
+    NameAddr(0x007059B0, "wow_lua_RegisterFunction");
+    NameAddr(0x00706C80, "wow_lua_Execute");
+    NameAddr(0x00706890, "wow_lua_DoStringCore");
+    NameAddr(0x0072D8B0, "wow_lua_index_to_value");
+    NameAddr(0x0072E0D0, "wow_lua_touserdata");
+    NameAddr(0x0072E550, "wow_lua_tolstring");
+    NameAddr(0x0072E4E0, "wow_lua_tostring");
+    NameAddr(0x0072E440, "wow_lua_pushvalue");
+    NameAddr(0x0072E470, "wow_lua_pushstring_at");
+    NameAddr(0x0072EE70, "wow_lua_settop");
+    NameAddr(0x0072E180, "wow_lua_pushnil");
+    NameAddr(0x0072E1A0, "wow_lua_pushnumber");
+    NameAddr(0x0072E200, "wow_lua_pushstring_impl");
+    NameAddr(0x0072E250, "wow_lua_pushstring");
+    NameAddr(0x0072E290, "wow_lua_pushformatted");
+    NameAddr(0x0072DDC0, "wow_lua_type");
+    NameAddr(0x0072DE00, "wow_lua_iscfunction");
+    NameAddr(0x0072E100, "wow_lua_tothread");
+    NameAddr(0x0072EE30, "wow_lua_convertpush");
+    NameAddr(0x0072EEF0, "wow_lua_stampstate");
+    NameAddr(0x0072E120, "wow_lua_pushbytype");
+    NameAddr(0x0072F5C0, "wow_lua_error");
+    NameAddr(0x00707200, "wow_GetText");
+    NameAddr(0x008D76DC, "aLua51");
+    NameAddr(0x008D6940, "aLuaLua511Copyr");
+    NameAddr(0x00706CF0, "wow_lua_gettime_seconds");
+
+    // ---- world tick / tile streaming (engine/Loading.hpp + game/World.hpp) -----
+    Data(0x00DA4528, "g_loadActiveFlag", "dword");
+    Data(0x00DA4524, "g_viewChangedFlag", "dword");
+    Data(0x00DA4674, "g_focusWindowY0", "dword");
+    Data(0x00DA4678, "g_focusWindowX0", "dword");
+    Data(0x00DA467C, "g_focusWindowY1", "dword");
+    Data(0x00DA4680, "g_focusWindowX1", "dword");
+    Data(0x00DA4684, "g_focusWindowPrevY0", "dword");
+    Data(0x00DA4688, "g_focusWindowPrevX0", "dword");
+    Data(0x00DA468C, "g_focusWindowPrevY1", "dword");
+    Data(0x00DA4690, "g_focusWindowPrevX1", "dword");
+    Data(0x00DA4664, "g_tileWindowY0", "dword");
+    Data(0x00DA4668, "g_tileWindowX0", "dword");
+    Data(0x00DA466C, "g_tileWindowY1", "dword");
+    Data(0x00DA4670, "g_tileWindowX1", "dword");
+    Data(0x00DA45F4, "g_cameraHalfExtent", "float");
+    Data(0x00DA4600, "g_cameraRect", "float");
+    Data(0x00DA4610, "g_cameraRectExpanded", "float");
+    Data(0x00DA4620, "g_viewAabb", "dword");
+    Data(0x00DA4638, "g_cameraAabb", "dword");
+    Data(0x00DCAC68, "g_tileGrid", "ptr");
+    Data(0x00DCEC68, "g_tileLoadTable", "ptr");
+    Data(0x00DC6C68, "g_tileTable16384", "ptr");
+    Data(0x00DBEC68, "g_cellBindingTable", "ptr");
+    Data(0x00BAAA1C, "g_cellBindingMgr", "ptr");
+    Data(0x00BAAA3C, "g_asyncIoQueue", "ptr");
+    Data(0x00BAAA44, "g_asyncIoQueueHead", "ptr");
+    Data(0x00DBEA68, "g_mapName", "ptr");
+    Data(0x00DBEB68, "g_mapPath", "ptr");
+    Data(0x00DD6C68, "g_mapFlags", "ptr");
+    Data(0x00DD6C88, "g_mapFlagsMphd", "dword");
+    Data(0x00DD6C8C, "g_mapLoadCounter", "dword");
+    Data(0x00DD6C90, "g_mapWdtLoaded", "dword");
+    Data(0x00BAAA14, "g_mapId", "dword");
+    Data(0x00BAAA18, "g_mapLoadingFlag", "dword");
+    Data(0x00DBE844, "g_cMapInstance", "ptr");
+    Data(0x00DBE968, "g_wdtPath", "ptr");
+    Data(0x00BAAA54, "g_wmoQueue", "ptr");
+    Data(0x00DBE57C, "g_loadProgressCallback", "ptr");
+    Data(0x00DBE578, "g_loadProgressArg", "ptr");
+    NameAddr(0x00657970, "wow_file_open");
+    NameAddr(0x00654E00, "wow_file_read");
+    NameAddr(0x00655290, "wow_file_close");
+    NameAddr(0x006BB900, "wow_world_load_map");
+    NameAddr(0x006BB2E0, "wow_world_wmo_area_construct");
+    NameAddr(0x006BB590, "wow_world_spawn_areas");
+    NameAddr(0x006B4F60, "wow_world_map_mode_setup");
+    NameAddr(0x006B8F60, "wow_world_post_wdt_setup");
+    NameAddr(0x0055BB50, "wow_async_fs_enqueue");
+    NameAddr(0x006BC600, "wow_tile_alloc");
+    NameAddr(0x006BC5C0, "wow_tile_init");
+    NameAddr(0x006CD3A0, "wow_tile_init_finalize");
+    NameAddr(0x00644CA0, "wow_snprintf");
+    NameAddr(0x00458A00, "wow_tile_loaded_action");
+    NameAddr(0x006B4DE0, "wow_world_tick");
+    NameAddr(0x006B4510, "wow_world_tick_streaming");
+    NameAddr(0x00684AA0, "wow_world_update");
+    NameAddr(0x00683B60, "wow_world_update_event");
+    NameAddr(0x00631450, "wow_world_movement_dispatch");
+    NameAddr(0x00682EC0, "wow_world_focus_update");
+    NameAddr(0x00683C80, "wow_world_view_update");
+    NameAddr(0x006986F0, "wow_world_camera_update");
+    NameAddr(0x004AB5B0, "wow_world_focus_state");
+    NameAddr(0x00596D00, "wow_world_entities_update");
+    NameAddr(0x006CFCE0, "wow_tile_load");
+    NameAddr(0x006B3E50, "wow_tile_finalize");
+    NameAddr(0x006BF640, "wow_tile_state_flush");
+    NameAddr(0x006BC770, "wow_tile_unlink");
+    NameAddr(0x006BF600, "wow_tile_free");
+    NameAddr(0x006BF050, "wow_tile_free_by_entry");
+    NameAddr(0x006C51B0, "wow_cell_binding_remove");
+    NameAddr(0x006BF6E0, "wow_world_reset");
+    NameAddr(0x00403170, "wow_world_enter");
+    NameAddr(0x00428200, "wow_task_queue_call");
+    Data(0x00BDB054, "g_pendingMapDir", "ptr");
+    Data(0x00E18DB4, "g_currentMapID", "dword");
+    NameAddr(0x006E7A80, "wow_world_wdl_load");
+
+    // ---- loading screen (LoadingScreen.cpp; the g_loadProgressCallback chain) ----
+    Data(0x00BDB298, "g_loadingProgressA", "float");
+    Data(0x00BDB29C, "g_loadingProgressSecondary", "float");
+    Data(0x00BDB2A0, "g_loadingProgressB", "float");
+    Data(0x00BDB2A4, "g_loadingScreenStatus", "byte");
+    Data(0x00BDB2A8, "g_loadingBarTextureBg", "ptr");
+    Data(0x00BDB2AC, "g_loadingBarTextureFill", "ptr");
+    Data(0x00BDB2B0, "g_loadingScreenInitGate", "ptr");
+    Data(0x00BDB258, "g_loadingMinTimeDeadline", "dword");
+    Data(0x00BDB2B4, "g_loadingFont", "ptr");
+    Data(0x00BDB2B8, "g_loadingTextObject", "ptr");
+    Data(0x00BDB2C0, "g_loadingStringBatch", "ptr");
+    Data(0x00BDB6A0, "g_loadingShipInfo", "ptr");
+    Data(0x0090F310, "g_loadingScreenState", "dword");
+    Data(0x0088D5B0, "g_loadingBarTextureTable", "ptr");
+    Data(0x0088D6F8, "g_loadingTaskDelay", "float");
+    Data(0x0088D6F4, "g_loadingOverlayFloat", "float");
+    NameAddr(0x0075A940, "wow_sound_update");
+    NameAddr(0x0075A9D0, "wow_sound_update_wrapper");
+    Data(0x00BDCE78, "g_evtLockA", "dword");
+    NameAddr(0x00428970, "wow_evt_sched_shutdown");
+    Data(0x00BDCF88, "g_evtSchedThreads", "dword");
+    NameAddr(0x00429AC0, "wow_evt_sched_worker_main");
+    NameAddr(0x004287A0, "wow_evt_sched_fire_update");
+    NameAddr(0x0042B380, "wow_evt_sched_execute");
+    NameAddr(0x0042A050, "wow_evt_sched_create");
+    Data(0x00BDB1A0, "g_evtSchedInstance", "ptr");
+    NameAddr(0x00406030, "wow_evt_boot_game_update");
+    NameAddr(0x00406340, "wow_evt_boot_enter_login");
+    NameAddr(0x00403990, "wow_game_client_init");
+    NameAddr(0x004283C0, "wow_task_register_id");
+    NameAddr(0x004479B0, "wow_ui_passes_register");
+    NameAddr(0x00447560, "wow_ui_region_render");
+    Data(0x00911758, "g_uiRegionList", "ptr");
+    Data(0x0091175C, "g_uiRegionListHead", "ptr");
+    Data(0x00911760, "g_uiRegionRenderList", "ptr");
+    Data(0x00BE1134, "g_uiRegionRenderAlpha", "float");
+    Data(0x00BE1138, "g_screenshotCallback", "dword");
+    Data(0x00BE113C, "g_screenshotPending", "dword");
+    Data(0x00447360, "wow_ui_screenshot_readback", "ptr");
+    NameAddr(0x00681550, "wow_loading_screen_register");
+    NameAddr(0x00458180, "wow_loading_screen_register_alt");
+    NameAddr(0x00409B20, "wow_loading_screen_progress_a");
+    NameAddr(0x00409B50, "wow_loading_screen_progress_b");
+    NameAddr(0x00409AF0, "wow_loading_screen_progress_alt");
+    NameAddr(0x00409640, "wow_loading_screen_update");
+    NameAddr(0x00407340, "wow_loading_screen_draw_bar");
+    NameAddr(0x00407A80, "wow_loading_screen_draw_helper");
+    NameAddr(0x004091C0, "wow_loading_screen_draw_overlay");
+    NameAddr(0x00409680, "wow_loading_screen_setup");
+    NameAddr(0x004097A0, "wow_loading_screen_show_text");
+    NameAddr(0x004099A0, "wow_loading_screen_show_zone");
+    NameAddr(0x00409A50, "wow_loading_screen_show_zone_alt");
+    NameAddr(0x00409490, "wow_loading_screen_ready_check");
+    NameAddr(0x00409520, "wow_loading_screen_shipinfo_resize");
+    NameAddr(0x00409B80, "wow_loading_screen_shipinfo_helper");
+    NameAddr(0x004479E0, "wow_task_register");
+    NameAddr(0x004094B0, "wow_loading_screen_shipinfo_pathinfo_ctor");
+
+    // ---- misc session landmarks ------------------------------------------------
+    NameAddr(0x00404D60, "wow_client_init");
+    NameAddr(0x004AB130, "wow_game_client_EnterWorld");
+    NameAddr(0x0046F050, "wow_glue_mgr_update");
+    NameAddr(0x00613CE0, "wow_ui_click_handler");
+    NameAddr(0x004A9B70, "wow_taint_frame");
+    NameAddr(0x004AAD50, "wow_script_callback_4AAD50");
+    NameAddr(0x00701FA0, "wow_toc_loader");
+    Data(0x00E1DAC4, "g_statusPresentCallback", "ptr");
+    Data(0x00E1DAB8, "g_statusProgressTotal", "dword");
+    Data(0x00E1DABC, "g_statusProgressPos", "dword");
+    NameAddr(0x004AAA78, "wow_game_ui_toc_init");
+
+    Message("--- discoveries applied ---\n");
+}

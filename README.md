@@ -226,3 +226,4 @@ The output DLL will be in `build/bin/TBCExtensions.dll`.
 ## Special Thanks
 
 A **big thank you** to **Alyst3r** for his invaluable help and support throughout the development of this project. 🙏
+A **big thank you** to **bloodfangx** for his invaluable help and support throughout the development of this project. (he give us adresses) 🙏

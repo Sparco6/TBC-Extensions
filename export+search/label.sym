@@ -1,0 +1,3407 @@
+__section_headers 00400200 l
+jump_table_40177c 0040177C l
+jump_table_401c64 00401C64 l
+jump_table_403148 00403148 l
+jump_table_405b40 00405B40 l
+lookup_table_405b4c 00405B4C l
+CLoadingScreenShipInfo_TAXIPATHINFO_ctor 00407920 l
+DYNAMICELEMENTVERT__ctor 004081A0 l
+__copysign 0040B43C l
+jump_table_40b5f8 0040B5F8 l
+jump_table_40b678 0040B678 l
+jump_table_40b6e4 0040B6E4 l
+jump_table_40b784 0040B784 l
+jump_table_40b830 0040B830 l
+jump_table_40b880 0040B880 l
+__SEH_epilog4 0040CE0D l
+__cfltcvt_l 0040D93E l
+__cfltcvt 0040D9C4 l
+__unwind_handler4 0040E1B8 l
+@_EH4_LocalUnwind@16 0040E264 l
+jump_table_40efaf 0040EFAF l
+?terminate@@YAXXZ 004101FD l
+jump_table_412738 00412738 l
+jump_table_4127b8 004127B8 l
+jump_table_412824 00412824 l
+jump_table_4128c4 004128C4 l
+jump_table_412970 00412970 l
+jump_table_4129c0 004129C0 l
+__alldvrm 00412C20 l
+__allmul 00412EA0 l
+__aulldvrm 00412EE0 l
+__unwind_handler 004130C4 l
+__NLG_Notify1 004131B0 l
+__NLG_Notify 004131B9 l
+jump_table_416c96 00416C96 l
+jump_table_417f34 00417F34 l
+RtlUnwind 0041BDE6 l
+PacketHandler_SMSG_AUTH_RESPONSE 0041C260 l
+PacketHandler_SMSG_ADDON_INFO 0041C320 l
+PacketHandler_SMSG_CHAR_CREATE 0041C370 l
+PacketHandler_SMSG_CHAR_DELETE 0041C3A0 l
+PacketHandler_SMSG_CHARACTER_LOGIN_FAILED 0041C3D0 l
+PacketHandler_SMSG_LOGOUT_COMPLETE 0041C400 l
+PacketHandler_SMSG_LOGOUT_RESPONSE 0041C410 l
+PacketHandler_SMSG_LOGOUT_CANCEL_ACK 0041C460 l
+PacketHandler_SMSG_AUTH_CHALLENGE 0041C470 l
+CHARACTER_INFO__ctor 0041C7A0 l
+CHARACTER_INFO__scalar_deleting_dtor 0041C890 l
+PacketHandler_SMSG_CHAR_ENUM 0041C920 l
+jump_table_41cd08 0041CD08 l
+lookup_table_41cd20 0041CD20 l
+RealmConnection__REALMCONNECTIONNODE_ctor 0041CD40 l
+RealmConnection__Constructor 0041CDC0 l
+jump_table_41d274 0041D274 l
+REALM_INFO__ctor 0041DFE0 l
+REALM_INFO__scalar_deleting_dtor 0041E4D0 l
+REALM_INFO__copy_or_list_op 0041E530 l
+jump_table_41e7e4 0041E7E4 l
+lookup_table_41e7f0 0041E7F0 l
+jump_table_41e850 0041E850 l
+lookup_table_41e858 0041E858 l
+jump_table_41ea30 0041EA30 l
+lookup_table_41ea40 0041EA40 l
+jump_table_41efac 0041EFAC l
+lookup_table_41efdc 0041EFDC l
+EvtThread__SetActive 00422080 l
+Grunt__CdKey_Info__ctor 004240A0 l
+Grunt__Pending_Data__ctor 00424680 l
+WowConnection__base_ctor 00424800 l
+WowConnection__ctor 00424EE0 l
+jump_table_425b98 00425B98 l
+CDataStore__Reset 00425C30 l
+jump_table_426cc4 00426CC4 l
+jump_table_426de0 00426DE0 l
+jump_table_426f80 00426F80 l
+EvtThread__ctor 004290C0 l
+jump_table_42ad1c 0042AD1C l
+EvtKeyDown__scalar_deleting_dtor 0042B030 l
+EvtMessage__scalar_deleting_dtor 0042B0B0 l
+jump_table_42b2d4 0042B2D4 l
+lookup_table_42b2e4 0042B2E4 l
+jump_table_42c3a0 0042C3A0 l
+lookup_table_42c3a8 0042C3A8 l
+jump_table_42c8f0 0042C8F0 l
+WowConnection__pure_virtual_stub 0042D3F0 l
+CSimpleBatchedMesh__ctor 0042E6F0 l
+CSimpleTexture__base_ctor 0042E790 l
+CSimpleEmbeddedTexture__ctor 0042EEE0 l
+RENDERCALLBACKNODE__ctor 0042F290 l
+CSimpleBatchedMesh__scalar_deleting_dtor 00430670 l
+CLayoutFrame__FRAMENODE_scalar_deleting_dtor 00432AE0 l
+CLayoutFrame__FRAMENODE_list_init 00432C40 l
+CFrame__UpdateBounds 00432F70 l
+jump_table_433c4c 00433C4C l
+jump_table_437054 00437054 l
+jump_table_437070 00437070 l
+lookup_table_437088 00437088 l
+jump_table_437098 00437098 l
+CFrame__SetPoint 00437900 l
+jump_table_437db8 00437DB8 l
+lookup_table_437dd0 00437DD0 l
+TSExplicitList_FRAMEATTR_ctor 00438390 l
+REGIONNODE__ctor 00438580 l
+REGIONNODE__scalar_deleting_dtor 00438630 l
+REGIONNODE__list_init 00438780 l
+SIMPLEFRAMENODE__scalar_deleting_dtor 00438800 l
+CFrame__ctor 00439AE0 l
+TSExplicitList_SIMPLEFONT_ctor 0043E0B0 l
+jump_table_43f074 0043F074 l
+lookup_table_43f080 0043F080 l
+jump_table_43f138 0043F138 l
+lookup_table_43f144 0043F144 l
+j_sub_412fdf 00448BD0 l
+j_sub_411087 00448BE0 l
+jump_table_44ac24 0044AC24 l
+jump_table_44aef0 0044AEF0 l
+jump_table_451cb4 00451CB4 l
+jump_table_451cc8 00451CC8 l
+jump_table_4548fc 004548FC l
+CMipBitsCache__ctor 00455340 l
+TSExplicitList_CTextureHash_ctor 00455880 l
+ProfileInternal__KEYVALUE_list_init 00459020 l
+ProfileInternal__SECTION_list_init 00459180 l
+jump_table_45a9e4 0045A9E4 l
+TSExplicitList_FONTHASHOBJ_ctor 0045B420 l
+jump_table_462ed8 00462ED8 l
+TSExplicitList_SOUNDKITLOOKUP_ctor 00464730 l
+TEXTEMOTE_LOOKUP__ctor 00465390 l
+TSExplicitList_FOOTSTEPSNDCACHE_ctor 00465870 l
+IMPACTSOUNDARRAY__ctor 00467200 l
+CObjectHeap__ctor 00469460 l
+CObjectHeap__dtor 00469540 l
+CObjectHeapList__scalar_deleting_dtor 00469980 l
+jump_table_469cb0 00469CB0 l
+jump_table_46a114 0046A114 l
+jump_table_46a1a4 0046A1A4 l
+lookup_table_46a1bc 0046A1BC l
+jump_table_46a2d4 0046A2D4 l
+jump_table_46a374 0046A374 l
+lookup_table_46a398 0046A398 l
+jump_table_46a578 0046A578 l
+jump_table_46a618 0046A618 l
+lookup_table_46a620 0046A620 l
+jump_table_46a794 0046A794 l
+lookup_table_46a7b8 0046A7B8 l
+jump_table_46a8f4 0046A8F4 l
+lookup_table_46a918 0046A918 l
+jump_table_46aa54 0046AA54 l
+lookup_table_46aa78 0046AA78 l
+jump_table_46ae14 0046AE14 l
+jump_table_46aed4 0046AED4 l
+jump_table_46b0a0 0046B0A0 l
+CMirrorHandler__ctor 0046B800 l
+TSExplicitList_CGObject_C_scalar_deleting_dtor 0046B840 l
+jump_table_46c078 0046C078 l
+jump_table_46cecc 0046CECC l
+jump_table_46daf4 0046DAF4 l
+jump_table_46dee0 0046DEE0 l
+jump_table_46f0d8 0046F0D8 l
+jump_table_470150 00470150 l
+jump_table_470cbc 00470CBC l
+GameClient__InitFrameTypes 00470E60 l
+jump_table_4732b8 004732B8 l
+RealmList__UpdatePingStats 00474150 l
+jump_table_474d4c 00474D4C l
+jump_table_474fa0 00474FA0 l
+CharacterSelectionDisplay__ctor 004766E0 l
+CSimpleModelFFX__ctor 00478F60 l
+jump_table_479db4 00479DB4 l
+jump_table_479ea0 00479EA0 l
+lookup_table_479ed0 00479ED0 l
+jump_table_479f54 00479F54 l
+jump_table_47c5cc 0047C5CC l
+lookup_table_47c5fc 0047C5FC l
+jump_table_47c6a8 0047C6A8 l
+lookup_table_47c6dc 0047C6DC l
+jump_table_47e924 0047E924 l
+lookup_table_47e954 0047E954 l
+jump_table_47ea94 0047EA94 l
+lookup_table_47ead0 0047EAD0 l
+TSExplicitList_CACHEENTRY_ctor 0047EDD0 l
+CACHEENTRY__ctor 0047F220 l
+jump_table_480618 00480618 l
+lookup_table_480620 00480620 l
+ChatColorInfo__ctor 00482130 l
+RaidInstanceInfo__ctor 004821D0 l
+PENDINGUSERLIST__scalar_deleting_dtor 00486ED0 l
+TSExplicitList_WORDLIST_ctor 00486FD0 l
+TSExplicitList_CHATTHROTTLE_ctor 00487130 l
+TSExplicitList_PROFANITYCHECK_ctor 00487290 l
+TSExplicitList_SPAMCHECK_ctor 004873F0 l
+TSExplicitList_CHANNEL_COUNT_ctor 00487550 l
+ChatChannel__ctor 00488460 l
+jump_table_48e0d4 0048E0D4 l
+lookup_table_48e0ec 0048E0EC l
+jump_table_48e118 0048E118 l
+lookup_table_48e130 0048E130 l
+jump_table_48ffb0 0048FFB0 l
+jump_table_492910 00492910 l
+jump_table_4945e0 004945E0 l
+j_sub_55bf10 004976F0 l
+jump_table_498a28 00498A28 l
+jump_table_498b2c 00498B2C l
+jump_table_498d58 00498D58 l
+NearestUnitData__ctor 00498F30 l
+TaintStackFrame__ctor 00499100 l
+jump_table_4991c0 004991C0 l
+jump_table_499c04 00499C04 l
+jump_table_49cecc 0049CECC l
+jump_table_49d7c8 0049D7C8 l
+jump_table_49d874 0049D874 l
+jump_table_49dc30 0049DC30 l
+lookup_table_49dc40 0049DC40 l
+jump_table_4a161c 004A161C l
+jump_table_4a1cc8 004A1CC8 l
+lookup_table_4a1cd8 004A1CD8 l
+jump_table_4a27f8 004A27F8 l
+PacketHandler_SMSG_START_MIRROR_TIMER 004A3010 l
+jump_table_4a4f4c 004A4F4C l
+lookup_table_4a4f5c 004A4F5C l
+PacketHandler_SMSG_PVP_CREDIT 004A5E30 l
+jump_table_4a647c 004A647C l
+lookup_table_4a64ac 004A64AC l
+jump_table_4a658c 004A658C l
+lookup_table_4a65a8 004A65A8 l
+TSExplicitList_SAVEDVARIABLE_ctor 004A6CB0 l
+TSExplicitList_TaintEvent_ctor 004A6E10 l
+CapturePointUIManagerNode__ctor 004A7BF0 l
+CapturePointUIManagerNode__list_op 004A7D20 l
+jump_table_4aaccc 004AACCC l
+GameClient__EnterWorld 004AB130 l
+jump_table_4abd04 004ABD04 l
+jump_table_4abd20 004ABD20 l
+lookup_table_4abd38 004ABD38 l
+jump_table_4abd48 004ABD48 l
+jump_table_4abdc8 004ABDC8 l
+lookup_table_4abde0 004ABDE0 l
+jump_table_4abe98 004ABE98 l
+lookup_table_4abea8 004ABEA8 l
+jump_table_4acda0 004ACDA0 l
+lookup_table_4acdb4 004ACDB4 l
+jump_table_4ad9e0 004AD9E0 l
+lookup_table_4ad9f4 004AD9F4 l
+CModelRecord__ctor 004ADD30 l
+CModelRecord__scalar_deleting_dtor 004AF200 l
+CWorldFrame__ctor 004AFAE0 l
+WorldMapLandmarkInfo__ctor 004B08B0 l
+WorldMapContinentInfo__scalar_deleting_dtor 004B3B00 l
+TSExplicitList_WORLDSTATE_ctor 004B4610 l
+jump_table_4b6088 004B6088 l
+lookup_table_4b609c 004B609C l
+jump_table_4b803c 004B803C l
+jump_table_4b8b20 004B8B20 l
+TUTORIALTIMER__ctor 004BD2F0 l
+jump_table_4bdff4 004BDFF4 l
+lookup_table_4be000 004BE000 l
+jump_table_4be6a8 004BE6A8 l
+jump_table_4be894 004BE894 l
+jump_table_4bf098 004BF098 l
+lookup_table_4bf140 004BF140 l
+jump_table_4bf3d4 004BF3D4 l
+lookup_table_4bf3e0 004BF3E0 l
+jump_table_4bf688 004BF688 l
+lookup_table_4bf698 004BF698 l
+jump_table_4bf8ac 004BF8AC l
+lookup_table_4bf8bc 004BF8BC l
+jump_table_4bfec8 004BFEC8 l
+lookup_table_4bfef0 004BFEF0 l
+jump_table_4c0eb8 004C0EB8 l
+lookup_table_4c0f10 004C0F10 l
+CombatFeedbackSpell__ctor 004C17B0 l
+SPELLBYNAME__scalar_deleting_dtor 004C3200 l
+TSExplicitList_SPELLSBYNAME_ctor 004C3280 l
+CMinimap__ctor 004C8970 l
+POIINFO__ctor 004CA810 l
+jump_table_4d0d44 004D0D44 l
+jump_table_4d37b4 004D37B4 l
+jump_table_4d37d0 004D37D0 l
+lookup_table_4d37e8 004D37E8 l
+jump_table_4d37f8 004D37F8 l
+jump_table_4d3b50 004D3B50 l
+lookup_table_4d3b68 004D3B68 l
+TSExplicitList_KEYCOMMAND_ctor 004D3EF0 l
+TSExplicitList_KEYBINDING_ctor 004D4050 l
+TSExplicitList_OVERRIDEKEYBINDING_ctor 004D41B0 l
+TSExplicitList_MODIFIEDCLICK_ctor 004D4310 l
+TSExplicitList_CLICKFRAME_ctor 004D4470 l
+OVERRIDEKEYBINDINGENTRY__scalar_deleting_dtor 004D5670 l
+OVERRIDEKEYBINDING__ctor 004D5D00 l
+jump_table_4dc52c 004DC52C l
+TAXILINE__ctor 004DDAC0 l
+TAXIROUTELINE__ctor 004DE400 l
+TSExplicitList_TAXIPATHNODESCLIENT_ctor 004DE5E0 l
+CTaxiRouteFrame__ctor 004DFDC0 l
+PetAction__ctor 004E3570 l
+jump_table_4e38fc 004E38FC l
+jump_table_4e4710 004E4710 l
+lookup_table_4e4720 004E4720 l
+jump_table_4e50ec 004E50EC l
+lookup_table_4e50fc 004E50FC l
+CPlayerModel__ctor 004E65A0 l
+CDressUpModel__ctor 004E6D40 l
+jump_table_4e78b4 004E78B4 l
+lookup_table_4e78ec 004E78EC l
+j_sub_4e7e70 004E7EE0 l
+CTabardModel__ctor 004E7EF0 l
+MacroCommand__ctor 004E9780 l
+TSExplicitList_MACRONODE_scalar_deleting_dtor 004EB310 l
+jump_table_4ed6a8 004ED6A8 l
+jump_table_4ef794 004EF794 l
+jump_table_4f1250 004F1250 l
+jump_table_4f29a0 004F29A0 l
+jump_table_4f2ffc 004F2FFC l
+jump_table_4f3610 004F3610 l
+jump_table_4f56ec 004F56EC l
+AuctionItemInfo__ctor 004F5DF0 l
+jump_table_4f64a4 004F64A4 l
+jump_table_4fa0c4 004FA0C4 l
+jump_table_4fb560 004FB560 l
+lookup_table_4fb574 004FB574 l
+jump_table_4fc928 004FC928 l
+GuildBankItem__ctor 004FE320 l
+jump_table_500bc0 00500BC0 l
+CGCommentator__InstanceInfo_ctor 005015A0 l
+jump_table_504d84 00504D84 l
+jump_table_5054e4 005054E4 l
+TSExplicitList_LFGLIST_ctor 00506790 l
+jump_table_507354 00507354 l
+lookup_table_507398 00507398 l
+jump_table_50b6b0 0050B6B0 l
+jump_table_50e1c8 0050E1C8 l
+PetitionSignerInfo__ctor 0050FC70 l
+PlayerForcedReaction__ctor 00511140 l
+jump_table_51cafc 0051CAFC l
+jump_table_51cb0c 0051CB0C l
+lookup_table_51cb14 0051CB14 l
+jump_table_5271c0 005271C0 l
+lookup_table_5271d0 005271D0 l
+CCooldown__ctor 0052A7D0 l
+MacroSubstring__ctor 0052C4C0 l
+jump_table_52c59c 0052C59C l
+lookup_table_52c5b4 0052C5B4 l
+jump_table_52c9ac 0052C9AC l
+TSExplicitList_MacroConditions_ctor 0052D5D0 l
+TSExplicitList_UIADDON_METADATA_ctor 0052EAB0 l
+TSExplicitList_ADDONSTATE_ctor 0052EC10 l
+TSExplicitList_UIADDON_ctor 0052ED70 l
+TSExplicitList_MOUSELOOKBINDING_ctor 00534AF0 l
+jump_table_538474 00538474 l
+jump_table_53cf44 0053CF44 l
+CameraShake__ctor 0053DC70 l
+UniqueSignal__ctor 00540C70 l
+jump_table_548808 00548808 l
+lookup_table_54881c 0054881C l
+jump_table_548f14 00548F14 l
+jump_table_54a9d0 0054A9D0 l
+jump_table_54b3ac 0054B3AC l
+jump_table_54b3c4 0054B3C4 l
+jump_table_54c5b8 0054C5B8 l
+CGameTooltip__ctor 0054CA40 l
+jump_table_551a60 00551A60 l
+lookup_table_551a74 00551A74 l
+jump_table_557a9c 00557A9C l
+jump_table_557aac 00557AAC l
+jump_table_55b0a0 0055B0A0 l
+lookup_table_55b0b0 0055B0B0 l
+TSExplicitList_PLAYERPORTRAIT_ctor 0055C120 l
+TSExplicitList_UNITPORTRAIT_ctor 0055C280 l
+TSExplicitList_ITEMPORTRAIT_ctor 0055C3E0 l
+NetClient__SetMessageHandler 0055F400 l
+NetClient__ProcessMessage 0055F440 l
+NetClient__HandlePong 0055F530 l
+NetClient__GetNetStats 0055F5E0 l
+NetClient__NETCLIENTNODE_Unlink 0055FD00 l
+NETCLIENTNODE__Constructor 0055FE10 l
+jump_table_55ffe4 0055FFE4 l
+NETEVENTQUEUE__Enqueue 00560020 l
+WowClientDB__Load__AnimationData 00560350 l
+WowClientDB__Load__AreaPOI 00560510 l
+WowClientDB__Load__AreaTable 005606D0 l
+WowClientDB__Load__AreaTrigger 00560890 l
+WowClientDB__Load__AttackAnimKits 00560A50 l
+WowClientDB__Load__AttackAnimTypes 00560C10 l
+WowClientDB__Load__AuctionHouse 00560DD0 l
+WowClientDB__Load__BankBagSlotPrices 00560F90 l
+WowClientDB__Load__BattlemasterList 00561150 l
+WowClientDB__Load__CameraShakes 00561310 l
+WowClientDB__Load__Cfg_Categories 005614D0 l
+WowClientDB__Load__Cfg_Configs 00561690 l
+WowClientDB__Load__CharBaseInfo 00561850 l
+WowClientDB__Load__CharHairGeosets 00561A10 l
+WowClientDB__Load__CharStartOutfit 00561BD0 l
+WowClientDB__Load__CharTitles 00561D90 l
+WowClientDB__Load__CharVariations 00561F50 l
+WowClientDB__Load__CharacterFacialHairStyles 00562110 l
+WowClientDB__Load__ChatChannels 005622D0 l
+WowClientDB__Load__ChrClasses 00562490 l
+WowClientDB__Load__ChrRaces 00562650 l
+WowClientDB__Load__CinematicCamera 00562810 l
+WowClientDB__Load__CinematicSequences 005629D0 l
+WowClientDB__Load__CreatureDisplayInfoExtra 00562B90 l
+WowClientDB__Load__CreatureDisplayInfo 00562D50 l
+WowClientDB__Load__CreatureFamily 00562F10 l
+WowClientDB__Load__CreatureModelData 005630D0 l
+WowClientDB__Load__CreatureSoundData 00563290 l
+WowClientDB__Load__CreatureSpellData 00563450 l
+WowClientDB__Load__CreatureType 00563610 l
+WowClientDB__Load__DeathThudLookups 005637D0 l
+WowClientDB__Load__DeclinedWord 00563990 l
+WowClientDB__Load__DeclinedWordCases 00563B50 l
+WowClientDB__Load__DurabilityCosts 00563D10 l
+WowClientDB__Load__DurabilityQuality 00563ED0 l
+WowClientDB__Load__Emotes 00564090 l
+WowClientDB__Load__EmotesTextData 00564250 l
+WowClientDB__Load__EmotesTextSound 00564410 l
+WowClientDB__Load__EmotesText 005645D0 l
+WowClientDB__Load__EnvironmentalDamage 00564790 l
+WowClientDB__Load__Exhaustion 00564950 l
+WowClientDB__Load__FactionGroup 00564B10 l
+WowClientDB__Load__Faction 00564CD0 l
+WowClientDB__Load__FactionTemplate 00564E90 l
+WowClientDB__Load__FootprintTextures 00565050 l
+WowClientDB__Load__FootstepTerrainLookup 00565210 l
+WowClientDB__Load__GameObjectArtKit 005653D0 l
+WowClientDB__Load__GameObjectDisplayInfo 00565590 l
+WowClientDB__Load__GameTables 00565750 l
+WowClientDB__Load__GameTips 00565910 l
+WowClientDB__Load__GemProperties 00565AD0 l
+WowClientDB__Load__GMSurveyCurrentSurvey 00565C90 l
+WowClientDB__Load__GMSurveyQuestions 00565E50 l
+WowClientDB__Load__GMSurveySurveys 00566010 l
+WowClientDB__Load__GMTicketCategory 005661D0 l
+WowClientDB__Load__GroundEffectDoodad 00566390 l
+WowClientDB__Load__GroundEffectTexture 00566550 l
+WowClientDB__Load__gtCombatRatings 00566710 l
+WowClientDB__Load__gtChanceToMeleeCrit 005668D0 l
+WowClientDB__Load__gtChanceToMeleeCritBase 00566A90 l
+WowClientDB__Load__gtChanceToSpellCrit 00566C50 l
+WowClientDB__Load__gtChanceToSpellCritBase 00566E10 l
+WowClientDB__Load__gtNPCManaCostScaler 00566FD0 l
+WowClientDB__Load__gtOCTRegenHP 00567190 l
+WowClientDB__Load__gtOCTRegenMP 00567350 l
+WowClientDB__Load__gtRegenHPPerSpt 00567510 l
+WowClientDB__Load__gtRegenMPPerSpt 005676D0 l
+WowClientDB__Load__HelmetGeosetVisData 00567890 l
+WowClientDB__Load__Item 00567A50 l
+WowClientDB__Load__ItemBagFamily 00567C10 l
+WowClientDB__Load__ItemClass 00567DD0 l
+WowClientDB__Load__ItemCondExtCosts 00567F90 l
+WowClientDB__Load__ItemDisplayInfo 00568150 l
+WowClientDB__Load__ItemExtendedCost 00568310 l
+WowClientDB__Load__ItemGroupSounds 005684D0 l
+WowClientDB__Load__ItemPetFood 00568690 l
+WowClientDB__Load__ItemRandomProperties 00568850 l
+WowClientDB__Load__ItemRandomSuffix 00568A10 l
+WowClientDB__Load__ItemSet 00568BD0 l
+WowClientDB__Load__ItemSubClassMask 00568D90 l
+WowClientDB__Load__ItemSubClass 00568F50 l
+WowClientDB__Load__ItemVisualEffects 00569110 l
+WowClientDB__Load__ItemVisuals 005692D0 l
+WowClientDB__Load__LanguageWords 00569490 l
+WowClientDB__Load__Languages 00569650 l
+WowClientDB__Load__LfgDungeons 00569810 l
+WowClientDB__Load__LightFloatBand 005699D0 l
+WowClientDB__Load__LightIntBand 00569B90 l
+WowClientDB__Load__LightParams 00569D50 l
+WowClientDB__Load__Light 00569F10 l
+WowClientDB__Load__LightSkybox 0056A0D0 l
+WowClientDB__Load__LiquidType 0056A290 l
+WowClientDB__Load__LoadingScreens 0056A450 l
+WowClientDB__Load__LoadingScreenTaxiSplines 0056A610 l
+WowClientDB__Load__Lock 0056A7D0 l
+WowClientDB__Load__LockType 0056A990 l
+WowClientDB__Load__MailTemplate 0056AB50 l
+WowClientDB__Load__Map 0056AD10 l
+WowClientDB__Load__Material 0056AED0 l
+WowClientDB__Load__NameGen 0056B090 l
+WowClientDB__Load__NPCSounds 0056B250 l
+WowClientDB__Load__ChatProfanity 0056B410 l
+WowClientDB__Load__Package 0056B5D0 l
+WowClientDB__Load__PageTextMaterial 0056B790 l
+WowClientDB__Load__PaperDollItemFrame 0056B950 l
+WowClientDB__Load__ParticleColor 0056BB10 l
+WowClientDB__Load__PetLoyalty 0056BCD0 l
+WowClientDB__Load__PetPersonality 0056BE90 l
+WowClientDB__Load__QuestInfo 0056C050 l
+WowClientDB__Load__QuestSort 0056C210 l
+WowClientDB__Load__RandPropPoints 0056C3D0 l
+WowClientDB__Load__Resistances 0056C590 l
+WowClientDB__Load__ServerMessages 0056C750 l
+WowClientDB__Load__SheatheSoundLookups 0056C910 l
+WowClientDB__Load__SkillCostsData 0056CAD0 l
+WowClientDB__Load__SkillLineAbility 0056CC90 l
+WowClientDB__Load__SkillLine 0056CE50 l
+WowClientDB__Load__SkillLineCategory 0056D010 l
+WowClientDB__Load__SkillRaceClassInfo 0056D1D0 l
+WowClientDB__Load__SkillTiers 0056D390 l
+WowClientDB__Load__SoundAmbience 0056D550 l
+WowClientDB__Load__SoundEntries 0056D710 l
+WowClientDB__Load__SoundProviderPreferences 0056D8D0 l
+WowClientDB__Load__SoundSamplePreferences 0056DA90 l
+WowClientDB__Load__SoundWaterType 0056DC50 l
+WowClientDB__Load__SpamMessages 0056DE10 l
+WowClientDB__Load__SpellCastTimes 0056DFD0 l
+WowClientDB__Load__SpellCategory 0056E190 l
+WowClientDB__Load__SpellChainEffects 0056E350 l
+WowClientDB__Load__SpellDispelType 0056E510 l
+WowClientDB__Load__SpellDuration 0056E6D0 l
+WowClientDB__Load__SpellEffectCameraShakes 0056E890 l
+WowClientDB__Load__SpellFocusObject 0056EA50 l
+WowClientDB__Load__SpellIcon 0056EC10 l
+WowClientDB__Load__SpellItemEnchantment 0056EDD0 l
+WowClientDB__Load__SpellItemEnchantmentCondition 0056EF90 l
+WowClientDB__Load__SpellMechanic 0056F150 l
+WowClientDB__Load__SpellMissileMotion 0056F310 l
+WowClientDB__Load__SpellRadius 0056F4D0 l
+WowClientDB__Load__SpellRange 0056F690 l
+WowClientDB__Load__Spell 0056F850 l
+WowClientDB__Load__SpellShapeshiftForm 0056FA10 l
+WowClientDB__Load__SpellVisualEffectName 0056FBD0 l
+WowClientDB__Load__SpellVisualKit 0056FD90 l
+WowClientDB__Load__SpellVisual 0056FF50 l
+WowClientDB__Load__StableSlotPrices 00570110 l
+WowClientDB__Load__Stationery 005702D0 l
+WowClientDB__Load__StringLookups 00570490 l
+WowClientDB__Load__SummonProperties 00570650 l
+WowClientDB__Load__Talent 00570810 l
+WowClientDB__Load__TalentTab 005709D0 l
+WowClientDB__Load__TaxiNodes 00570B90 l
+WowClientDB__Load__TaxiPathNode 00570D50 l
+WowClientDB__Load__TaxiPath 00570F10 l
+WowClientDB__Load__TerrainType 005710D0 l
+WowClientDB__Load__TerrainTypeSounds 00571290 l
+WowClientDB__Load__TotemCategory 00571450 l
+WowClientDB__Load__TransportAnimation 00571610 l
+WowClientDB__Load__TransportPhysics 005717D0 l
+WowClientDB__Load__UISoundLookups 00571990 l
+WowClientDB__Load__UnitBloodLevels 00571B50 l
+WowClientDB__Load__UnitBlood 00571D10 l
+WowClientDB__Load__VocalUISounds 00571ED0 l
+WowClientDB__Load__WeaponImpactSounds 00572090 l
+WowClientDB__Load__WeaponSwingSounds2 00572250 l
+WowClientDB__Load__Weather 00572410 l
+WowClientDB__Load__WorldMapArea 005725D0 l
+WowClientDB__Load__WorldMapContinent 00572790 l
+WowClientDB__Load__WorldMapOverlay 00572950 l
+WowClientDB__Load__WorldMapTransforms 00572B10 l
+WowClientDB__Load__WorldSafeLocs 00572CD0 l
+WowClientDB__Load__WorldStateUI 00572E90 l
+WowClientDB__Load__NamesProfanity 00573050 l
+WowClientDB__Load__NamesReserved 00573210 l
+WowClientDB__Load__CharSections 005733D0 l
+WowClientDB__Load__ZoneIntroMusicTable 00573590 l
+WowClientDB__Load__ZoneMusic 00573750 l
+WowClientDB__Load__WorldStateZoneSounds 00573910 l
+WowClientDB__Load__WMOAreaTable 00573AD0 l
+NameCache__Load 0057DD70 l
+PetNameCache__Load 0057E040 l
+TSExplicitList_DBCache_NameCache_ReverseEntry_extra_ctor 0057F890 l
+DBCacheCallback__ctor 00582E00 l
+TSExplicitList_DBCache_CreatureStats_Hash_ctor 00582E60 l
+TSExplicitList_DBCache_GameObjectStats_Hash_ctor 00582FC0 l
+TSExplicitList_DBCache_ItemName_Hash_ctor 00583120 l
+TSExplicitList_DBCache_ItemStats_Hash_ctor 00583280 l
+TSExplicitList_DBCache_NPCText_Hash_ctor 005833E0 l
+TSExplicitList_DBCache_NameCache_Hash_ctor 00583540 l
+TSExplicitList_DBCache_GuildStats_Hash_ctor 005836A0 l
+TSExplicitList_DBCache_QuestCache_Hash_ctor 00583800 l
+TSExplicitList_DBCache_PageTextCache_Hash_ctor 00583960 l
+TSExplicitList_DBCache_PetNameCache_Hash_ctor 00583AC0 l
+TSExplicitList_DBCache_CGPetition_Hash_ctor 00583C20 l
+TSExplicitList_DBCache_ItemTextCache_Hash_ctor 00583D80 l
+TSExplicitList_DBCache_WardenCachedModule_Hash_ctor 00583EE0 l
+TSExplicitList_DBCache_ArenaTeamCache_Hash_ctor 00584040 l
+DBCacheCallback__scalar_deleting_dtor 00585730 l
+DBCache_ItemName__Hash_ctor 00585DA0 l
+DBCache_PageTextCache__Hash_ctor 00586800 l
+GxDrawListEntry__ctor 005965D0 l
+CDataStore__pure_virtual_stub 00597BE0 l
+jump_table_598184 00598184 l
+CGxAppRenderState__ctor 005984E0 l
+CGxStateBom__ctor 00598590 l
+CGxPushedRenderState__ctor 00598630 l
+CGxDevice__DeviceOverride 0059A0B0 l
+jump_table_59af34 0059AF34 l
+TSExplicitList_CGxShader_ctor 0059C7D0 l
+CGxShaderParam__scalar_deleting_dtor 0059E720 l
+jump_table_59f330 0059F330 l
+lookup_table_59f344 0059F344 l
+jump_table_59f350 0059F350 l
+lookup_table_59f378 0059F378 l
+jump_table_59f7c4 0059F7C4 l
+TSExplicitList_CGxDeviceOpenGl_FrameBufferObject_ctor 005A0860 l
+jump_table_5a2480 005A2480 l
+lookup_table_5a24a0 005A24A0 l
+jump_table_5a24b0 005A24B0 l
+jump_table_5a261c 005A261C l
+jump_table_5a4024 005A4024 l
+lookup_table_5a4050 005A4050 l
+jump_table_5a40d0 005A40D0 l
+?CheckFCreateWriter@Mod1@@AAE_N_NPAPAVIDebugSSectionWriter@@K0@Z 005A4D50 l
+jump_table_5a5350 005A5350 l
+jump_table_5a5628 005A5628 l
+jump_table_5a69a0 005A69A0 l
+lookup_table_5a6a18 005A6A18 l
+jump_table_5a7058 005A7058 l
+lookup_table_5a7070 005A7070 l
+jump_table_5a7080 005A7080 l
+lookup_table_5a7094 005A7094 l
+jump_table_5a77dc 005A77DC l
+jump_table_5a7d54 005A7D54 l
+lookup_table_5a7de4 005A7DE4 l
+jump_table_5a882c 005A882C l
+lookup_table_5a8834 005A8834 l
+jump_table_5a917c 005A917C l
+lookup_table_5a9184 005A9184 l
+jump_table_5a92cc 005A92CC l
+jump_table_5a92e4 005A92E4 l
+jump_table_5a95d8 005A95D8 l
+jump_table_5aa664 005AA664 l
+jump_table_5aa674 005AA674 l
+jump_table_5aaa68 005AAA68 l
+jump_table_5abba8 005ABBA8 l
+lookup_table_5abc30 005ABC30 l
+jump_table_5abd34 005ABD34 l
+jump_table_5acb5c 005ACB5C l
+lookup_table_5acbe0 005ACBE0 l
+jump_table_5ad6a8 005AD6A8 l
+lookup_table_5ad6b4 005AD6B4 l
+jump_table_5aedf4 005AEDF4 l
+lookup_table_5aee0c 005AEE0C l
+jump_table_5aee54 005AEE54 l
+jump_table_5b2aac 005B2AAC l
+jump_table_5b2c24 005B2C24 l
+jump_table_5b2e04 005B2E04 l
+lookup_table_5b2e10 005B2E10 l
+jump_table_5b3154 005B3154 l
+lookup_table_5b3164 005B3164 l
+jump_table_5b3944 005B3944 l
+jump_table_5b3970 005B3970 l
+lookup_table_5b3a00 005B3A00 l
+RealmConnection__Connect 005B3FA0 l
+RealmConnection__ConnectWrapper 005B40D0 l
+jump_table_5b5328 005B5328 l
+jump_table_5b55c8 005B55C8 l
+jump_table_5b7464 005B7464 l
+jump_table_5ba2b8 005BA2B8 l
+jump_table_5bcdd0 005BCDD0 l
+TSExplicitList_CLightList_ctor 005BD630 l
+CGxuLight__ctor 005BD800 l
+jump_table_5bf340 005BF340 l
+lookup_table_5bf364 005BF364 l
+jump_table_5bf8ac 005BF8AC l
+lookup_table_5bf8b4 005BF8B4 l
+jump_table_5c1d20 005C1D20 l
+lookup_table_5c1d28 005C1D28 l
+jump_table_5c1d64 005C1D64 l
+lookup_table_5c1d6c 005C1D6C l
+jump_table_5c1e04 005C1E04 l
+lookup_table_5c1e0c 005C1E0C l
+jump_table_5c1e14 005C1E14 l
+lookup_table_5c1e1c 005C1E1C l
+jump_table_5c1ec8 005C1EC8 l
+lookup_table_5c1ed0 005C1ED0 l
+jump_table_5c1fc4 005C1FC4 l
+lookup_table_5c1fcc 005C1FCC l
+jump_table_5c20bc 005C20BC l
+lookup_table_5c20c4 005C20C4 l
+jump_table_5c2ae4 005C2AE4 l
+lookup_table_5c2af0 005C2AF0 l
+jump_table_5c2edc 005C2EDC l
+lookup_table_5c2ee8 005C2EE8 l
+jump_table_5c3248 005C3248 l
+jump_table_5c35e8 005C35E8 l
+lookup_table_5c35f4 005C35F4 l
+TSExplicitList_CHARCODEDESC_scalar_deleting_dtor 005C3AC0 l
+TSExplicitList_KERNNODE_ctor 005C3C20 l
+GRADIENTINFO__ctor 005C6F90 l
+GXUFONTHYPERLINKINFO__ctor 005C7330 l
+GXUEMBEDDEDTEXTUREINFO__ctor 005C73C0 l
+jump_table_5c8678 005C8678 l
+CGxString__scalar_deleting_dtor 005C8740 l
+TSExplicitList_FACEDATA_ctor 005C90A0 l
+jump_table_5cdb74 005CDB74 l
+lookup_table_5cdb7c 005CDB7C l
+jump_table_5cdbd4 005CDBD4 l
+lookup_table_5cdbdc 005CDBDC l
+jump_table_5d1084 005D1084 l
+jump_table_5d2cfc 005D2CFC l
+jump_table_5d66f0 005D66F0 l
+jump_table_5d6ca8 005D6CA8 l
+lookup_table_5d6cc0 005D6CC0 l
+jump_table_5d6cd8 005D6CD8 l
+jump_table_5d6f5c 005D6F5C l
+jump_table_5d7280 005D7280 l
+lookup_table_5d7294 005D7294 l
+jump_table_5d72a4 005D72A4 l
+lookup_table_5d72ec 005D72EC l
+jump_table_5d7ac4 005D7AC4 l
+jump_table_5d7b7c 005D7B7C l
+lookup_table_5d7ba8 005D7BA8 l
+jump_table_5d7d84 005D7D84 l
+lookup_table_5d7d94 005D7D94 l
+jump_table_5d7eac 005D7EAC l
+lookup_table_5d7ebc 005D7EBC l
+jump_table_5d804c 005D804C l
+jump_table_5d8188 005D8188 l
+InitialSpellStruct__ctor 005D9240 l
+GuildUpdateTimestamp__ctor 005D9310 l
+ITEMSWAP__ctor 005D93B0 l
+jump_table_5d9bd0 005D9BD0 l
+jump_table_5de1d8 005DE1D8 l
+jump_table_5e04a0 005E04A0 l
+lookup_table_5e04c8 005E04C8 l
+jump_table_5e07cc 005E07CC l
+jump_table_5e09a8 005E09A8 l
+jump_table_5e09c0 005E09C0 l
+jump_table_5e1964 005E1964 l
+jump_table_5e3d90 005E3D90 l
+lookup_table_5e3db8 005E3DB8 l
+TSExplicitList_TRADESKILLLINE_ctor 005EB840 l
+TSExplicitList_PROFICIENCYSPELL_ctor 005EB9A0 l
+PlayerPendingItemExpiration__scalar_deleting_dtor 005EBCB0 l
+jump_table_5ee698 005EE698 l
+lookup_table_5ee704 005EE704 l
+jump_table_5ee800 005EE800 l
+jump_table_5ee814 005EE814 l
+lookup_table_5ee848 005EE848 l
+jump_table_5ee930 005EE930 l
+jump_table_5ee954 005EE954 l
+lookup_table_5ee96c 005EE96C l
+jump_table_5f2530 005F2530 l
+lookup_table_5f2548 005F2548 l
+jump_table_5f4f30 005F4F30 l
+lookup_table_5f4f50 005F4F50 l
+jump_table_5f82e8 005F82E8 l
+lookup_table_5f8300 005F8300 l
+TSExplicitList_INVENTORYART_ctor 005F98B0 l
+TSExplicitList_ITEMBYNAME_ctor 005F9A10 l
+jump_table_5fb398 005FB398 l
+lookup_table_5fb3a8 005FB3A8 l
+ShipPath_TimeEvent_ctor 005FBF40 l
+ShipPath_Segment_ctor 005FBFE0 l
+?_Getal@?$_Vector_alloc@$0A@U?$_Vec_base_types@EV?$allocator@E@std@@@std@@@std@@QBE?AU?$_Wrap_alloc@V?$allocator@E@std@@@2@XZ 005FC0F0 l
+jump_table_5fd7f8 005FD7F8 l
+lookup_table_5fd800 005FD800 l
+jump_table_5fe4c8 005FE4C8 l
+jump_table_5fe684 005FE684 l
+CLightInfo__CopyFrom 00601910 l
+jump_table_603428 00603428 l
+jump_table_603c08 00603C08 l
+lookup_table_603c10 00603C10 l
+jump_table_603c70 00603C70 l
+lookup_table_603c78 00603C78 l
+jump_table_603ce0 00603CE0 l
+lookup_table_603ce8 00603CE8 l
+jump_table_603d60 00603D60 l
+lookup_table_603d68 00603D68 l
+jump_table_603e34 00603E34 l
+lookup_table_603e3c 00603E3C l
+jump_table_603f30 00603F30 l
+lookup_table_603f38 00603F38 l
+jump_table_604044 00604044 l
+lookup_table_60404c 0060404C l
+jump_table_604134 00604134 l
+lookup_table_60413c 0060413C l
+jump_table_604334 00604334 l
+lookup_table_604344 00604344 l
+jump_table_604384 00604384 l
+lookup_table_60438c 0060438C l
+jump_table_604568 00604568 l
+lookup_table_60457c 0060457C l
+jump_table_6045c0 006045C0 l
+lookup_table_6045c8 006045C8 l
+ExtraAuraInfo__ctor 00605B50 l
+jump_table_606f4c 00606F4C l
+lookup_table_606f64 00606F64 l
+jump_table_60a3c0 0060A3C0 l
+jump_table_60a3d8 0060A3D8 l
+lookup_table_60a3ec 0060A3EC l
+jump_table_60a740 0060A740 l
+jump_table_60a758 0060A758 l
+lookup_table_60a76c 0060A76C l
+jump_table_60ae90 0060AE90 l
+jump_table_60b550 0060B550 l
+DelayedSpellVisualKit__ctor 0060BDE0 l
+jump_table_60cc74 0060CC74 l
+jump_table_60e420 0060E420 l
+lookup_table_60e428 0060E428 l
+jump_table_612844 00612844 l
+lookup_table_612870 00612870 l
+jump_table_612e1c 00612E1C l
+jump_table_613278 00613278 l
+jump_table_61522c 0061522C l
+jump_table_615474 00615474 l
+lookup_table_615484 00615484 l
+jump_table_6198cc 006198CC l
+lookup_table_619904 00619904 l
+jump_table_619934 00619934 l
+lookup_table_619950 00619950 l
+jump_table_61aed4 0061AED4 l
+lookup_table_61aeec 0061AEEC l
+jump_table_61af08 0061AF08 l
+lookup_table_61af1c 0061AF1C l
+jump_table_61c9c8 0061C9C8 l
+jump_table_61d0b8 0061D0B8 l
+lookup_table_61d0cc 0061D0CC l
+jump_table_61e330 0061E330 l
+jump_table_61e970 0061E970 l
+lookup_table_61e988 0061E988 l
+jump_table_61e9c4 0061E9C4 l
+lookup_table_61e9dc 0061E9DC l
+jump_table_61f42c 0061F42C l
+jump_table_620288 00620288 l
+lookup_table_6202e4 006202E4 l
+jump_table_6206bc 006206BC l
+lookup_table_6206d0 006206D0 l
+jump_table_620df8 00620DF8 l
+jump_table_620e28 00620E28 l
+jump_table_620f50 00620F50 l
+lookup_table_620f74 00620F74 l
+jump_table_621108 00621108 l
+lookup_table_62113c 0062113C l
+jump_table_621490 00621490 l
+lookup_table_6214fc 006214FC l
+jump_table_621540 00621540 l
+lookup_table_621564 00621564 l
+jump_table_621dc0 00621DC0 l
+lookup_table_621dc8 00621DC8 l
+jump_table_624ac8 00624AC8 l
+jump_table_625ea0 00625EA0 l
+jump_table_6261a0 006261A0 l
+jump_table_626bbc 00626BBC l
+DEATTHUDSOUNDINFO__ctor 00626D70 l
+jump_table_627688 00627688 l
+lookup_table_627694 00627694 l
+jump_table_627cdc 00627CDC l
+jump_table_62a508 0062A508 l
+jump_table_62af9c 0062AF9C l
+jump_table_62b338 0062B338 l
+jump_table_62b690 0062B690 l
+jump_table_62b7a8 0062B7A8 l
+jump_table_62b7b8 0062B7B8 l
+jump_table_62d440 0062D440 l
+lookup_table_62d454 0062D454 l
+jump_table_62d9c8 0062D9C8 l
+jump_table_62eb38 0062EB38 l
+lookup_table_62eb50 0062EB50 l
+jump_table_630240 00630240 l
+SimpleScriptFunction__ctor 00630560 l
+jump_table_632bd4 00632BD4 l
+jump_table_63bb00 0063BB00 l
+jump_table_63e090 0063E090 l
+TSExplicitList_CONSOLECOMMAND_ctor 0063E470 l
+TSExplicitList_CVar_ctor 0063FBF0 l
+jump_table_641464 00641464 l
+lookup_table_64146c 0064146C l
+jump_table_64306c 0064306C l
+lookup_table_643084 00643084 l
+jump_table_644464 00644464 l
+jump_table_6447b8 006447B8 l
+InterlockedCompareExchange 00646150 l
+jump_table_646bec 00646BEC l
+lookup_table_646c20 00646C20 l
+jump_table_646e58 00646E58 l
+jump_table_646e68 00646E68 l
+lookup_table_646eb0 00646EB0 l
+jump_table_647b04 00647B04 l
+CMDDEF__ctor 006483F0 l
+jump_table_649244 00649244 l
+jump_table_64b3b8 0064B3B8 l
+jump_table_64b4d4 0064B4D4 l
+jump_table_64b68c 0064B68C l
+jump_table_64b848 0064B848 l
+TSExplicitList_RGN_ctor 0064BFB0 l
+RGN__scalar_deleting_dtor 0064C280 l
+jump_table_6512bc 006512BC l
+lookup_table_6512dc 006512DC l
+jump_table_6516d4 006516D4 l
+jump_table_6516e8 006516E8 l
+WNDREC__ctor 00653AD0 l
+jump_table_653f30 00653F30 l
+jump_table_6540f4 006540F4 l
+jump_table_654428 00654428 l
+jump_table_654cc4 00654CC4 l
+jump_table_655014 00655014 l
+jump_table_657840 00657840 l
+jump_table_657f20 00657F20 l
+jump_table_65ad60 0065AD60 l
+lookup_table_65ad70 0065AD70 l
+jump_table_65b128 0065B128 l
+jump_table_65b2d0 0065B2D0 l
+jump_table_65e248 0065E248 l
+lookup_table_65e254 0065E254 l
+jump_table_661c58 00661C58 l
+lookup_table_661c74 00661C74 l
+Blizzard__IOCoreAlignedFileUnit__ctor 00663740 l
+IOFileUnit__AlignedRead 006639C0 l
+StackedAllocator__BumpAlloc 00663DF0 l
+Filestack__FileExists 00667E20 l
+jump_table_668eac 00668EAC l
+jump_table_67599c 0067599C l
+jump_table_67ab78 0067AB78 l
+jump_table_67f7d4 0067F7D4 l
+jump_table_67fdc8 0067FDC8 l
+jump_table_680e88 00680E88 l
+jump_table_6867d0 006867D0 l
+Mists__Mist_scalar_deleting_dtor 00689700 l
+PosDelta__scalar_deleting_dtor 0068B300 l
+jump_table_6926d0 006926D0 l
+CGxVertexPC__ctor 00693870 l
+jump_table_696180 00696180 l
+LODIndexFix__ctor 0069AEA0 l
+LODIndexFix__scalar_deleting_dtor 0069B450 l
+jump_table_69d404 0069D404 l
+lookup_table_69d410 0069D410 l
+Water0Ripple__scalar_deleting_dtor 0069DF60 l
+WaterRadWave__scalar_deleting_dtor 0069F0B0 l
+FogQ__ctor 006A0EE0 l
+CMapObj__WaitLoadGroup 006ACDD0 l
+TSExplicitList_CMapObj_ctor 006AE260 l
+CDetailDoodadInstAdd__ctor 006AF530 l
+CDetailDoodadInstAdd__scalar_deleting_dtor 006B0400 l
+CMapChunk__CreateVerticesLocal 006B1730 l
+CMapChunk__UnpackAlphaShadowBits 006B6D80 l
+CMapChunk__UnpackAlphaBits 006B76D0 l
+CMapAreaLow__ctor 006B9510 l
+TSExplicitList_CMapDoodadDef_ctor 006B9FF0 l
+TSExplicitList_CMapObjDef_ctor 006BA150 l
+jump_table_6c1580 006C1580 l
+lookup_table_6c158c 006C158C l
+jump_table_6c5dc4 006C5DC4 l
+jump_table_6c6448 006C6448 l
+jump_table_6c7228 006C7228 l
+?setContext@?$Map@KHV?$HashClass@K$0A@@pdb_internal@@XVCriticalSectionNop@@@pdb_internal@@QAEXPAX@Z 006CC6D0 l
+TSExplicitList_DECLINEDWORD_ctor 006D0E80 l
+jump_table_6d1b74 006D1B74 l
+lookup_table_6d1b84 006D1B84 l
+jump_table_6d1dcc 006D1DCC l
+jump_table_6d231c 006D231C l
+jump_table_6d24a4 006D24A4 l
+lookup_table_6d24bc 006D24BC l
+WORLDTEXTSTRING__scalar_deleting_dtor 006D5FA0 l
+SWorldTextIcon__ctor 006D6000 l
+ComSatCallback__ctor 006D8400 l
+ComSatEvent__ctor 006D84F0 l
+jump_table_6d9088 006D9088 l
+TSExplicitList_TALKINGPLAYER_ctor 006D9450 l
+TSExplicitList_MUTEDPLAYER_ctor 006D95B0 l
+jump_table_6dbb50 006DBB50 l
+LightRef__ctor 006E1520 l
+AreaLightOverride__ctor 006E21D0 l
+LightQE__ctor 006E36A0 l
+TSExplicitList_DNOverrideSky_ctor 006E7290 l
+TSExplicitList_MINIMAPMD5NAME_ctor 006E9E80 l
+LightningObject__Bolt_ctor 006EE630 l
+MountTransitionObject__ctor 006EFE20 l
+BlizzardObject__ctor 006EFEB0 l
+Shard__ctor 006F01C0 l
+jump_table_6f0f84 006F0F84 l
+jump_table_6f12c8 006F12C8 l
+lookup_table_6f12d8 006F12D8 l
+jump_table_6f1368 006F1368 l
+lookup_table_6f1374 006F1374 l
+jump_table_6f1c6c 006F1C6C l
+lookup_table_6f1c80 006F1C80 l
+jump_table_6f1e48 006F1E48 l
+lookup_table_6f1e50 006F1E50 l
+jump_table_6f1eac 006F1EAC l
+lookup_table_6f1eb4 006F1EB4 l
+jump_table_6f1f10 006F1F10 l
+lookup_table_6f1f1c 006F1F1C l
+jump_table_6f1f5c 006F1F5C l
+lookup_table_6f1f68 006F1F68 l
+jump_table_6f36ac 006F36AC l
+jump_table_6f71dc 006F71DC l
+lookup_table_6f7218 006F7218 l
+ITEMCOOLDOWNHASHNODE_list_init 006F7340 l
+SPELLHISTORY__ctor 006F7760 l
+jump_table_6f90d4 006F90D4 l
+lookup_table_6f9118 006F9118 l
+jump_table_6f91ac 006F91AC l
+lookup_table_6f91b8 006F91B8 l
+jump_table_6f91c0 006F91C0 l
+lookup_table_6f91cc 006F91CC l
+jump_table_6f91d4 006F91D4 l
+lookup_table_6f91dc 006F91DC l
+jump_table_6f9234 006F9234 l
+lookup_table_6f923c 006F923C l
+jump_table_6f92b0 006F92B0 l
+lookup_table_6f92b8 006F92B8 l
+jump_table_6f9320 006F9320 l
+lookup_table_6f9358 006F9358 l
+jump_table_6fa6bc 006FA6BC l
+lookup_table_6fa6e4 006FA6E4 l
+jump_table_6fb774 006FB774 l
+lookup_table_6fb7a4 006FB7A4 l
+TSExplicitList_RACECLASSINFO_ctor 006FE240 l
+TSExplicitList_SKILLCOSTSINFO_ctor 006FE3A0 l
+TSExplicitList_SKILLLINEREC_ctor 006FE500 l
+TSExplicitList_HashedNode_ctor 00700450 l
+TSExplicitList_FrameFactoryNode_ctor 007005B0 l
+CXMLAttribute__ctor 007024F0 l
+jump_table_702f80 00702F80 l
+lookup_table_702f8c 00702F8C l
+jump_table_703074 00703074 l
+jump_table_7056ec 007056EC l
+lookup_table_7056f4 007056F4 l
+jump_table_705d9c 00705D9C l
+lookup_table_705db4 00705DB4 l
+jump_table_7064a8 007064A8 l
+jump_table_7064c4 007064C4 l
+lookup_table_7064d8 007064D8 l
+jump_table_706538 00706538 l
+jump_table_7079e8 007079E8 l
+lookup_table_707a00 00707A00 l
+TSExplicitList_FrameScript_EventObject_ctor 00707A20 l
+EVENTLISTENERNODE__scalar_deleting_dtor 00707D20 l
+jump_table_709af4 00709AF4 l
+M2Element__ctor 00709DE0 l
+M2SceneCallback__ctor 00709E70 l
+jump_table_70c08c 0070C08C l
+jump_table_70c7d4 0070C7D4 l
+jump_table_70d13c 0070D13C l
+jump_table_711530 00711530 l
+jump_table_719c3c 00719C3C l
+lookup_table_719c50 00719C50 l
+jump_table_71c448 0071C448 l
+jump_table_71c464 0071C464 l
+jump_table_721194 00721194 l
+jump_table_72161c 0072161C l
+lookup_table_721634 00721634 l
+jump_table_72183c 0072183C l
+lookup_table_721850 00721850 l
+jump_table_721a40 00721A40 l
+lookup_table_721a74 00721A74 l
+jump_table_721ac8 00721AC8 l
+lookup_table_721ad4 00721AD4 l
+jump_table_721b5c 00721B5C l
+lookup_table_721b68 00721B68 l
+jump_table_721c0c 00721C0C l
+lookup_table_721c18 00721C18 l
+jump_table_721d6c 00721D6C l
+lookup_table_721d84 00721D84 l
+jump_table_721dc4 00721DC4 l
+lookup_table_721dd0 00721DD0 l
+jump_table_723c40 00723C40 l
+lookup_table_723c70 00723C70 l
+jump_table_723cf0 00723CF0 l
+jump_table_723d08 00723D08 l
+lookup_table_723d38 00723D38 l
+jump_table_723d6c 00723D6C l
+lookup_table_723d8c 00723D8C l
+jump_table_724248 00724248 l
+lookup_table_724258 00724258 l
+jump_table_7243a0 007243A0 l
+jump_table_7256b4 007256B4 l
+lookup_table_7256d8 007256D8 l
+jump_table_725734 00725734 l
+lookup_table_725758 00725758 l
+jump_table_72578c 0072578C l
+lookup_table_7257b4 007257B4 l
+jump_table_7295d0 007295D0 l
+lookup_table_729688 00729688 l
+jump_table_7296dc 007296DC l
+lookup_table_7296e4 007296E4 l
+jump_table_7296ec 007296EC l
+lookup_table_7296f4 007296F4 l
+jump_table_7296fc 007296FC l
+lookup_table_729704 00729704 l
+jump_table_72970c 0072970C l
+jump_table_72972c 0072972C l
+jump_table_72974c 0072974C l
+jump_table_72976c 0072976C l
+jump_table_72978c 0072978C l
+jump_table_7297ac 007297AC l
+jump_table_72a2e0 0072A2E0 l
+lookup_table_72a2e8 0072A2E8 l
+jump_table_72a754 0072A754 l
+lookup_table_72a760 0072A760 l
+jump_table_72ae18 0072AE18 l
+lookup_table_72ae24 0072AE24 l
+jump_table_72c758 0072C758 l
+CHATMESSAGE__ctor 0072D340 l
+jump_table_72d888 0072D888 l
+jump_table_72e0bc 0072E0BC l
+jump_table_72e160 0072E160 l
+jump_table_72ed08 0072ED08 l
+jump_table_72f038 0072F038 l
+jump_table_72f344 0072F344 l
+lookup_table_72f360 0072F360 l
+jump_table_7308c0 007308C0 l
+lookup_table_7308fc 007308FC l
+jump_table_730a74 00730A74 l
+lookup_table_730a8c 00730A8C l
+jump_table_730db4 00730DB4 l
+lookup_table_730dcc 00730DCC l
+jump_table_732d58 00732D58 l
+lookup_table_732d84 00732D84 l
+jump_table_733330 00733330 l
+lookup_table_733348 00733348 l
+jump_table_733374 00733374 l
+lookup_table_733388 00733388 l
+jump_table_733a90 00733A90 l
+jump_table_733d3c 00733D3C l
+lookup_table_733d4c 00733D4C l
+jump_table_734174 00734174 l
+lookup_table_734190 00734190 l
+jump_table_734c98 00734C98 l
+jump_table_735c18 00735C18 l
+jump_table_736c80 00736C80 l
+jump_table_7372a4 007372A4 l
+jump_table_73746c 0073746C l
+jump_table_737528 00737528 l
+jump_table_737d88 00737D88 l
+jump_table_738bb4 00738BB4 l
+jump_table_738f08 00738F08 l
+jump_table_73a284 0073A284 l
+jump_table_73b800 0073B800 l
+jump_table_73b988 0073B988 l
+jump_table_73dcdc 0073DCDC l
+lookup_table_73dcf0 0073DCF0 l
+jump_table_73dfd8 0073DFD8 l
+lookup_table_73dfe8 0073DFE8 l
+jump_table_73e048 0073E048 l
+lookup_table_73e070 0073E070 l
+jump_table_73e634 0073E634 l
+lookup_table_73e660 0073E660 l
+jump_table_73f920 0073F920 l
+lookup_table_73f934 0073F934 l
+jump_table_73fb44 0073FB44 l
+lookup_table_73fb68 0073FB68 l
+jump_table_73fcb8 0073FCB8 l
+lookup_table_73fcf8 0073FCF8 l
+jump_table_73ff04 0073FF04 l
+lookup_table_73ff0c 0073FF0C l
+jump_table_740b30 00740B30 l
+lookup_table_740b58 00740B58 l
+jump_table_741398 00741398 l
+jump_table_741718 00741718 l
+jump_table_74184c 0074184C l
+jump_table_741b28 00741B28 l
+jump_table_741be0 00741BE0 l
+jump_table_741d2c 00741D2C l
+lookup_table_741d3c 00741D3C l
+jump_table_741dbc 00741DBC l
+lookup_table_741dcc 00741DCC l
+jump_table_741e70 00741E70 l
+lookup_table_741e84 00741E84 l
+jump_table_742320 00742320 l
+jump_table_744f00 00744F00 l
+jump_table_744f74 00744F74 l
+??$_Pocma@V?$allocator@_W@std@@@std@@YAXAAV?$allocator@_W@0@0U?$integral_constant@_N$00@0@@Z 00746F80 l
+jump_table_747c08 00747C08 l
+lookup_table_747cb0 00747CB0 l
+jump_table_747fd0 00747FD0 l
+jump_table_747fe8 00747FE8 l
+jump_table_748024 00748024 l
+jump_table_748100 00748100 l
+lookup_table_748114 00748114 l
+jump_table_748120 00748120 l
+lookup_table_748130 00748130 l
+jump_table_748280 00748280 l
+lookup_table_748298 00748298 l
+jump_table_7485d8 007485D8 l
+lookup_table_7485e4 007485E4 l
+jump_table_7485ec 007485EC l
+jump_table_748770 00748770 l
+lookup_table_748780 00748780 l
+jump_table_748864 00748864 l
+lookup_table_74887c 0074887C l
+jump_table_749344 00749344 l
+lookup_table_749378 00749378 l
+jump_table_74943c 0074943C l
+lookup_table_749460 00749460 l
+jump_table_7494e8 007494E8 l
+jump_table_749778 00749778 l
+jump_table_74b458 0074B458 l
+OsIMECandidate__scalar_deleting_dtor 0074BED0 l
+TSExplicitList_OsNet_NETSELSOCKPTR_ctor 0074D4B0 l
+jump_table_74ec54 0074EC54 l
+lookup_table_74ec70 0074EC70 l
+W32Joystick__ctor 0074EF30 l
+??A?$Array@ULCRec@@@pdb_internal@@QBEAAULCRec@@I@Z 0074F440 l
+jump_table_74f5d8 0074F5D8 l
+lookup_table_74f5ec 0074F5EC l
+jump_table_74f810 0074F810 l
+jump_table_74f820 0074F820 l
+lookup_table_74f834 0074F834 l
+FreeLibrary 00750868 l
+CloseHandle 00750874 l
+TSExplicitList_CShaderEffect_ctor 00751800 l
+CShaderEffect__scalar_deleting_dtor 00751CC0 l
+TSExplicitList_CacheData_ctor 007553A0 l
+jump_table_756374 00756374 l
+SEDiskSound__SECachingReadCallback 00756900 l
+?SetNiOptions@FI@@QAEXK@Z 00756B70 l
+??4?$_Subatomic@I@details@Concurrency@@QAEII@Z 00756B80 l
+SEChannelGroup__ctor 007575F0 l
+__ftol2 0075D286 l
+?_JumpToContinuation@@YGXPAXPAUEHRegistrationNode@@@Z 0075D2FB l
+__TranslatorGuardHandler 0075D4BF l
+_test_whether_TOS_is_int 0075E522 l
+__aulldiv 0075E5E0 l
+__alldiv 0075E790 l
+__allrem 0075F840 l
+?__ArrayUnwind@@YGXPAXIHP6EX0@Z@Z 0075FA03 l
+__fload_withFB 00762B35 l
+__checkTOS_withFB 00762B78 l
+__CallSettingFrame@12 00763910 l
+__fload 00763F24 l
+AugmentSinCos 007652AC l
+jump_table_765594 00765594 l
+__pow_pentium4 00765829 l
+__ffexpm1 007664CE l
+start 0076673E l
+fFEXPH 00766EC8 l
+ExpHypCopyInv 00766F0B l
+start 00766F3E l
+start 007671CE l
+start 007681EE l
+D3DPERF_SetMarker 00769BCC l
+VerQueryValueA 00769BD2 l
+GetFileVersionInfoA 00769BD8 l
+GetFileVersionInfoSizeA 00769BDE l
+ImmReleaseContext 00769BE4 l
+ImmGetConversionStatus 00769BEA l
+ImmGetContext 00769BF0 l
+ImmGetCompositionStringA 00769BF6 l
+ImmAssociateContext 00769BFC l
+ImmSetConversionStatus 00769C02 l
+ImmAssociateContextEx 00769C08 l
+ImmNotifyIME 00769C0E l
+ImmGetCandidateListA 00769C14 l
+ntohs 00769C1A l
+htons 00769C20 l
+closesocket 00769C26 l
+recv 00769C32 l
+send 00769C38 l
+socket 00769C3E l
+ioctlsocket 00769C44 l
+accept 00769C4A l
+connect 00769C50 l
+inet_addr 00769C56 l
+listen 00769C5C l
+bind 00769C62 l
+htonl 00769C68 l
+WSAStartup 00769C6E l
+select 00769C7A l
+__WSAFDIsSet 00769C80 l
+Thread32Next 00769C86 l
+Thread32First 00769C8C l
+CreateToolhelp32Snapshot 00769C92 l
+jump_table_76b014 0076B014 l
+?isValidNi@NMP@@UAEHK@Z 00786310 l
+jump_table_7876c0 007876C0 l
+jump_table_787730 00787730 l
+FMOD_MANAGER__scalar_deleting_dtor 00787970 l
+FMOD_BASE__scalar_deleting_dtor 00787DE0 l
+?SetOwningContext@WorkQueue@details@Concurrency@@QAEXPAVContextBase@23@@Z 007896B0 l
+?register_target_block@?$source_link_manager@V?$multi_link_registry@V?$ISource@W4agent_status@Concurrency@@@Concurrency@@@Concurrency@@@Concurrency@@QAEXPAV?$ITarget@W4agent_status@Concurrency@@@2@@Z 007896C0 l
+jump_table_78ae18 0078AE18 l
+jump_table_7901b4 007901B4 l
+CModel__ctor 00793080 l
+CStatusBar__ctor 00795410 l
+CButton__ctor 00796520 l
+CCheckButton__ctor 00796A00 l
+CSimpleEditBox__EditHistory_ctor 00797BB0 l
+jump_table_797e78 00797E78 l
+OsIMECandidate__ctor 0079A3F0 l
+jump_table_79a8c0 0079A8C0 l
+CEditBox__ctor 0079AF00 l
+jump_table_79be90 0079BE90 l
+lookup_table_79bec0 0079BEC0 l
+jump_table_79bef8 0079BEF8 l
+CSimpleMessageFrameLine__ctor 0079C140 l
+MessageData__ctor 0079C430 l
+CSimpleMessageFrame__ctor_helper 0079C5D0 l
+CMessageFrame__ctor 0079CA70 l
+CScrollFrame__ctor 0079D5F0 l
+CSimpleMessageScrollFrameLine__dtor 0079E3F0 l
+CSimpleMessageScrollFrame__helper 0079EDE0 l
+CScrollingMessageFrame__ctor 0079EEC0 l
+CSlider__ctor 0079FD90 l
+CSimpleHTML__ctor 007A0590 l
+CONTENTNODE__ctor 007A0740 l
+jump_table_7a11e0 007A11E0 l
+lookup_table_7a11ec 007A11EC l
+CColorSelect__ctor 007A1B10 l
+MOVIECAPTION__ctor 007A2FB0 l
+CMovieFrame__ctor 007A3340 l
+CSimpleHyperlinkButton__ctor 007ACAC0 l
+CScrollFrame_base__ctor 007ACD90 l
+CParticle2__ctor 007AE670 l
+CParticle2_Model__ctor 007AE700 l
+CSortableParticleRecord__ctor 007AE7D0 l
+CRibbonMat__ctor 007B2310 l
+CRibbonVertex__ctor 007B2890 l
+jump_table_7b5108 007B5108 l
+jump_table_7b5584 007B5584 l
+jump_table_7b6018 007B6018 l
+jump_table_7b928c 007B928C l
+lookup_table_7b92a8 007B92A8 l
+jump_table_7bf628 007BF628 l
+lookup_table_7bf650 007BF650 l
+jump_table_7c8904 007C8904 l
+jump_table_7c9604 007C9604 l
+jump_table_7c9d18 007C9D18 l
+jump_table_7c9eac 007C9EAC l
+lookup_table_7c9eb8 007C9EB8 l
+jump_table_7ca1c0 007CA1C0 l
+lookup_table_7ca1cc 007CA1CC l
+jump_table_7ca45c 007CA45C l
+jump_table_7ca47c 007CA47C l
+lookup_table_7ca48c 007CA48C l
+jump_table_7caba8 007CABA8 l
+jump_table_7cb1ac 007CB1AC l
+jump_table_7cc3b4 007CC3B4 l
+jump_table_7cc594 007CC594 l
+jump_table_7cdac4 007CDAC4 l
+jump_table_7cea9c 007CEA9C l
+lookup_table_7ceae8 007CEAE8 l
+jump_table_7cebe8 007CEBE8 l
+jump_table_7cec4c 007CEC4C l
+lookup_table_7cec74 007CEC74 l
+jump_table_7cec98 007CEC98 l
+lookup_table_7cecb4 007CECB4 l
+jump_table_7d0444 007D0444 l
+jump_table_7d2954 007D2954 l
+jump_table_7d29d0 007D29D0 l
+jump_table_7d2a5c 007D2A5C l
+jump_table_7d353c 007D353C l
+LightningJoint__ctor 007D68D0 l
+LightningJoint__scalar_deleting_dtor 007D7FD0 l
+jump_table_7db23c 007DB23C l
+lookup_table_7db258 007DB258 l
+jump_table_7db370 007DB370 l
+lookup_table_7db384 007DB384 l
+jump_table_7dc6dc 007DC6DC l
+lookup_table_7dc700 007DC700 l
+jump_table_7dca6c 007DCA6C l
+lookup_table_7dca90 007DCA90 l
+jump_table_7dd394 007DD394 l
+lookup_table_7dd3b8 007DD3B8 l
+jump_table_7de774 007DE774 l
+jump_table_7dfeac 007DFEAC l
+jump_table_7dfec0 007DFEC0 l
+jump_table_7e03cc 007E03CC l
+lookup_table_7e03e4 007E03E4 l
+jump_table_7e04b0 007E04B0 l
+jump_table_7e04d0 007E04D0 l
+lookup_table_7e04e0 007E04E0 l
+jump_table_7e04f8 007E04F8 l
+lookup_table_7e0500 007E0500 l
+jump_table_7e082c 007E082C l
+lookup_table_7e0844 007E0844 l
+jump_table_7e0860 007E0860 l
+lookup_table_7e0880 007E0880 l
+jump_table_7e089c 007E089C l
+lookup_table_7e08b4 007E08B4 l
+jump_table_7e0af0 007E0AF0 l
+jump_table_7e0b1c 007E0B1C l
+lookup_table_7e0b30 007E0B30 l
+jump_table_7e0d10 007E0D10 l
+lookup_table_7e0d28 007E0D28 l
+jump_table_7e0d44 007E0D44 l
+lookup_table_7e0d64 007E0D64 l
+jump_table_7e0d80 007E0D80 l
+lookup_table_7e0d8c 007E0D8C l
+jump_table_7e1008 007E1008 l
+lookup_table_7e1024 007E1024 l
+jump_table_7e1040 007E1040 l
+lookup_table_7e105c 007E105C l
+jump_table_7e1478 007E1478 l
+lookup_table_7e149c 007E149C l
+jump_table_7e14b8 007E14B8 l
+lookup_table_7e14d0 007E14D0 l
+jump_table_7e14ec 007E14EC l
+jump_table_7e1510 007E1510 l
+lookup_table_7e1520 007E1520 l
+jump_table_7e1530 007E1530 l
+lookup_table_7e1554 007E1554 l
+jump_table_7e1930 007E1930 l
+lookup_table_7e1954 007E1954 l
+jump_table_7e1970 007E1970 l
+lookup_table_7e1998 007E1998 l
+jump_table_7e19b4 007E19B4 l
+lookup_table_7e19cc 007E19CC l
+jump_table_7e19e8 007E19E8 l
+lookup_table_7e1a0c 007E1A0C l
+jump_table_7e1cb0 007E1CB0 l
+jump_table_7e1cdc 007E1CDC l
+lookup_table_7e1cf0 007E1CF0 l
+jump_table_7e1e90 007E1E90 l
+lookup_table_7e1eac 007E1EAC l
+jump_table_7e1ec8 007E1EC8 l
+lookup_table_7e1ee4 007E1EE4 l
+jump_table_7e2090 007E2090 l
+lookup_table_7e20a8 007E20A8 l
+jump_table_7e20c4 007E20C4 l
+lookup_table_7e20e0 007E20E0 l
+jump_table_7e2224 007E2224 l
+lookup_table_7e223c 007E223C l
+jump_table_7e224c 007E224C l
+lookup_table_7e2254 007E2254 l
+jump_table_7e27d4 007E27D4 l
+lookup_table_7e2828 007E2828 l
+jump_table_7e284c 007E284C l
+lookup_table_7e285c 007E285C l
+jump_table_7e2878 007E2878 l
+lookup_table_7e288c 007E288C l
+jump_table_7e28a8 007E28A8 l
+lookup_table_7e28d4 007E28D4 l
+jump_table_7e28f4 007E28F4 l
+lookup_table_7e290c 007E290C l
+jump_table_7e2a1c 007E2A1C l
+lookup_table_7e2a40 007E2A40 l
+jump_table_7e2b50 007E2B50 l
+lookup_table_7e2b70 007E2B70 l
+jump_table_7e2cf0 007E2CF0 l
+jump_table_7e2d98 007E2D98 l
+lookup_table_7e2da8 007E2DA8 l
+jump_table_7e3008 007E3008 l
+lookup_table_7e3034 007E3034 l
+jump_table_7e31a8 007E31A8 l
+lookup_table_7e31bc 007E31BC l
+jump_table_7e31d8 007E31D8 l
+lookup_table_7e31e0 007E31E0 l
+jump_table_7e3298 007E3298 l
+lookup_table_7e32ac 007E32AC l
+jump_table_7e3384 007E3384 l
+jump_table_7e366c 007E366C l
+lookup_table_7e367c 007E367C l
+jump_table_7e3800 007E3800 l
+lookup_table_7e3810 007E3810 l
+jump_table_7e3aa0 007E3AA0 l
+lookup_table_7e3ab0 007E3AB0 l
+jump_table_7e3cd0 007E3CD0 l
+lookup_table_7e3ce8 007E3CE8 l
+jump_table_7e3df8 007E3DF8 l
+jump_table_7e3e18 007E3E18 l
+lookup_table_7e3e28 007E3E28 l
+jump_table_7e3e40 007E3E40 l
+lookup_table_7e3e48 007E3E48 l
+jump_table_7e4168 007E4168 l
+lookup_table_7e4180 007E4180 l
+jump_table_7e419c 007E419C l
+lookup_table_7e41bc 007E41BC l
+jump_table_7e41d8 007E41D8 l
+lookup_table_7e41f0 007E41F0 l
+jump_table_7e43e4 007E43E4 l
+jump_table_7e4410 007E4410 l
+lookup_table_7e4424 007E4424 l
+jump_table_7e45c0 007E45C0 l
+lookup_table_7e45d8 007E45D8 l
+jump_table_7e45f4 007E45F4 l
+lookup_table_7e4614 007E4614 l
+jump_table_7e4630 007E4630 l
+lookup_table_7e463c 007E463C l
+jump_table_7e48b8 007E48B8 l
+lookup_table_7e48d4 007E48D4 l
+jump_table_7e48f0 007E48F0 l
+lookup_table_7e490c 007E490C l
+jump_table_7e4d1c 007E4D1C l
+lookup_table_7e4d40 007E4D40 l
+jump_table_7e4d5c 007E4D5C l
+lookup_table_7e4d74 007E4D74 l
+jump_table_7e4d90 007E4D90 l
+jump_table_7e4db4 007E4DB4 l
+lookup_table_7e4dc4 007E4DC4 l
+jump_table_7e4dd4 007E4DD4 l
+lookup_table_7e4df8 007E4DF8 l
+jump_table_7e5144 007E5144 l
+lookup_table_7e5168 007E5168 l
+jump_table_7e5184 007E5184 l
+lookup_table_7e51ac 007E51AC l
+jump_table_7e51c8 007E51C8 l
+lookup_table_7e51e0 007E51E0 l
+jump_table_7e51fc 007E51FC l
+lookup_table_7e5220 007E5220 l
+jump_table_7e5450 007E5450 l
+jump_table_7e547c 007E547C l
+lookup_table_7e5490 007E5490 l
+jump_table_7e55ec 007E55EC l
+lookup_table_7e5608 007E5608 l
+jump_table_7e5624 007E5624 l
+lookup_table_7e5640 007E5640 l
+jump_table_7e57a0 007E57A0 l
+lookup_table_7e57b8 007E57B8 l
+jump_table_7e57d4 007E57D4 l
+lookup_table_7e57f0 007E57F0 l
+jump_table_7e58e4 007E58E4 l
+lookup_table_7e58fc 007E58FC l
+jump_table_7e590c 007E590C l
+lookup_table_7e5914 007E5914 l
+jump_table_7e5e50 007E5E50 l
+lookup_table_7e5ea4 007E5EA4 l
+jump_table_7e5ec8 007E5EC8 l
+lookup_table_7e5ed8 007E5ED8 l
+jump_table_7e5ef4 007E5EF4 l
+lookup_table_7e5f08 007E5F08 l
+jump_table_7e5f24 007E5F24 l
+lookup_table_7e5f50 007E5F50 l
+jump_table_7e5f70 007E5F70 l
+lookup_table_7e5f88 007E5F88 l
+jump_table_7e60d4 007E60D4 l
+lookup_table_7e60f8 007E60F8 l
+jump_table_7e6228 007E6228 l
+lookup_table_7e6248 007E6248 l
+jump_table_7e638c 007E638C l
+jump_table_7e6458 007E6458 l
+lookup_table_7e6468 007E6468 l
+jump_table_7e6700 007E6700 l
+lookup_table_7e6728 007E6728 l
+jump_table_7e6958 007E6958 l
+lookup_table_7e696c 007E696C l
+jump_table_7e6988 007E6988 l
+lookup_table_7e6990 007E6990 l
+jump_table_7e6a48 007E6A48 l
+lookup_table_7e6a58 007E6A58 l
+jump_table_7e6b64 007E6B64 l
+jump_table_7e6c60 007E6C60 l
+lookup_table_7e6c78 007E6C78 l
+jump_table_7e6d88 007E6D88 l
+jump_table_7e6da8 007E6DA8 l
+lookup_table_7e6db8 007E6DB8 l
+jump_table_7e6dd0 007E6DD0 l
+lookup_table_7e6dd8 007E6DD8 l
+jump_table_7e7100 007E7100 l
+lookup_table_7e7118 007E7118 l
+jump_table_7e7134 007E7134 l
+lookup_table_7e7154 007E7154 l
+jump_table_7e7170 007E7170 l
+lookup_table_7e7188 007E7188 l
+jump_table_7e7384 007E7384 l
+jump_table_7e73b0 007E73B0 l
+lookup_table_7e73c4 007E73C4 l
+jump_table_7e7590 007E7590 l
+lookup_table_7e75a8 007E75A8 l
+jump_table_7e75c4 007E75C4 l
+lookup_table_7e75e4 007E75E4 l
+jump_table_7e7600 007E7600 l
+lookup_table_7e760c 007E760C l
+jump_table_7e788c 007E788C l
+lookup_table_7e78a8 007E78A8 l
+jump_table_7e78c4 007E78C4 l
+lookup_table_7e78e0 007E78E0 l
+jump_table_7e7ccc 007E7CCC l
+lookup_table_7e7cf0 007E7CF0 l
+jump_table_7e7d0c 007E7D0C l
+lookup_table_7e7d24 007E7D24 l
+jump_table_7e7d40 007E7D40 l
+jump_table_7e7d64 007E7D64 l
+lookup_table_7e7d74 007E7D74 l
+jump_table_7e7d84 007E7D84 l
+lookup_table_7e7da8 007E7DA8 l
+jump_table_7e8138 007E8138 l
+lookup_table_7e815c 007E815C l
+jump_table_7e8178 007E8178 l
+lookup_table_7e81a0 007E81A0 l
+jump_table_7e81bc 007E81BC l
+lookup_table_7e81d4 007E81D4 l
+jump_table_7e81f0 007E81F0 l
+lookup_table_7e8214 007E8214 l
+jump_table_7e8450 007E8450 l
+jump_table_7e847c 007E847C l
+lookup_table_7e8490 007E8490 l
+jump_table_7e85e0 007E85E0 l
+lookup_table_7e85fc 007E85FC l
+jump_table_7e8618 007E8618 l
+lookup_table_7e8634 007E8634 l
+jump_table_7e8784 007E8784 l
+lookup_table_7e879c 007E879C l
+jump_table_7e87b8 007E87B8 l
+lookup_table_7e87d4 007E87D4 l
+jump_table_7e88d8 007E88D8 l
+lookup_table_7e88f0 007E88F0 l
+jump_table_7e8900 007E8900 l
+lookup_table_7e8908 007E8908 l
+jump_table_7e8e64 007E8E64 l
+lookup_table_7e8eb8 007E8EB8 l
+jump_table_7e8edc 007E8EDC l
+lookup_table_7e8eec 007E8EEC l
+jump_table_7e8f08 007E8F08 l
+lookup_table_7e8f1c 007E8F1C l
+jump_table_7e8f38 007E8F38 l
+lookup_table_7e8f64 007E8F64 l
+jump_table_7e8f84 007E8F84 l
+lookup_table_7e8f9c 007E8F9C l
+jump_table_7e90d8 007E90D8 l
+lookup_table_7e90fc 007E90FC l
+jump_table_7e9228 007E9228 l
+lookup_table_7e9248 007E9248 l
+jump_table_7e938c 007E938C l
+jump_table_7e9458 007E9458 l
+lookup_table_7e9468 007E9468 l
+jump_table_7e96e4 007E96E4 l
+lookup_table_7e970c 007E970C l
+jump_table_7e993c 007E993C l
+lookup_table_7e9950 007E9950 l
+jump_table_7e996c 007E996C l
+lookup_table_7e9974 007E9974 l
+jump_table_7e9a28 007E9A28 l
+lookup_table_7e9a38 007E9A38 l
+jump_table_7e9b48 007E9B48 l
+jump_table_7e9c20 007E9C20 l
+lookup_table_7e9c28 007E9C28 l
+jump_table_7eac5c 007EAC5C l
+lookup_table_7eac6c 007EAC6C l
+jump_table_7ead54 007EAD54 l
+lookup_table_7ead64 007EAD64 l
+jump_table_7eae40 007EAE40 l
+lookup_table_7eae50 007EAE50 l
+jump_table_7eaf0c 007EAF0C l
+lookup_table_7eaf20 007EAF20 l
+jump_table_7eb3ec 007EB3EC l
+lookup_table_7eb40c 007EB40C l
+jump_table_7eb710 007EB710 l
+lookup_table_7eb72c 007EB72C l
+jump_table_7eb914 007EB914 l
+lookup_table_7eb920 007EB920 l
+jump_table_7eb9f0 007EB9F0 l
+lookup_table_7eba04 007EBA04 l
+jump_table_7ebbd8 007EBBD8 l
+lookup_table_7ebbf8 007EBBF8 l
+jump_table_7ebf00 007EBF00 l
+lookup_table_7ebf10 007EBF10 l
+jump_table_7ec0dc 007EC0DC l
+lookup_table_7ec0f8 007EC0F8 l
+jump_table_7ec178 007EC178 l
+lookup_table_7ec190 007EC190 l
+jump_table_7ec350 007EC350 l
+lookup_table_7ec364 007EC364 l
+jump_table_7ec438 007EC438 l
+lookup_table_7ec450 007EC450 l
+jump_table_7ec528 007EC528 l
+lookup_table_7ec548 007EC548 l
+jump_table_7ecb1c 007ECB1C l
+jump_table_7ee719 007EE719 l
+j_sub_7ee83d 007EF16E l
+j_sub_7ee8cb 007EF173 l
+jump_table_7f2045 007F2045 l
+jump_table_7f22ad 007F22AD l
+jump_table_7f22d9 007F22D9 l
+jump_table_7f251d 007F251D l
+jump_table_7f2549 007F2549 l
+jump_table_7f63e7 007F63E7 l
+jump_table_7f8c09 007F8C09 l
+jump_table_7f8c35 007F8C35 l
+jump_table_7f8c61 007F8C61 l
+jump_table_7f8c8d 007F8C8D l
+jump_table_7f8cb9 007F8CB9 l
+jump_table_7f8ce5 007F8CE5 l
+jump_table_7fb61b 007FB61B l
+jump_table_7fb757 007FB757 l
+jump_table_7fb9a3 007FB9A3 l
+jump_table_7fb9cf 007FB9CF l
+jump_table_7fbbeb 007FBBEB l
+jump_table_7fbc17 007FBC17 l
+jump_table_7fc1a7 007FC1A7 l
+jump_table_7fc1d3 007FC1D3 l
+jump_table_7fc1ff 007FC1FF l
+jump_table_7fc3ff 007FC3FF l
+jump_table_7fc42b 007FC42B l
+jump_table_7fc826 007FC826 l
+jump_table_7fcb22 007FCB22 l
+lookup_table_7fcb26 007FCB26 l
+jump_table_7fcb32 007FCB32 l
+jump_table_7fcd0e 007FCD0E l
+jump_table_804165 00804165 l
+jump_table_8043c5 008043C5 l
+jump_table_804645 00804645 l
+jump_table_806abe 00806ABE l
+jump_table_806b52 00806B52 l
+jump_table_80dfc1 0080DFC1 l
+jump_table_8119a9 008119A9 l
+jump_table_811bdd 00811BDD l
+jump_table_8136cd 008136CD l
+lookup_table_8136d5 008136D5 l
+jump_table_8136ed 008136ED l
+lookup_table_8136f9 008136F9 l
+jump_table_813bb5 00813BB5 l
+jump_table_813eca 00813ECA l
+jump_table_813ef6 00813EF6 l
+jump_table_81494f 0081494F l
+jump_table_8179af 008179AF l
+jump_table_817a13 00817A13 l
+jump_table_817a4f 00817A4F l
+jump_table_817a7f 00817A7F l
+jump_table_81831b 0081831B l
+jump_table_818347 00818347 l
+jump_table_81a770 0081A770 l
+jump_table_81a79c 0081A79C l
+jump_table_81aec3 0081AEC3 l
+jump_table_81ba4b 0081BA4B l
+jump_table_81ba8f 0081BA8F l
+jump_table_81c3cf 0081C3CF l
+jump_table_81caa4 0081CAA4 l
+jump_table_81cad0 0081CAD0 l
+jump_table_81ddc9 0081DDC9 l
+jump_table_81e921 0081E921 l
+jump_table_81f055 0081F055 l
+jump_table_81f6a2 0081F6A2 l
+jump_table_81f6ce 0081F6CE l
+jump_table_820827 00820827 l
+jump_table_821161 00821161 l
+jump_table_821195 00821195 l
+jump_table_821d20 00821D20 l
+jump_table_821d4c 00821D4C l
+jump_table_822ae5 00822AE5 l
+jump_table_822b11 00822B11 l
+jump_table_8232ab 008232AB l
+lookup_table_8232af 008232AF l
+jump_table_8232bb 008232BB l
+_ldexpf 00823375 l
+jump_table_823c20 00823C20 l
+jump_table_823d24 00823D24 l
+lookup_table_823d28 00823D28 l
+jump_table_823d34 00823D34 l
+jump_table_825528 00825528 l
+jump_table_825554 00825554 l
+jump_table_82596b 0082596B l
+lookup_table_82596f 0082596F l
+jump_table_8262ce 008262CE l
+jump_table_8262fa 008262FA l
+jump_table_826be7 00826BE7 l
+jump_table_827f30 00827F30 l
+jump_table_829414 00829414 l
+jump_table_82972b 0082972B l
+jump_table_829c76 00829C76 l
+jump_table_82a25a 0082A25A l
+jump_table_82a794 0082A794 l
+jump_table_82a7c0 0082A7C0 l
+jump_table_82a7ec 0082A7EC l
+jump_table_82ab80 0082AB80 l
+jump_table_82abac 0082ABAC l
+jump_table_82abd8 0082ABD8 l
+jump_table_82aed7 0082AED7 l
+jump_table_82e865 0082E865 l
+lookup_table_82e86d 0082E86D l
+jump_table_82e879 0082E879 l
+jump_table_82e8a5 0082E8A5 l
+jump_table_82f299 0082F299 l
+jump_table_82f2c5 0082F2C5 l
+jump_table_82f2e9 0082F2E9 l
+jump_table_82f94d 0082F94D l
+jump_table_82f979 0082F979 l
+jump_table_82f99d 0082F99D l
+jump_table_82fc9c 0082FC9C l
+jump_table_830140 00830140 l
+jump_table_830a80 00830A80 l
+jump_table_830aac 00830AAC l
+jump_table_830ad8 00830AD8 l
+jump_table_830b04 00830B04 l
+jump_table_832179 00832179 l
+jump_table_8323d5 008323D5 l
+jump_table_834e4d 00834E4D l
+jump_table_834e79 00834E79 l
+jump_table_834ea5 00834EA5 l
+jump_table_836d08 00836D08 l
+jump_table_83afd0 0083AFD0 l
+lookup_table_83afd8 0083AFD8 l
+jump_table_83afe4 0083AFE4 l
+jump_table_83b010 0083B010 l
+jump_table_842f98 00842F98 l
+jump_table_84312c 0084312C l
+jump_table_8436cd 008436CD l
+jump_table_843c23 00843C23 l
+jump_table_843c5f 00843C5F l
+jump_table_843f87 00843F87 l
+jump_table_843fc3 00843FC3 l
+jump_table_844f65 00844F65 l
+jump_table_845116 00845116 l
+jump_table_845f15 00845F15 l
+jump_table_8468d9 008468D9 l
+jump_table_846d21 00846D21 l
+jump_table_846e15 00846E15 l
+jump_table_8470e5 008470E5 l
+jump_table_847717 00847717 l
+jump_table_847cf2 00847CF2 l
+jump_table_847d1e 00847D1E l
+jump_table_848ac6 00848AC6 l
+jump_table_84917f 0084917F l
+jump_table_84993c 0084993C l
+jump_table_849968 00849968 l
+jump_table_84a64a 0084A64A l
+jump_table_84a676 0084A676 l
+lookup_table_84a67e 0084A67E l
+jump_table_84a68a 0084A68A l
+jump_table_84a842 0084A842 l
+jump_table_84a86e 0084A86E l
+jump_table_84ee81 0084EE81 l
+jump_table_84f30b 0084F30B l
+jump_table_84f513 0084F513 l
+jump_table_850795 00850795 l
+jump_table_851dea 00851DEA l
+jump_table_851f7e 00851F7E l
+jump_table_8545cf 008545CF l
+jump_table_8545fb 008545FB l
+jump_table_854627 00854627 l
+jump_table_8553f6 008553F6 l
+jump_table_855422 00855422 l
+jump_table_85544e 0085544E l
+jump_table_8569c8 008569C8 l
+jump_table_857f78 00857F78 l
+jump_table_857fa4 00857FA4 l
+jump_table_8581f4 008581F4 l
+jump_table_858220 00858220 l
+jump_table_859fda 00859FDA l
+jump_table_85ef9b 0085EF9B l
+jump_table_86439c 0086439C l
+jump_table_8643b8 008643B8 l
+jump_table_864be8 00864BE8 l
+lookup_table_864bfc 00864BFC l
+jump_table_864c0c 00864C0C l
+jump_table_864c4c 00864C4C l
+jump_table_864f00 00864F00 l
+jump_table_864fe0 00864FE0 l
+jump_table_865df4 00865DF4 l
+jump_table_866c9c 00866C9C l
+lookup_table_866cb0 00866CB0 l
+jump_table_868758 00868758 l
+jump_table_86b024 0086B024 l
+jump_table_86c590 0086C590 l
+jump_table_86c5b0 0086C5B0 l
+jump_table_86c78c 0086C78C l
+jump_table_86ca08 0086CA08 l
+jump_table_86e218 0086E218 l
+acmStreamSize 00874F46 l
+acmStreamOpen 00874F4C l
+acmFormatSuggest 00874F52 l
+acmStreamUnprepareHeader 00874F58 l
+acmStreamConvert 00874F5E l
+acmStreamPrepareHeader 00874F64 l
+WSACancelAsyncRequest 00874F6A l
+WSAAsyncGetHostByName 00874F70 l
+VirtualProtect 00874F80 l
+FlushInstructionCache 00874FA1 l
+__ehhandler$??_U@YAPAXIW4align_val_t@std@@ABUnothrow_t@1@@Z 00875400 l
+__ehhandler$___std_fs_get_file_id@8 00875510 l
+__ehhandler$??2@YAPAXIW4align_val_t@std@@ABUnothrow_t@1@@Z 00875AC0 l
+__ehhandler$?_FullAliasWait@_TaskCollection@details@Concurrency@@AAEXPAV123@@Z 00875ED0 l
+__ehhandler$?_Init@?$_Mpunct@G@std@@IAEXABV_Locinfo@2@_N@Z 00875EF0 l
+__ehhandler$?shortsort@@YAXPAD0IP6AHPBX1@Z@Z 0087792C l
+__ehhandler$?fp_format_a@@YAHQBNPADIQADIH_NIQAU__crt_locale_pointers@@@Z 00877B4F l
+__ehhandler$?_wcrtomb_s_l@@YAHQAHQADI_WQAU_Mbstatet@@QAU__crt_locale_pointers@@@Z 00877B7B l
+__ehhandler$?do_get@?$num_get@DV?$istreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@MBE?AV?$istreambuf_iterator@DU?$char_traits@D@std@@@2@V32@0AAVios_base@2@AAHAA_N@Z 0087837C l
+_cleanup 00885B60 l
+_cleanup 00885BE0 l
+RegOpenKeyA 0088A000 l
+RegEnumKeyA 0088A004 l
+CryptAcquireContextA 0088A008 l
+CryptGenRandom 0088A00C l
+CryptReleaseContext 0088A010 l
+AllocateAndInitializeSid 0088A014 l
+OpenProcessToken 0088A018 l
+GetTokenInformation 0088A01C l
+InitializeAcl 0088A020 l
+AddAccessDeniedAce 0088A024 l
+AddAccessAllowedAce 0088A028 l
+SetSecurityInfo 0088A02C l
+FreeSid 0088A030 l
+GetUserNameA 0088A034 l
+RegCreateKeyExA 0088A038 l
+RegSetValueExA 0088A03C l
+RegFlushKey 0088A040 l
+RegQueryValueExA 0088A044 l
+RegOpenKeyExA 0088A048 l
+RegCloseKey 0088A04C l
+InitializeDivxDecoder 0088A054 l
+SetOutputFormat 0088A058 l
+DivxDecode 0088A05C l
+UnInitializeDivxDecoder 0088A060 l
+GetPixelFormat 0088A068 l
+SetDeviceGammaRamp 0088A06C l
+DescribePixelFormat 0088A070 l
+SetPixelFormat 0088A074 l
+SetBkMode 0088A078 l
+GetDeviceGammaRamp 0088A07C l
+ChoosePixelFormat 0088A080 l
+GetStockObject 0088A084 l
+SelectObject 0088A088 l
+CreateFontIndirectA 0088A08C l
+GetObjectA 0088A090 l
+SetMapMode 0088A094 l
+GdiFlush 0088A098 l
+DeleteDC 0088A09C l
+CreateDIBSection 0088A0A0 l
+CreateCompatibleDC 0088A0A4 l
+OffsetViewportOrgEx 0088A0A8 l
+SetViewportOrgEx 0088A0AC l
+SelectClipRgn 0088A0B0 l
+CreateRectRgn 0088A0B4 l
+BitBlt 0088A0B8 l
+SetTextColor 0088A0BC l
+DeleteObject 0088A0C0 l
+SetBkColor 0088A0C4 l
+ImmGetCandidateListA 0088A0CC l
+ImmNotifyIME 0088A0D0 l
+ImmAssociateContextEx 0088A0D4 l
+ImmSetConversionStatus 0088A0D8 l
+ImmAssociateContext 0088A0DC l
+ImmGetCompositionStringA 0088A0E0 l
+ImmGetContext 0088A0E4 l
+ImmGetConversionStatus 0088A0E8 l
+ImmReleaseContext 0088A0EC l
+GetSystemDirectoryA 0088A0F4 l
+GetWindowsDirectoryA 0088A0F8 l
+SetEnvironmentVariableA 0088A0FC l
+CompareStringA 0088A100 l
+FlushFileBuffers 0088A104 l
+CloseHandle 0088A108 l
+CreateFileA 0088A10C l
+GetTimeZoneInformation 0088A110 l
+GetConsoleOutputCP 0088A114 l
+WriteConsoleA 0088A118 l
+SetStdHandle 0088A11C l
+GetDateFormatA 0088A120 l
+OpenFile 0088A124 l
+OpenFileMappingA 0088A128 l
+CreateFileMappingA 0088A12C l
+MapViewOfFile 0088A130 l
+OpenEventA 0088A134 l
+UnmapViewOfFile 0088A138 l
+DeviceIoControl 0088A13C l
+MulDiv 0088A140 l
+GetTimeFormatA 0088A144 l
+GetStringTypeA 0088A148 l
+LCMapStringA 0088A14C l
+GetConsoleMode 0088A150 l
+GetConsoleCP 0088A154 l
+SetFilePointer 0088A158 l
+GetLocaleInfoA 0088A15C l
+HeapReAlloc 0088A160 l
+VirtualAlloc 0088A164 l
+GetOEMCP 0088A168 l
+GetACP 0088A16C l
+InitializeCriticalSection 0088A170 l
+LoadLibraryA 0088A174 l
+InterlockedExchange 0088A178 l
+FreeLibrary 0088A17C l
+EnterCriticalSection 0088A180 l
+LeaveCriticalSection 0088A184 l
+RaiseException 0088A188 l
+HeapSize 0088A18C l
+Sleep 0088A190 l
+RtlUnwind 0088A194 l
+GetSystemTimeAsFileTime 0088A198 l
+GetCurrentProcessId 0088A19C l
+GetTickCount 0088A1A0 l
+QueryPerformanceCounter 0088A1A4 l
+VirtualFree 0088A1A8 l
+HeapCreate 0088A1AC l
+HeapDestroy 0088A1B0 l
+GetCurrentThread 0088A1B4 l
+InterlockedDecrement 0088A1B8 l
+GetCurrentThreadId 0088A1BC l
+SetLastError 0088A1C0 l
+InterlockedIncrement 0088A1C4 l
+TlsFree 0088A1C8 l
+TlsSetValue 0088A1CC l
+TlsAlloc 0088A1D0 l
+TlsGetValue 0088A1D4 l
+DeleteCriticalSection 0088A1D8 l
+GetFileType 0088A1DC l
+SetHandleCount 0088A1E0 l
+GetLastError 0088A1E4 l
+GetEnvironmentStrings 0088A1E8 l
+FreeEnvironmentStringsA 0088A1EC l
+GetModuleFileNameA 0088A1F0 l
+GetStdHandle 0088A1F4 l
+WriteFile 0088A1F8 l
+ExitProcess 0088A1FC l
+GetModuleHandleA 0088A200 l
+IsDebuggerPresent 0088A204 l
+GetCurrentDirectoryA 0088A208 l
+GetFullPathNameA 0088A20C l
+ExitThread 0088A210 l
+SetUnhandledExceptionFilter 0088A214 l
+UnhandledExceptionFilter 0088A218 l
+GetCurrentProcess 0088A21C l
+TerminateProcess 0088A220 l
+GetStartupInfoA 0088A224 l
+GetProcessHeap 0088A228 l
+HeapAlloc 0088A22C l
+GetVersionExA 0088A230 l
+HeapFree 0088A234 l
+GetCommandLineA 0088A238 l
+GetDriveTypeA 0088A23C l
+VirtualProtect 0088A240 l
+GlobalAlloc 0088A244 l
+GlobalFree 0088A248 l
+GlobalLock 0088A24C l
+GlobalUnlock 0088A250 l
+LocalFree 0088A254 l
+FlushInstructionCache 0088A258 l
+GetQueuedCompletionStatus 0088A25C l
+CreateIoCompletionPort 0088A260 l
+QueryPerformanceFrequency 0088A264 l
+GetPriorityClass 0088A268 l
+SetPriorityClass 0088A26C l
+GetProcessAffinityMask 0088A270 l
+SetThreadAffinityMask 0088A274 l
+WaitForSingleObjectEx 0088A278 l
+SetFileTime 0088A27C l
+GetTempPathA 0088A280 l
+DeleteFileA 0088A284 l
+FileTimeToSystemTime 0088A288 l
+FileTimeToLocalFileTime 0088A28C l
+SignalObjectAndWait 0088A290 l
+GlobalMemoryStatus 0088A294 l
+OpenThread 0088A298 l
+SuspendThread 0088A29C l
+GetThreadContext 0088A2A0 l
+CreateToolhelp32Snapshot 0088A2A4 l
+Thread32First 0088A2A8 l
+Thread32Next 0088A2AC l
+lstrcpynA 0088A2B0 l
+VirtualQuery 0088A2B4 l
+GetComputerNameA 0088A2B8 l
+GetDiskFreeSpaceA 0088A2BC l
+SetEndOfFile 0088A2C0 l
+CreateMutexA 0088A2C4 l
+CreateSemaphoreA 0088A2C8 l
+DuplicateHandle 0088A2CC l
+GetSystemInfo 0088A2D0 l
+CreateEventA 0088A2D4 l
+SetEvent 0088A2D8 l
+ResetEvent 0088A2DC l
+WaitForMultipleObjects 0088A2E0 l
+IsBadReadPtr 0088A2E4 l
+IsBadWritePtr 0088A2E8 l
+GetThreadPriority 0088A2EC l
+SetThreadPriority 0088A2F0 l
+SetProcessAffinityMask 0088A2F4 l
+WaitForSingleObject 0088A2F8 l
+ResumeThread 0088A2FC l
+CreateThread 0088A300 l
+InterlockedExchangeAdd 0088A304 l
+InterlockedCompareExchange 0088A308 l
+GetFileAttributesA 0088A30C l
+CreateDirectoryA 0088A310 l
+GetLocalTime 0088A314 l
+FormatMessageA 0088A318 l
+GetExitCodeProcess 0088A31C l
+GetVersion 0088A320 l
+FindClose 0088A324 l
+FindFirstFileA 0088A328 l
+OutputDebugStringA 0088A32C l
+ReadFile 0088A330 l
+GetFileSize 0088A334 l
+ReleaseSemaphore 0088A338 l
+ReleaseMutex 0088A33C l
+acmStreamSize 0088A344 l
+acmFormatSuggest 0088A348 l
+acmStreamUnprepareHeader 0088A34C l
+acmStreamConvert 0088A350 l
+acmStreamPrepareHeader 0088A354 l
+acmStreamOpen 0088A358 l
+glBindTexture 0088A360 l
+glGenTextures 0088A364 l
+glEnable 0088A368 l
+glTexParameteri 0088A36C l
+glAccum 0088A370 l
+glReadPixels 0088A374 l
+glColor4fv 0088A378 l
+glScissor 0088A37C l
+glDepthRange 0088A380 l
+glViewport 0088A384 l
+glTexImage2D 0088A388 l
+wglGetProcAddress 0088A38C l
+wglDeleteContext 0088A390 l
+wglMakeCurrent 0088A394 l
+wglCreateContext 0088A398 l
+wglGetCurrentContext 0088A39C l
+glCopyTexSubImage2D 0088A3A0 l
+glCopyTexImage2D 0088A3A4 l
+wglGetCurrentDC 0088A3A8 l
+glGetString 0088A3AC l
+glCullFace 0088A3B0 l
+glDeleteTextures 0088A3B4 l
+glDisable 0088A3B8 l
+glGetError 0088A3BC l
+glGetIntegerv 0088A3C0 l
+glGetFloatv 0088A3C4 l
+glLightf 0088A3C8 l
+glNormalPointer 0088A3CC l
+glBlendFunc 0088A3D0 l
+glMatrixMode 0088A3D4 l
+glPolygonOffset 0088A3D8 l
+glDisableClientState 0088A3DC l
+glEnableClientState 0088A3E0 l
+glLightfv 0088A3E4 l
+glPixelStorei 0088A3E8 l
+glColorMaterial 0088A3EC l
+glLightModeli 0088A3F0 l
+glTexEnvfv 0088A3F4 l
+glTexEnvf 0088A3F8 l
+glTexEnvi 0088A3FC l
+glTexGeni 0088A400 l
+glColorMask 0088A404 l
+glDepthMask 0088A408 l
+glPolygonMode 0088A40C l
+glLightModelfv 0088A410 l
+glTexGenfv 0088A414 l
+glLoadIdentity 0088A418 l
+glPointSize 0088A41C l
+glDepthFunc 0088A420 l
+glFogfv 0088A424 l
+glFogf 0088A428 l
+glFogi 0088A42C l
+glAlphaFunc 0088A430 l
+glMaterialf 0088A434 l
+glMaterialfv 0088A438 l
+glLoadMatrixf 0088A43C l
+glTexSubImage2D 0088A440 l
+glTexEnviv 0088A444 l
+wglSwapLayerBuffers 0088A448 l
+glFinish 0088A44C l
+glClear 0088A450 l
+glClearColor 0088A454 l
+glLineWidth 0088A458 l
+glDrawArrays 0088A45C l
+glDrawElements 0088A460 l
+glHint 0088A464 l
+glColorPointer 0088A468 l
+glTexCoordPointer 0088A46C l
+glClipPlane 0088A470 l
+glVertexPointer 0088A474 l
+FindExecutableA 0088A47C l
+SHGetSpecialFolderLocation 0088A480 l
+ShellExecuteA 0088A484 l
+IsWindow 0088A48C l
+wsprintfA 0088A490 l
+DispatchMessageA 0088A494 l
+TranslateMessage 0088A498 l
+PeekMessageA 0088A49C l
+GetMessageA 0088A4A0 l
+GetActiveWindow 0088A4A4 l
+KillTimer 0088A4A8 l
+SetTimer 0088A4AC l
+MsgWaitForMultipleObjects 0088A4B0 l
+LoadBitmapA 0088A4B4 l
+MapVirtualKeyA 0088A4B8 l
+VkKeyScanA 0088A4BC l
+SetCursorPos 0088A4C0 l
+ClientToScreen 0088A4C4 l
+SetCursor 0088A4C8 l
+SystemParametersInfoA 0088A4CC l
+SendInput 0088A4D0 l
+SetCapture 0088A4D4 l
+ReleaseCapture 0088A4D8 l
+MoveWindow 0088A4DC l
+SendMessageA 0088A4E0 l
+GetWindowPlacement 0088A4E4 l
+SetFocus 0088A4E8 l
+PostQuitMessage 0088A4EC l
+IsZoomed 0088A4F0 l
+IsIconic 0088A4F4 l
+PostMessageA 0088A4F8 l
+GetParent 0088A4FC l
+CloseClipboard 0088A500 l
+OpenClipboard 0088A504 l
+IsWindowVisible 0088A508 l
+GetForegroundWindow 0088A50C l
+MessageBeep 0088A510 l
+GetKeyState 0088A514 l
+GetCursorPos 0088A518 l
+IsDialogMessageA 0088A51C l
+TranslateAcceleratorA 0088A520 l
+GetKeyboardLayout 0088A524 l
+SetClipboardData 0088A528 l
+EmptyClipboard 0088A52C l
+ScreenToClient 0088A530 l
+GetClientRect 0088A534 l
+LoadImageA 0088A538 l
+LoadCursorA 0088A53C l
+MapWindowPoints 0088A540 l
+BeginPaint 0088A544 l
+EndPaint 0088A548 l
+AdjustWindowRectEx 0088A54C l
+GetSystemMetrics 0088A550 l
+ChangeDisplaySettingsExA 0088A554 l
+SetWindowPos 0088A558 l
+ShowWindow 0088A55C l
+GetWindowRect 0088A560 l
+ClipCursor 0088A564 l
+DefWindowProcA 0088A568 l
+RegisterClassExA 0088A56C l
+CreateWindowExA 0088A570 l
+GetDC 0088A574 l
+ReleaseDC 0088A578 l
+DestroyWindow 0088A57C l
+UnregisterClassA 0088A580 l
+EnumDisplaySettingsA 0088A584 l
+EnumDisplayDevicesA 0088A588 l
+MonitorFromPoint 0088A58C l
+GetMonitorInfoA 0088A590 l
+MessageBoxA 0088A594 l
+LoadStringA 0088A598 l
+WaitForInputIdle 0088A59C l
+InvertRect 0088A5A0 l
+GetDesktopWindow 0088A5A4 l
+CharLowerBuffA 0088A5A8 l
+GetAsyncKeyState 0088A5AC l
+FillRect 0088A5B0 l
+GetFileVersionInfoSizeA 0088A5B8 l
+GetFileVersionInfoA 0088A5BC l
+VerQueryValueA 0088A5C0 l
+HttpOpenRequestA 0088A5C8 l
+InternetCrackUrlA 0088A5CC l
+InternetCloseHandle 0088A5D0 l
+InternetReadFileExA 0088A5D4 l
+HttpQueryInfoA 0088A5D8 l
+InternetSetOptionA 0088A5DC l
+InternetConnectA 0088A5E0 l
+InternetSetStatusCallbackA 0088A5E4 l
+InternetOpenA 0088A5E8 l
+HttpSendRequestA 0088A5EC l
+InternetSetCookieW 0088A5F0 l
+InternetSetStatusCallback 0088A5F4 l
+joyGetPosEx 0088A5FC l
+waveInGetNumDevs 0088A600 l
+waveOutGetNumDevs 0088A604 l
+timeGetTime 0088A608 l
+mciSendCommandA 0088A60C l
+timeSetEvent 0088A610 l
+timeKillEvent 0088A614 l
+waveOutGetDevCapsA 0088A618 l
+waveOutClose 0088A61C l
+waveOutOpen 0088A620 l
+waveOutUnprepareHeader 0088A624 l
+waveOutWrite 0088A628 l
+waveOutReset 0088A62C l
+waveOutGetPosition 0088A630 l
+waveInAddBuffer 0088A634 l
+waveInPrepareHeader 0088A638 l
+waveInUnprepareHeader 0088A63C l
+waveInGetDevCapsA 0088A640 l
+waveInStart 0088A644 l
+waveInOpen 0088A648 l
+waveInClose 0088A64C l
+waveInReset 0088A650 l
+waveOutPrepareHeader 0088A654 l
+joyGetDevCapsA 0088A658 l
+joyGetNumDevs 0088A65C l
+getsockname 0088A664 l
+htons 0088A668 l
+setsockopt 0088A66C l
+closesocket 0088A670 l
+WSAGetLastError 0088A674 l
+WSACancelAsyncRequest 0088A678 l
+WSAAsyncGetHostByName 0088A67C l
+recv 0088A680 l
+getpeername 0088A684 l
+send 0088A688 l
+socket 0088A68C l
+getsockopt 0088A690 l
+ioctlsocket 0088A694 l
+accept 0088A698 l
+connect 0088A69C l
+gethostbyname 0088A6A0 l
+inet_addr 0088A6A4 l
+listen 0088A6A8 l
+bind 0088A6AC l
+htonl 0088A6B0 l
+WSAStartup 0088A6B4 l
+WSACleanup 0088A6B8 l
+WSACloseEvent 0088A6BC l
+WSACreateEvent 0088A6C0 l
+WSAEventSelect 0088A6C4 l
+WSAEnumNetworkEvents 0088A6C8 l
+select 0088A6CC l
+__WSAFDIsSet 0088A6D0 l
+sendto 0088A6D4 l
+recvfrom 0088A6D8 l
+inet_ntoa 0088A6DC l
+ntohs 0088A6E0 l
+D3DPERF_SetMarker 0088A6E8 l
+CoInitialize 0088A6F0 l
+PropVariantClear 0088A6F4 l
+CoCreateInstance 0088A6F8 l
+CoTaskMemFree 0088A6FC l
+CoUninitialize 0088A700 l
+CLSIDFromString 0088A704 l
+__debug_directory_entries 0088B890 l
+CDataStore__vtable 0088BA8C l
+CDataStore__vtable_alt 0088CB08 l
+WowClientDB__vtable 0088CC90 l
+CStatus__vtable 0088CE84 l
+CLightInfo__vtable 0088D638 l
+type_info::`vftable' 0088D7D4 l
+RealmConnection__vtable 0088F5A0 l
+GruntClient__vtable 0088F9F0 l
+WowConnection__vtable_base 0088FC70 l
+CDataStore__vtable_write 0088FD0C l
+WowConnection__vtable_tertiary 0088FF74 l
+WowConnection__vtable_secondary 0088FF78 l
+WowConnection__vtable_primary 0088FF7C l
+lookup_table_890410 00890410 l
+CSimpleTexture__vtable_secondary 008907F8 l
+CSimpleTexture__vtable_primary 00890838 l
+CLayoutFrame__vtable_primary 00890AC8 l
+CLayoutFrame__vtable_secondary 00890BF0 l
+CFrame__vtable 008918B0 l
+CECC_LDPC::`vftable'{for `CECC_Base'} 00892DC4 l
+CECC_Base::`vftable' 00892E38 l
+CGObject_C__vtable 008986FC l
+CLayoutFrame__vtable 00898710 l
+CSimpleModelFFX__vtable_secondary 0089A8E8 l
+CSimpleModelFFX__vtable 0089A928 l
+CWorldFrame__vtable_secondary 008A7BA8 l
+CWorldFrame__vtable 008A7BE8 l
+CSimpleCheckbox__vtable 008AAA48 l
+CMinimap__vtable 008AAA88 l
+CSimpleTaxiRouteFrame__vtable 008ACB98 l
+CTaxiRouteFrame__vtable 008ACBD8 l
+CSimpleTaxiFrame__vtable 008AD9B8 l
+CPlayerModel__vtable 008AD9F8 l
+CDressUpModel__vtable_secondary 008ADB50 l
+CDressUpModel__vtable 008ADB90 l
+CTabardModel__vtable_secondary 008ADD88 l
+CTabardModel__vtable 008ADDC8 l
+CSimpleFrame__vtable_primary 008B4CF8 l
+CSimpleFrame__vtable_secondary 008B4D38 l
+CSimpleButton__vtable 008BA398 l
+CGameTooltip__vtable 008BA3D8 l
+NetClient__vtable 008BBDC8 l
+WowClientDB__vtable 008BC180 l
+DBCache__vtable 008BCC28 l
+CGxDevice__vtable 008BF748 l
+CGxDeviceOpenGl__FrameBufferObject__vtable 008BFA80 l
+CGxDeviceOpenGl__vtable 008BFA88 l
+CGxDeviceD3d__vtable 008BFEA0 l
+WowConnection__vtable 008C32B8 l
+CGPlayer_C__vtable 008C5580 l
+lookup_table_8c9958 008C9958 l
+lookup_table_8ca618 008CA618 l
+std::bad_alloc::`vftable'{for `std::exception'} 008CC0CC l
+std::logic_error::`vftable'{for `std::exception'} 008CC118 l
+std::length_error::`vftable'{for `std::logic_error'} 008CC124 l
+lookup_table_8cc4a8 008CC4A8 l
+Blizzard::IOUnit::`vftable' 008CC6C4 l
+Blizzard::URL::DownloadCallback::`vftable' 008CC6EC l
+Blizzard::IOCoreFileUnit::`vftable'{for `Blizzard::IOFileUnit'} 008CC874 l
+Blizzard::IOOwnedLockUnitInternal::`vftable'{for `Blizzard::IOLockUnitInternal'} 008CC89C l
+Blizzard::IORangeUnitInternal::`vftable'{for `Blizzard::IORangeUnit'} 008CC8C4 l
+Blizzard::IOChecksumUnitInternal::`vftable'{for `Blizzard::IOChecksumUnit'} 008CC980 l
+Blizzard::IOAlignUnitInternal::`vftable'{for `Blizzard::IOAlignUnit'} 008CCBB8 l
+Blizzard::IOCRCChecksumUnit::`vftable'{for `Blizzard::IOChecksumUnitInternal'} 008CCC74 l
+Blizzard::IOMD5ChecksumUnit::`vftable'{for `Blizzard::IOChecksumUnitInternal'} 008CCCA8 l
+Blizzard::IOMopaqSectorReadUnitInternal::`vftable'{for `Blizzard::IOMopaqSectorReadUnit'} 008CCCDC l
+Blizzard::IOMopaqUnitInternal::`vftable'{for `Blizzard::IOMopaqUnit'} 008CCD14 l
+Blizzard::IOCoreAlignedFileUnit::`vftable'{for `Blizzard::IOCoreFileUnit'} 008CCE90 l
+Blizzard::Mopaq::RepairCallback::`vftable'{for `Blizzard::URL::DownloadCallback'} 008CD174 l
+Blizzard::File::Transport::TransportHttpCallback::`vftable'{for `Blizzard::URL::DownloadCallback'} 008CD1AC l
+System_Streaming::HttpCallback::`vftable'{for `Blizzard::URL::DownloadCallback'} 008CD1EC l
+std::out_of_range::`vftable'{for `std::logic_error'} 008CD328 l
+Blizzard::IOMPQFileUnit::`vftable'{for `Blizzard::IOMopaqUnitInternal'} 008CD8BC l
+Blizzard::IOReadOnlyMPQFileUnit::`vftable'{for `Blizzard::IOMPQFileUnit'} 008CD914 l
+Blizzard::IODiskFileUnit::`vftable'{for `Blizzard::IOMopaqUnitInternal'} 008CD96C l
+Tracker::TryWowHttpDataDownloadCallBack::`vftable'{for `Blizzard::URL::DownloadCallback'} 008CDD74 l
+lookup_table_8d64c0 008D64C0 l
+TSHashTable<class CShaderEffect, class HASHKEY_STRI>::`vftable' 008DCAF8 l
+std::exception::`vftable' 008E0074 l
+std::bad_exception::`vftable'{for `std::exception'} 008E016C l
+CSimpleFrame__vtable 008F3F00 l
+CModel__vtable_primary 008F3F40 l
+CStatusBar__vtable_secondary 008F4350 l
+CStatusBar__vtable_primary 008F4390 l
+CButton__vtable_secondary 008F4548 l
+CButton__vtable_primary 008F4588 l
+CCheckButton__vtable_secondary 008F46F0 l
+CCheckButton__vtable_primary 008F4730 l
+CSimpleFontString__vtable_secondary 008F49C0 l
+CSimpleFontString__vtable_primary 008F49C8 l
+CEditBox__vtable_secondary 008F4A08 l
+CEditBox__vtable_primary 008F4A48 l
+CMessageFrame__vtable_secondary 008F4C48 l
+CMessageFrame__vtable_primary 008F4C88 l
+CScrollFrame__vtable_secondary 008F4DF0 l
+CScrollFrame__vtable_primary 008F4E30 l
+CScrollingMessageFrame__vtable_secondary 008F5050 l
+CScrollingMessageFrame__vtable_primary 008F5090 l
+CSlider__vtable_secondary 008F5138 l
+CSlider__vtable_primary 008F5178 l
+CSimpleHTML__vtable_secondary 008F5258 l
+CSimpleHTML__vtable_primary 008F5298 l
+CColorSelect__vtable_secondary 008F5490 l
+CColorSelect__vtable_primary 008F54D0 l
+CMovieFrame__vtable_secondary 008F58F8 l
+CMovieFrame__vtable_primary 008F5938 l
+FMOD::Plugin::`vftable' 008FFE3C l
+FMOD::DSPI::`vftable'{for `FMOD::Plugin'} 008FFE4C l
+FMOD::Thread::`vftable' 00900348 l
+FMOD::MemoryFile::`vftable'{for `FMOD::File'} 00900354 l
+FMOD::DiskFile::`vftable'{for `FMOD::File'} 00900374 l
+FMOD::UserFile::`vftable'{for `FMOD::File'} 00900394 l
+FMOD::NullFile::`vftable'{for `FMOD::File'} 009003B4 l
+FMOD::SoundI::`vftable' 009004CC l
+FMOD::File::`vftable' 0090071C l
+FMOD::DSPFilter::`vftable'{for `FMOD::DSPI'} 00901AF4 l
+FMOD::DSPResamplerMultiInput::`vftable'{for `FMOD::DSPResampler'} 00901B4C l
+FMOD::DSPSoundCard::`vftable'{for `FMOD::DSPFilter'} 00901BA4 l
+FMOD::DSPWaveTable::`vftable'{for `FMOD::DSPI'} 00901BFC l
+FMOD::DSPCodec::`vftable'{for `FMOD::DSPResampler'} 00901C54 l
+FMOD::Codec::`vftable'{for `FMOD::Plugin'} 00901CAC l
+FMOD::CodecMPEG::`vftable'{for `FMOD::Codec'} 00901CB4 l
+FMOD::CodecWav::`vftable'{for `FMOD::Codec'} 00901CBC l
+FMOD::CodecRaw::`vftable'{for `FMOD::Codec'} 00901CC4 l
+FMOD::DSPCodecMPEG::`vftable'{for `FMOD::DSPCodec'} 00901CCC l
+FMOD::DSPCodecADPCM::`vftable'{for `FMOD::DSPCodec'} 00901D24 l
+FMOD::DSPCodecRaw::`vftable'{for `FMOD::DSPCodec'} 00901D7C l
+FMOD::CROStream::`vftable'{for `IStream'} 00902028 l
+FMOD::Output::`vftable'{for `FMOD::Plugin'} 00902C14 l
+FMOD::OutputSoftware::`vftable'{for `FMOD::Output'} 0090304C l
+FMOD::Sample::`vftable'{for `FMOD::SoundI'} 0090305C l
+FMOD::DSPResampler::`vftable'{for `FMOD::DSPFilter'} 00903144 l
+FMOD::Stream::`vftable'{for `FMOD::SoundI'} 009031D4 l
+FMOD::ChannelReal::`vftable' 0090328C l
+FMOD::ChannelStream::`vftable'{for `FMOD::ChannelReal'} 00903324 l
+FMOD::NetFile::`vftable'{for `FMOD::File'} 009036E0 l
+FMOD::CddaFile::`vftable'{for `FMOD::File'} 00903724 l
+FMOD::OutputEmulated::`vftable'{for `FMOD::Output'} 009037A0 l
+FMOD::OutputPolled::`vftable'{for `FMOD::Output'} 009037D0 l
+FMOD::OutputPolled::`vftable'{for `FMOD::Thread'} 009037DC l
+FMOD::ChannelOpenALEAX3::`vftable'{for `FMOD::ChannelOpenAL'} 00903934 l
+FMOD::ChannelOpenALEAX4::`vftable'{for `FMOD::ChannelOpenAL'} 009039D4 l
+FMOD::ChannelOpenALEAX5::`vftable'{for `FMOD::ChannelOpenAL'} 00903A74 l
+FMOD::ChannelOpenALEAX2::`vftable'{for `FMOD::ChannelOpenAL'} 00903B8C l
+FMOD::OutputOpenAL::`vftable'{for `FMOD::OutputTimer'} 00903C28 l
+FMOD::ChannelSoftware::`vftable'{for `FMOD::ChannelRealManual3D'} 00903DB4 l
+FMOD::ChannelDSound::`vftable'{for `FMOD::ChannelReal'} 00904184 l
+FMOD::ChannelDSoundEAX2::`vftable'{for `FMOD::ChannelDSound'} 0090421C l
+FMOD::ChannelDSoundEAX3::`vftable'{for `FMOD::ChannelDSound'} 009042B4 l
+FMOD::ChannelDSoundEAX4::`vftable'{for `FMOD::ChannelDSound'} 0090434C l
+FMOD::SampleSoftware::`vftable'{for `FMOD::Sample'} 00904504 l
+FMOD::ChannelEmulated::`vftable'{for `FMOD::ChannelReal'} 00904644 l
+FMOD::ChannelOpenAL::`vftable'{for `FMOD::ChannelReal'} 00904724 l
+FMOD::SampleOpenAL::`vftable'{for `FMOD::Sample'} 00904DE4 l
+FMOD::ChannelRealManual3D::`vftable'{for `FMOD::ChannelReal'} 00904EC4 l
+FMOD::SampleDSound::`vftable'{for `FMOD::Sample'} 0090516C l
+debugInfoType 00906888 l
+PDBGuid 0090688C l
+PDBAge 0090689C l
+PDBFileName 009068A0 l
+type_info::`RTTI Complete Object Locator' 009068F4 l
+type_info::`RTTI Class Hierarchy Descriptor' 00906908 l
+type_info::`RTTI Base Class Array' 00906918 l
+type_info::`RTTI Base Class Descriptor at (0,-1,0,64) 00906920 l
+CECC_LDPC::`RTTI Complete Object Locator' 0090693C l
+CECC_LDPC::`RTTI Class Hierarchy Descriptor' 00906950 l
+CECC_LDPC::`RTTI Base Class Array' 00906960 l
+CECC_LDPC::`RTTI Base Class Descriptor at (0,-1,0,64) 0090696C l
+CECC_Base::`RTTI Base Class Descriptor at (0,-1,0,64) 00906988 l
+CECC_Base::`RTTI Class Hierarchy Descriptor' 009069A4 l
+CECC_Base::`RTTI Base Class Array' 009069B4 l
+CECC_Base::`RTTI Complete Object Locator' 009069BC l
+std::bad_alloc::`RTTI Complete Object Locator' 009069D0 l
+std::bad_alloc::`RTTI Class Hierarchy Descriptor' 009069E4 l
+std::bad_alloc::`RTTI Base Class Array' 009069F4 l
+std::bad_alloc::`RTTI Base Class Descriptor at (0,-1,0,64) 00906A00 l
+std::exception::`RTTI Base Class Descriptor at (0,-1,0,64) 00906A1C l
+std::exception::`RTTI Class Hierarchy Descriptor' 00906A38 l
+std::exception::`RTTI Base Class Array' 00906A48 l
+std::logic_error::`RTTI Complete Object Locator' 00906A50 l
+std::logic_error::`RTTI Class Hierarchy Descriptor' 00906A64 l
+std::logic_error::`RTTI Base Class Array' 00906A74 l
+std::logic_error::`RTTI Base Class Descriptor at (0,-1,0,64) 00906A80 l
+std::length_error::`RTTI Complete Object Locator' 00906A9C l
+std::length_error::`RTTI Class Hierarchy Descriptor' 00906AB0 l
+std::length_error::`RTTI Base Class Array' 00906AC0 l
+std::length_error::`RTTI Base Class Descriptor at (0,-1,0,64) 00906AD0 l
+Blizzard::IOUnit::`RTTI Complete Object Locator' 00906AEC l
+Blizzard::IOUnit::`RTTI Class Hierarchy Descriptor' 00906B00 l
+Blizzard::IOUnit::`RTTI Base Class Array' 00906B10 l
+Blizzard::IOUnit::`RTTI Base Class Descriptor at (0,-1,0,64) 00906B18 l
+Blizzard::URL::DownloadCallback::`RTTI Complete Object Locator' 00906B34 l
+Blizzard::URL::DownloadCallback::`RTTI Class Hierarchy Descriptor' 00906B48 l
+Blizzard::URL::DownloadCallback::`RTTI Base Class Array' 00906B58 l
+Blizzard::URL::DownloadCallback::`RTTI Base Class Descriptor at (0,-1,0,64) 00906B60 l
+Blizzard::IOUnitWithIdentifier<1718185061>::`RTTI Base Class Descriptor at (0,-1,0,64) 00906B98 l
+Blizzard::IOUnitWithIdentifier<1918987879>::`RTTI Base Class Descriptor at (0,-1,0,64) 00906BD0 l
+Blizzard::IOUnitWithIdentifier<1819239275>::`RTTI Base Class Descriptor at (0,-1,0,64) 00906C08 l
+Blizzard::IOUnitWithIdentifier<1634494823>::`RTTI Base Class Descriptor at (0,-1,0,64) 00906C40 l
+Blizzard::IOUnitWithIdentifier<1668440864>::`RTTI Base Class Descriptor at (0,-1,0,64) 00906C78 l
+Blizzard::IOUnitWithIdentifier<1836085536>::`RTTI Base Class Descriptor at (0,-1,0,64) 00906CB0 l
+Blizzard::IOUnitWithIdentifier<1836085586>::`RTTI Base Class Descriptor at (0,-1,0,64) 00906CE8 l
+Blizzard::IOFileUnit::`RTTI Base Class Descriptor at (0,-1,0,64) 00906D24 l
+Blizzard::IORangeUnit::`RTTI Base Class Descriptor at (0,-1,0,64) 00906D60 l
+Blizzard::IOLockUnit::`RTTI Base Class Descriptor at (0,-1,0,64) 00906D9C l
+Blizzard::IOAlignUnit::`RTTI Base Class Descriptor at (0,-1,0,64) 00906DD8 l
+Blizzard::IOCoreFileUnit::`RTTI Complete Object Locator' 00906DF4 l
+Blizzard::IOCoreFileUnit::`RTTI Class Hierarchy Descriptor' 00906E08 l
+Blizzard::IOCoreFileUnit::`RTTI Base Class Array' 00906E18 l
+Blizzard::IOCoreFileUnit::`RTTI Base Class Descriptor at (0,-1,0,64) 00906E2C l
+Blizzard::IOLockUnitInternal::`RTTI Base Class Descriptor at (0,-1,0,64) 00906E6C l
+Blizzard::IOOwnedLockUnitInternal::`RTTI Complete Object Locator' 00906E88 l
+Blizzard::IOOwnedLockUnitInternal::`RTTI Class Hierarchy Descriptor' 00906E9C l
+Blizzard::IOOwnedLockUnitInternal::`RTTI Base Class Array' 00906EAC l
+Blizzard::IOOwnedLockUnitInternal::`RTTI Base Class Descriptor at (0,-1,0,64) 00906EC4 l
+Blizzard::IORangeUnitInternal::`RTTI Complete Object Locator' 00906EE0 l
+Blizzard::IORangeUnitInternal::`RTTI Class Hierarchy Descriptor' 00906EF4 l
+Blizzard::IORangeUnitInternal::`RTTI Base Class Array' 00906F04 l
+Blizzard::IORangeUnitInternal::`RTTI Base Class Descriptor at (0,-1,0,64) 00906F18 l
+Blizzard::IOChecksumUnit::`RTTI Base Class Descriptor at (0,-1,0,64) 00906F54 l
+Blizzard::IOMopaqUnit::`RTTI Base Class Descriptor at (0,-1,0,64) 00906F90 l
+Blizzard::IOChecksumUnitInternal::`RTTI Complete Object Locator' 00906FAC l
+Blizzard::IOChecksumUnitInternal::`RTTI Class Hierarchy Descriptor' 00906FC0 l
+Blizzard::IOChecksumUnitInternal::`RTTI Base Class Array' 00906FD0 l
+Blizzard::IOChecksumUnitInternal::`RTTI Base Class Descriptor at (0,-1,0,64) 00906FE4 l
+Blizzard::IOMopaqSectorReadUnit::`RTTI Base Class Descriptor at (0,-1,0,64) 00907020 l
+Blizzard::IOAlignUnitInternal::`RTTI Complete Object Locator' 0090703C l
+Blizzard::IOAlignUnitInternal::`RTTI Class Hierarchy Descriptor' 00907050 l
+Blizzard::IOAlignUnitInternal::`RTTI Base Class Array' 00907060 l
+Blizzard::IOAlignUnitInternal::`RTTI Base Class Descriptor at (0,-1,0,64) 00907074 l
+Blizzard::IOCRCChecksumUnit::`RTTI Complete Object Locator' 00907090 l
+Blizzard::IOCRCChecksumUnit::`RTTI Class Hierarchy Descriptor' 009070A4 l
+Blizzard::IOCRCChecksumUnit::`RTTI Base Class Array' 009070B4 l
+Blizzard::IOCRCChecksumUnit::`RTTI Base Class Descriptor at (0,-1,0,64) 009070CC l
+Blizzard::IOMD5ChecksumUnit::`RTTI Complete Object Locator' 009070E8 l
+Blizzard::IOMD5ChecksumUnit::`RTTI Class Hierarchy Descriptor' 009070FC l
+Blizzard::IOMD5ChecksumUnit::`RTTI Base Class Array' 0090710C l
+Blizzard::IOMD5ChecksumUnit::`RTTI Base Class Descriptor at (0,-1,0,64) 00907124 l
+Blizzard::IOMopaqSectorReadUnitInternal::`RTTI Complete Object Locator' 00907140 l
+Blizzard::IOMopaqSectorReadUnitInternal::`RTTI Class Hierarchy Descriptor' 00907154 l
+Blizzard::IOMopaqSectorReadUnitInternal::`RTTI Base Class Array' 00907164 l
+Blizzard::IOMopaqSectorReadUnitInternal::`RTTI Base Class Descriptor at (0,-1,0,64) 00907178 l
+Blizzard::IOMopaqUnitInternal::`RTTI Complete Object Locator' 00907194 l
+Blizzard::IOMopaqUnitInternal::`RTTI Class Hierarchy Descriptor' 009071A8 l
+Blizzard::IOMopaqUnitInternal::`RTTI Base Class Array' 009071B8 l
+Blizzard::IOMopaqUnitInternal::`RTTI Base Class Descriptor at (0,-1,0,64) 009071CC l
+Blizzard::IOCoreAlignedFileUnit::`RTTI Complete Object Locator' 009071E8 l
+Blizzard::IOCoreAlignedFileUnit::`RTTI Class Hierarchy Descriptor' 009071FC l
+Blizzard::IOCoreAlignedFileUnit::`RTTI Base Class Array' 0090720C l
+Blizzard::IOCoreAlignedFileUnit::`RTTI Base Class Descriptor at (0,-1,0,64) 00907224 l
+Blizzard::Mopaq::RepairCallback::`RTTI Complete Object Locator' 00907240 l
+Blizzard::Mopaq::RepairCallback::`RTTI Class Hierarchy Descriptor' 00907254 l
+Blizzard::Mopaq::RepairCallback::`RTTI Base Class Array' 00907264 l
+Blizzard::Mopaq::RepairCallback::`RTTI Base Class Descriptor at (0,-1,0,64) 00907270 l
+Blizzard::File::Transport::TransportHttpCallback::`RTTI Complete Object Locator' 0090728C l
+Blizzard::File::Transport::TransportHttpCallback::`RTTI Class Hierarchy Descriptor' 009072A0 l
+Blizzard::File::Transport::TransportHttpCallback::`RTTI Base Class Array' 009072B0 l
+Blizzard::File::Transport::TransportHttpCallback::`RTTI Base Class Descriptor at (0,-1,0,64) 009072BC l
+System_Streaming::HttpCallback::`RTTI Complete Object Locator' 009072D8 l
+System_Streaming::HttpCallback::`RTTI Class Hierarchy Descriptor' 009072EC l
+System_Streaming::HttpCallback::`RTTI Base Class Array' 009072FC l
+System_Streaming::HttpCallback::`RTTI Base Class Descriptor at (0,-1,0,64) 00907308 l
+std::out_of_range::`RTTI Complete Object Locator' 00907324 l
+std::out_of_range::`RTTI Class Hierarchy Descriptor' 00907338 l
+std::out_of_range::`RTTI Base Class Array' 00907348 l
+std::out_of_range::`RTTI Base Class Descriptor at (0,-1,0,64) 00907358 l
+Blizzard::IOMPQFileUnit::`RTTI Complete Object Locator' 00907374 l
+Blizzard::IOMPQFileUnit::`RTTI Class Hierarchy Descriptor' 00907388 l
+Blizzard::IOMPQFileUnit::`RTTI Base Class Array' 00907398 l
+Blizzard::IOMPQFileUnit::`RTTI Base Class Descriptor at (0,-1,0,64) 009073B0 l
+Blizzard::IOReadOnlyMPQFileUnit::`RTTI Complete Object Locator' 009073CC l
+Blizzard::IOReadOnlyMPQFileUnit::`RTTI Class Hierarchy Descriptor' 009073E0 l
+Blizzard::IOReadOnlyMPQFileUnit::`RTTI Base Class Array' 009073F0 l
+Blizzard::IOReadOnlyMPQFileUnit::`RTTI Base Class Descriptor at (0,-1,0,64) 0090740C l
+Blizzard::IODiskFileUnit::`RTTI Complete Object Locator' 00907428 l
+Blizzard::IODiskFileUnit::`RTTI Class Hierarchy Descriptor' 0090743C l
+Blizzard::IODiskFileUnit::`RTTI Base Class Array' 0090744C l
+Blizzard::IODiskFileUnit::`RTTI Base Class Descriptor at (0,-1,0,64) 00907464 l
+Tracker::TryWowHttpDataDownloadCallBack::`RTTI Complete Object Locator' 00907480 l
+Tracker::TryWowHttpDataDownloadCallBack::`RTTI Class Hierarchy Descriptor' 00907494 l
+Tracker::TryWowHttpDataDownloadCallBack::`RTTI Base Class Array' 009074A4 l
+Tracker::TryWowHttpDataDownloadCallBack::`RTTI Base Class Descriptor at (0,-1,0,64) 009074B0 l
+TSHashTable<class CShaderEffect, class HASHKEY_STRI>::`RTTI Complete Object Locator' 009074CC l
+TSHashTable<class CShaderEffect, class HASHKEY_STRI>::`RTTI Class Hierarchy Descriptor' 009074E0 l
+TSHashTable<class CShaderEffect, class HASHKEY_STRI>::`RTTI Base Class Array' 009074F0 l
+TSHashTable<class CShaderEffect, class HASHKEY_STRI>::`RTTI Base Class Descriptor at (0,-1,0,64) 009074F8 l
+std::exception::`RTTI Complete Object Locator' 00907514 l
+std::bad_exception::`RTTI Complete Object Locator' 00907528 l
+std::bad_exception::`RTTI Class Hierarchy Descriptor' 0090753C l
+std::bad_exception::`RTTI Base Class Array' 0090754C l
+std::bad_exception::`RTTI Base Class Descriptor at (0,-1,0,64) 00907558 l
+FMOD::Plugin::`RTTI Complete Object Locator' 00907574 l
+FMOD::Plugin::`RTTI Class Hierarchy Descriptor' 00907588 l
+FMOD::Plugin::`RTTI Base Class Array' 00907598 l
+FMOD::Plugin::`RTTI Base Class Descriptor at (0,-1,0,64) 009075A4 l
+FMOD::LinkedListNode::`RTTI Base Class Descriptor at (4,-1,0,64) 009075C0 l
+FMOD::DSPI::`RTTI Complete Object Locator' 00907610 l
+FMOD::DSPI::`RTTI Class Hierarchy Descriptor' 00907624 l
+FMOD::DSPI::`RTTI Base Class Array' 00907634 l
+FMOD::DSPI::`RTTI Base Class Descriptor at (0,-1,0,64) 00907648 l
+FMOD_DSP_STATE::`RTTI Base Class Descriptor at (24,-1,0,64) 00907664 l
+FMOD::Thread::`RTTI Complete Object Locator' 009076B4 l
+FMOD::Thread::`RTTI Class Hierarchy Descriptor' 009076C8 l
+FMOD::Thread::`RTTI Base Class Array' 009076D8 l
+FMOD::Thread::`RTTI Base Class Descriptor at (0,-1,0,64) 009076E0 l
+FMOD::MemoryFile::`RTTI Complete Object Locator' 009076FC l
+FMOD::MemoryFile::`RTTI Class Hierarchy Descriptor' 00907710 l
+FMOD::MemoryFile::`RTTI Base Class Array' 00907720 l
+FMOD::MemoryFile::`RTTI Base Class Descriptor at (0,-1,0,64) 00907730 l
+FMOD::File::`RTTI Base Class Descriptor at (0,-1,0,64) 0090774C l
+FMOD::File::`RTTI Class Hierarchy Descriptor' 00907768 l
+FMOD::File::`RTTI Base Class Array' 00907778 l
+FMOD::DiskFile::`RTTI Complete Object Locator' 00907784 l
+FMOD::DiskFile::`RTTI Class Hierarchy Descriptor' 00907798 l
+FMOD::DiskFile::`RTTI Base Class Array' 009077A8 l
+FMOD::DiskFile::`RTTI Base Class Descriptor at (0,-1,0,64) 009077B8 l
+FMOD::UserFile::`RTTI Complete Object Locator' 009077D4 l
+FMOD::UserFile::`RTTI Class Hierarchy Descriptor' 009077E8 l
+FMOD::UserFile::`RTTI Base Class Array' 009077F8 l
+FMOD::UserFile::`RTTI Base Class Descriptor at (0,-1,0,64) 00907808 l
+FMOD::NullFile::`RTTI Complete Object Locator' 00907824 l
+FMOD::NullFile::`RTTI Class Hierarchy Descriptor' 00907838 l
+FMOD::NullFile::`RTTI Base Class Array' 00907848 l
+FMOD::NullFile::`RTTI Base Class Descriptor at (0,-1,0,64) 00907858 l
+FMOD::SoundI::`RTTI Complete Object Locator' 00907874 l
+FMOD::SoundI::`RTTI Class Hierarchy Descriptor' 00907888 l
+FMOD::SoundI::`RTTI Base Class Array' 00907898 l
+FMOD::SoundI::`RTTI Base Class Descriptor at (0,-1,0,64) 009078A4 l
+FMOD::File::`RTTI Complete Object Locator' 009078C0 l
+FMOD::DSPFilter::`RTTI Complete Object Locator' 009078D4 l
+FMOD::DSPFilter::`RTTI Class Hierarchy Descriptor' 009078E8 l
+FMOD::DSPFilter::`RTTI Base Class Array' 009078F8 l
+FMOD::DSPFilter::`RTTI Base Class Descriptor at (0,-1,0,64) 00907910 l
+FMOD::DSPResamplerMultiInput::`RTTI Complete Object Locator' 0090792C l
+FMOD::DSPResamplerMultiInput::`RTTI Class Hierarchy Descriptor' 00907940 l
+FMOD::DSPResamplerMultiInput::`RTTI Base Class Array' 00907950 l
+FMOD::DSPResamplerMultiInput::`RTTI Base Class Descriptor at (0,-1,0,64) 00907970 l
+FMOD::DSPResampler::`RTTI Base Class Descriptor at (0,-1,0,64) 0090798C l
+FMOD::DSPResampler::`RTTI Class Hierarchy Descriptor' 009079A8 l
+FMOD::DSPResampler::`RTTI Base Class Array' 009079B8 l
+FMOD::DSPSoundCard::`RTTI Complete Object Locator' 009079D4 l
+FMOD::DSPSoundCard::`RTTI Class Hierarchy Descriptor' 009079E8 l
+FMOD::DSPSoundCard::`RTTI Base Class Array' 009079F8 l
+FMOD::DSPSoundCard::`RTTI Base Class Descriptor at (0,-1,0,64) 00907A14 l
+FMOD::DSPWaveTable::`RTTI Complete Object Locator' 00907A30 l
+FMOD::DSPWaveTable::`RTTI Class Hierarchy Descriptor' 00907A44 l
+FMOD::DSPWaveTable::`RTTI Base Class Array' 00907A54 l
+FMOD::DSPWaveTable::`RTTI Base Class Descriptor at (0,-1,0,64) 00907A6C l
+FMOD::DSPCodec::`RTTI Complete Object Locator' 00907A88 l
+FMOD::DSPCodec::`RTTI Class Hierarchy Descriptor' 00907A9C l
+FMOD::DSPCodec::`RTTI Base Class Array' 00907AAC l
+FMOD::DSPCodec::`RTTI Base Class Descriptor at (0,-1,0,64) 00907ACC l
+FMOD::Codec::`RTTI Complete Object Locator' 00907AE8 l
+FMOD::Codec::`RTTI Class Hierarchy Descriptor' 00907AFC l
+FMOD::Codec::`RTTI Base Class Array' 00907B0C l
+FMOD::Codec::`RTTI Base Class Descriptor at (0,-1,0,64) 00907B20 l
+FMOD_CODEC_STATE::`RTTI Base Class Descriptor at (24,-1,0,64) 00907B3C l
+FMOD::CodecMPEG::`RTTI Complete Object Locator' 00907B8C l
+FMOD::CodecMPEG::`RTTI Class Hierarchy Descriptor' 00907BA0 l
+FMOD::CodecMPEG::`RTTI Base Class Array' 00907BB0 l
+FMOD::CodecMPEG::`RTTI Base Class Descriptor at (0,-1,0,64) 00907BC8 l
+FMOD::CodecWav::`RTTI Complete Object Locator' 00907BE4 l
+FMOD::CodecWav::`RTTI Class Hierarchy Descriptor' 00907BF8 l
+FMOD::CodecWav::`RTTI Base Class Array' 00907C08 l
+FMOD::CodecWav::`RTTI Base Class Descriptor at (0,-1,0,64) 00907C20 l
+FMOD::CodecRaw::`RTTI Complete Object Locator' 00907C3C l
+FMOD::CodecRaw::`RTTI Class Hierarchy Descriptor' 00907C50 l
+FMOD::CodecRaw::`RTTI Base Class Array' 00907C60 l
+FMOD::CodecRaw::`RTTI Base Class Descriptor at (0,-1,0,64) 00907C78 l
+FMOD::DSPCodecMPEG::`RTTI Complete Object Locator' 00907C94 l
+FMOD::DSPCodecMPEG::`RTTI Class Hierarchy Descriptor' 00907CA8 l
+FMOD::DSPCodecMPEG::`RTTI Base Class Array' 00907CB8 l
+FMOD::DSPCodecMPEG::`RTTI Base Class Descriptor at (0,-1,0,64) 00907CDC l
+FMOD::DSPCodecADPCM::`RTTI Complete Object Locator' 00907CF8 l
+FMOD::DSPCodecADPCM::`RTTI Class Hierarchy Descriptor' 00907D0C l
+FMOD::DSPCodecADPCM::`RTTI Base Class Array' 00907D1C l
+FMOD::DSPCodecADPCM::`RTTI Base Class Descriptor at (0,-1,0,64) 00907D40 l
+FMOD::DSPCodecRaw::`RTTI Complete Object Locator' 00907D5C l
+FMOD::DSPCodecRaw::`RTTI Class Hierarchy Descriptor' 00907D70 l
+FMOD::DSPCodecRaw::`RTTI Base Class Array' 00907D80 l
+FMOD::DSPCodecRaw::`RTTI Base Class Descriptor at (0,-1,0,64) 00907DA4 l
+FMOD::CROStream::`RTTI Complete Object Locator' 00907DC0 l
+FMOD::CROStream::`RTTI Class Hierarchy Descriptor' 00907DD4 l
+FMOD::CROStream::`RTTI Base Class Array' 00907DE4 l
+FMOD::CROStream::`RTTI Base Class Descriptor at (0,-1,0,64) 00907DF8 l
+IStream::`RTTI Base Class Descriptor at (0,-1,0,64) 00907E14 l
+ISequentialStream::`RTTI Base Class Descriptor at (0,-1,0,64) 00907E50 l
+IUnknown::`RTTI Base Class Descriptor at (0,-1,0,64) 00907E88 l
+FMOD::Output::`RTTI Complete Object Locator' 00907EBC l
+FMOD::Output::`RTTI Class Hierarchy Descriptor' 00907ED0 l
+FMOD::Output::`RTTI Base Class Array' 00907EE0 l
+FMOD::Output::`RTTI Base Class Descriptor at (0,-1,0,64) 00907EF4 l
+FMOD_OUTPUT_STATE::`RTTI Base Class Descriptor at (24,-1,0,64) 00907F10 l
+FMOD::OutputSoftware::`RTTI Complete Object Locator' 00907F60 l
+FMOD::OutputSoftware::`RTTI Class Hierarchy Descriptor' 00907F74 l
+FMOD::OutputSoftware::`RTTI Base Class Array' 00907F84 l
+FMOD::OutputSoftware::`RTTI Base Class Descriptor at (0,-1,0,64) 00907F9C l
+FMOD::Sample::`RTTI Complete Object Locator' 00907FB8 l
+FMOD::Sample::`RTTI Class Hierarchy Descriptor' 00907FCC l
+FMOD::Sample::`RTTI Base Class Array' 00907FDC l
+FMOD::Sample::`RTTI Base Class Descriptor at (0,-1,0,64) 00907FEC l
+FMOD::DSPResampler::`RTTI Complete Object Locator' 00908008 l
+FMOD::Stream::`RTTI Complete Object Locator' 0090801C l
+FMOD::Stream::`RTTI Class Hierarchy Descriptor' 00908030 l
+FMOD::Stream::`RTTI Base Class Array' 00908040 l
+FMOD::Stream::`RTTI Base Class Descriptor at (0,-1,0,64) 00908050 l
+FMOD::ChannelReal::`RTTI Complete Object Locator' 0090806C l
+FMOD::ChannelReal::`RTTI Class Hierarchy Descriptor' 00908080 l
+FMOD::ChannelReal::`RTTI Base Class Array' 00908090 l
+FMOD::ChannelReal::`RTTI Base Class Descriptor at (0,-1,0,64) 00908098 l
+FMOD::ChannelStream::`RTTI Complete Object Locator' 009080B4 l
+FMOD::ChannelStream::`RTTI Class Hierarchy Descriptor' 009080C8 l
+FMOD::ChannelStream::`RTTI Base Class Array' 009080D8 l
+FMOD::ChannelStream::`RTTI Base Class Descriptor at (0,-1,0,64) 009080E8 l
+FMOD::LinkedListNode::`RTTI Base Class Descriptor at (152,-1,0,64) 00908104 l
+FMOD::NetFile::`RTTI Complete Object Locator' 00908120 l
+FMOD::NetFile::`RTTI Class Hierarchy Descriptor' 00908134 l
+FMOD::NetFile::`RTTI Base Class Array' 00908144 l
+FMOD::NetFile::`RTTI Base Class Descriptor at (0,-1,0,64) 00908154 l
+FMOD::CddaFile::`RTTI Complete Object Locator' 00908170 l
+FMOD::CddaFile::`RTTI Class Hierarchy Descriptor' 00908184 l
+FMOD::CddaFile::`RTTI Base Class Array' 00908194 l
+FMOD::CddaFile::`RTTI Base Class Descriptor at (0,-1,0,64) 009081A4 l
+FMOD::OutputEmulated::`RTTI Complete Object Locator' 009081C0 l
+FMOD::OutputEmulated::`RTTI Class Hierarchy Descriptor' 009081D4 l
+FMOD::OutputEmulated::`RTTI Base Class Array' 009081E4 l
+FMOD::OutputEmulated::`RTTI Base Class Descriptor at (0,-1,0,64) 009081FC l
+FMOD::OutputPolled::`RTTI Complete Object Locator'{for `FMOD::Thread'} 00908218 l
+FMOD::OutputPolled::`RTTI Class Hierarchy Descriptor' 0090822C l
+FMOD::OutputPolled::`RTTI Base Class Array' 0090823C l
+FMOD::OutputPolled::`RTTI Base Class Descriptor at (0,-1,0,64) 00908258 l
+FMOD::Thread::`RTTI Base Class Descriptor at (624,-1,0,64) 00908274 l
+FMOD::OutputPolled::`RTTI Complete Object Locator' 00908290 l
+FMOD::ChannelOpenALEAX3::`RTTI Complete Object Locator' 009082A4 l
+FMOD::ChannelOpenALEAX3::`RTTI Class Hierarchy Descriptor' 009082B8 l
+FMOD::ChannelOpenALEAX3::`RTTI Base Class Array' 009082C8 l
+FMOD::ChannelOpenALEAX3::`RTTI Base Class Descriptor at (0,-1,0,64) 009082D8 l
+FMOD::ChannelOpenAL::`RTTI Base Class Descriptor at (0,-1,0,64) 009082F4 l
+FMOD::ChannelOpenAL::`RTTI Class Hierarchy Descriptor' 00908310 l
+FMOD::ChannelOpenAL::`RTTI Base Class Array' 00908320 l
+FMOD::ChannelOpenALEAX4::`RTTI Complete Object Locator' 0090832C l
+FMOD::ChannelOpenALEAX4::`RTTI Class Hierarchy Descriptor' 00908340 l
+FMOD::ChannelOpenALEAX4::`RTTI Base Class Array' 00908350 l
+FMOD::ChannelOpenALEAX4::`RTTI Base Class Descriptor at (0,-1,0,64) 00908360 l
+FMOD::ChannelOpenALEAX5::`RTTI Complete Object Locator' 0090837C l
+FMOD::ChannelOpenALEAX5::`RTTI Class Hierarchy Descriptor' 00908390 l
+FMOD::ChannelOpenALEAX5::`RTTI Base Class Array' 009083A0 l
+FMOD::ChannelOpenALEAX5::`RTTI Base Class Descriptor at (0,-1,0,64) 009083B0 l
+FMOD::OutputTimer::`RTTI Base Class Descriptor at (0,-1,0,64) 009083F4 l
+FMOD::ChannelOpenALEAX2::`RTTI Complete Object Locator' 00908410 l
+FMOD::ChannelOpenALEAX2::`RTTI Class Hierarchy Descriptor' 00908424 l
+FMOD::ChannelOpenALEAX2::`RTTI Base Class Array' 00908434 l
+FMOD::ChannelOpenALEAX2::`RTTI Base Class Descriptor at (0,-1,0,64) 00908444 l
+FMOD::OutputOpenAL::`RTTI Complete Object Locator' 00908460 l
+FMOD::OutputOpenAL::`RTTI Class Hierarchy Descriptor' 00908474 l
+FMOD::OutputOpenAL::`RTTI Base Class Array' 00908484 l
+FMOD::OutputOpenAL::`RTTI Base Class Descriptor at (0,-1,0,64) 009084A0 l
+FMOD::ChannelSoftware::`RTTI Complete Object Locator' 009084BC l
+FMOD::ChannelSoftware::`RTTI Class Hierarchy Descriptor' 009084D0 l
+FMOD::ChannelSoftware::`RTTI Base Class Array' 009084E0 l
+FMOD::ChannelSoftware::`RTTI Base Class Descriptor at (0,-1,0,64) 009084F0 l
+FMOD::ChannelRealManual3D::`RTTI Base Class Descriptor at (0,-1,0,64) 0090850C l
+FMOD::ChannelRealManual3D::`RTTI Class Hierarchy Descriptor' 00908528 l
+FMOD::ChannelRealManual3D::`RTTI Base Class Array' 00908538 l
+FMOD::ChannelDSound::`RTTI Complete Object Locator' 00908544 l
+FMOD::ChannelDSound::`RTTI Class Hierarchy Descriptor' 00908558 l
+FMOD::ChannelDSound::`RTTI Base Class Array' 00908568 l
+FMOD::ChannelDSound::`RTTI Base Class Descriptor at (0,-1,0,64) 00908574 l
+FMOD::ChannelDSoundEAX2::`RTTI Complete Object Locator' 00908590 l
+FMOD::ChannelDSoundEAX2::`RTTI Class Hierarchy Descriptor' 009085A4 l
+FMOD::ChannelDSoundEAX2::`RTTI Base Class Array' 009085B4 l
+FMOD::ChannelDSoundEAX2::`RTTI Base Class Descriptor at (0,-1,0,64) 009085C4 l
+FMOD::ChannelDSoundEAX3::`RTTI Complete Object Locator' 009085E0 l
+FMOD::ChannelDSoundEAX3::`RTTI Class Hierarchy Descriptor' 009085F4 l
+FMOD::ChannelDSoundEAX3::`RTTI Base Class Array' 00908604 l
+FMOD::ChannelDSoundEAX3::`RTTI Base Class Descriptor at (0,-1,0,64) 00908614 l
+FMOD::ChannelDSoundEAX4::`RTTI Complete Object Locator' 00908630 l
+FMOD::ChannelDSoundEAX4::`RTTI Class Hierarchy Descriptor' 00908644 l
+FMOD::ChannelDSoundEAX4::`RTTI Base Class Array' 00908654 l
+FMOD::ChannelDSoundEAX4::`RTTI Base Class Descriptor at (0,-1,0,64) 00908664 l
+FMOD::SampleSoftware::`RTTI Complete Object Locator' 00908680 l
+FMOD::SampleSoftware::`RTTI Class Hierarchy Descriptor' 00908694 l
+FMOD::SampleSoftware::`RTTI Base Class Array' 009086A4 l
+FMOD::SampleSoftware::`RTTI Base Class Descriptor at (0,-1,0,64) 009086B8 l
+FMOD::ChannelEmulated::`RTTI Complete Object Locator' 009086D4 l
+FMOD::ChannelEmulated::`RTTI Class Hierarchy Descriptor' 009086E8 l
+FMOD::ChannelEmulated::`RTTI Base Class Array' 009086F8 l
+FMOD::ChannelEmulated::`RTTI Base Class Descriptor at (0,-1,0,64) 00908704 l
+FMOD::ChannelOpenAL::`RTTI Complete Object Locator' 00908720 l
+FMOD::SampleOpenAL::`RTTI Complete Object Locator' 00908734 l
+FMOD::SampleOpenAL::`RTTI Class Hierarchy Descriptor' 00908748 l
+FMOD::SampleOpenAL::`RTTI Base Class Array' 00908758 l
+FMOD::SampleOpenAL::`RTTI Base Class Descriptor at (0,-1,0,64) 0090876C l
+FMOD::ChannelRealManual3D::`RTTI Complete Object Locator' 00908788 l
+FMOD::SampleDSound::`RTTI Complete Object Locator' 0090879C l
+FMOD::SampleDSound::`RTTI Class Hierarchy Descriptor' 009087B0 l
+FMOD::SampleDSound::`RTTI Base Class Array' 009087C0 l
+FMOD::SampleDSound::`RTTI Base Class Descriptor at (0,-1,0,64) 009087D4 l
+class type_info `RTTI Type Descriptor' 0090F544 l
+g_realmConnectionNodeList 00910A18 l
+class CECC_LDPC `RTTI Type Descriptor' 00912BC0 l
+class CECC_Base `RTTI Type Descriptor' 00912BD8 l
+g_netClientList 00B9F940 l
+class std::bad_alloc `RTTI Type Descriptor' 00BA796C l
+class std::exception `RTTI Type Descriptor' 00BA7988 l
+class std::logic_error `RTTI Type Descriptor' 00BA79A4 l
+class std::length_error `RTTI Type Descriptor' 00BA79C4 l
+class Blizzard::IOUnit `RTTI Type Descriptor' 00BA924C l
+class Blizzard::URL::DownloadCallback `RTTI Type Descriptor' 00BA926C l
+class Blizzard::IOUnitWithIdentifier<1718185061> `RTTI Type Descriptor' 00BA9298 l
+class Blizzard::IOUnitWithIdentifier<1918987879> `RTTI Type Descriptor' 00BA92D4 l
+class Blizzard::IOUnitWithIdentifier<1819239275> `RTTI Type Descriptor' 00BA9310 l
+class Blizzard::IOUnitWithIdentifier<1634494823> `RTTI Type Descriptor' 00BA934C l
+class Blizzard::IOUnitWithIdentifier<1668440864> `RTTI Type Descriptor' 00BA9388 l
+class Blizzard::IOUnitWithIdentifier<1836085536> `RTTI Type Descriptor' 00BA93C4 l
+class Blizzard::IOUnitWithIdentifier<1836085586> `RTTI Type Descriptor' 00BA9400 l
+class Blizzard::IOFileUnit `RTTI Type Descriptor' 00BA943C l
+class Blizzard::IORangeUnit `RTTI Type Descriptor' 00BA9460 l
+class Blizzard::IOLockUnit `RTTI Type Descriptor' 00BA9484 l
+class Blizzard::IOAlignUnit `RTTI Type Descriptor' 00BA94A8 l
+class Blizzard::IOCoreFileUnit `RTTI Type Descriptor' 00BA94CC l
+class Blizzard::IOLockUnitInternal `RTTI Type Descriptor' 00BA94F4 l
+class Blizzard::IOOwnedLockUnitInternal `RTTI Type Descriptor' 00BA9520 l
+class Blizzard::IORangeUnitInternal `RTTI Type Descriptor' 00BA9550 l
+class Blizzard::IOChecksumUnit `RTTI Type Descriptor' 00BA957C l
+class Blizzard::IOMopaqUnit `RTTI Type Descriptor' 00BA95A4 l
+class Blizzard::IOChecksumUnitInternal `RTTI Type Descriptor' 00BA95C8 l
+class Blizzard::IOMopaqSectorReadUnit `RTTI Type Descriptor' 00BA95F8 l
+class Blizzard::IOAlignUnitInternal `RTTI Type Descriptor' 00BA9628 l
+class Blizzard::IOCRCChecksumUnit `RTTI Type Descriptor' 00BA9654 l
+class Blizzard::IOMD5ChecksumUnit `RTTI Type Descriptor' 00BA9680 l
+class Blizzard::IOMopaqSectorReadUnitInternal `RTTI Type Descriptor' 00BA96AC l
+class Blizzard::IOMopaqUnitInternal `RTTI Type Descriptor' 00BA96E4 l
+class Blizzard::IOCoreAlignedFileUnit `RTTI Type Descriptor' 00BA9710 l
+class Blizzard::Mopaq::RepairCallback `RTTI Type Descriptor' 00BA9740 l
+class Blizzard::File::Transport::TransportHttpCallback `RTTI Type Descriptor' 00BA976C l
+class System_Streaming::HttpCallback `RTTI Type Descriptor' 00BA97A8 l
+class std::out_of_range `RTTI Type Descriptor' 00BA97D4 l
+class Blizzard::IOMPQFileUnit `RTTI Type Descriptor' 00BA97F4 l
+class Blizzard::IOReadOnlyMPQFileUnit `RTTI Type Descriptor' 00BA981C l
+class Blizzard::IODiskFileUnit `RTTI Type Descriptor' 00BA984C l
+class Tracker::TryWowHttpDataDownloadCallBack `RTTI Type Descriptor' 00BA9878 l
+class TSHashTable<class CShaderEffect, class HASHKEY_STRI> `RTTI Type Descriptor' 00BC2334 l
+class std::bad_exception `RTTI Type Descriptor' 00BC2724 l
+class FMOD::Plugin `RTTI Type Descriptor' 00BC5D80 l
+class FMOD::LinkedListNode `RTTI Type Descriptor' 00BC5D9C l
+class FMOD::DSPI `RTTI Type Descriptor' 00BC5DC0 l
+class FMOD_DSP_STATE `RTTI Type Descriptor' 00BC5DD8 l
+class FMOD::Thread `RTTI Type Descriptor' 00BC5E6C l
+class FMOD::MemoryFile `RTTI Type Descriptor' 00BC5E88 l
+class FMOD::File `RTTI Type Descriptor' 00BC5EA8 l
+class FMOD::DiskFile `RTTI Type Descriptor' 00BC5EC0 l
+class FMOD::UserFile `RTTI Type Descriptor' 00BC5EDC l
+class FMOD::NullFile `RTTI Type Descriptor' 00BC5EF8 l
+class FMOD::SoundI `RTTI Type Descriptor' 00BC5F18 l
+class FMOD::DSPFilter `RTTI Type Descriptor' 00BC7BD4 l
+class FMOD::DSPResamplerMultiInput `RTTI Type Descriptor' 00BC7BF4 l
+class FMOD::DSPResampler `RTTI Type Descriptor' 00BC7C20 l
+class FMOD::DSPSoundCard `RTTI Type Descriptor' 00BC7C40 l
+class FMOD::DSPWaveTable `RTTI Type Descriptor' 00BC7C60 l
+class FMOD::DSPCodec `RTTI Type Descriptor' 00BC7C80 l
+class FMOD::Codec `RTTI Type Descriptor' 00BC7C9C l
+class FMOD_CODEC_STATE `RTTI Type Descriptor' 00BC7CB8 l
+class FMOD::CodecMPEG `RTTI Type Descriptor' 00BC7CD8 l
+class FMOD::CodecWav `RTTI Type Descriptor' 00BC7CF8 l
+class FMOD::CodecRaw `RTTI Type Descriptor' 00BC7D14 l
+class FMOD::DSPCodecMPEG `RTTI Type Descriptor' 00BC7D30 l
+class FMOD::DSPCodecADPCM `RTTI Type Descriptor' 00BC7D50 l
+class FMOD::DSPCodecRaw `RTTI Type Descriptor' 00BC7D74 l
+class FMOD::CROStream `RTTI Type Descriptor' 00BC8450 l
+class IStream `RTTI Type Descriptor' 00BC8470 l
+class ISequentialStream `RTTI Type Descriptor' 00BC8488 l
+class IUnknown `RTTI Type Descriptor' 00BC84A8 l
+class FMOD::Output `RTTI Type Descriptor' 00BC9320 l
+class FMOD_OUTPUT_STATE `RTTI Type Descriptor' 00BC933C l
+class FMOD::OutputSoftware `RTTI Type Descriptor' 00BC942C l
+class FMOD::Sample `RTTI Type Descriptor' 00BC9450 l
+class FMOD::Stream `RTTI Type Descriptor' 00BC946C l
+class FMOD::ChannelReal `RTTI Type Descriptor' 00BC9488 l
+class FMOD::ChannelStream `RTTI Type Descriptor' 00BC94A8 l
+class FMOD::NetFile `RTTI Type Descriptor' 00BC94CC l
+class FMOD::CddaFile `RTTI Type Descriptor' 00BC94E8 l
+class FMOD::OutputEmulated `RTTI Type Descriptor' 00BC9510 l
+class FMOD::OutputPolled `RTTI Type Descriptor' 00BC9534 l
+class FMOD::ChannelOpenALEAX3 `RTTI Type Descriptor' 00BC9620 l
+class FMOD::ChannelOpenAL `RTTI Type Descriptor' 00BC9648 l
+class FMOD::ChannelOpenALEAX4 `RTTI Type Descriptor' 00BC966C l
+class FMOD::ChannelOpenALEAX5 `RTTI Type Descriptor' 00BC9694 l
+class FMOD::OutputTimer `RTTI Type Descriptor' 00BC96BC l
+class FMOD::ChannelOpenALEAX2 `RTTI Type Descriptor' 00BC96DC l
+class FMOD::OutputOpenAL `RTTI Type Descriptor' 00BC9704 l
+class FMOD::ChannelSoftware `RTTI Type Descriptor' 00BCCD10 l
+class FMOD::ChannelRealManual3D `RTTI Type Descriptor' 00BCCD34 l
+class FMOD::ChannelDSound `RTTI Type Descriptor' 00BCD9B0 l
+class FMOD::ChannelDSoundEAX2 `RTTI Type Descriptor' 00BCD9D4 l
+class FMOD::ChannelDSoundEAX3 `RTTI Type Descriptor' 00BCD9FC l
+class FMOD::ChannelDSoundEAX4 `RTTI Type Descriptor' 00BCDA24 l
+class FMOD::SampleSoftware `RTTI Type Descriptor' 00BCDAE8 l
+class FMOD::ChannelEmulated `RTTI Type Descriptor' 00BCDB0C l
+class FMOD::SampleOpenAL `RTTI Type Descriptor' 00BCDC50 l
+class FMOD::SampleDSound `RTTI Type Descriptor' 00BCDC84 l
+g_pendingMapFacing 00BDB058 l
+g_pendingMapID 00BDB05C l
+g_pendingMapX 00BDB214 l
+g_pendingMapY 00BDB218 l
+g_pendingMapZ 00BDB21C l
+g_glueMgrState 00C07D2C l
+g_netBytesReceived 00D298A8 l
+g_netBytesSent 00D298B4 l
+g_netStartTime 00D298C0 l
+g_netClientRefCount 00D298C4 l
+g_gruntClient 00D43324 l
+g_realmConnection 00D4332C l
+__resource_directory_table_0 00EBE000 l
+__resource_directory_table_0_entries 00EBE010 l
+__resource_directory_table_1 00EBE050 l
+__resource_directory_table_1_entries 00EBE060 l
+__resource_directory_table_2 00EBE068 l
+__resource_directory_table_2_entries 00EBE078 l
+__resource_directory_table_3 00EBE080 l
+__resource_directory_table_3_entries 00EBE090 l
+__resource_directory_table_4 00EBE0D8 l
+__resource_directory_table_4_entries 00EBE0E8 l
+__resource_directory_table_5 00EBE0F0 l
+__resource_directory_table_5_entries 00EBE100 l
+__resource_directory_table_6 00EBE108 l
+__resource_directory_table_6_entries 00EBE118 l
+__resource_directory_table_7 00EBE120 l
+__resource_directory_table_7_entries 00EBE130 l
+__resource_directory_table_8 00EBE138 l
+__resource_directory_table_8_entries 00EBE148 l
+__resource_directory_table_9 00EBE150 l
+__resource_directory_table_9_entries 00EBE160 l
+__resource_directory_table_10 00EBE168 l
+__resource_directory_table_10_entries 00EBE178 l
+__resource_directory_table_11 00EBE180 l
+__resource_directory_table_11_entries 00EBE190 l
+__resource_directory_table_12 00EBE198 l
+__resource_directory_table_12_entries 00EBE1A8 l
+__resource_directory_table_13 00EBE1B0 l
+__resource_directory_table_13_entries 00EBE1C0 l
+__resource_directory_table_14 00EBE1C8 l
+__resource_directory_table_14_entries 00EBE1D8 l
+__resource_directory_table_15 00EBE1E0 l
+__resource_directory_table_15_entries 00EBE1F0 l
+__resource_directory_table_16 00EBE1F8 l
+__resource_directory_table_16_entries 00EBE208 l
+__resource_directory_table_17 00EBE210 l
+__resource_directory_table_17_entries 00EBE220 l
+__resource_directory_table_18 00EBE228 l
+__resource_directory_table_18_entries 00EBE238 l
+__resource_directory_table_19 00EBE240 l
+__resource_directory_table_19_entries 00EBE250 l
+__resource_directory_table_20 00EBE258 l
+__resource_directory_table_20_entries 00EBE268 l
+__resource_directory_table_21 00EBE270 l
+__resource_directory_table_21_entries 00EBE280 l
+__resource_directory_table_22 00EBE288 l
+__resource_directory_table_22_entries 00EBE298 l
+__resource_directory_table_23 00EBE2A0 l
+__resource_directory_table_23_entries 00EBE2B0 l
+__resource_directory_table_24 00EBE2B8 l
+__resource_directory_table_24_entries 00EBE2C8 l
+__resource_directory_table_9_data_entry_0 00EBE2D0 l
+__resource_directory_table_10_data_entry_0 00EBE2E0 l
+__resource_directory_table_11_data_entry_0 00EBE2F0 l
+__resource_directory_table_12_data_entry_0 00EBE300 l
+__resource_directory_table_13_data_entry_0 00EBE310 l
+__resource_directory_table_14_data_entry_0 00EBE320 l
+__resource_directory_table_15_data_entry_0 00EBE330 l
+__resource_directory_table_16_data_entry_0 00EBE340 l
+__resource_directory_table_17_data_entry_0 00EBE350 l
+__resource_directory_table_18_data_entry_0 00EBE360 l
+__resource_directory_table_19_data_entry_0 00EBE370 l
+__resource_directory_table_20_data_entry_0 00EBE380 l
+__resource_directory_table_21_data_entry_0 00EBE390 l
+__resource_directory_table_22_data_entry_0 00EBE3A0 l
+__resource_directory_table_23_data_entry_0 00EBE3B0 l
+__resource_directory_table_24_data_entry_0 00EBE3C0 l
+AddAccessAllowedAce 00EC70C0 l
+AddAccessDeniedAce 00EC70C4 l
+AdjustWindowRectEx 00EC70C8 l
+AllocateAndInitializeSid 00EC70CC l
+BeginPaint 00EC70D0 l
+BitBlt 00EC70D4 l
+CLSIDFromString 00EC70D8 l
+ChangeDisplaySettingsExA 00EC70DC l
+CharLowerBuffA 00EC70E0 l
+ChoosePixelFormat 00EC70E4 l
+ClientToScreen 00EC70E8 l
+ClipCursor 00EC70EC l
+CloseClipboard 00EC70F0 l
+CloseHandle 00EC70F4 l
+CoCreateInstance 00EC70F8 l
+CoInitialize 00EC70FC l
+CoTaskMemFree 00EC7100 l
+CoUninitialize 00EC7104 l
+CompareStringA 00EC7108 l
+CreateCompatibleDC 00EC710C l
+CreateDIBSection 00EC7110 l
+CreateDirectoryA 00EC7114 l
+CreateEventA 00EC7118 l
+CreateFileA 00EC711C l
+CreateFileMappingA 00EC7120 l
+CreateFontIndirectA 00EC7124 l
+CreateIoCompletionPort 00EC7128 l
+CreateMutexA 00EC712C l
+CreateRectRgn 00EC7130 l
+CreateSemaphoreA 00EC7134 l
+CreateThread 00EC7138 l
+CreateToolhelp32Snapshot 00EC713C l
+CreateWindowExA 00EC7140 l
+CryptAcquireContextA 00EC7144 l
+CryptGenRandom 00EC7148 l
+CryptReleaseContext 00EC714C l
+D3DPERF_SetMarker 00EC7150 l
+DefWindowProcA 00EC7154 l
+DeleteCriticalSection 00EC7158 l
+DeleteDC 00EC715C l
+DeleteFileA 00EC7160 l
+DeleteObject 00EC7164 l
+DescribePixelFormat 00EC7168 l
+DestroyWindow 00EC716C l
+DeviceIoControl 00EC7170 l
+DispatchMessageA 00EC7174 l
+DivxDecode 00EC7178 l
+DuplicateHandle 00EC717C l
+EmptyClipboard 00EC7180 l
+EndPaint 00EC7184 l
+EnterCriticalSection 00EC7188 l
+EnumDisplayDevicesA 00EC718C l
+EnumDisplaySettingsA 00EC7190 l
+ExitProcess 00EC7194 l
+ExitThread 00EC7198 l
+FileTimeToLocalFileTime 00EC719C l
+FileTimeToSystemTime 00EC71A0 l
+FillRect 00EC71A4 l
+FindClose 00EC71A8 l
+FindExecutableA 00EC71AC l
+FindFirstFileA 00EC71B0 l
+FlushFileBuffers 00EC71B4 l
+FlushInstructionCache 00EC71B8 l
+FormatMessageA 00EC71BC l
+FreeEnvironmentStringsA 00EC71C0 l
+FreeLibrary 00EC71C4 l
+FreeSid 00EC71C8 l
+GdiFlush 00EC71CC l
+GetACP 00EC71D0 l
+GetActiveWindow 00EC71D4 l
+GetAsyncKeyState 00EC71D8 l
+GetClientRect 00EC71DC l
+GetCommandLineA 00EC71E0 l
+GetComputerNameA 00EC71E4 l
+GetConsoleCP 00EC71E8 l
+GetConsoleMode 00EC71EC l
+GetConsoleOutputCP 00EC71F0 l
+GetCurrentDirectoryA 00EC71F4 l
+GetCurrentProcess 00EC71F8 l
+GetCurrentProcessId 00EC71FC l
+GetCurrentThread 00EC7200 l
+GetCurrentThreadId 00EC7204 l
+GetCursorPos 00EC7208 l
+GetDC 00EC720C l
+GetDateFormatA 00EC7210 l
+GetDesktopWindow 00EC7214 l
+GetDeviceGammaRamp 00EC7218 l
+GetDiskFreeSpaceA 00EC721C l
+GetDriveTypeA 00EC7220 l
+GetEnvironmentStrings 00EC7224 l
+GetExitCodeProcess 00EC7228 l
+GetFileAttributesA 00EC722C l
+GetFileSize 00EC7230 l
+GetFileType 00EC7234 l
+GetFileVersionInfoA 00EC7238 l
+GetFileVersionInfoSizeA 00EC723C l
+GetForegroundWindow 00EC7240 l
+GetFullPathNameA 00EC7244 l
+GetKeyState 00EC7248 l
+GetKeyboardLayout 00EC724C l
+GetLastError 00EC7250 l
+GetLocalTime 00EC7254 l
+GetLocaleInfoA 00EC7258 l
+GetMessageA 00EC725C l
+GetModuleFileNameA 00EC7260 l
+GetModuleHandleA 00EC7264 l
+GetMonitorInfoA 00EC7268 l
+GetOEMCP 00EC726C l
+GetObjectA 00EC7270 l
+GetParent 00EC7274 l
+GetPixelFormat 00EC7278 l
+GetPriorityClass 00EC727C l
+GetProcessAffinityMask 00EC7280 l
+GetProcessHeap 00EC7284 l
+GetQueuedCompletionStatus 00EC7288 l
+GetStartupInfoA 00EC728C l
+GetStdHandle 00EC7290 l
+GetStockObject 00EC7294 l
+GetStringTypeA 00EC7298 l
+GetSystemDirectoryA 00EC729C l
+GetSystemInfo 00EC72A0 l
+GetSystemMetrics 00EC72A4 l
+GetSystemTimeAsFileTime 00EC72A8 l
+GetTempPathA 00EC72AC l
+GetThreadContext 00EC72B0 l
+GetThreadPriority 00EC72B4 l
+GetTickCount 00EC72B8 l
+GetTimeFormatA 00EC72BC l
+GetTimeZoneInformation 00EC72C0 l
+GetTokenInformation 00EC72C4 l
+GetUserNameA 00EC72C8 l
+GetVersion 00EC72CC l
+GetVersionExA 00EC72D0 l
+GetWindowPlacement 00EC72D4 l
+GetWindowRect 00EC72D8 l
+GetWindowsDirectoryA 00EC72DC l
+GlobalAlloc 00EC72E0 l
+GlobalFree 00EC72E4 l
+GlobalLock 00EC72E8 l
+GlobalMemoryStatus 00EC72EC l
+GlobalUnlock 00EC72F0 l
+HeapAlloc 00EC72F4 l
+HeapCreate 00EC72F8 l
+HeapDestroy 00EC72FC l
+HeapFree 00EC7300 l
+HeapReAlloc 00EC7304 l
+HeapSize 00EC7308 l
+HttpOpenRequestA 00EC730C l
+HttpQueryInfoA 00EC7310 l
+HttpSendRequestA 00EC7314 l
+ImmAssociateContext 00EC7318 l
+ImmAssociateContextEx 00EC731C l
+ImmGetCandidateListA 00EC7320 l
+ImmGetCompositionStringA 00EC7324 l
+ImmGetContext 00EC7328 l
+ImmGetConversionStatus 00EC732C l
+ImmNotifyIME 00EC7330 l
+ImmReleaseContext 00EC7334 l
+ImmSetConversionStatus 00EC7338 l
+InitializeAcl 00EC733C l
+InitializeCriticalSection 00EC7340 l
+InitializeDivxDecoder 00EC7344 l
+InterlockedCompareExchange 00EC7348 l
+InterlockedDecrement 00EC734C l
+InterlockedExchange 00EC7350 l
+InterlockedExchangeAdd 00EC7354 l
+InterlockedIncrement 00EC7358 l
+InternetCloseHandle 00EC735C l
+InternetConnectA 00EC7360 l
+InternetCrackUrlA 00EC7364 l
+InternetOpenA 00EC7368 l
+InternetReadFileExA 00EC736C l
+InternetSetCookieW 00EC7370 l
+InternetSetOptionA 00EC7374 l
+InternetSetStatusCallback 00EC7378 l
+InternetSetStatusCallbackA 00EC737C l
+InvertRect 00EC7380 l
+IsBadReadPtr 00EC7384 l
+IsBadWritePtr 00EC7388 l
+IsDebuggerPresent 00EC738C l
+IsDialogMessageA 00EC7390 l
+IsIconic 00EC7394 l
+IsWindow 00EC7398 l
+IsWindowVisible 00EC739C l
+IsZoomed 00EC73A0 l
+KillTimer 00EC73A4 l
+LCMapStringA 00EC73A8 l
+LeaveCriticalSection 00EC73AC l
+LoadBitmapA 00EC73B0 l
+LoadCursorA 00EC73B4 l
+LoadImageA 00EC73B8 l
+LoadLibraryA 00EC73BC l
+LoadStringA 00EC73C0 l
+LocalFree 00EC73C4 l
+MapViewOfFile 00EC73C8 l
+MapVirtualKeyA 00EC73CC l
+MapWindowPoints 00EC73D0 l
+MessageBeep 00EC73D4 l
+MessageBoxA 00EC73D8 l
+MonitorFromPoint 00EC73DC l
+MoveWindow 00EC73E0 l
+MsgWaitForMultipleObjects 00EC73E4 l
+MulDiv 00EC73E8 l
+OffsetViewportOrgEx 00EC73EC l
+OpenClipboard 00EC73F0 l
+OpenEventA 00EC73F4 l
+OpenFile 00EC73F8 l
+OpenFileMappingA 00EC73FC l
+OpenProcessToken 00EC7400 l
+OpenThread 00EC7404 l
+OutputDebugStringA 00EC7408 l
+PeekMessageA 00EC740C l
+PostMessageA 00EC7410 l
+PostQuitMessage 00EC7414 l
+PropVariantClear 00EC7418 l
+QueryPerformanceCounter 00EC741C l
+QueryPerformanceFrequency 00EC7420 l
+RaiseException 00EC7424 l
+ReadFile 00EC7428 l
+RegCloseKey 00EC742C l
+RegCreateKeyExA 00EC7430 l
+RegEnumKeyA 00EC7434 l
+RegFlushKey 00EC7438 l
+RegOpenKeyA 00EC743C l
+RegOpenKeyExA 00EC7440 l
+RegQueryValueExA 00EC7444 l
+RegSetValueExA 00EC7448 l
+RegisterClassExA 00EC744C l
+ReleaseCapture 00EC7450 l
+ReleaseDC 00EC7454 l
+ReleaseMutex 00EC7458 l
+ReleaseSemaphore 00EC745C l
+ResetEvent 00EC7460 l
+ResumeThread 00EC7464 l
+RtlUnwind 00EC7468 l
+SHGetSpecialFolderLocation 00EC746C l
+ScreenToClient 00EC7470 l
+SelectClipRgn 00EC7474 l
+SelectObject 00EC7478 l
+SendInput 00EC747C l
+SendMessageA 00EC7480 l
+SetBkColor 00EC7484 l
+SetBkMode 00EC7488 l
+SetCapture 00EC748C l
+SetClipboardData 00EC7490 l
+SetCursor 00EC7494 l
+SetCursorPos 00EC7498 l
+SetDeviceGammaRamp 00EC749C l
+SetEndOfFile 00EC74A0 l
+SetEnvironmentVariableA 00EC74A4 l
+SetEvent 00EC74A8 l
+SetFilePointer 00EC74AC l
+SetFileTime 00EC74B0 l
+SetFocus 00EC74B4 l
+SetHandleCount 00EC74B8 l
+SetLastError 00EC74BC l
+SetMapMode 00EC74C0 l
+SetOutputFormat 00EC74C4 l
+SetPixelFormat 00EC74C8 l
+SetPriorityClass 00EC74CC l
+SetProcessAffinityMask 00EC74D0 l
+SetSecurityInfo 00EC74D4 l
+SetStdHandle 00EC74D8 l
+SetTextColor 00EC74DC l
+SetThreadAffinityMask 00EC74E0 l
+SetThreadPriority 00EC74E4 l
+SetTimer 00EC74E8 l
+SetUnhandledExceptionFilter 00EC74EC l
+SetViewportOrgEx 00EC74F0 l
+SetWindowPos 00EC74F4 l
+ShellExecuteA 00EC74F8 l
+ShowWindow 00EC74FC l
+SignalObjectAndWait 00EC7500 l
+Sleep 00EC7504 l
+SuspendThread 00EC7508 l
+SystemParametersInfoA 00EC750C l
+TerminateProcess 00EC7510 l
+Thread32First 00EC7514 l
+Thread32Next 00EC7518 l
+TlsAlloc 00EC751C l
+TlsFree 00EC7520 l
+TlsGetValue 00EC7524 l
+TlsSetValue 00EC7528 l
+TranslateAcceleratorA 00EC752C l
+TranslateMessage 00EC7530 l
+UnInitializeDivxDecoder 00EC7534 l
+UnhandledExceptionFilter 00EC7538 l
+UnmapViewOfFile 00EC753C l
+UnregisterClassA 00EC7540 l
+VerQueryValueA 00EC7544 l
+VirtualAlloc 00EC7548 l
+VirtualFree 00EC754C l
+VirtualProtect 00EC7550 l
+VirtualQuery 00EC7554 l
+VkKeyScanA 00EC7558 l
+WSAAsyncGetHostByName 00EC755C l
+WSACancelAsyncRequest 00EC7560 l
+WSACleanup 00EC7564 l
+WSACloseEvent 00EC7568 l
+WSACreateEvent 00EC756C l
+WSAEnumNetworkEvents 00EC7570 l
+WSAEventSelect 00EC7574 l
+WSAGetLastError 00EC7578 l
+WSAStartup 00EC757C l
+WaitForInputIdle 00EC7580 l
+WaitForMultipleObjects 00EC7584 l
+WaitForSingleObject 00EC7588 l
+WaitForSingleObjectEx 00EC758C l
+WriteConsoleA 00EC7590 l
+WriteFile 00EC7594 l
+__WSAFDIsSet 00EC7598 l
+accept 00EC759C l
+acmFormatSuggest 00EC75A0 l
+acmStreamConvert 00EC75A4 l
+acmStreamOpen 00EC75A8 l
+acmStreamPrepareHeader 00EC75AC l
+acmStreamSize 00EC75B0 l
+acmStreamUnprepareHeader 00EC75B4 l
+bind 00EC75B8 l
+closesocket 00EC75BC l
+connect 00EC75C0 l
+gethostbyname 00EC75C4 l
+getpeername 00EC75C8 l
+getsockname 00EC75CC l
+getsockopt 00EC75D0 l
+glAccum 00EC75D4 l
+glAlphaFunc 00EC75D8 l
+glBindTexture 00EC75DC l
+glBlendFunc 00EC75E0 l
+glClear 00EC75E4 l
+glClearColor 00EC75E8 l
+glClipPlane 00EC75EC l
+glColor4fv 00EC75F0 l
+glColorMask 00EC75F4 l
+glColorMaterial 00EC75F8 l
+glColorPointer 00EC75FC l
+glCopyTexImage2D 00EC7600 l
+glCopyTexSubImage2D 00EC7604 l
+glCullFace 00EC7608 l
+glDeleteTextures 00EC760C l
+glDepthFunc 00EC7610 l
+glDepthMask 00EC7614 l
+glDepthRange 00EC7618 l
+glDisable 00EC761C l
+glDisableClientState 00EC7620 l
+glDrawArrays 00EC7624 l
+glDrawElements 00EC7628 l
+glEnable 00EC762C l
+glEnableClientState 00EC7630 l
+glFinish 00EC7634 l
+glFogf 00EC7638 l
+glFogfv 00EC763C l
+glFogi 00EC7640 l
+glGenTextures 00EC7644 l
+glGetError 00EC7648 l
+glGetFloatv 00EC764C l
+glGetIntegerv 00EC7650 l
+glGetString 00EC7654 l
+glHint 00EC7658 l
+glLightModelfv 00EC765C l
+glLightModeli 00EC7660 l
+glLightf 00EC7664 l
+glLightfv 00EC7668 l
+glLineWidth 00EC766C l
+glLoadIdentity 00EC7670 l
+glLoadMatrixf 00EC7674 l
+glMaterialf 00EC7678 l
+glMaterialfv 00EC767C l
+glMatrixMode 00EC7680 l
+glNormalPointer 00EC7684 l
+glPixelStorei 00EC7688 l
+glPointSize 00EC768C l
+glPolygonMode 00EC7690 l
+glPolygonOffset 00EC7694 l
+glReadPixels 00EC7698 l
+glScissor 00EC769C l
+glTexCoordPointer 00EC76A0 l
+glTexEnvf 00EC76A4 l
+glTexEnvfv 00EC76A8 l
+glTexEnvi 00EC76AC l
+glTexEnviv 00EC76B0 l
+glTexGenfv 00EC76B4 l
+glTexGeni 00EC76B8 l
+glTexImage2D 00EC76BC l
+glTexParameteri 00EC76C0 l
+glTexSubImage2D 00EC76C4 l
+glVertexPointer 00EC76C8 l
+glViewport 00EC76CC l
+htonl 00EC76D0 l
+htons 00EC76D4 l
+inet_addr 00EC76D8 l
+inet_ntoa 00EC76DC l
+ioctlsocket 00EC76E0 l
+joyGetDevCapsA 00EC76E4 l
+joyGetNumDevs 00EC76E8 l
+joyGetPosEx 00EC76EC l
+listen 00EC76F0 l
+lstrcpynA 00EC76F4 l
+mciSendCommandA 00EC76F8 l
+ntohs 00EC76FC l
+recv 00EC7700 l
+recvfrom 00EC7704 l
+select 00EC7708 l
+send 00EC770C l
+sendto 00EC7710 l
+setsockopt 00EC7714 l
+socket 00EC7718 l
+timeGetTime 00EC771C l
+timeKillEvent 00EC7720 l
+timeSetEvent 00EC7724 l
+waveInAddBuffer 00EC7728 l
+waveInClose 00EC772C l
+waveInGetDevCapsA 00EC7730 l
+waveInGetNumDevs 00EC7734 l
+waveInOpen 00EC7738 l
+waveInPrepareHeader 00EC773C l
+waveInReset 00EC7740 l
+waveInStart 00EC7744 l
+waveInUnprepareHeader 00EC7748 l
+waveOutClose 00EC774C l
+waveOutGetDevCapsA 00EC7750 l
+waveOutGetNumDevs 00EC7754 l
+waveOutGetPosition 00EC7758 l
+waveOutOpen 00EC775C l
+waveOutPrepareHeader 00EC7760 l
+waveOutReset 00EC7764 l
+waveOutUnprepareHeader 00EC7768 l
+waveOutWrite 00EC776C l
+wglCreateContext 00EC7770 l
+wglDeleteContext 00EC7774 l
+wglGetCurrentContext 00EC7778 l
+wglGetCurrentDC 00EC777C l
+wglGetProcAddress 00EC7780 l
+wglMakeCurrent 00EC7784 l
+wglSwapLayerBuffers 00EC7788 l
+wsprintfA 00EC778C l
+__builtin_memcpy 00EC7790 l
+__builtin_memset 00EC7794 l
+__builtin_strcpy 00EC7798 l
+__builtin_strncpy 00EC779C l
+__builtin_wcscpy 00EC77A0 l
+__builtin_wmemcpy 00EC77A4 l

@@ -1,0 +1,38 @@
+## Interface: 20400
+## Title: MasterWoW DevTools
+## Notes: Comprehensive TBC 2.4.3 client-side developer toolkit
+## Author: MasterWoW
+## Version: 1.2.0
+## SavedVariables: MasterWoWDevToolsDB
+
+Data\KnownCVars.lua
+Data\KnownEvents.lua
+Data\Snippets.lua
+Data\NativeFunctions.lua
+Data\ProposedLabels.lua
+Data\DBCSamples.lua
+Data\TextureCatalog.lua
+Data\ModelCatalog.lua
+Core.lua
+UI.lua
+Modules\Console.lua
+Modules\Browser.lua
+Modules\CVar.lua
+Modules\FrameInspector.lua
+Modules\EventMonitor.lua
+Modules\UnitInspector.lua
+Modules\ItemInspector.lua
+Modules\SpellInspector.lua
+Modules\ActionMacro.lua
+Modules\TextureBrowser.lua
+Modules\Watch.lua
+Modules\Performance.lua
+Modules\Capabilities.lua
+Modules\AddonInspector.lua
+
+Modules\Research.lua
+Modules\Native.lua
+Modules\NativeCatalog.lua
+Modules\ClientInternals.lua
+Modules\DBCInspector.lua
+Modules\ModelBrowser.lua

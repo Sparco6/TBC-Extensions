@@ -11,6 +11,11 @@
 // ============================================================
 
 #include <Client/CDataStore.hpp>
+#include <CDBCMgr/NativeDBC.hpp>
+#include <Graphics/Textures/BLPInspector.hpp>
+#include <Graphics/Textures/BLPRuntimeTrace.hpp>
+#include <Graphics/Textures/NativeBLPCorrelation.hpp>
+#include <stdexcept>
 #include <Client/CGChat.hpp>
 #include <Client/ClientServices.hpp>
 #include <Client/CNetClient.hpp>
@@ -31,10 +36,313 @@
 #include <WorldData/CWorld.hpp>
 
 #include <PatchConfig.hpp>
+#include <Offsets/ClientOffsets_8606.hpp>
+
+#include <Windows.h>
+#include <ctime>
+
+namespace
+{
+// Immutable startup snapshot, captured before any bridge hook is installed.
+bool g_coreValid = false;
+bool g_validatorValid = false;
+bool BytesMatch(std::uintptr_t address, const unsigned char* expected, std::size_t count)
+{
+    MEMORY_BASIC_INFORMATION mbi{};
+    return VirtualQuery(reinterpret_cast<const void*>(address), &mbi, sizeof(mbi)) == sizeof(mbi) &&
+        mbi.State == MEM_COMMIT && (mbi.Protect & (PAGE_GUARD | PAGE_NOACCESS)) == 0 &&
+        memcmp(reinterpret_cast<const void*>(address), expected, count) == 0;
+}
+
+bool IsExpected8606Image()
+{
+    const auto base = reinterpret_cast<const unsigned char*>(GetModuleHandle(nullptr));
+    if (reinterpret_cast<std::uintptr_t>(base) != 0x00400000)
+        return false;
+    const auto dos = reinterpret_cast<const IMAGE_DOS_HEADER*>(base);
+    if (dos->e_magic != IMAGE_DOS_SIGNATURE)
+        return false;
+    const auto nt = reinterpret_cast<const IMAGE_NT_HEADERS32*>(base + dos->e_lfanew);
+    return nt->Signature == IMAGE_NT_SIGNATURE && nt->FileHeader.Machine == IMAGE_FILE_MACHINE_I386 &&
+        nt->FileHeader.TimeDateStamp == 1215715495u && nt->OptionalHeader.SizeOfImage == 0x00AC8000u;
+}
+
+bool CoreLuaSignaturesValid()
+{
+    static const unsigned char registerBytes[] = {0x55,0x8B,0xEC,0x56,0xE8,0x07,0xFE,0xFF,0xFF};
+    // Source: current custom Wow.exe, build 8606; checked offline 2026-09-02.
+    static const unsigned char pushStringBytes[] = {0x55,0x8B,0xEC,0x8B,0x55,0x0C,0x85,0xD2,0x75,0x0E,0x8B,0x45};
+    static const unsigned char pushNumberBytes[] = {0x55,0x8B,0xEC,0x8B,0x4D,0x08,0xDD,0x45,0x0C,0x8B,0x41,0x0C};
+    static const unsigned char pushBooleanBytes[] = {0x55,0x8B,0xEC,0x8B,0x15,0x40,0xF6,0xE1,0x00,0x8B,0x4D,0x08};
+    static const unsigned char toNumberBytes[] = {0x55,0x8B,0xEC,0x8B,0x45,0x0C,0x8B,0x4D,0x08,0x83,0xEC,0x10};
+    static const unsigned char getTopBytes[] = {0x55,0x8B,0xEC,0x8B,0x4D,0x08,0x8B,0x41,0x0C,0x2B,0x41,0x10};
+    static const unsigned char setTopBytes[] = {0x55,0x8B,0xEC,0x8B,0x4D,0x0C,0x85,0xC9,0x8B,0x45,0x08,0x7C};
+    static const unsigned char getFieldBytes[] = {0x55,0x8B,0xEC,0x8B,0x45,0x0C,0x56,0x8B,0x75,0x08,0x8B,0xCE};
+    static const unsigned char typeBytes[] = {0x55,0x8B,0xEC,0x8B,0x45,0x0C,0x8B,0x4D,0x08,0xE8,0xE2,0xFA};
+    static const unsigned char toStringBytes[] = {0x55,0x8B,0xEC,0x56,0x8B,0x75,0x08,0x57,0x8B,0x7D,0x0C,0x8B,0xC7,0x8B,0xCE,0xE8};
+    return IsExpected8606Image() &&
+        BytesMatch(Offsets8606::FrameScriptRegisterFunction, registerBytes, sizeof(registerBytes)) &&
+        BytesMatch(Offsets8606::LuaPushString, pushStringBytes, sizeof(pushStringBytes)) &&
+        BytesMatch(Offsets8606::LuaPushNumber, pushNumberBytes, sizeof(pushNumberBytes)) &&
+        BytesMatch(Offsets8606::LuaPushBoolean, pushBooleanBytes, sizeof(pushBooleanBytes)) &&
+        BytesMatch(Offsets8606::LuaToNumber, toNumberBytes, sizeof(toNumberBytes)) &&
+        BytesMatch(Offsets8606::LuaToLString, toStringBytes, sizeof(toStringBytes)) &&
+        BytesMatch(Offsets8606::LuaGetTop, getTopBytes, sizeof(getTopBytes)) &&
+        BytesMatch(Offsets8606::LuaSetTop, setTopBytes, sizeof(setTopBytes)) &&
+        BytesMatch(Offsets8606::LuaGetField, getFieldBytes, sizeof(getFieldBytes)) &&
+        BytesMatch(Offsets8606::LuaType, typeBytes, sizeof(typeBytes));
+}
+
+bool ValidatorSignatureValid()
+{
+    static const unsigned char bytes[] = {0x55,0x8B,0xEC,0x83,0xEC,0x44,0xA1,0x30,0xF5,0x90,0x00};
+    return IsExpected8606Image() && BytesMatch(Offsets8606::ValidateFunctionPointer, bytes, sizeof(bytes));
+}
+
+bool QueryAddress(lua_State* L, bool requireExecute)
+{
+    const double input = FrameScript::GetNumber(L, 1);
+    if (!(input >= 1.0 && input <= 4294967295.0))
+    {
+        FrameScript::PushBoolean(L, false);
+        return true;
+    }
+    const auto address = static_cast<uintptr_t>(input);
+    if (static_cast<double>(address) != input)
+    {
+        FrameScript::PushBoolean(L, false);
+        return true;
+    }
+    MEMORY_BASIC_INFORMATION mbi{};
+    bool allowed = false;
+    if (address != 0 && VirtualQuery(reinterpret_cast<const void*>(address), &mbi, sizeof(mbi)) == sizeof(mbi) && mbi.State == MEM_COMMIT)
+    {
+        const DWORD protection = mbi.Protect & 0xFF;
+        const bool guarded = (mbi.Protect & (PAGE_GUARD | PAGE_NOACCESS)) != 0;
+        const bool readable = protection == PAGE_READONLY || protection == PAGE_READWRITE || protection == PAGE_WRITECOPY ||
+            protection == PAGE_EXECUTE_READ || protection == PAGE_EXECUTE_READWRITE || protection == PAGE_EXECUTE_WRITECOPY;
+        const bool executable = protection == PAGE_EXECUTE || protection == PAGE_EXECUTE_READ ||
+            protection == PAGE_EXECUTE_READWRITE || protection == PAGE_EXECUTE_WRITECOPY;
+        allowed = !guarded && (requireExecute ? executable : readable);
+    }
+    FrameScript::PushBoolean(L, allowed);
+    return true;
+}
+
+// Only inspect OS-identified module headers; never dereference the supplied target.
+void DescribeAddress(std::uintptr_t address, char* output, size_t capacity)
+{
+    MEMORY_BASIC_INFORMATION mbi{};
+    if (!VirtualQuery(reinterpret_cast<void*>(address), &mbi, sizeof(mbi)))
+    {
+        sprintf_s(output, capacity, "Type: UNKNOWN_POINTER\nMemory: unavailable");
+        return;
+    }
+    HMODULE module = nullptr;
+    if (!GetModuleHandleExA(GET_MODULE_HANDLE_EX_FLAG_FROM_ADDRESS | GET_MODULE_HANDLE_EX_FLAG_UNCHANGED_REFCOUNT,
+        reinterpret_cast<LPCSTR>(address), &module))
+    {
+        sprintf_s(output, capacity, "Type: UNKNOWN_POINTER\nMemory kind: %s\nProtection: 0x%08lX\nNot proof of a callable function",
+            mbi.Type == MEM_PRIVATE ? "private (not proof of a heap object)" : "mapped or unallocated", mbi.Protect);
+        return;
+    }
+    char file[MAX_PATH] = {};
+    GetModuleFileNameA(module, file, MAX_PATH);
+    char section[9] = "unknown";
+    __try
+    {
+        const auto dos = reinterpret_cast<const IMAGE_DOS_HEADER*>(module);
+        const auto nt = reinterpret_cast<const IMAGE_NT_HEADERS32*>(reinterpret_cast<const BYTE*>(module) + dos->e_lfanew);
+        if (dos->e_magic == IMAGE_DOS_SIGNATURE && nt->Signature == IMAGE_NT_SIGNATURE)
+        {
+            const auto sections = IMAGE_FIRST_SECTION(nt);
+            const auto rva = address - reinterpret_cast<std::uintptr_t>(module);
+            for (unsigned i = 0; i < nt->FileHeader.NumberOfSections; ++i)
+            {
+                const auto& s = sections[i];
+                if (rva >= s.VirtualAddress && rva - s.VirtualAddress < s.Misc.VirtualSize)
+                { memcpy(section, s.Name, 8); section[8] = 0; break; }
+            }
+        }
+    }
+    __except(EXCEPTION_EXECUTE_HANDLER) { strcpy_s(section, "unknown"); }
+    sprintf_s(output, capacity, "Type: %s\nModule: %s\nSection: %s\nRVA: 0x%08X (MODULE_RELATIVE_RVA)\nProtection: 0x%08lX",
+        module == GetModuleHandle(nullptr) ? "WOW_STATIC_ADDRESS" : "DLL_ADDRESS", file, section,
+        static_cast<unsigned>(address - reinterpret_cast<std::uintptr_t>(module)), mbi.Protect);
+}
+}
 
 // ============================================================
 // Core: Apply and RegisterFunctions
 // ============================================================
+
+bool CustomLua::CaptureClientFingerprint()
+{
+    g_coreValid = CoreLuaSignaturesValid();
+    g_validatorValid = ValidatorSignatureValid();
+    return g_coreValid && g_validatorValid;
+}
+
+void CustomLua::ApplySafeResearchApi()
+{
+    // Registration uses only the build-specific function confirmed in commit
+    // 641d799. No loader hook, memory write, or unverified client call occurs.
+    FrameScript::RegisterFunction("TBCExt_GetVersion", (void*)&TBCExtGetVersion);
+    FrameScript::RegisterFunction("TBCExt_GetClientBuild", (void*)&TBCExtGetClientBuild);
+    FrameScript::RegisterFunction("TBCExt_GetModuleBase", (void*)&TBCExtGetModuleBase);
+    FrameScript::RegisterFunction("TBCExt_GetLuaState", (void*)&TBCExtGetLuaState);
+    FrameScript::RegisterFunction("TBCExt_GetAddressInfo", (void*)&TBCExtGetAddressInfo);
+    FrameScript::RegisterFunction("TBCExt_GetNativeApiVersion", (void*)&TBCExtGetNativeApiVersion);
+    FrameScript::RegisterFunction("TBCExt_GetClientProfile", (void*)&TBCExtGetClientProfile);
+    FrameScript::RegisterFunction("TBCExt_GetCoreLuaStatus", (void*)&TBCExtGetCoreLuaStatus);
+    FrameScript::RegisterFunction("TBCExt_GetCallbackValidatorStatus", (void*)&TBCExtGetCallbackValidatorStatus);
+    FrameScript::RegisterFunction("TBCExt_GetNativeTraceStatus", (void*)&TBCExtGetNativeTraceStatus);
+    FrameScript::RegisterFunction("TBCExt_GetModelHooksStatus", (void*)&TBCExtGetModelHooksStatus);
+    FrameScript::RegisterFunction("TBCExt_IsAddressExecutable", (void*)&TBCExtIsAddressExecutable);
+    FrameScript::RegisterFunction("TBCExt_IsAddressReadable", (void*)&TBCExtIsAddressReadable);
+    FrameScript::RegisterFunction("TBCExt_CustomDBC", (void*)&TBCExtCustomDBC);
+    FrameScript::RegisterFunction("TBCExt_GetBLPSupport", (void*)&TBCExtGetBLPSupport);
+    FrameScript::RegisterFunction("TBCExt_InspectBLP", (void*)&TBCExtInspectBLP);
+    FrameScript::RegisterFunction("TBCExt_GetTextureLoaderStatus", (void*)&TBCExtGetTextureLoaderStatus);
+    FrameScript::RegisterFunction("TBCExt_ArmBLPObservation", (void*)&TBCExtArmBLPObservation);
+    FrameScript::RegisterFunction("TBCExt_GetBLPObservationStatus", (void*)&TBCExtGetBLPObservationStatus);
+    FrameScript::RegisterFunction("TBCExt_ArmNativeBLPDXT5", (void*)&TBCExtArmNativeBLPDXT5);
+    FrameScript::RegisterFunction("TBCExt_ArmNativeBLPBGRA8", (void*)&TBCExtArmNativeBLPBGRA8);
+    FrameScript::RegisterFunction("TBCExt_ArmNativeBLPBGRA8Prototype", (void*)&TBCExtArmNativeBLPBGRA8Prototype);
+    FrameScript::RegisterFunction("TBCExt_GetNativeBLPTraceStatus", (void*)&TBCExtGetNativeBLPTraceStatus);
+}
+
+void CustomLua::ApplySafeResearchApiWithRegistrar(SafeRegistrar registrar)
+{
+    if (registrar == nullptr)
+        return;
+    registrar("TBCExt_GetVersion", (void*)&TBCExtGetVersion);
+    registrar("TBCExt_GetClientBuild", (void*)&TBCExtGetClientBuild);
+    registrar("TBCExt_GetModuleBase", (void*)&TBCExtGetModuleBase);
+    registrar("TBCExt_GetLuaState", (void*)&TBCExtGetLuaState);
+    registrar("TBCExt_GetAddressInfo", (void*)&TBCExtGetAddressInfo);
+    registrar("TBCExt_GetNativeApiVersion", (void*)&TBCExtGetNativeApiVersion);
+    registrar("TBCExt_GetClientProfile", (void*)&TBCExtGetClientProfile);
+    registrar("TBCExt_GetCoreLuaStatus", (void*)&TBCExtGetCoreLuaStatus);
+    registrar("TBCExt_GetCallbackValidatorStatus", (void*)&TBCExtGetCallbackValidatorStatus);
+    registrar("TBCExt_GetNativeTraceStatus", (void*)&TBCExtGetNativeTraceStatus);
+    registrar("TBCExt_GetModelHooksStatus", (void*)&TBCExtGetModelHooksStatus);
+    registrar("TBCExt_IsAddressExecutable", (void*)&TBCExtIsAddressExecutable);
+    registrar("TBCExt_IsAddressReadable", (void*)&TBCExtIsAddressReadable);
+    registrar("TBCExt_CustomDBC", (void*)&TBCExtCustomDBC);
+    registrar("TBCExt_GetBLPSupport", (void*)&TBCExtGetBLPSupport);
+    registrar("TBCExt_InspectBLP", (void*)&TBCExtInspectBLP);
+    registrar("TBCExt_GetTextureLoaderStatus", (void*)&TBCExtGetTextureLoaderStatus);
+    registrar("TBCExt_ArmBLPObservation", (void*)&TBCExtArmBLPObservation);
+    registrar("TBCExt_GetBLPObservationStatus", (void*)&TBCExtGetBLPObservationStatus);
+    registrar("TBCExt_ArmNativeBLPDXT5", (void*)&TBCExtArmNativeBLPDXT5);
+    registrar("TBCExt_ArmNativeBLPBGRA8", (void*)&TBCExtArmNativeBLPBGRA8);
+    registrar("TBCExt_ArmNativeBLPBGRA8Prototype", (void*)&TBCExtArmNativeBLPBGRA8Prototype);
+    registrar("TBCExt_GetNativeBLPTraceStatus", (void*)&TBCExtGetNativeBLPTraceStatus);
+}
+
+bool CustomLua::IsSafeResearchCallback(std::uintptr_t address)
+{
+    return address == reinterpret_cast<std::uintptr_t>(&TBCExtGetVersion) ||
+        address == reinterpret_cast<std::uintptr_t>(&TBCExtCustomDBC) ||
+        address == reinterpret_cast<std::uintptr_t>(&TBCExtGetBLPSupport) ||
+        address == reinterpret_cast<std::uintptr_t>(&TBCExtInspectBLP) ||
+        address == reinterpret_cast<std::uintptr_t>(&TBCExtGetTextureLoaderStatus) ||
+        address == reinterpret_cast<std::uintptr_t>(&TBCExtArmBLPObservation) ||
+        address == reinterpret_cast<std::uintptr_t>(&TBCExtGetBLPObservationStatus) ||
+        address == reinterpret_cast<std::uintptr_t>(&TBCExtArmNativeBLPDXT5) ||
+        address == reinterpret_cast<std::uintptr_t>(&TBCExtArmNativeBLPBGRA8) ||
+        address == reinterpret_cast<std::uintptr_t>(&TBCExtArmNativeBLPBGRA8Prototype) ||
+        address == reinterpret_cast<std::uintptr_t>(&TBCExtGetNativeBLPTraceStatus) ||
+        address == reinterpret_cast<std::uintptr_t>(&TBCExtGetAddressInfo) ||
+        address == reinterpret_cast<std::uintptr_t>(&TBCExtGetClientBuild) ||
+        address == reinterpret_cast<std::uintptr_t>(&TBCExtGetModuleBase) ||
+        address == reinterpret_cast<std::uintptr_t>(&TBCExtGetLuaState) ||
+        address == reinterpret_cast<std::uintptr_t>(&TBCExtGetNativeApiVersion) ||
+        address == reinterpret_cast<std::uintptr_t>(&TBCExtGetClientProfile) ||
+        address == reinterpret_cast<std::uintptr_t>(&TBCExtGetCoreLuaStatus) ||
+        address == reinterpret_cast<std::uintptr_t>(&TBCExtGetCallbackValidatorStatus) ||
+        address == reinterpret_cast<std::uintptr_t>(&TBCExtGetNativeTraceStatus) ||
+        address == reinterpret_cast<std::uintptr_t>(&TBCExtGetModelHooksStatus) ||
+        address == reinterpret_cast<std::uintptr_t>(&TBCExtIsAddressExecutable) ||
+        address == reinterpret_cast<std::uintptr_t>(&TBCExtIsAddressReadable);
+}
+
+int32_t CustomLua::TBCExtGetVersion(lua_State* L) { FrameScript::PushString(L, "TBCExtensions 0.2.0-blp2-native-compat-research"); return 1; }
+int32_t CustomLua::TBCExtGetClientBuild(lua_State* L) { FrameScript::PushString(L, "2.4.3.8606"); return 1; }
+int32_t CustomLua::TBCExtGetModuleBase(lua_State* L) { FrameScript::PushNumber(L, static_cast<double>(reinterpret_cast<uintptr_t>(GetModuleHandle(nullptr)))); return 1; }
+int32_t CustomLua::TBCExtGetLuaState(lua_State* L) { FrameScript::PushNumber(L, static_cast<double>(reinterpret_cast<uintptr_t>(L))); return 1; }
+int32_t CustomLua::TBCExtGetAddressInfo(lua_State* L)
+{
+    const double value = FrameScript::GetNumber(L, 1);
+    if (!(value >= 1 && value <= 4294967295.0) || static_cast<double>(static_cast<std::uintptr_t>(value)) != value)
+    { FrameScript::PushString(L, "Invalid 32-bit address"); return 1; }
+    char output[768] = {};
+    DescribeAddress(static_cast<std::uintptr_t>(value), output, sizeof(output));
+    FrameScript::PushString(L, output);
+    return 1;
+}
+int32_t CustomLua::TBCExtGetNativeApiVersion(lua_State* L) { FrameScript::PushNumber(L, 7.0); return 1; }
+int32_t CustomLua::TBCExtGetClientProfile(lua_State* L)
+{
+    FrameScript::PushString(L, g_coreValid && g_validatorValid ?
+        "MASTERWOW_CUSTOM_8606" : (IsExpected8606Image() ? "TBC_8606_UNVALIDATED" : "UNKNOWN_CLIENT"));
+    return 1;
+}
+int32_t CustomLua::TBCExtGetCoreLuaStatus(lua_State* L) { FrameScript::PushString(L, g_coreValid ? "VALID (startup signatures)" : "INVALID"); return 1; }
+int32_t CustomLua::TBCExtGetCallbackValidatorStatus(lua_State* L) { FrameScript::PushString(L, g_validatorValid ? "VALID (startup signature)" : "INVALID"); return 1; }
+int32_t CustomLua::TBCExtGetNativeTraceStatus(lua_State* L) { FrameScript::PushString(L, "DISABLED"); return 1; }
+int32_t CustomLua::TBCExtGetModelHooksStatus(lua_State* L) { FrameScript::PushString(L, "NOT CONFIGURED"); return 1; }
+int32_t CustomLua::TBCExtIsAddressExecutable(lua_State* L) { QueryAddress(L, true); return 1; }
+int32_t CustomLua::TBCExtIsAddressReadable(lua_State* L) { QueryAddress(L, false); return 1; }
+int32_t CustomLua::TBCExtGetBLPSupport(lua_State* L) { FrameScript::PushString(L,"Offline BLP2 decoder: palette alpha 0/1/4/8; DXT1/DXT3/DXT5; BGRA8; up to 16 validated mips. BLP1 is inspected only and always remains on the stock path.");return 1; }
+int32_t CustomLua::TBCExtGetTextureLoaderStatus(lua_State* L) { FrameScript::PushString(L,"BLP PARSER: ENABLED; STOCK PATH: UNCHANGED; RUNTIME TRANSFORM: DISABLED; TRANSFORM HOOK: NOT INSTALLED; BGRA8 TRANSFORMS: 0; OBSERVATION: see TBCExt_GetBLPObservationStatus");return 1; }
+int32_t CustomLua::TBCExtArmBLPObservation(lua_State* L) { FrameScript::PushBoolean(L, BlpRuntimeTrace::ArmOneShot()); return 1; }
+int32_t CustomLua::TBCExtGetBLPObservationStatus(lua_State* L) { char status[512] = {}; BlpRuntimeTrace::Describe(status, sizeof(status)); FrameScript::PushString(L, status); return 1; }
+int32_t CustomLua::TBCExtArmNativeBLPDXT5(lua_State* L) { FrameScript::PushBoolean(L, NativeBLPCorrelation::Arm(NativeBLPCorrelation::Test::DXT5)); return 1; }
+int32_t CustomLua::TBCExtArmNativeBLPBGRA8(lua_State* L) { FrameScript::PushBoolean(L, NativeBLPCorrelation::Arm(NativeBLPCorrelation::Test::BGRA8)); return 1; }
+int32_t CustomLua::TBCExtArmNativeBLPBGRA8Prototype(lua_State* L) { FrameScript::PushBoolean(L, NativeBLPCorrelation::Arm(NativeBLPCorrelation::Test::BGRA8Prototype)); return 1; }
+int32_t CustomLua::TBCExtGetNativeBLPTraceStatus(lua_State* L) { char status[6144] = {}; NativeBLPCorrelation::Describe(status, sizeof(status)); FrameScript::PushString(L, status); return 1; }
+int32_t CustomLua::TBCExtInspectBLP(lua_State* L) {
+    try {
+        if(FrameScript::LuaType(L,1)!=4)throw std::runtime_error("Expected BLP basename string");size_t n=0;const char* p=reinterpret_cast<const char*(__cdecl*)(lua_State*,int,size_t*)>(Offsets8606::LuaToLString)(L,1,&n);
+        if(!p||n>96||memchr(p,0,n))throw std::runtime_error("Invalid BLP basename");std::string result=Blp::InspectLooseFile(std::string(p,n));FrameScript::PushString(L,result.c_str());FrameScript::PushString(L,"OK");
+    }catch(const std::exception& e){FrameScript::PushString(L,e.what());FrameScript::PushString(L,"ERROR");}catch(...){FrameScript::PushString(L,"BLP inspection failed");FrameScript::PushString(L,"ERROR");}return 2;
+}
+
+int32_t CustomLua::TBCExtCustomDBC(lua_State* L)
+{
+    // Fixed contract: text, "OK"|"ERROR". No boolean ABI dependency.
+    std::string result;
+    bool ok = false;
+    try {
+        auto textArg = [L](int slot) -> std::string {
+            if (FrameScript::LuaType(L,slot)!=4) throw std::runtime_error("Expected string argument");
+            size_t size=0;
+            const char* p=reinterpret_cast<const char*(__cdecl*)(lua_State*,int,size_t*)>(Offsets8606::LuaToLString)(L,slot,&size);
+            if (!p || size>128 || memchr(p,0,size)) throw std::runtime_error("Invalid or oversized string argument");
+            return std::string(p,size);
+        };
+        auto numberArg = [L](int slot) -> uint32_t {
+            if (FrameScript::LuaType(L,slot)!=3) throw std::runtime_error("Expected numeric argument");
+            double n=FrameScript::GetNumber(L,slot);
+            if (!(n>=0 && n<=4294967295.0) || n!=static_cast<double>(static_cast<uint32_t>(n)))
+                throw std::runtime_error("Expected unsigned 32-bit integer");
+            return static_cast<uint32_t>(n);
+        };
+        std::string action=textArg(1), filename, type;
+        uint32_t id=0,column=0;
+        if (action=="load") filename=textArg(2);
+        if (action=="row" || action=="field") id=numberArg(2);
+        if (action=="field") { column=numberArg(3); type=textArg(4); }
+        result=NativeDBC::Request(action,filename,id,column,type);
+        ok=true;
+    } catch (const std::exception& e) { result=e.what(); }
+      catch (...) { result="Custom DBC operation failed"; }
+    FrameScript::PushString(L,result.c_str());
+    FrameScript::PushString(L,ok ? "OK" : "ERROR");
+    return 2;
+}
 
 void CustomLua::Apply()
 {

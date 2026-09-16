@@ -1,0 +1,39 @@
+# Current architecture (build 8606)
+
+```text
+custom Wow.exe startup loader -> LoadLibraryA("TBCExtensions.dll")
+  -> DLL fingerprint/signatures -> safe Lua lifecycle + exact-callback validator
+  -> TBCExt_* native APIs -> MasterWoW Developer Toolkit
+  -> DLL-owned WDBC inspection and independent BLP inspection/offline research
+  -> research-only MinHook BLP observations (no byte replacement)
+```
+
+`Patcher/SafeMain.cpp` has nine file-offset records for the loader: `0x244A17`, `0x30D281`, `0x310D81`, `0x3111E1`, `0x48B900`, `0x5DD0`, `0x5DD7`, `0x311201`, `0x311331`. It requires 2.4.3.8606 x86, accepts only exact original/replacement bytes, makes a timestamped backup, and refuses conflicts. The complete authoritative original/replacement/rollback byte arrays are in that source. `Docs/CUSTOM_WOW_PATCH_BASELINE.md` says the compared custom exe had all nine locations unpatched on 2026-09-02; this is a dated snapshot, **not** a claim about today's installed executable. The loader's operational status is owner **RUNTIME VERIFIED** (`Docs/TBC_DLL_RUNTIME_TEST.md`). No proxy DLL or remote injection is used.
+
+`TBCExtensions/src/Client/CustomLua.cpp` gates the safe bridge on PE32 i386 at base `0x00400000`, timestamp `1215715495`, image size `0x00AC8000`, plus exact critical Lua byte signatures. `Main.cpp` checks registrar/validator prologues before MinHook creation; `NativeBLPCorrelation.cpp` additionally checks executable `.text`, readable committed pages, and exact hook bytes. On mismatch `DllMain` leaves stock behavior and logs; optional BLP observation hook mismatch leaves it absent. These checks protect the **safe research API**, not unverified WotLK-derived modules. `UNSAFE_LEGACY_PORT` is OFF by default and must remain OFF. Its guarded branch in `Main.cpp` includes WoWTime, map/model, miscellaneous/player/tooltip/spell, packet, stock DBC patch, and zero-address bootstrap writes. Also see `TBCExtensions/src/CDBCMgr/CDBCMgr.cpp` and [known issues](KNOWN_ISSUES.md).
+
+The lifecycle detour at `0x007059B0` calls the original registrar, tests Lua state/global `TBCExt_GetVersion`, and re-registers the safe API when state or global environment changes. The validator detour at `0x0074A160` bypasses validation **only** for the exact `TBCExt_*` callbacks identified by `CustomLua::IsSafeResearchCallback`; all other callbacks use the original validator. The global Lua-state pointer is `0x00E1DB84`. Source: `Main.cpp`, `Client/CustomLua.cpp`, `Client/FrameScript.cpp`, `Offsets/ClientOffsets_8606.hpp`. The owner previously observed the bridge in-client; exact current 0.1.7 two-test trace is separately recorded in [BLP research](BLP_TEXTURE_RESEARCH.md).
+
+## Public native API (source registration, API 7)
+
+`CustomLua::ApplySafeResearchApi` registers 22 names via `FrameScript::RegisterFunction` or the lifecycle registrar. All return Lua values; see source for exact argument and error contracts. Production-facing diagnostics: `TBCExt_GetVersion` (version string), `GetClientBuild` (build string), `GetModuleBase` (numeric base), `GetLuaState` (state descriptor), `GetAddressInfo` (classification string), `GetNativeApiVersion` (7), `GetClientProfile` (profile string), `GetCoreLuaStatus`, `GetCallbackValidatorStatus`, `GetNativeTraceStatus`, `GetModelHooksStatus`, `IsAddressExecutable`, `IsAddressReadable`. The address predicates classify pages and do not call targets. `TBCExt_CustomDBC(action, filename?, id?, column?, type?)` is DLL-owned WDBC inspection. `TBCExt_GetBLPSupport`, `TBCExt_InspectBLP(basename)`, and `TBCExt_GetTextureLoaderStatus` inspect/describe texture support; no stock loader mutation. Experimental: `TBCExt_ArmBLPObservation`, `GetBLPObservationStatus` for the older 0x005B3170 one-shot, and `ArmNativeBLPDXT5`, `ArmNativeBLPBGRA8`, `GetNativeBLPTraceStatus` for three-hook research correlation. Version/profile/status functions are diagnostics, not proof that all subsystems work.
+
+| Registered name (prefix `TBCExt_`) | Arguments → return | Current role/status |
+|---|---|---|
+| `GetVersion`, `GetClientBuild`, `GetModuleBase`, `GetLuaState`, `GetNativeApiVersion`, `GetClientProfile` | no arguments → one string or number | Diagnostic safe API; source returns version 0.1.7, build 8606, API 7, profile gated by fingerprint |
+| `GetAddressInfo` | 32-bit numeric address → classification string | Diagnostic; invalid input gives error string; never calls address |
+| `GetCoreLuaStatus`, `GetCallbackValidatorStatus`, `GetNativeTraceStatus`, `GetModelHooksStatus` | no arguments → status string | Diagnostic; generic native trace currently `DISABLED`, model hooks `NOT CONFIGURED` |
+| `IsAddressExecutable`, `IsAddressReadable` | 32-bit numeric address → boolean | OS-page predicate only, not function/object verification |
+| `CustomDBC` | `load`, filename; `info`/`unload`; `row`, ID; `field`, ID, 1-based column, `uint32`/`float`/`string` → `(text, "OK"|"ERROR")` | DLL-owned read-only WDBC API; no stock integration |
+| `GetBLPSupport`, `GetTextureLoaderStatus` | no arguments → status string | Independent decoder capabilities; loader status explicitly transform DISABLED |
+| `InspectBLP` | loose-file basename string → `(text, "OK"|"ERROR")` | Offline inspection, not stock render/loader proof |
+| `ArmBLPObservation`, `GetBLPObservationStatus` | no arguments → boolean arm / status string | EXPERIMENTAL older 0x005B3170 one-shot |
+| `ArmNativeBLPDXT5`, `ArmNativeBLPBGRA8`, `GetNativeBLPTraceStatus` | no arguments → boolean arm / status string | EXPERIMENTAL same three-detour native correlation; v2 pointer/candidate status compiled and owner-tested, but deep controlled path still uncorrelated |
+
+All exact registrations, return counts, safe callback allowlist and error handling are in `TBCExtensions/src/Client/CustomLua.cpp` (`ApplySafeResearchApi`, `TBCExtCustomDBC`, `TBCExtInspectBLP`); do not infer additional backported functions below that safe set are active while legacy port is OFF.
+
+## Custom DBC today
+
+`NativeDBC::Request` reads only basename `AoR_*.dbc` or `TBCExt_*.dbc` from `TBCExtensions/DBFilesClient/` beside Wow.exe, with 5–96-character name, alphanumeric/underscore stem, exact lowercase `.dbc`, and no path separator. One DLL-owned table is active at a time; `load`, `info`, `row`, `field`, `unload` are supported. A failed load keeps the prior table. `field` supports `uint32`, finite `float`, NUL-terminated `string`; rows show first 32 fields. `WdbcTable.hpp` validates `WDBC`, 20 bytes–64 MiB, ≤1,000,000 rows, 1–256 fields, 4-byte cells, exact length, nonempty string block beginning/ending NUL, ≤4096-byte strings, and unique first-column IDs. `AoR_CreatureModelData.dbc` requires 3 fields (ID, ModelPath, MountHeight); `AoR_CreatureDisplayInfo.dbc` requires 7 (ID, ModelID, ModelPath, Texture1–4). This is **implemented read-only lookup**, not stock `CreatureDisplayInfo` or renderer insertion. The old `CDBCMgr` stock patch remains behind unsafe legacy code.
+
+`Client/SFile.cpp` uses symbol-derived `OpenFileEx` `0x006755A0` and `ReadFile` `0x0067FF90` casts, without independent runtime qualification here. `CloseFile` is still a zero-address TODO. This wrapper is **not** a complete retail-asset acquisition layer and must not be used as such. AoREngine (sibling `../AoREngine-main`) targets 3.3.5a/12340. Reuse format algorithms/reference tests (BLP, M2/SKIN parsing) only after TBC validation; adapt animation/external `.anim`, `.bone`, `.physics`, index/bone-palette lessons; TBC-specific hooks are required for FileDataID/RetailFile, D3D9, creature/item/character/spell rendering. Risky areas include stock player integration, 32-bit indices, particles, ribbons, attachments and cache lifetime. Its addresses/offsets are **never** TBC evidence. See `Docs/AORENGINE_TBC_PORT_AUDIT.md` and AoREngine `src/` for detail.
