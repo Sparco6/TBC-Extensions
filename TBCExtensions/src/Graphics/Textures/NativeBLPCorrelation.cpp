@@ -52,7 +52,9 @@ struct CompatibilityAsset {
 };
 // Developer-only allowlist. Adding an entry does not make it runtime-compatible; it must also pass every metadata gate.
 constexpr CompatibilityAsset kCompatibilityAllowlist[] = {
-    {"Interface\\MasterWoW\\BLP2Test.blp", 64, 64, 1}
+    {"Interface\\MasterWoW\\BLP2Test.blp", 64, 64, 1},
+    {"Interface\\MasterWoW\\TBCExt_BGRA8_256_Mips.blp", 256, 256, 9},
+    {"Interface\\MasterWoW\\TBCExt_BGRA8_128x64_Mips.blp", 128, 64, 8}
 };
 std::atomic<unsigned char> g_resourceName[kResourceNameCapacity]{};
 std::atomic<bool> g_resourceNameValid{false}, g_resourceNameMatches{false};
@@ -87,6 +89,11 @@ std::array<std::atomic<unsigned>, kMaxObservedMips> g_mipWidths{}, g_mipHeights{
     g_mipSourcePitches{}, g_mipDestinationPitches{}, g_mipClasses1{}, g_mipClasses2{},
     g_mipRows{}, g_mipBytes{};
 std::array<std::atomic<uintptr_t>, kMaxObservedMips> g_mipSources{}, g_mipDestinations{};
+std::array<std::atomic<uintptr_t>, kMaxObservedMips> g_mipResources{}, g_mipDescriptors{};
+std::array<std::atomic<unsigned>, kMaxObservedMips> g_mipGenerations{}, g_mipThreads{};
+std::atomic<unsigned> g_expectedWidth{0}, g_expectedHeight{0}, g_expectedMipCount{0};
+std::atomic<uintptr_t> g_previousResource{0}, g_previousDescriptor{0};
+std::atomic<unsigned> g_previousTest{0};
 enum class PrototypeState : unsigned { NotArmed, Armed, Applied, Rejected };
 enum class PrototypeReject : unsigned {
     None, GenerationMismatch, Ambiguous, ResourceMismatch, PathMismatch,

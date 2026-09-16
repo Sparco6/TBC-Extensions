@@ -11,6 +11,7 @@ A comprehensive extension DLL for World of Warcraft TBC 2.4.3 (build 8606), port
 
 ---
 
+Contact: Discord: sparco6 if you want help us! make TBC great AGAIN
 ## What Has Been Done
 
 ### ✅ Framework & Porting (initial port)
